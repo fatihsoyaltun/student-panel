@@ -439,4 +439,59 @@ img {
 }
 .main-wrapper .section .content .star-students .card-body .table a {
   color: #333;
+}
+.main-wrapper .section .content .star-students .card-body .activity-box {
+  margin-bottom: 38px;
+  display: flex;
+  align-items: center;
+}
+.main-wrapper .section .content .star-students .card-body .activity-box .activity-box-img {
+  background: #EDF4FF;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+.main-wrapper .section .content .star-students .card-body .activity-box .activity-box-text h4 {
+  color: #2C323F;
+  font-weight: 500;
+  font-size: 14px;
+}
+.main-wrapper .section .content .star-students .card-body .activity-box .activity-box-text h5 {
+  color: #808191;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.main-wrapper .section .content .star-students .card-body .activity-box .activity-box-time {
+  margin-left: auto;
+}
+.main-wrapper .section .content .star-students .card-body .activity-box .activity-box-time span {
+  background: #FFF9ED;
+  color: #808191;
+  font-weight: 400;
+  font-size: 11px;
+  padding: 5px 9px;
+  border-radius: 6px;
+}
+.main-wrapper .section .content .card-chart {
+  background: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+  border-radius: 15px;
+  border: 0;
+}
+.main-wrapper .section .content .card-chart .card-header {
+  border-radius: 15px 15px 0 0;
+  border-bottom: 0;
+  padding-bottom: 10px;
+  background: transparent;
+}
+.main-wrapper .section .content .card-chart .card-header .card-title {
+  font-size: 18px !important;
+  margin-bottom: 0;
+}
+.main-wrapper .section .content .card-chart .card-body {
+  padding: 8px;
 }/*# sourceMappingURL=style.css.map */
