@@ -708,6 +708,68 @@ img {
 .student-panel .content .card .card-body .table-responsive .text-table a {
   color: #333;
 }
+.student-panel .content .card .card-body .myForm {
+  position: relative;
+  margin-bottom: 40px;
+}
+.student-panel .content .card .card-body .myForm label {
+  font-size: 13px;
+  color: #ABABAB;
+  font-weight: 500;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: #fff;
+  margin-bottom: 0;
+  padding: 0px 5px;
+  z-index: 99;
+}
+.student-panel .content .card .card-body .myForm .form-control {
+  border: 1px solid #ddd;
+  box-shadow: none;
+  color: #333;
+  font-size: 15px;
+  height: 45px;
+}
+.student-panel .content .card .card-body .upFile label {
+  font-size: 15px;
+  font-weight: 500;
+}
+.student-panel .content .card .card-body .upFile .upload .file-up {
+  position: relative;
+  overflow: hidden;
+}
+.student-panel .content .card .card-body .upFile .upload .img-file-btn {
+  background: #444;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #fff;
+  padding: 6px 19px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.student-panel .content .card .card-body .upFile .upload .img-file-btn input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+.student-panel .content .card .card-body .submit-btn .btn {
+  min-width: 160px;
+  border-radius: 10px;
+  background: #3D5EE1;
+  border: 1px solid #3D5EE1;
+}
 
 @media screen and (max-width: 768px) {
   .off-canvas {
