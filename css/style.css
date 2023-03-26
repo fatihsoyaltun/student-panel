@@ -656,6 +656,59 @@ img {
   font-weight: 400;
   color: #828282;
 }
+.student-panel .content .list-header {
+  margin-bottom: 1.875rem;
+}
+.student-panel .content .list-header .list-sub-header {
+  display: flex;
+  align-items: center;
+}
+.student-panel .content .list-header .list-sub-header .list-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #2C323F;
+  margin-bottom: 5px;
+}
+.student-panel .content .list-header .list-sub-header .breadcrumb {
+  background-color: transparent;
+  color: #6c757d;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  padding: 0;
+  margin-left: auto;
+}
+.student-panel .content .list-header .list-sub-header .breadcrumb a {
+  color: #333;
+}
+.student-panel .content .list-group-form .form-group {
+  margin-bottom: 1.25rem;
+}
+.student-panel .content .card {
+  border: 2px solid rgba(220, 220, 220, 0.3);
+  border-radius: 10px;
+  box-shadow: none;
+}
+.student-panel .content .card .card-body {
+  position: relative;
+  padding: 25px;
+}
+.student-panel .content .card .card-body .list-table-header {
+  margin-bottom: 1.875rem;
+}
+.student-panel .content .card .card-body .list-table-header .list-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #2C323F;
+  margin-bottom: 5px;
+}
+.student-panel .content .card .card-body .table-responsive {
+  white-space: nowrap;
+}
+.student-panel .content .card .card-body .table-responsive .text-table a {
+  color: #333;
+}
+
 @media screen and (max-width: 768px) {
   .off-canvas {
     display: block !important;
