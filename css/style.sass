@@ -220,6 +220,7 @@ img
         z-index: 1000
         background: $color8
         overflow: scroll
+    .offcanvas-body
         .sidebar-menu
             padding: 15px
             ul
@@ -310,7 +311,7 @@ img
         transition: all 0.4s ease
         background: #fff
         .content
-            padding: 1.8rem 1.8rem
+            padding: 1.8rem 1.8rem 0
             .section-title
                 font-size: 22px
                 font-weight: 500
@@ -391,6 +392,7 @@ img
                             max-width: 100%
                             margin-bottom: 0
                             width: 100%
+                            white-space: nowrap
                             a
                                 color: #333
                     .activity-box
@@ -440,3 +442,183 @@ img
                         margin-bottom: 0
                 .card-body
                     padding: 8px
+
+//! Student Css
+.student-panel
+    margin-left: 259px
+    padding-top: 60px
+    position: relative
+    transition: all 0.4s ease
+    .content
+        padding: 1.8rem 1.8rem 0
+        .student-panel-header
+            margin-bottom: 1.875rem
+            .student-header-text
+                display: -webkit-box
+                display: -ms-flexbox
+                display: flex
+                -webkit-box-align: center
+                -ms-flex-align: center
+                align-items: center
+                .text-title
+                    font-size: 22px
+                    font-weight: 500
+                    color: #2C323F
+                    margin-bottom: 5px
+                .breadcrumb
+                    background-color: transparent
+                    color: #6c757d
+                    font-size: 1rem
+                    font-weight: 500
+                    margin-bottom: 0
+                    padding: 0
+                    margin-left: auto
+                    a
+                        color: #333
+        .student-card
+            border: 0
+            border-radius: 10px
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px
+            // box-shadow: 0px 0px 31px 3px rgb(44 50 63 / 2%)
+            margin-bottom: 1.875rem
+            .card-body
+                position: relative
+                padding: 25px
+                .student-info
+                    margin-bottom: 25px
+                .student-profil
+                    background: #F7F7FA
+                    border-radius: 10px
+                    margin-bottom: 40px
+                    .student-bg-img
+                        img
+                            width: 100%
+                            border-radius: 10px
+                    .student-profil-box
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        .student-profil-box-img
+                            margin-right: 20px
+                            position: relative
+                            top: -30px
+                            img
+                                border-radius: 50%
+                                border: 9px solid #fff
+                                width: 141px
+                        .student-profil-box-name
+                            h4
+                                font-size: 18px
+                                font-weight: 500
+                                color: #000
+                                margin-bottom: 3px
+                            h5
+                                font-size: 14px
+                                font-weight: 500
+                                color: #9E9E9E
+                                margin-bottom: 0
+                    .student-btn-group
+                        width: 100%
+                        display: flex
+                        display: -webkit-box
+                        justify-content: center
+                        .btn-info
+                            min-width: 127px
+                            font-size: 16px
+                            font-weight: 500
+                            color: #fff
+                            border-radius: 10px
+                            padding: 9px 15px
+                        .fal-btn
+                            margin-right: 15px
+                            background: $color2
+                            border: 1px solid $color2
+                .student-details-card
+                    .card
+                        border: 2px solid rgba(220, 220, 220, 0.3)
+                        border-radius: 10px
+                        box-shadow: none
+                        .card-body
+                            position: relative
+                            padding: 25px
+                            .student-detail
+                                h4
+                                    font-size: 20px
+                                    font-weight: 500
+                                    color: #000000
+                                    margin-bottom: 25px
+                            .student-detail-content
+                                display: flex
+                                margin-bottom: 20px
+                                .stu-dt-icons
+                                    i
+                                        color: $color3
+                                .stu-dt-view
+                                    margin-left: 10px
+                                    h4
+                                        color: #000
+                                        font-size: 16px
+                                        font-weight: 500
+                                        margin-bottom: 0
+                                    h5
+                                        color: #808080
+                                        font-size: 14px
+                                        font-weight: 500
+                                        margin-bottom: 0
+                            .student-about
+                                h5
+                                    font-size: 18px
+                                    font-weight: 500
+                                    margin-bottom: 20px
+                                p
+                                    font-size: 14px
+                                    font-weight: 400
+                                    color: #828282
+                                .edu-detail
+                                    h6
+                                        font-size: 13px
+                                        font-weight: 400
+                                        color: #000000
+                                    p
+                                        font-size: 14px
+                                        font-weight: 400
+                                        color: #828282
+        .card-chart
+
+
+
+
+@media screen and (max-width: 768px)
+    .off-canvas
+        display: block !important
+    .sidebar
+        display: none
+    .section
+        width: 100%
+        margin-left: 0 !important
+        .col-sm-6
+            margin-bottom: 1rem
+        .card
+            margin-bottom: 1rem
+
+
+
+@media screen and (max-width: 576px)
+    .header
+        .navbar
+            .user-text
+                display: none
+            .off-canvas
+                .show
+                    width: 70%
+            form
+                display: none !important
+            
+    .off-canvas
+        display: block !important
+    .sidebar
+        display: none
+    .section
+        .row>*
+            padding-left: 0 !important
+            padding-right: 0 !important

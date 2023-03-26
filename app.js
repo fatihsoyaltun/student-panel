@@ -109,6 +109,45 @@ xaxis: {
 var chart2 = new ApexCharts(document.querySelector("#apexcharts-bar"), options2);
 chart2.render();
 
+//* Charts Student
+var options3 = {
+  series: [{
+    name: "Katılım",
+    data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+},{
+  name:"Not Ortalaması",
+  data:[20,34,45,56,67,78,89,90,78]
+}],
+  chart: {
+  height: 350,
+  type: 'line',
+  zoom: {
+    enabled: false
+  }
+},
+dataLabels: {
+  enabled: false
+},
+stroke: {
+  curve: 'straight'
+},
+title: {
+  text: 'Product Trends by Month',
+  align: 'left'
+},
+grid: {
+  row: {
+    colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+    opacity: 0.5
+  },
+},
+xaxis: {
+  categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+}
+};
+
+var chart3 = new ApexCharts(document.querySelector("#apexcharts-student"), options3);
+chart3.render();
 
 //! Calendar
 
@@ -125,4 +164,4 @@ chart2.render();
 // });
 // <div id="calendar" class="calendar-container"></div>
 
-
+//* SAyfa yönlendirme

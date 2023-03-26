@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="tr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,12 +19,103 @@
     <!-- Main Css -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <div class="main-wrapper">
         <div class="header">
             <nav class="navbar">
                 <div class="container-fluid">
-                    <a href="#" class="navbar-brand"><img src="https://neosyazilim.com/static/img/neosLogo2.png" width="100" alt=""></a>
+                    <!-- Off Canvas -->
+                    <div class="off-canvas d-none">
+                        <button class="btn" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-bars"></i></button>
+                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+                            tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Admin Menu</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="sidebar-menu">
+                                    <ul>
+                                        <li class="menu-title">
+                                            <span>Admin Dashboard</span>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-graduation-cap"></i>
+                                                <span>Öğrenci</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Öğrenci Listesi</a></li>
+                                                <li><a href="./student.html">Öğrenci Görüntüle</a></li>
+                                                <li><a href="#">Öğrenci Ekle</a></li>
+                                                <li><a href="#">Öğrenci Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                                <span>Eğitmen</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Eğitmen Listesi</a></li>
+                                                <li><a href="#">Eğitmen Görüntüle</a></li>
+                                                <li><a href="#">Eğitmen Ekle</a></li>
+                                                <li><a href="#">Eğitmen Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-building"></i>
+                                                <span>Sınıflar</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Sınıf Listesi</a></li>
+                                                <li><a href="#">Sınıfları Görüntüle</a></li>
+                                                <li><a href="#">Sınıf Ekle</a></li>
+                                                <li><a href="#">Sınıf Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-book-reader"></i>
+                                                <span>Müfredat</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Müfredat Görüntüle</a></li>
+                                                <li><a href="#">Müfredat Düzenle</a></li>
+                                                <li><a href="#">Quizler</a></li>
+                                                <li><a href="#">Quizleri Düzenle</a></li>
+                                                <li><a href="#">Projeler </a></li>
+                                                <li><a href="#">Projeleri Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-newspaper"></i>
+                                                <span>Bloglar</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Tüm Bloglar</a></li>
+                                                <li><a href="#">Blog Ekle</a></li>
+                                                <li><a href="#">Blog Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Off Canvas -->
+                    <a href="#" class="navbar-brand"><img src="https://neosyazilim.com/static/img/neosLogo2.png"
+                            width="100" alt=""></a>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     </form>
@@ -44,12 +136,14 @@
                                             <a href="#">
                                                 <div class="media d-flex">
                                                     <span class="avatar flex-shrink-0">
-                                                        <img class="avatar-img rounded-circle" src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
                                                     </span>
                                                     <div class="media-body flex-grow-1">
                                                         <p class="media-details">
                                                             <span class="media-titUser">Fatih Soyaltun</span>
-                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit amet?</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
                                                         </p>
                                                         <p class="media-time">
                                                             <span class="media-time-m">4 dk. önce</span>
@@ -62,12 +156,14 @@
                                             <a href="#">
                                                 <div class="media d-flex">
                                                     <span class="avatar flex-shrink-0">
-                                                        <img class="avatar-img rounded-circle" src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
                                                     </span>
                                                     <div class="media-body flex-grow-1">
                                                         <p class="media-details">
                                                             <span class="media-titUser">Fatih Soyaltun</span>
-                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit amet?</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
                                                         </p>
                                                         <p class="media-time">
                                                             <span class="media-time-m">4 dk. önce</span>
@@ -80,12 +176,14 @@
                                             <a href="#">
                                                 <div class="media d-flex">
                                                     <span class="avatar flex-shrink-0">
-                                                        <img class="avatar-img rounded-circle" src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
                                                     </span>
                                                     <div class="media-body flex-grow-1">
                                                         <p class="media-details">
                                                             <span class="media-titUser">Fatih Soyaltun</span>
-                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit amet?</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
                                                         </p>
                                                         <p class="media-time">
                                                             <span class="media-time-m">4 dk. önce</span>
@@ -98,12 +196,14 @@
                                             <a href="#">
                                                 <div class="media d-flex">
                                                     <span class="avatar flex-shrink-0">
-                                                        <img class="avatar-img rounded-circle" src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
                                                     </span>
                                                     <div class="media-body flex-grow-1">
                                                         <p class="media-details">
                                                             <span class="media-titUser">Fatih Soyaltun</span>
-                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit amet?</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
                                                         </p>
                                                         <p class="media-time">
                                                             <span class="media-time-m">4 dk. önce</span>
@@ -121,10 +221,11 @@
                         </div>
                         <div class="user-menu">
                             <div class="dropdown">
-                                <a class="user-img-hero dropdown-toggle d-flex" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                <a class="user-img-hero dropdown-toggle d-flex" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="user-img">
-                                        <img class="rounded-circle" src="https://randomuser.me/api/portraits/men/47.jpg" width="31" alt="">
+                                        <img class="rounded-circle" src="https://randomuser.me/api/portraits/men/47.jpg"
+                                            width="31" alt="">
                                         <div class="user-text">
                                             <h6>Fatih Soyaltun</h6>
                                             <p class="text-muted mb-0">Admin</p>
@@ -142,7 +243,7 @@
                 </div>
             </nav>
         </div>
-        <div class="sidebar">
+        <div class="sidebar offcanvas-body">
             <div class="sidebar-menu">
                 <ul>
                     <li class="menu-title">
@@ -156,7 +257,7 @@
                         </a>
                         <ul class="submenu-content">
                             <li><a href="#">Öğrenci Listesi</a></li>
-                            <li><a href="#">Öğrenci Görüntüle</a></li>
+                            <li><a href="./student.html">Öğrenci Görüntüle</a></li>
                             <li><a href="#">Öğrenci Ekle</a></li>
                             <li><a href="#">Öğrenci Düzenle</a></li>
                         </ul>
@@ -218,298 +319,309 @@
             </div>
         </div>
         <div class="section" style="min-height: 387px;">
-            <div class="content container-fluid">
-                <div class="section-header mb-4">
+                <div class="content container-fluid">
+                    <div class="section-header mb-4">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="section-sub-header d-flex">
+                                    <h3 class="section-title">Hoşgeldiniz Admin!</h3>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="./admin.html">Anasayfa</a>
+                                        </li>
+                                        <li class="breadcrumb-item active"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
-                        <div class="col-sm-12">
-                            <div class="section-sub-header d-flex">
-                                <h3 class="section-title">Hoşgeldiniz Admin!</h3>
-                                <ul class="breadcrumb">
-                                    <li class="breadcrumb-item">
-                                        <a href="./admin.html">Anasayfa</a>
-                                    </li>
-                                    <li class="breadcrumb-item active"></li>
-                                </ul>
+                        <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                            <div class="card myBg w-100">
+                                <div class="card-body">
+                                    <div class="card-body-content d-flex justify-content-between align-items-center">
+                                        <div class="card-info">
+                                            <h6>Öğrenci Sayısı</h6>
+                                            <h3>1000+</h3>
+                                        </div>
+                                        <div class="card-icon">
+                                            <img src="./img/students.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                            <div class="card myBg w-100">
+                                <div class="card-body">
+                                    <div class="card-body-content d-flex justify-content-between align-items-center">
+                                        <div class="card-info">
+                                            <h6>Eğitmen Sayısı</h6>
+                                            <h3>50+</h3>
+                                        </div>
+                                        <div class="card-icon">
+                                            <img src="./img/teachers.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                            <div class="card myBg w-100">
+                                <div class="card-body">
+                                    <div class="card-body-content d-flex justify-content-between align-items-center">
+                                        <div class="card-info">
+                                            <h6>Yüz Yüze Eğitim</h6>
+                                            <h3>10+</h3>
+                                        </div>
+                                        <div class="card-icon">
+                                            <img src="./img/face-to-face.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                            <div class="card myBg w-100">
+                                <div class="card-body">
+                                    <div class="card-body-content d-flex justify-content-between align-items-center">
+                                        <div class="card-info">
+                                            <h6>Online Eğitim</h6>
+                                            <h3>1000+</h3>
+                                        </div>
+                                        <div class="card-icon">
+                                            <img src="./img/videoconference.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-xl-6 d-flex">
+                            <div class="card star-students flex-fill">
+                                <div class="card-header d-flex align-items-center">
+                                    <h5>Yıldız Öğrenciler</h5>
+                                    <ul class="list-out">
+                                        <li class="star-menus">
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table
+                                            class="table star-student table-hover table-center table-borderless table-striped">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th class="text-start">ID</th>
+                                                    <th class="text-start">Name</th>
+                                                    <th class="text-start">Ortalama</th>
+                                                    <th class="text-start">Yıl</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-table">
+                                                        <div class="table-id">STD125</div>
+                                                    </td>
+                                                    <td class="text-table">
+                                                        <a href="#">
+                                                            <img class="rounded-circle"
+                                                                src="https://randomuser.me/api/portraits/men/51.jpg"
+                                                                width="25" alt="">
+                                                            Fatih Soyaltun
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-table">
+                                                        98%
+                                                    </td>
+                                                    <td class="text-table">
+                                                        2022
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-table">
+                                                        <div class="table-id">STD138</div>
+                                                    </td>
+                                                    <td class="text-table">
+                                                        <a href="#">
+                                                            <img class="rounded-circle"
+                                                                src="https://randomuser.me/api/portraits/men/46.jpg"
+                                                                width="25" alt="">
+                                                            Ayhan Dursun Şanlı
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-table">
+                                                        98%
+                                                    </td>
+                                                    <td class="text-table">
+                                                        2022
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-table">
+                                                        <div class="table-id">STD147</div>
+                                                    </td>
+                                                    <td class="text-table">
+                                                        <a href="#">
+                                                            <img class="rounded-circle"
+                                                                src="https://randomuser.me/api/portraits/men/32.jpg"
+                                                                width="25" alt="">
+                                                            Safa Yiğit
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-table">
+                                                        98%
+                                                    </td>
+                                                    <td class="text-table">
+                                                        2022
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-table">
+                                                        <div class="table-id">STD129</div>
+                                                    </td>
+                                                    <td class="text-table">
+                                                        <a href="#">
+                                                            <img class="rounded-circle"
+                                                                src="https://randomuser.me/api/portraits/women/67.jpg"
+                                                                width="25" alt="">
+                                                            Veronica Romero
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-table">
+                                                        98%
+                                                    </td>
+                                                    <td class="text-table">
+                                                        2022
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-table">
+                                                        <div class="table-id">STD151</div>
+                                                    </td>
+                                                    <td class="text-table">
+                                                        <a href="#">
+                                                            <img class="rounded-circle"
+                                                                src="https://randomuser.me/api/portraits/women/68.jpg"
+                                                                width="25" alt="">
+                                                            Susan Chambers
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-table">
+                                                        98%
+                                                    </td>
+                                                    <td class="text-table">
+                                                        2022
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 d-flex">
+                            <div class="card star-students flex-fill">
+                                <div class="card-header d-flex align-items-center">
+                                    <h5>Yaklaşan Aktiviteler</h5>
+                                    <ul class="list-out">
+                                        <li class="star-menus">
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="upcoming-activity">
+                                        <div class="activity-box">
+                                            <div class="activity-box-img">
+                                                <img src="./img/activity4.png" alt="">
+                                            </div>
+                                            <div class="activity-box-text">
+                                                <h4>Kariyer Günleri</h4>
+                                                <h5>Proje tanıtımı ve öğreciler ile tanışma.</h5>
+                                            </div>
+                                            <div class="activity-box-time">
+                                                <span>3 Gün Sonra</span>
+                                            </div>
+                                        </div>
+                                        <div class="activity-box">
+                                            <div class="activity-box-img">
+                                                <img src="./img/activity3.png" alt="">
+                                            </div>
+                                            <div class="activity-box-text">
+                                                <h4>Yapay Zeka</h4>
+                                                <h5>Yapay Zeka'ya giriş. Temel Bilgiler.</h5>
+                                            </div>
+                                            <div class="activity-box-time">
+                                                <span>1 Hafta Sonra</span>
+                                            </div>
+                                        </div>
+                                        <div class="activity-box">
+                                            <div class="activity-box-img">
+                                                <img src="./img/activity1.png" alt="">
+                                            </div>
+                                            <div class="activity-box-text">
+                                                <h4>Konferans</h4>
+                                                <h5>Staj ve Sektör Simülasyonu Hakkında</h5>
+                                            </div>
+                                            <div class="activity-box-time">
+                                                <span>2 Hafta Sonra</span>
+                                            </div>
+                                        </div>
+                                        <div class="activity-box">
+                                            <div class="activity-box-img">
+                                                <img src="./img/activity2.png" alt="">
+                                            </div>
+                                            <div class="activity-box-text">
+                                                <h4>Kariyer Günleri</h4>
+                                                <h5>Proje tanıtımı ve öğreciler ile tanışma</h5>
+                                            </div>
+                                            <div class="activity-box-time">
+                                                <span>3 Gün Önce</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card card-chart">
+                                <div class="card-header">
+                                    <div class="row align-items-center">
+                                        <div class="col-6">
+                                            <h5 class="card-title">Genel Bakış</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div id="apexcharts-area"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card card-chart">
+                                <div class="card-header">
+                                    <div class="row align-items-center">
+                                        <div class="col-6">
+                                            <h5 class="card-title">Genel Bakış</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div id="apexcharts-bar"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
-                        <div class="card myBg w-100">
-                            <div class="card-body">
-                                <div class="card-body-content d-flex justify-content-between align-items-center">
-                                    <div class="card-info">
-                                        <h6>Öğrenci Sayısı</h6>
-                                        <h3>1000+</h3>
-                                    </div>
-                                    <div class="card-icon">
-                                        <img src="./img/students.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
-                        <div class="card myBg w-100">
-                            <div class="card-body">
-                                <div class="card-body-content d-flex justify-content-between align-items-center">
-                                    <div class="card-info">
-                                        <h6>Eğitmen Sayısı</h6>
-                                        <h3>50+</h3>
-                                    </div>
-                                    <div class="card-icon">
-                                        <img src="./img/teachers.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
-                        <div class="card myBg w-100">
-                            <div class="card-body">
-                                <div class="card-body-content d-flex justify-content-between align-items-center">
-                                    <div class="card-info">
-                                        <h6>Yüz Yüze Eğitim</h6>
-                                        <h3>10+</h3>
-                                    </div>
-                                    <div class="card-icon">
-                                        <img src="./img/face-to-face.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
-                        <div class="card myBg w-100">
-                            <div class="card-body">
-                                <div class="card-body-content d-flex justify-content-between align-items-center">
-                                    <div class="card-info">
-                                        <h6>Online Eğitim</h6>
-                                        <h3>1000+</h3>
-                                    </div>
-                                    <div class="card-icon">
-                                        <img src="./img/videoconference.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-xl-6 d-flex">
-                        <div class="card star-students flex-fill">
-                            <div class="card-header d-flex align-items-center">
-                                <h5>Yıldız Öğrenciler</h5>
-                                <ul class="list-out">
-                                    <li class="star-menus">
-                                        <a href="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table star-student table-hover table-center table-borderless table-striped">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th class="text-start">ID</th>
-                                                <th class="text-start">Name</th>
-                                                <th class="text-start">Ortalama</th>
-                                                <th class="text-start">Yıl</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-table">
-                                                    <div class="table-id">STD125</div>
-                                                </td>
-                                                <td class="text-table">
-                                                    <a href="#">
-                                                        <img class="rounded-circle" src="https://randomuser.me/api/portraits/men/51.jpg" width="25" alt="">
-                                                        Fatih Soyaltun
-                                                    </a>
-                                                </td>
-                                                <td class="text-table">
-                                                    98%
-                                                </td>
-                                                <td class="text-table">
-                                                    2022
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-table">
-                                                    <div class="table-id">STD138</div>
-                                                </td>
-                                                <td class="text-table">
-                                                    <a href="#">
-                                                        <img class="rounded-circle" src="https://randomuser.me/api/portraits/men/46.jpg" width="25" alt="">
-                                                        Ayhan Dursun Şanlı
-                                                    </a>
-                                                </td>
-                                                <td class="text-table">
-                                                    98%
-                                                </td>
-                                                <td class="text-table">
-                                                    2022
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-table">
-                                                    <div class="table-id">STD147</div>
-                                                </td>
-                                                <td class="text-table">
-                                                    <a href="#">
-                                                        <img class="rounded-circle" src="https://randomuser.me/api/portraits/men/32.jpg" width="25" alt="">
-                                                        Safa Yiğit
-                                                    </a>
-                                                </td>
-                                                <td class="text-table">
-                                                    98%
-                                                </td>
-                                                <td class="text-table">
-                                                    2022
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-table">
-                                                    <div class="table-id">STD129</div>
-                                                </td>
-                                                <td class="text-table">
-                                                    <a href="#">
-                                                        <img class="rounded-circle" src="https://randomuser.me/api/portraits/women/67.jpg" width="25" alt="">
-                                                        Veronica Romero
-                                                    </a>
-                                                </td>
-                                                <td class="text-table">
-                                                    98%
-                                                </td>
-                                                <td class="text-table">
-                                                    2022
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-table">
-                                                    <div class="table-id">STD151</div>
-                                                </td>
-                                                <td class="text-table">
-                                                    <a href="#">
-                                                        <img class="rounded-circle" src="https://randomuser.me/api/portraits/women/68.jpg" width="25" alt="">
-                                                        Susan Chambers
-                                                    </a>
-                                                </td>
-                                                <td class="text-table">
-                                                    98%
-                                                </td>
-                                                <td class="text-table">
-                                                    2022
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 d-flex">
-                        <div class="card star-students flex-fill">
-                            <div class="card-header d-flex align-items-center">
-                                <h5>Yaklaşan Aktiviteler</h5>
-                                <ul class="list-out">
-                                    <li class="star-menus">
-                                        <a href="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="card-body">
-                                <div class="upcoming-activity">
-                                    <div class="activity-box">
-                                        <div class="activity-box-img">
-                                            <img src="./img/activity4.png" alt="">
-                                        </div>
-                                        <div class="activity-box-text">
-                                            <h4>Kariyer Günleri</h4>
-                                            <h5>Proje tanıtımı ve öğreciler ile tanışma.</h5>
-                                        </div>
-                                        <div class="activity-box-time">
-                                            <span>3 Gün Sonra</span>
-                                        </div>
-                                    </div>
-                                    <div class="activity-box">
-                                        <div class="activity-box-img">
-                                            <img src="./img/activity3.png" alt="">
-                                        </div>
-                                        <div class="activity-box-text">
-                                            <h4>Yapay Zeka</h4>
-                                            <h5>Yapay Zeka'ya giriş. Temel Bilgiler.</h5>
-                                        </div>
-                                        <div class="activity-box-time">
-                                            <span>1 Hafta Sonra</span>
-                                        </div>
-                                    </div>
-                                    <div class="activity-box">
-                                        <div class="activity-box-img">
-                                            <img src="./img/activity1.png" alt="">
-                                        </div>
-                                        <div class="activity-box-text">
-                                            <h4>Konferans</h4>
-                                            <h5>Staj ve Sektör Simülasyonu Hakkında</h5>
-                                        </div>
-                                        <div class="activity-box-time">
-                                            <span>2 Hafta Sonra</span>
-                                        </div>
-                                    </div>
-                                    <div class="activity-box">
-                                        <div class="activity-box-img">
-                                            <img src="./img/activity2.png" alt="">
-                                        </div>
-                                        <div class="activity-box-text">
-                                            <h4>Kariyer Günleri</h4>
-                                            <h5>Proje tanıtımı ve öğreciler ile tanışma</h5>
-                                        </div>
-                                        <div class="activity-box-time">
-                                            <span>3 Gün Önce</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-md-12 col-lg-6">
-                        <div class="card card-chart">
-                            <div class="card-header">
-                                <div class="row align-items-center">
-                                    <div class="col-6">
-                                        <h5 class="card-title">Genel Bakış</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div id="apexcharts-area"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-6">
-                        <div class="card card-chart">
-                            <div class="card-header">
-                                <div class="row align-items-center">
-                                    <div class="col-6">
-                                        <h5 class="card-title">Genel Bakış</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div id="apexcharts-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <!-- Bootstrap Js -->
@@ -519,8 +631,11 @@
     <!-- Fullcalendar -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js"></script>
     <!-- ApexCharts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.2/apexcharts.min.js" integrity="sha512-yWglrpRYz/pD0pp1cSpWmSVvcFwuuc739X4WHy7hRKB11BGijnz7fuqKRQB7Ksot42IN365OGvuOhSgUejKbmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.2/apexcharts.min.js"
+        integrity="sha512-yWglrpRYz/pD0pp1cSpWmSVvcFwuuc739X4WHy7hRKB11BGijnz7fuqKRQB7Ksot42IN365OGvuOhSgUejKbmA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Main Js -->
     <script src="./app.js"></script>
 </body>
+
 </html>

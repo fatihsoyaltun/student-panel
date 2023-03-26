@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Panel</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap Cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Main Css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="student-panel" style="min-height: 387px;">
+        <div id="content" class="content container-fluid">
+            <div class="student-panel-header">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="student-header-text">
+                            <h3 class="text-title">Öğrenci Detayları</h3>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="#">Anasayfa</a>
+                                </li>
+                                <li class="breadcrumb-item active"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card student-card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="student-info">
+                                <h4>Profil</h4>
+                            </div>
+                            <div class="student-profil">
+                                <div class="student-bg-img">
+                                    <img src="./img/profile-bg.jpg" alt="">
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="student-profil-box">
+                                            <div class="student-profil-box-img">
+                                                <img src="https://randomuser.me/api/portraits/men/18.jpg" alt="">
+                                            </div>
+                                            <div class="student-profil-box-name">
+                                                <h4>Fatih Soyaltun</h4>
+                                                <h5>FrontEnd Developer</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">TEST</div>
+                                    <div class="col-lg-4 col-md-4 d-flex align-items-center">
+                                        <div class="student-btn-group">
+                                            <button type="submit" class="btn btn-info fal-btn">Takip Et</button>
+                                            <button type="submit" class="btn btn-info mes-btn">Mesaj Gönder</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="student-details-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="student-detail">
+                                            <h4>Öğrenci Bilgileri</h4>
+                                        </div>
+                                        <div class="student-detail-content">
+                                            <div class="stu-dt-icons">
+                                                <i class="fa-regular fa-user"></i>
+                                            </div>
+                                            <div class="stu-dt-view">
+                                                <h4>Fatih Soyaltun</h4>
+                                                <h5>FrontEnd Developer</h5>
+                                            </div>
+                                        </div>
+                                        <div class="student-detail-content">
+                                            <div class="stu-dt-icons">
+                                                <i class="fa-solid fa-landmark"></i>
+                                            </div>
+                                            <div class="stu-dt-view">
+                                                <h4>Sınıf</h4>
+                                                <h5>7 Kasım</h5>
+                                            </div>
+                                        </div>
+                                        <div class="student-detail-content">
+                                            <div class="stu-dt-icons">
+                                                <i class="fa-solid fa-phone"></i>
+                                            </div>
+                                            <div class="stu-dt-view">
+                                                <h4>Telefon</h4>
+                                                <h5>+(90) 536 494 5675</h5>
+                                            </div>
+                                        </div>
+                                        <div class="student-detail-content">
+                                            <div class="stu-dt-icons">
+                                                <i class="fa-solid fa-envelope"></i>
+                                            </div>
+                                            <div class="stu-dt-view">
+                                                <h4>E-mail</h4>
+                                                <h5>soyaltunfatih@gmail.com</h5>
+                                            </div>
+                                        </div>
+                                        <div class="student-detail-content">
+                                            <div class="stu-dt-icons">
+                                                <i class="fa-solid fa-cake-candles"></i>
+                                            </div>
+                                            <div class="stu-dt-view">
+                                                <h4>Doğum Tarih</h4>
+                                                <h5>27 Eylül 1992</h5>
+                                            </div>
+                                        </div>
+                                        <div class="student-detail-content">
+                                            <div class="stu-dt-icons">
+                                                <i class="fa-solid fa-map-location-dot"></i>
+                                            </div>
+                                            <div class="stu-dt-view">
+                                                <h4>Adres</h4>
+                                                <h5>İstanbul</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="student-details-card">
+                                <div class="card mb-0">
+                                    <div class="card-body">
+                                        <div class="student-detail-card">
+                                            <div class="student-detail">
+                                                <h4>Hakkında</h4>
+                                            </div>
+                                            <div class="student-about">
+                                                <h5>Merhaba Ben Fatih Soyaltun</h5>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum culpa accusamus quibusdam illo eos similique consequuntur suscipit, consectetur iusto, tenetur sunt necessitatibus temporibus illum facilis explicabo! Accusantium itaque ullam enim!</p>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum culpa accusamus quibusdam illo eos similique consequuntur suscipit, consectetur iusto, tenetur sunt necessitatibus temporibus illum facilis explicabo! Accusantium itaque ullam enim!</p>
+                                            </div>
+                                        </div>
+                                        <div class="student-detail-card">
+                                            <div class="student-detail">
+                                                <h4>Eğitim</h4>
+                                            </div>
+                                            <div class="student-about">
+                                                <div class="edu-detail">
+                                                    <h6>2008-2009</h6>
+                                                    <p>Lorem ipsum dolor sit amet.</p>
+                                                </div>
+                                                <div class="edu-detail">
+                                                    <h6>2010-2012</h6>
+                                                    <p>Lorem ipsum dolor sit amet.</p>
+                                                </div>
+                                                <div class="edu-detail">
+                                                    <h6>2012-2015</h6>
+                                                    <p>Lorem ipsum dolor sit amet.</p>
+                                                </div>
+                                                <div class="edu-detail">
+                                                    <h6>2015-2019</h6>
+                                                    <p>Lorem ipsum dolor sit amet.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-12 col-lg-6">
+                    <div class="card card-chart">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <h5 class="card-title">Genel Bakış</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="apexcharts-student"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- Fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js"></script>
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.2/apexcharts.min.js"
+        integrity="sha512-yWglrpRYz/pD0pp1cSpWmSVvcFwuuc739X4WHy7hRKB11BGijnz7fuqKRQB7Ksot42IN365OGvuOhSgUejKbmA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Main Js -->
+    <script src="./app.js"></script>
+</body>
+
+</html>
