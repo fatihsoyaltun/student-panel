@@ -444,7 +444,33 @@ img
                 .card-body
                     padding: 8px
 
-//! Student Dashboard Css
+.stdDash
+    .card-body
+        position: relative
+        padding: 25px !important
+        .prog-bar-content
+            .barHead
+                display: flex
+                align-items: center
+                justify-content: space-between
+            .progress
+                height: 8px !important
+                .bg-html
+                    background-color: #7149C6
+                .bg-css
+                    background-color: #FC2947
+                .bg-bootstrap
+                    background-color: #FE6244
+                .bg-jQuery
+                    background-color: #FFDEB9
+                .bg-js
+                    background-color: #16FF00
+                .bg-py
+                    background-color: #9DF1DF
+                .bg-dj
+                    background-color: #A555EC
+
+//! Student Profil Css
 .student-panel
     margin-left: 259px
     padding-top: 60px
@@ -521,8 +547,8 @@ img
                     .student-btn-group
                         width: 100%
                         display: flex
-                        display: -webkit-box
-                        justify-content: center
+                        // display: -webkit-box
+                        justify-content: end
                         .btn-info
                             min-width: 127px
                             font-size: 16px
@@ -584,7 +610,6 @@ img
                                         font-size: 14px
                                         font-weight: 400
                                         color: #828282
-        .card-chart
 
 
 
@@ -698,7 +723,7 @@ img
         display: block !important
     .sidebar
         display: none
-    .section
+    .section,.student-panel
         width: 100%
         margin-left: 0 !important
         .col-sm-6
