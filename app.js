@@ -195,6 +195,58 @@ var x = setInterval(function() {
 
 //* AYHAN APP JS--->
 
+//* teacher.html
+  //* Anket başarı durumu
+  var options = {
+    series: [{
+      name: "Desktops",
+      data: [90, 85, 80, 75, 80, 90, 100, 90, 85]
+  }],
+    chart: {
+    height: 350,
+    type: 'line',
+    zoom: {
+      enabled: false
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    curve: 'straight'
+  },
+  title: {
+    text: 'Product Trends by Month',
+    align: 'left'
+  },
+  grid: {
+    row: {
+      colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+      opacity: 0.5
+    },
+  },
+  xaxis: {
+    categories: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağust.', 'Eylül'],
+  }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#teacher_success_average"), options);
+  chart.render();
+
+  const teacher_data = options.series[0].data;
+  const sum = teacher_data.reduce((total, num) => total + num);
+  const average = sum / teacher_data.length;
+  const teacher_average = average.toFixed(2);
+
+  const teacher_average_score = document.querySelector(".teacher_average_score");
+  teacher_average_score.innerHTML = teacher_average;
+  
+
+
+
+
+
+
 //* müfredat
 var options = {
   series: [25],
