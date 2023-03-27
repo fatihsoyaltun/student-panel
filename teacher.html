@@ -1,28 +1,1138 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Panel</title>
-    <!-- Google Fonts -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <!-- Bootstrap Cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <!-- Font Awesome Cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Main Css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
+    <div class="main-wrapper">
+        <div class="header">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <!-- Off Canvas -->
+                    <div class="off-canvas d-none">
+                        <button class="btn" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-bars"></i></button>
+                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+                            tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Admin Menu</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="sidebar-menu">
+                                    <ul>
+                                        <li class="menu-title">
+                                            <span>Admin Dashboard</span>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-graduation-cap"></i>
+                                                <span>Öğrenci</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Öğrenci Listesi</a></li>
+                                                <li><a href="./student.html">Öğrenci Görüntüle</a></li>
+                                                <li><a href="#">Öğrenci Ekle</a></li>
+                                                <li><a href="#">Öğrenci Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                                <span>Eğitmen</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Eğitmen Listesi</a></li>
+                                                <li><a href="#">Eğitmen Görüntüle</a></li>
+                                                <li><a href="#">Eğitmen Ekle</a></li>
+                                                <li><a href="#">Eğitmen Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-building"></i>
+                                                <span>Sınıflar</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Sınıf Listesi</a></li>
+                                                <li><a href="#">Sınıfları Görüntüle</a></li>
+                                                <li><a href="#">Sınıf Ekle</a></li>
+                                                <li><a href="#">Sınıf Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-book-reader"></i>
+                                                <span>Müfredat</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Müfredat Görüntüle</a></li>
+                                                <li><a href="#">Müfredat Düzenle</a></li>
+                                                <li><a href="#">Quizler</a></li>
+                                                <li><a href="#">Quizleri Düzenle</a></li>
+                                                <li><a href="#">Projeler </a></li>
+                                                <li><a href="#">Projeleri Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-newspaper"></i>
+                                                <span>Bloglar</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Tüm Bloglar</a></li>
+                                                <li><a href="#">Blog Ekle</a></li>
+                                                <li><a href="#">Blog Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Off Canvas -->
+                    <a href="#" class="navbar-brand"><img src="https://neosyazilim.com/static/img/neosLogo2.png"
+                            width="100" alt=""></a>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <div class="right d-flex align-items-center">
+                        <div class="dropdown">
+                            <a class="myBtn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-regular fa-bell"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <div class="drop-top">
+                                    <span class="drop-top-title">Bildirimler</span>
+                                    <a class="clear-not" href="#">Tümünü Sil</a>
+                                </div>
+                                <div class="drop-center">
+                                    <ul class="drop-center-list">
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="drop-bottom">
+                                    <a class="drp-btm-text" href="#">Tüm Bildirimleri Aç</a>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="user-menu">
+                            <div class="dropdown">
+                                <a class="user-img-hero dropdown-toggle d-flex" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="user-img">
+                                        <img class="rounded-circle" src="https://randomuser.me/api/portraits/men/47.jpg"
+                                            width="31" alt="">
+                                        <div class="user-text">
+                                            <h6>Fatih Soyaltun</h6>
+                                            <p class="text-muted mb-0">Admin</p>
+                                        </div>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Profil</a></li>
+                                    <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
+                                    <li><a class="dropdown-item" href="#">Çıkış</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="sidebar offcanvas-body">
+            <div class="sidebar-menu">
+                <ul>
+                    <li class="menu-title">
+                        <span>Admin Dashboard</span>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Öğrenci</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="#">Öğrenci Listesi</a></li>
+                            <li><a href="./student.html">Öğrenci Görüntüle</a></li>
+                            <li><a href="#">Öğrenci Ekle</a></li>
+                            <li><a href="#">Öğrenci Düzenle</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Eğitmen</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="#">Eğitmen Listesi</a></li>
+                            <li><a href="#">Eğitmen Görüntüle</a></li>
+                            <li><a href="#">Eğitmen Ekle</a></li>
+                            <li><a href="#">Eğitmen Düzenle</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-building"></i>
+                            <span>Sınıflar</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="#">Sınıf Listesi</a></li>
+                            <li><a href="#">Sınıfları Görüntüle</a></li>
+                            <li><a href="#">Sınıf Ekle</a></li>
+                            <li><a href="#">Sınıf Düzenle</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-book-reader"></i>
+                            <span>Müfredat</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="#">Müfredat Görüntüle</a></li>
+                            <li><a href="#">Müfredat Düzenle</a></li>
+                            <li><a href="#">Quizler</a></li>
+                            <li><a href="#">Quizleri Düzenle</a></li>
+                            <li><a href="#">Projeler </a></li>
+                            <li><a href="#">Projeleri Düzenle</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Bloglar</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="#">Tüm Bloglar</a></li>
+                            <li><a href="#">Blog Ekle</a></li>
+                            <li><a href="#">Blog Düzenle</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section" style="min-height: 387px;">
+            <div class="content container-fluid">
+                <header class="teacher_header mt-5">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="teacher_header_head_left d-flex justify-content-start">
+                                    <h4>Eğitmen Ayrıntıları</h4>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="teacher_header_head_right d-flex justify-content-end">
+                                    <h4>Eğitmenler /</h4>
+                                    <h4>Eğitmen Ayrıntıları</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="teacher_head_bottom mt-5">
+                                    <div class="teacher_header_head_bottom_image"></div>
+                                </div>
+                                <div class="teacher_head_bottom_profile">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="teacher_head_bottom_profile_summary_area_left">
+                                                <img src="/ayhan_img/avatar-18.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="teacher_head_bottom_profile_summary_area_center">
+                                                <h5 class="teacher_name">Ayşe Aslan </h5>
+                                                <h6 class="teacher_job">Front-end Dev</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-7 d-flex align-items-center justify-content-between">
+                                            <div class="teacher_head_bottom_profile_summary_area_right_one">
+                                                <div class=" teacher_head_bottom_profile_summary_area_right_social_media">
+                                                    <button class="btn btn-primary social_media_button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
+                                                        aria-expanded="false" aria-controls="collapseWidthExample">
+                                                        <i class="fa-solid fa-user-group"></i> Sosyal Medya <i
+                                                            class="fa-solid fa-arrow-right fa-beat-fade"></i>
+                                                    </button>
+                                                    <div>
+                                                        <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                                                            <div class="card card-body social_media_body">
+                                                                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                                                <a href=""><i class="fa-brands fa-github"></i></a>
+                                                                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                                                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="teacher_head_bottom_profile_summary_area_right_two">
+                                                <button><i class="fa-solid fa-plus"></i> Takip et</button>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal" data-bs-whatever="@mdo"><i class="fa-regular fa-envelope"></i> Mesaj Gönder</button>
+                                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Yeni Mesaj</h1>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                    aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form>
+                                                                    <div class="mb-3">
+                                                                        <label for="recipient-name"
+                                                                            class="col-form-label"><i class="fa-solid fa-user-tie"></i> Alıcı:</label>
+                                                                        <input type="text" class="form-control" id="recipient-name">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="message-text"
+                                                                            class="col-form-label"><i class="fa-regular fa-envelope"></i> Mesaj:</label>
+                                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-bs-dismiss="modal"><i class="fa-solid fa-power-off"></i> Kapat</button>
+                                                                <button type="button" class="btn btn-primary"><i class="fa-regular fa-paper-plane fa-fade"></i> Gönder</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <section class="teacher_about mt-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="teacher_about_left">
+                                    <h5>Kişisel Detaylar : </h5>
+                                    <ul>
+                                        <li>
+                                            <h6><i class="fa-regular fa-user"></i> İsim :</h6>
+                                            <h6 class="teacher_about_left_name mb-3">Ayşe Aslan</h6>
+                                        </li>
+                                        <li>
+                                            <h6><i class="fa-regular fa-building"></i> Uzmanlık :</h6>
+                                            <h6 class="teacher_about_left_profession mb-3">Front-end web development</h6>
+                                        </li>
+                                        <li>
+                                            <h6><i class="fa-solid fa-phone-volume"></i> Mobil :</h6>
+                                            <h6 class="teacher_about_left_mobil mb-3">0 563-999-99-99</h6>
+                                        </li>
+                                        <li>
+                                            <h6><i class="fa-regular fa-envelope"></i> E-posta :</h6>
+                                            <h6 class="teacher_about_left_mail mb-3">ayseaslan@gmail.com</h6>
+                                        </li>
+                                        <li>
+                                            <h6><i class="fa-regular fa-calendar-days"></i> Doğum Tarihi :</h6>
+                                            <h6 class="teacher_about_left_birth mb-3">01 Temmuz 1989</h6>
+                                        </li>
+                                        <li>
+                                            <h6><i class="fa-solid fa-italic"></i> Dil :</h6>
+                                            <h6 class="teacher_about_left_language mb-3">Türkçe, İngilizce</h6>
+                                        </li>
+                                        <li>
+                                            <h6><i class="fa-solid fa-location-dot"></i> Adres :</h6>
+                                            <h6 class="teacher_about_left_adress">Neos Yazılım Akademi, Bakırköy/İSTANBUL</h6>
+                                        </li>
+                                    </ul>
+            
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="teacher_about_right">
+                                    <h5>Hakkında :</h5>
+                                    <h6>Merhaba Ben <span class="teacher_about_right_name">Ayşe Aslan</span></h6>
+                                    <p class="teacher_about_right_aboutme">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae laboriosam ipsum accusamus
+                                        error labore illum corrupti enim atque eveniet itaque. Ullam officia maiores iure maxime
+                                        sunt sequi, incidunt beatae eius adipisci at placeat perspiciatis dignissimos voluptate
+                                        iusto earum soluta. Cum excepturi vitae minima laborum doloremque quos adipisci enim animi
+                                        quibusdam! <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque odio
+                                        repudiandae aut repellendus at doloremque molestiae voluptas, sunt voluptates minima, labore
+                                        autem earum laboriosam adipisci aliquid velit? Impedit obcaecati dolorem voluptate? Quidem
+                                        accusantium beatae libero voluptates ea excepturi eaque reiciendis?
+                                    </p>
+                                    <h5>Eğitim :</h5>
+                                    <ul>
+                                        <li>
+                                            <h6 class="teacher_about_right_period">2000 - 2005</h6>
+                                            <h6 class="teacher_about_right_school">Ordu Anadolu Lisesi</h6>
+                                        </li>
+                                        <li>
+                                            <h6 class="teacher_about_right_period">2005 - 2010</h6>
+                                            <h6 class="teacher_about_right_school">Tekirdağ Namık Kemal Üniversitesi Bilgisayar
+                                                Programcılığı</h6>
+                                        </li>
+                                        <li>
+                                            <h6 class="teacher_about_right_period">2010 - 2015</h6>
+                                            <h6 class="teacher_about_right_school">Boğaziçi Üniversitesi Yazılım Mühendisliği Lisans
+                                            </h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+            
+            
+                </section>
+                <section class="teacher_analyces">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="cards mt-5 d-flex justify-content-around">
+                                    <div class="card p-3">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h6>Toplam Sınıflar</h6>
+                                                <h5>4</h5>
+                                            </div>
+                                            <div class="col-4 d-flex align-items-center">
+                                                <img src="/ayhan_img/laptop-icon-01.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card p-3">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h6>Toplam Öğrenci</h6>
+                                                <h5>40</h5>
+                                            </div>
+                                            <div class="col-4 d-flex align-items-center">
+                                                <img src="/ayhan_img/student-icon-01.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card p-3">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h6>Toplam Ders</h6>
+                                                <h5>30 / 20</h5>
+                                            </div>
+                                            <div class="col-4 d-flex align-items-center">
+                                                <img src="/ayhan_img/lesson-icon-02.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="upcoming_lesson card p-4 mt-3">
+                                            <h5>Yaklaşan Ders</h5>
+                                            <h6 class="time_left small"> Gelecek Derse Kalan Süreniz : <br> <span
+                                                    class="time_left_for_class fw-bold"></span></h6>
+                                            <hr>
+                                            <div class="upcoming_lesson_line">
+                                                <h6 class="class_name mt-3">7 Kasım Grubu</h6>
+                                                <h6 class="lesson_number">16. Ders</h6>
+                                                <div class="upcoming_lesson_line_date d-flex">
+                                                    <span class="me-3"><i class="fa-solid fa-calendar-days"></i> 01.04.2023</span>
+                                                    <span><i class="fa-regular fa-clock"></i> 19:00 - 21:00</span>
+                                                </div>
+                                            </div>
+                                            <div class="upcoming_lesson_line">
+                                                <h6 class="class_name mt-3">14 Ekim Grubu</h6>
+                                                <h6 class="lesson_number">24. Ders</h6>
+                                                <div class="upcoming_lesson_line_date d-flex">
+                                                    <span class="me-3"><i class="fa-solid fa-calendar-days"></i> 03.04.2023</span>
+                                                    <span><i class="fa-regular fa-clock"></i> 16:00 - 18:00</span>
+                                                </div>
+                                            </div>
+                                            <div class="upcoming_lesson_line">
+                                                <h6 class="class_name mt-3">10 Aralık Grubu</h6>
+                                                <h6 class="lesson_number">37. Ders</h6>
+                                                <div class="upcoming_lesson_line_date d-flex">
+                                                    <span class="me-3"><i class="fa-solid fa-calendar-days"></i> 03.04.2023</span>
+                                                    <span><i class="fa-regular fa-clock"></i> 16:00 - 18:00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="teacher_analyce_survey_score mt-5">
+                                    <h5 class="text-center">Başarı Yüzdeniz: % <span class="average_score fw-bold"></span></h5>
+                                    <canvas class="mt-4" id="myChart" style="width:100%;max-width:600px"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="teacher_my_classes mt-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <h5 class="ms-1 mb-3"><i class="fa-solid fa-laptop"></i> Sınıflarım</h5>
+                                <div class="accordion accordion-flush my_classes" id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                                aria-controls="flush-collapseOne">
+                                                <h6 class="class_name">7 Kasım Grubu</h6>
+                                                <h6 class="class_average"> <span class="ort">Sınıf Ortalaması :</span>
+                                                    80<span>%</span></h6>
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <ol class="person">
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/60.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>İsmet Kaçar</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>95</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/43.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Rıza Sezgin</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>92</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/74.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Recep Bakkal</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>89</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/28.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Serdar Yılmaz</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>87</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/88.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Sadık Turan</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>84</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/81.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Aziz Serdar</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>80</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/women/31.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Asuman Dinçer</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>75</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/women/34.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Arzu Deniz Yılmazer</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>60</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/58.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Orhan Yanık</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>50</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Osman Sakin</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>40</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                                aria-controls="flush-collapseTwo">
+                                                <h6 class="class_name">14 Ekim Grubu</h6>
+                                                <h6 class="class_average"> <span class="ort">Sınıf Ortalaması :</span>
+                                                    74<span>%</span></h6>
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <ol class="person">
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/60.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>İsmet Kaçar</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>95</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/43.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Rıza Sezgin</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>92</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/74.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Recep Bakkal</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>89</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/28.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Serdar Yılmaz</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>87</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/88.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Sadık Turan</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>84</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/81.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Aziz Serdar</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>80</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/women/31.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Asuman Dinçer</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>75</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/women/34.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Arzu Deniz Yılmazer</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>60</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/58.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Orhan Yanık</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>50</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Osman Sakin</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>40</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                                aria-controls="flush-collapseThree">
+                                                <h6 class="class_name">10 Aralık Grubu</h6>
+                                                <h6 class="class_average"> <span class="ort">Sınıf Ortalaması :</span>
+                                                    92<span>%</span></h6>
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <ol class="person">
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/60.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>İsmet Kaçar</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>95</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/43.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Rıza Sezgin</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>92</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/74.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Recep Bakkal</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>89</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/28.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Serdar Yılmaz</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>87</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/88.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Sadık Turan</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>84</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/81.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Aziz Serdar</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>80</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/women/31.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Asuman Dinçer</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>75</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/women/34.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Arzu Deniz Yılmazer</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>60</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/58.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Orhan Yanık</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>50</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="">
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Osman Sakin</h6>
+                                                                </div>
+                                                                <div class="col-5 d-flex align-items-center">
+                                                                    <h6>Ortalama : <span>40</span></h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
 
 
+    <!-- google charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-<!-- Bootstrap Js -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<!-- Main Js -->
-<script src="./app.js"></script>
+    <!-- bs js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- app js -->
+    <script src="/app.js"></script>
 </body>
+
 </html>

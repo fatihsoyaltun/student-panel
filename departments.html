@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <!-- Off Canvas -->
+                    <div class="off-canvas d-none">
+                        <button class="btn" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-bars"></i></button>
+                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+                            tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Admin Menu</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="sidebar-menu">
+                                    <ul>
+                                        <li class="menu-title">
+                                            <span>Admin Dashboard</span>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-graduation-cap"></i>
+                                                <span>Öğrenci</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Öğrenci Listesi</a></li>
+                                                <li><a href="./student.html">Öğrenci Görüntüle</a></li>
+                                                <li><a href="#">Öğrenci Ekle</a></li>
+                                                <li><a href="#">Öğrenci Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                                <span>Eğitmen</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Eğitmen Listesi</a></li>
+                                                <li><a href="#">Eğitmen Görüntüle</a></li>
+                                                <li><a href="#">Eğitmen Ekle</a></li>
+                                                <li><a href="#">Eğitmen Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-building"></i>
+                                                <span>Sınıflar</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Sınıf Listesi</a></li>
+                                                <li><a href="#">Sınıfları Görüntüle</a></li>
+                                                <li><a href="#">Sınıf Ekle</a></li>
+                                                <li><a href="#">Sınıf Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-book-reader"></i>
+                                                <span>Müfredat</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Müfredat Görüntüle</a></li>
+                                                <li><a href="#">Müfredat Düzenle</a></li>
+                                                <li><a href="#">Quizler</a></li>
+                                                <li><a href="#">Quizleri Düzenle</a></li>
+                                                <li><a href="#">Projeler </a></li>
+                                                <li><a href="#">Projeleri Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-newspaper"></i>
+                                                <span>Bloglar</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Tüm Bloglar</a></li>
+                                                <li><a href="#">Blog Ekle</a></li>
+                                                <li><a href="#">Blog Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Off Canvas -->
+                    <a href="#" class="navbar-brand"><img src="https://neosyazilim.com/static/img/neosLogo2.png"
+                            width="100" alt=""></a>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <div class="right d-flex align-items-center">
+                        <div class="dropdown">
+                            <a class="myBtn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-regular fa-bell"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <div class="drop-top">
+                                    <span class="drop-top-title">Bildirimler</span>
+                                    <a class="clear-not" href="#">Tümünü Sil</a>
+                                </div>
+                                <div class="drop-center">
+                                    <ul class="drop-center-list">
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="drop-bottom">
+                                    <a class="drp-btm-text" href="#">Tüm Bildirimleri Aç</a>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="user-menu">
+                            <div class="dropdown">
+                                <a class="user-img-hero dropdown-toggle d-flex" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="user-img">
+                                        <img class="rounded-circle" src="https://randomuser.me/api/portraits/men/47.jpg"
+                                            width="31" alt="">
+                                        <div class="user-text">
+                                            <h6>Fatih Soyaltun</h6>
+                                            <p class="text-muted mb-0">Admin</p>
+                                        </div>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Profil</a></li>
+                                    <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
+                                    <li><a class="dropdown-item" href="#">Çıkış</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="sidebar offcanvas-body">
+            <div class="sidebar-menu">
+                <ul>
+                    <li class="menu-title">
+                        <span>Admin Dashboard</span>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Öğrenci</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="#">Öğrenci Listesi</a></li>
+                            <li><a href="./student.html">Öğrenci Görüntüle</a></li>
+                            <li><a href="#">Öğrenci Ekle</a></li>
+                            <li><a href="#">Öğrenci Düzenle</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Eğitmen</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="#">Eğitmen Listesi</a></li>
+                            <li><a href="#">Eğitmen Görüntüle</a></li>
+                            <li><a href="#">Eğitmen Ekle</a></li>
+                            <li><a href="#">Eğitmen Düzenle</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-building"></i>
+                            <span>Sınıflar</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="#">Sınıf Listesi</a></li>
+                            <li><a href="#">Sınıfları Görüntüle</a></li>
+                            <li><a href="#">Sınıf Ekle</a></li>
+                            <li><a href="#">Sınıf Düzenle</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-book-reader"></i>
+                            <span>Müfredat</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="#">Müfredat Görüntüle</a></li>
+                            <li><a href="#">Müfredat Düzenle</a></li>
+                            <li><a href="#">Quizler</a></li>
+                            <li><a href="#">Quizleri Düzenle</a></li>
+                            <li><a href="#">Projeler </a></li>
+                            <li><a href="#">Projeleri Düzenle</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Bloglar</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="#">Tüm Bloglar</a></li>
+                            <li><a href="#">Blog Ekle</a></li>
+                            <li><a href="#">Blog Düzenle</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section" style="min-height: 387px;">
+            <div class="content container-fluid">
+                <header class="departments_header mt-5">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="departments_header_head_left d-flex justify-content-start">
+                                    <h4>Sınıflar</h4>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="departments_header_head_right d-flex justify-content-end">
+                                    <h4>Gösterge Paneli /</h4>
+                                    <h4>Sınıflar</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="departments_search_field">
+                                    <form class="departments_search_field_form mt-5" action="">
+                                        <input class="departments_search_field_form_identity" type="text" placeholder="Şubeye Göre Ara...">
+                                        <input class="departments_search_field_form_name" type="text" placeholder="İsme Göre Ara...">
+                                        <input class="departments_search_field_form_date" type="text" placeholder="Yıla Göre Ara...">
+                                        <button type="button">Ara</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <section class="departments mt-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="departments_heading mt-3">
+                                    <h4 class="fw-bold">Bölümler</h4>
+                                    <div class="departments_buttons">
+                                        <button>İndir <i class="fa-solid fa-download"></i></button>
+                                        <button>Ekle <i class="fa-solid fa-circle-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <h6>Sayfada
+                                    <span>
+                                        <select class="number_of_elements" name="" id="">
+                                            <option value="">10</option>
+                                            <option value="">20</option>
+                                            <option value="">50</option>
+                                            <option value="">100</option>
+                                        </select>
+                                    </span>
+                                    Satır Göster
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="departments_heading_role mt-3">
+                            <div class="row">
+                                <div class="col-2">
+                                    <h5 class="departments_heading_office">
+                                        Şube <i class="fa-solid fa-arrow-right-arrow-left fa-rotate-90"></i>
+                                    </h5>
+                                </div>
+                                <div class="col-2">
+                                    <h5 class="departments_heading_type">
+                                        Eğitim Türü <i class="fa-solid fa-arrow-right-arrow-left fa-rotate-90"></i>
+                                    </h5>
+                                </div>
+                                <div class="col-2">
+                                    <h5 class="departments_heading_name">
+                                        Bölüm İsmi <i class="fa-solid fa-arrow-right-arrow-left fa-rotate-90"></i>
+                                    </h5>
+                                </div>
+                                <div class="col-2">
+                                    <h5 class="departments_heading_instructor">
+                                        Eğitmen <i class="fa-solid fa-arrow-right-arrow-left fa-rotate-90"></i>
+                                    </h5>
+                                </div>
+                                <div class="col-2">
+                                    <h5 class="departments_heading_starting_date">
+                                        Başlama Tarihi <i class="fa-solid fa-arrow-right-arrow-left fa-rotate-90"></i>
+                                    </h5>
+                                </div>
+                                <div class="col-1">
+                                    <h5 class="departments_heading_number_of_students">
+                                        Öğrenci Sayısı <i class="fa-solid fa-arrow-right-arrow-left fa-rotate-90"></i>
+                                    </h5>
+                                </div>
+                                <div class="col-1">
+                                    <h5 class="departments_heading_action">
+                                        Aksiyon <i class="fa-solid fa-arrow-right-arrow-left fa-rotate-90"></i>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="departments_details_role mt-3">
+                            <div class="row">
+                                <div class="col-2">
+                                    <h6 class="departments_details_office">
+                                        İstanbul Şube
+                                    </h6>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="departments_details_type">
+                                        Yüzyüze
+                                    </h6>
+                                </div>
+                                <div class="col-2">
+                                    <a href="" class="departments_details_name">
+                                        7 Kasım Grubu
+                                    </a>
+                                </div>
+                                <div class="col-2">
+                                    <a href="/teacher.html" class="departments_details_instructor">
+                                        Mehmet Çoban
+                                    </a>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="departments_details_starting_date">
+                                        07.11.2022
+                                    </h6>
+                                </div>
+                                <div class="col-1">
+                                    <h6 class="departments_details_number_of_students">
+                                        10
+                                    </h6>
+                                </div>
+                                <div class="col-1">
+                                    <div class="departments_details_action">
+                                        <a href=""><i class="fa-solid fa-eye me-3"></i></a>
+                                        <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <h6 class="departments_details_office">
+                                        Ankara Şube
+                                    </h6>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="departments_details_type">
+                                        Yüzyüze
+                                    </h6>
+                                </div>
+                                <div class="col-2">
+                                    <a href="" class="departments_details_name">
+                                        11 Kasım Grubu
+                                    </a>
+                                </div>
+                                <div class="col-2">
+                                    <a href="/teacher.html" class="departments_details_instructor">
+                                        Sadık Taşçı
+                                    </a>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="departments_details_starting_date">
+                                        11.11.2022
+                                    </h6>
+                                </div>
+                                <div class="col-1">
+                                    <h6 class="departments_details_number_of_students">
+                                        9
+                                    </h6>
+                                </div>
+                                <div class="col-1">
+                                    <div class="departments_details_action">
+                                        <a href=""><i class="fa-solid fa-eye me-3"></i></a>
+                                        <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <h6 class="departments_details_office">
+                                        İzmir Şube
+                                    </h6>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="departments_details_type">
+                                        Yüzyüze
+                                    </h6>
+                                </div>
+                                <div class="col-2">
+                                    <a href="" class="departments_details_name">
+                                        20 Kasım Grubu
+                                    </a>
+                                </div>
+                                <div class="col-2">
+                                    <a href="/teacher.html" class="departments_details_instructor">
+                                        Aynur Şahin
+                                    </a>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="departments_details_starting_date">
+                                        20.11.2022
+                                    </h6>
+                                </div>
+                                <div class="col-1">
+                                    <h6 class="departments_details_number_of_students">
+                                        12
+                                    </h6>
+                                </div>
+                                <div class="col-1">
+                                    <div class="departments_details_action">
+                                        <a href=""><i class="fa-solid fa-eye me-3"></i></a>
+                                        <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <h6 class="departments_details_office">
+                                        Bursa Şube
+                                    </h6>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="departments_details_type">
+                                        Online
+                                    </h6>
+                                </div>
+                                <div class="col-2">
+                                    <a href="" class="departments_details_name">
+                                        1 Aralık Grubu
+                                    </a>
+                                </div>
+                                <div class="col-2">
+                                    <a href="/teacher.html" class="departments_details_instructor">
+                                        Süleyman Koşucu
+                                    </a>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="departments_details_starting_date">
+                                        01.12.2022
+                                    </h6>
+                                </div>
+                                <div class="col-1">
+                                    <h6 class="departments_details_number_of_students">
+                                        15
+                                    </h6>
+                                </div>
+                                <div class="col-1">
+                                    <div class="departments_details_action">
+                                        <a href=""><i class="fa-solid fa-eye me-3"></i></a>
+                                        <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <h6 class="departments_details_office">
+                                        İstanbul Şube
+                                    </h6>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="departments_details_type">
+                                        Online
+                                    </h6>
+                                </div>
+                                <div class="col-2">
+                                    <a href="" class="departments_details_name">
+                                        12 Aralık Grubu
+                                    </a>
+                                </div>
+                                <div class="col-2">
+                                    <a href="/teacher.html" class="departments_details_instructor">
+                                        Mehmet Çoban
+                                    </a>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="departments_details_starting_date">
+                                        07.11.2022
+                                    </h6>
+                                </div>
+                                <div class="col-1">
+                                    <h6 class="departments_details_number_of_students">
+                                        13
+                                    </h6>
+                                </div>
+                                <div class="col-1">
+                                    <div class="departments_details_action">
+                                        <a href=""><i class="fa-solid fa-eye me-3"></i></a>
+                                        <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <h6 class="departments_details_office">
+                                        Stuttgart Şube
+                                    </h6>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="departments_details_type">
+                                        Online
+                                    </h6>
+                                </div>
+                                <div class="col-2">
+                                    <a href="" class="departments_details_name">
+                                        01 Ocak Grubu
+                                    </a>
+                                </div>
+                                <div class="col-2">
+                                    <a href="/teacher.html" class="departments_details_instructor">
+                                        Lütfü Yıldız
+                                    </a>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="departments_details_starting_date">
+                                        01.01.2023
+                                    </h6>
+                                </div>
+                                <div class="col-1">
+                                    <h6 class="departments_details_number_of_students">
+                                        10
+                                    </h6>
+                                </div>
+                                <div class="col-1">
+                                    <div class="departments_details_action">
+                                        <a href=""><i class="fa-solid fa-eye me-3"></i></a>
+                                        <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 ms-auto">
+                                    <nav class="mt-3" aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item"><a class="page-link" href="#">Geri</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">İleri</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- google charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <!-- bs js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- app js -->
+    <script src="/app.js"></script>
+</body>
+
+</html>

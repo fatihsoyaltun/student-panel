@@ -4,6 +4,12 @@ $color1:#1B262C
 $color2:#0F4C75
 $color3:#3282B8
 $color4:#BBE1FA
+$color5:#222831
+$color6:#393E46
+$color7:#00ADB5
+$color8:#EEEEEE
+$backroundimg:"/ayhan_img/neos_teacher_header_img.jfif"
+
 
 body
     font-family: 'Roboto', sans-serif
@@ -16,17 +22,17 @@ a
     text-decoration: none
 img
     max-width: 100%
+    vertical-align: middle
 
 
 
 
-//! Admin Css (fatih)
+//! Admin Dashboard (fatih)
 .main-wrapper
     width: 100%
     height: 100vh
     min-height: 100vh
     .header
-        background-color: #fff
         border-bottom: 1px solid #f3f3f4
         left: 0
         position: fixed
@@ -34,83 +40,1031 @@ img
         top: 0
         z-index: 1001
         height: 60px
-        .header-left
-            float: left
-            height: 60px
-            padding: 0 20px
-            position: relative
-            width: 259px
-            z-index: 1
-            transition: all 0.2s ease-in-out
-            display: flex
-            align-items: center
-            background: #FFFFFF
-            box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.03)
-            .logo
-                display: inline-block
-                line-height: 60px
-                img
-                    max-height: 40px
-                    width: auto
-            .logo-small
-                display: none
-        .top-nav-search
-            float: left
-            margin-left: 55px
-            form
-                margin-top: 10px
-                position: relative
+        .navbar
+            background: $color8
+            margin: 0
+            padding: 0
+            box-sizing: border-box
+            .form-control
+                background: $color8
                 width: 300px
-                .form-control
-                    background: #F5F5F5
-                    border: 1px solid #D7D9DE
-                    border-radius: 8px
-                    color: #6c757d
-                    height: 40px
-                    padding: 10px 15px 10px 40px
-                    &:focus-visible
-                        box-shadow: none
-                .btn
-                    background-color: transparent
-                    border-color: transparent
-                    color: rgba(17, 17, 17, 0.32)
-                    min-height: 40px
-                    padding: 7px 15px
-                    position: absolute
-                    left: 0
-                    top: 0
-        .nav
-            display: flex
-            flex-wrap: wrap
-            padding-left: 0
-            margin-bottom: 0
-            list-style: none
-            .user-menu
-                float: right
-                margin: 0
-                position: relative
-                z-index: 99
-                padding-right: 15px
-                align-items: center
-                li
-                    a
-                        color: #a0a0a0
-                        font-size: 14px
-                        line-height: 58px
-            .header-nav-list
+                color: $color5
+                &:focus
+                    box-shadow: none
+            .myBtn
                 width: 40px
                 height: 40px
-                background: #f7f7fa
+                background: $color8
                 border-radius: 50px
                 padding: 0
                 display: flex
-                -webkit-box-align: center
                 align-items: center
                 justify-content: center
+                i
+                    color: #000
             .dropdown-toggle
                 &::after
                     display: none
-//!Student Css (safa)
+            .dropdown-menu
+                    min-width: 200px
+                    padding: 0
+                    visibility: hidden
+                    opacity: 0
+                    display: block
+                    transform: translate(-300px, 0px)
+                    .dropdown-item
+                        padding: 7px 15px
+                        display: flex
+                        align-items: center
+                        padding: 10px 15px
+                    .drop-top
+                        border-bottom: 1px solid #eee
+                        text-align: center
+                        font-size: 14px
+                        height: 40px
+                        line-height: 40px
+                        padding-left: 15px
+                        padding-right: 15px
+                        .drop-top-title
+                            color: #333
+                            display: block
+                            float: left
+                            font-size: 14px
+                        .clear-not
+                            color: #18aefa
+                            float: right
+                            font-size: 12px
+                            text-transform: uppercase
+                    .drop-center
+                        height: 290px
+                        width: 350px
+                        overflow-y: auto
+                        position: relative
+                        .drop-center-list
+                            list-style: none
+                            margin: 0
+                            padding: 0
+                            .dcl-message
+                                margin: 0
+                                border-bottom: 1px solid #f5f5f5
+                                &:hover
+                                    background: $color8
+                                a
+                                    display: block
+                                    padding: 10px 15px
+                                    border-radius: 2px
+                                    .avatar
+                                        width: 2.5rem
+                                        height: 2.5rem
+                                        margin-right: 10px
+                                        position: relative
+                                        display: inline-block
+                                        img
+                                            width: 100%
+                                            height: 100%
+                                            object-fit: cover
+                                    .media-body
+                                        .media-details
+                                            color: #989c9e
+                                            margin-bottom: 0
+                                            font-size: 14px
+                                            .media-titUser
+                                                color: #333
+                                                font-size: 14px
+                                        .media-time-m
+                                            font-size: 12px
+                                            line-height: 1.35
+                                            color: #bdbdbd
+                    .drop-bottom
+                        border-top: 1px solid #eee
+                        font-size: 14px
+                        height: 40px
+                        line-height: 40px
+                        padding-left: 15px
+                        padding-right: 15px
+                        text-align: center
+                        .drp-btm-text
+                            color: #18aefa
+                            text-align: center
+                            font-size: 12px
+                            text-transform: uppercase
+            .show
+                visibility: visible
+                opacity: 1
+                margin-top: 0
+                transition: all 0.5s ease
+                -moz-transition: all 0.5s ease
+                -o-transition: all 0.5s ease
+                -ms-transition: all 0.5s ease
+                -webkit-transition: all 0.5s ease
+            .user-menu
+                .user-img-hero
+                    color: #a0a0a0
+                    font-size: 14px
+                    line-height: 58px
+                    padding: 0 15px
+                    height: 60px
+                    .user-img
+                        margin-right: 3px
+                        position: relative
+                        display: inline-flex
+                        -webkit-box-align: center
+                        -ms-flex-align: center
+                        align-items: center
+                        img
+                            width: 40px
+                            height: 40px
+                            border: 2px solid #E6E6E6
+                            padding: 2px
+                        .user-text
+                            margin: 0px 8px
+                            h6
+                                font-size: 14px
+                                font-weight: 500
+                                color: #1d1d1d
+                                margin-bottom: 3px
+                            p
+                                line-height: 1.2
+                                font-size: 12px
+                                font-weight: 500
+                                color: $color7 !important
+                .dropdown-menu
+                    min-width: 200px
+                    padding: 0
+                    visibility: hidden
+                    opacity: 0
+                    display: block
+                    transform: translate(-15px, 0px)
+                    .dropdown-item
+                        padding: 7px 15px
+                        display: flex
+                        align-items: center
+                        padding: 10px 15px
+                        border-bottom: 1px solid $color8
+                .show
+                    visibility: visible
+                    opacity: 1
+                    margin-top: 0
+                    transition: all 0.5s ease
+                    -moz-transition: all 0.5s ease
+                    -o-transition: all 0.5s ease
+                    -ms-transition: all 0.5s ease
+                    -webkit-transition: all 0.5s ease
+    .sidebar
+        bottom: 0
+        left: 0
+        margin-top: 0
+        position: fixed
+        top: 60px
+        transition: all 0.2s ease-in-out 0s
+        width: 259px
+        z-index: 1000
+        background: $color8
+        overflow: scroll
+    .offcanvas-body
+        .sidebar-menu
+            padding: 15px
+            ul
+                font-size: 15px
+                list-style-type: none
+                margin: 0
+                padding: 0
+                position: relative
+                li
+                    margin-bottom: 3px
+                    position: relative
+                    a
+                        align-items: center
+                        display: flex
+                        justify-content: flex-start
+                        padding: 12px 15px
+                        position: relative
+                        transition: all 0.2s ease-in-out 0s
+                        color: #6f6f6f
+                        font-size: 16px
+                        height: auto
+                        &:hover
+                            background-color: #fff
+                            color: #3D5EE1
+                            margin: 0px -15px
+                            padding-left: 30px
+                        i
+                            display: inline-block
+                            font-size: 16px
+                            line-height: 24px
+                            text-align: left
+                            vertical-align: middle
+                            width: 20px
+                            transition: all 0.2s ease-in-out 0s
+                        span
+                            transition: all 0.2s ease-in-out 0s
+                            display: inline-block
+                            margin-left: 10px
+                            white-space: nowrap
+                        .menu-arrow
+                            -webkit-transition: -webkit-transform 0.15s
+                            -o-transition: -o-transform 0.15s
+                            transition: transform .15s
+                            position: absolute
+                            right: 15px
+                            display: inline-block
+                            font-family: "Font Awesome 5 Free"
+                            font-weight: 900
+                            text-rendering: auto
+                            line-height: 40px
+                            font-size: 16px
+                            -webkit-font-smoothing: antialiased
+                            -moz-osx-font-smoothing: grayscale
+                            -webkit-transform: translate(0, 0)
+                            -ms-transform: translate(0, 0)
+                            -o-transform: translate(0, 0)
+                            transform: translate(0, 0)
+                            line-height: 18px
+                            top: 14px
+                            &::before
+                                content: "\f105"
+                .menu-title
+                    color: #9e9e9e
+                    display: flex
+                    font-size: 14px
+                    opacity: 1
+                    padding: 5px 15px
+                    white-space: nowrap
+                .submenu
+                    .submenu-content
+                        display: none
+                        margin-left: 15px
+                        li
+                            a
+                                display: block
+                                font-size: 15px
+                                padding: 7px 10px 7px 30px
+                                position: relative
+                                margin-bottom: 2px
+                                &:hover
+                                    color: #fff
+                                    background: #3D5EE1
+                                    border-radius: 6px
+    .section
+        margin-left: 259px
+        padding-top: 60px
+        position: relative
+        transition: all 0.4s ease
+        background: #fff
+        .content
+            padding: 1.8rem 1.8rem 0
+            .section-title
+                font-size: 22px
+                font-weight: 500
+                color: #2C323F
+                margin-bottom: 5px
+            .breadcrumb
+                background-color: transparent
+                color: #6c757d
+                font-size: 1rem
+                font-weight: 500
+                margin-bottom: 0
+                padding: 0
+                margin-left: auto
+                a
+                    color: #333
+            .myBg
+                background-color: $color8
+                border: 0
+                border-radius: 10px
+                box-shadow: 0px 0px 31px 3px rgba(44, 50, 63, 0.02)
+                .card-body
+                    position: relative
+                    padding: 25px
+                    .card-info
+                        h6
+                            margin: 0px
+                            font-weight: 400
+                            font-size: 14px
+                            color: #808191
+                            margin-bottom: 5px
+                        h3
+                            font-size: 22px
+                            font-weight: 600
+                            color: #000
+                            margin-bottom: 0
+                    .card-icon
+                        background-color: #EDF4FF
+                        border-radius: 8px
+                        font-size: 25px
+                        width: 60px
+                        height: 60px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+            .star-students
+                background: #ffffff
+                // box-shadow: 0px 0px 31px rgba(44, 50, 63, 0.02)
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px
+                border-radius: 15px
+                border: 0
+                .card-header
+                    border-radius: 15px 15px 0 0
+                    border-bottom: 0
+                    padding-bottom: 10px
+                    background: transparent
+                    h5
+                        font-size: 18px
+                        margin-bottom: 0
+                    .list-out
+                        margin-left: auto
+                        .star-menus
+                            margin-right: 0
+                            a
+                                width: 25px
+                                height: 28px
+                                background: #F4F4F4
+                                display: flex
+                                border-radius: 6px
+                                align-items: center
+                                justify-content: center
+                                color: #000
+                                font-size: 14px
+                .card-body
+                    position: relative
+                    padding: 25px
+                    .table
+                            color: #333
+                            max-width: 100%
+                            margin-bottom: 0
+                            width: 100%
+                            white-space: nowrap
+                            a
+                                color: #333
+                    .activity-box
+                        margin-bottom: 38px
+                        display: flex
+                        align-items: center
+                        .activity-box-img
+                                background: #EDF4FF
+                                width: 40px
+                                height: 40px
+                                border-radius: 6px
+                                margin-right: 12px
+                                display: flex
+                                align-items: center
+                        .activity-box-text
+                            h4
+                                color: #2C323F
+                                font-weight: 500
+                                font-size: 14px
+                            h5
+                                color: #808191
+                                font-weight: 400
+                                font-size: 12px
+                                margin-bottom: 0
+                        .activity-box-time
+                            margin-left: auto
+                            span
+                                background: #FFF9ED
+                                color: #808191
+                                font-weight: 400
+                                font-size: 11px
+                                padding: 5px 9px
+                                border-radius: 6px
+            .card-chart
+                background: #FFFFFF
+                //box-shadow: 0px 0px 31px rgba(44, 50, 63, 0.02)
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px
+                border-radius: 15px
+                border: 0
+                .card-header
+                    border-radius: 15px 15px 0 0
+                    border-bottom: 0
+                    padding-bottom: 10px
+                    background: transparent
+                    .card-title
+                        font-size: 18px !important
+                        margin-bottom: 0
+                .card-body
+                    padding: 8px
+
+//! Student Dashboard Css
+.student-panel
+    margin-left: 259px
+    padding-top: 60px
+    position: relative
+    transition: all 0.4s ease
+    .content
+        padding: 1.8rem 1.8rem 0
+        .student-panel-header
+            margin-bottom: 1.875rem
+            .student-header-text
+                display: -webkit-box
+                display: -ms-flexbox
+                display: flex
+                -webkit-box-align: center
+                -ms-flex-align: center
+                align-items: center
+                .text-title
+                    font-size: 22px
+                    font-weight: 500
+                    color: #2C323F
+                    margin-bottom: 5px
+                .breadcrumb
+                    background-color: transparent
+                    color: #6c757d
+                    font-size: 1rem
+                    font-weight: 500
+                    margin-bottom: 0
+                    padding: 0
+                    margin-left: auto
+                    a
+                        color: #333
+        .student-card
+            border: 0
+            border-radius: 10px
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px
+            // box-shadow: 0px 0px 31px 3px rgb(44 50 63 / 2%)
+            margin-bottom: 1.875rem
+            .card-body
+                position: relative
+                padding: 25px
+                .student-info
+                    margin-bottom: 25px
+                .student-profil
+                    background: #F7F7FA
+                    border-radius: 10px
+                    margin-bottom: 40px
+                    .student-bg-img
+                        img
+                            width: 100%
+                            border-radius: 10px
+                    .student-profil-box
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        .student-profil-box-img
+                            margin-right: 20px
+                            position: relative
+                            top: -30px
+                            img
+                                border-radius: 50%
+                                border: 9px solid #fff
+                                width: 141px
+                        .student-profil-box-name
+                            h4
+                                font-size: 18px
+                                font-weight: 500
+                                color: #000
+                                margin-bottom: 3px
+                            h5
+                                font-size: 14px
+                                font-weight: 500
+                                color: #9E9E9E
+                                margin-bottom: 0
+                    .student-btn-group
+                        width: 100%
+                        display: flex
+                        display: -webkit-box
+                        justify-content: center
+                        .btn-info
+                            min-width: 127px
+                            font-size: 16px
+                            font-weight: 500
+                            color: #fff
+                            border-radius: 10px
+                            padding: 9px 15px
+                        .fal-btn
+                            margin-right: 15px
+                            background: $color2
+                            border: 1px solid $color2
+                .student-details-card
+                    .card
+                        border: 2px solid rgba(220, 220, 220, 0.3)
+                        border-radius: 10px
+                        box-shadow: none
+                        .card-body
+                            position: relative
+                            padding: 25px
+                            .student-detail
+                                h4
+                                    font-size: 20px
+                                    font-weight: 500
+                                    color: #000000
+                                    margin-bottom: 25px
+                            .student-detail-content
+                                display: flex
+                                margin-bottom: 20px
+                                .stu-dt-icons
+                                    i
+                                        color: $color3
+                                .stu-dt-view
+                                    margin-left: 10px
+                                    h4
+                                        color: #000
+                                        font-size: 16px
+                                        font-weight: 500
+                                        margin-bottom: 0
+                                    h5
+                                        color: #808080
+                                        font-size: 14px
+                                        font-weight: 500
+                                        margin-bottom: 0
+                            .student-about
+                                h5
+                                    font-size: 18px
+                                    font-weight: 500
+                                    margin-bottom: 20px
+                                p
+                                    font-size: 14px
+                                    font-weight: 400
+                                    color: #828282
+                                .edu-detail
+                                    h6
+                                        font-size: 13px
+                                        font-weight: 400
+                                        color: #000000
+                                    p
+                                        font-size: 14px
+                                        font-weight: 400
+                                        color: #828282
+        .card-chart
 
 
-//! Teacher Css (ayhan)
+
+
+        .list-header
+            margin-bottom: 1.875rem
+            .list-sub-header
+                display: flex
+                align-items: center
+                .list-title
+                    font-size: 22px
+                    font-weight: 500
+                    color: #2C323F
+                    margin-bottom: 5px
+                .breadcrumb
+                    background-color: transparent
+                    color: #6c757d
+                    font-size: 1rem
+                    font-weight: 500
+                    margin-bottom: 0
+                    padding: 0
+                    margin-left: auto
+                    a
+                        color: #333
+        .list-group-form
+            .form-group
+                margin-bottom: 1.25rem
+        .card
+            border: 2px solid rgba(220, 220, 220, 0.3)
+            border-radius: 10px
+            box-shadow: none
+            .card-body
+                position: relative
+                padding: 25px
+                .list-table-header
+                    margin-bottom: 1.875rem
+                    .list-title
+                        font-size: 22px
+                        font-weight: 500
+                        color: #2C323F
+                        margin-bottom: 5px
+                .table-responsive
+                    white-space: nowrap
+                    .text-table
+                        a
+                            color: #333
+
+                .myForm
+                    position: relative
+                    margin-bottom: 40px
+                    label
+                        font-size: 13px
+                        color: #ABABAB
+                        font-weight: 500
+                        position: absolute
+                        top: -10px
+                        left: 10px
+                        background: #fff
+                        margin-bottom: 0
+                        padding: 0px 5px
+                        z-index: 99
+                    .form-control
+                        border: 1px solid #ddd
+                        box-shadow: none
+                        color: #333
+                        font-size: 15px
+                        height: 45px
+                .upFile
+                    label
+                        font-size: 15px
+                        font-weight: 500
+                    .upload
+                        .file-up
+                            position: relative
+                            overflow: hidden
+                        .img-file-btn
+                            background: #444
+                            border: 1px solid #444
+                            border-radius: 8px
+                            color: #fff
+                            padding: 6px 19px
+                            font-size: 14px
+                            font-weight: 500
+                            cursor: pointer
+                            input[type="file"]
+                                position: absolute
+                                top: 0
+                                right: 0
+                                min-width: 100%
+                                min-height: 100%
+                                font-size: 100px
+                                text-align: right
+                                filter: alpha(opacity=0)
+                                opacity: 0
+                                outline: none
+                                background: white
+                                cursor: inherit
+                                display: block
+                .submit-btn
+                    .btn
+                        min-width: 160px
+                        border-radius: 10px
+                        background: #3D5EE1
+                        border: 1px solid #3D5EE1
+
+
+
+
+@media screen and (max-width: 768px)
+    .off-canvas
+        display: block !important
+    .sidebar
+        display: none
+    .section
+        width: 100%
+        margin-left: 0 !important
+        .col-sm-6
+            margin-bottom: 1rem
+        .card
+            margin-bottom: 1rem
+
+
+
+@media screen and (max-width: 576px)
+    .header
+        .navbar
+            .user-text
+                display: none
+            .off-canvas
+                .show
+                    width: 70%
+            form
+                display: none !important
+            
+    .off-canvas
+        display: block !important
+    .sidebar
+        display: none
+    .section
+        .row>*
+            padding-left: 0 !important
+            padding-right: 0 !important
+
+
+
+
+
+
+//* AYHAN CSS-->
+
+//* teacher.html (ayhan)
+.teacher_header
+    .teacher_head_bottom
+        .teacher_header_head_bottom_image
+        // background-color: gray
+        background: linear-gradient(rgba(33, 45, 70, 0.7), rgba(33,45,70,.5)) ,  url($backroundimg)
+        background-position: center
+        background-size: cover
+        // background-size: contain
+        background-repeat: no-repeat
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+        width: 100%
+        height: 300px
+    .teacher_head_bottom_profile
+        // height: 100px
+        padding: 1.5rem
+        background-color: white
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px
+        .teacher_head_bottom_profile_summary_area_left
+            position: relative
+            img
+                width: 150px
+                border-radius: 50%
+                border: 5px solid white
+                position: absolute
+                left: 50px
+                top: -90px
+        .teacher_head_bottom_profile_summary_area_center
+            display: flex
+            flex-direction: column
+            gap: 0px
+            justify-content: center
+            .teacher_name
+                font-weight: bold
+        .teacher_head_bottom_profile_summary_area_right_one
+            .teacher_head_bottom_profile_summary_area_right_social_media
+                display: flex
+                align-items: center
+                justify-content: start
+                .social_media_button
+                    font-size: 14px
+                    font-weight: bold
+                    height: 40px
+                    background-color: white
+                    color: black
+                    border: none
+                .social_media_body
+                    height: 40px
+                    border: none
+                    display: flex
+                    flex-direction: row
+                    gap: 1rem
+                    align-items: center
+                    a
+                        text-decoration: none
+                        color: black
+                        i
+                            font-size: 24px
+                            transition: .2s
+                            &:hover
+                                scale: 1.2
+                        .fa-linkedin
+                            color: #0072b1
+                        .fa-github
+                            color: #171515
+                        .fa-instagram
+                            color: #C13584
+                        .fa-facebook
+                            color: #3b5998
+        .teacher_head_bottom_profile_summary_area_right_two
+            display: flex
+            align-items: center
+            button
+                margin-right: .2rem
+                background-color: #3b5998
+                color: white
+                padding: .5rem
+                border: none
+                border-radius: 10px
+                &:hover
+                    background-color: #283a60
+.teacher_about
+    .teacher_about_left
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        border-radius: 10px
+        background-color: white
+        padding: 1.5rem
+        h5
+            font-weight: bold
+            margin-bottom: 1.5rem
+        ul
+            margin: 0
+            padding: 0
+            li
+                list-style-type: none
+                h6
+                    margin-bottom: .2rem
+                    font-weight: bold
+                    i
+                        color: #3b5998
+                        font-size: 14px
+                        margin-right: .5rem
+                .teacher_about_left_name, 
+                .teacher_about_left_profession,
+                .teacher_about_left_mobil,
+                .teacher_about_left_mail,
+                .teacher_about_left_birth,
+                .teacher_about_left_language,
+                .teacher_about_left_adress
+                    margin-left: 1.5rem
+                    font-weight: lighter
+                    color: #a3a3a3
+    .teacher_about_right
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        background-color: white
+        padding: 1.5rem
+        border-radius: 10px
+        h5
+            font-weight: bold
+            margin-bottom: 1.5rem
+        .teacher_about_right_aboutme
+            color: #a3a3a3
+        ul
+            margin: 0
+            padding: 0
+            li
+                list-style-type: none 
+                h6
+                    font-size: 14px
+                .teacher_about_right_school
+                    font-size: 16px
+                    color: #a3a3a3
+.teacher_analyces
+    .cards
+        .card
+            h6
+                color: #a3a3a3
+                font-size: small
+            h5 
+                font-weight: bold
+    .teacher_analyce_survey_score
+        padding: 1rem
+        border-radius: 10px
+        background-color: white
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+    .upcoming_lesson
+        overflow: scroll
+        height: 250px
+        position: relative
+        .time_left
+            position: absolute
+            right: 50px
+            top: 20px
+            color: #a3a3a3
+        .upcoming_lesson_line
+            .class_name
+                font-weight: bold
+            .lesson_number
+                font-size: 14px
+            span
+                font-size: small
+                color: #a3a3a3
+.teacher_my_classes
+    .my_classes
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        .accordion-item 
+            .accordion-body
+                .person
+                    li
+                        padding: .5rem
+                        &:hover
+                            background-color: #faf8f8
+                            border-radius: 10px
+                        a
+                            text-decoration: none
+                            color: black
+                            img
+                                width: 35px
+                                border-radius: 50%
+                            h6
+                                margin-bottom: 0
+            .accordion-header
+                .accordion-button
+                    position: relative
+                    .class_name
+                        margin-bottom: 0
+                        font-weight: bold
+                    .class_average
+                        margin-bottom: 0
+                        position: absolute
+                        right: 100px
+                        font-weight: bold
+                        .ort
+                            font-weight: lighter
+
+
+//* departments.html (ayhan)
+.departments_header
+    .departments_search_field
+        .departments_search_field_form
+            display: flex
+            justify-content: space-between
+            input
+                padding: .3rem
+                width: 25%
+                border-radius: 10px
+                border: 1px solid gray
+            button
+                width: 10%
+                background-color: #3b5998
+                color: white
+                padding: .5rem
+                border: none
+                border-radius: 10px
+                &:hover
+                    background-color: #283a60
+.departments
+    .container
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        padding: 1.5rem
+        background-color: white
+        border-radius: 10px
+    .departments_heading
+        display: flex
+        justify-content: space-between
+        .departments_buttons
+            button
+                width: 100px
+                background-color: #3b5998
+                color: white
+                padding: .5rem
+                border: none
+                border-radius: 10px
+                &:hover
+                    background-color: #283a60
+.number_of_elements
+    padding: .5rem
+    border-radius: 5px
+.departments_heading_role
+    .col-2,
+    .col-1
+        display: flex
+        align-items: center
+    h5
+        margin-bottom: 0
+        font-weight: bold
+        font-size: 18px
+        cursor: pointer
+        i
+            color: #a3a3a3
+            font-size: 12px
+.departments_details_role
+    .col-2,
+    .col-1
+        display: flex
+        align-items: center
+        padding: 1rem
+        h6
+            margin-bottom: 0
+        a
+            text-decoration: none
+            font-weight: bold
+            color: black
+            &:hover
+                color: blue
+
+
+
+//! classes.html //
+
+//* classes.html (ayhan)
+.classes_header
+    .classes_search_field
+        .classes_search_field_form
+            display: flex
+            justify-content: end
+            input
+                padding: .3rem
+                width: 25%
+                border-radius: 10px
+                border: 1px solid gray
+            button
+                width: 10%
+                background-color: #3b5998
+                color: white
+                padding: .5rem
+                border: none
+                border-radius: 10px
+                &:hover
+                    background-color: #283a60
+.classes
+    .classes_information_card
+        background-color: white
+        display: flex
+        flex-direction: column
+        gap: 2rem
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 
+        border-radius: 10px
+        padding: 1rem
+    .classes_bar
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 
+        background-color: white
+        border-radius: 10px
+        display: flex
+        flex-direction: column
+        align-items: center
+    .classes_participation_rate
+        padding: 1rem             
+.classes_topics_section
+    .classes_topics
+        ol
+            margin: 0
+            li
+                display: flex
+                justify-content: space-between
+                margin-top: .5rem
+                a
+                    text-decoration: none
+                    color: gray
+                .classes_buttons
+                    button
+                        width: 40px
+                        border: none
+                        border-radius: 5px
+                    .classed_processed_button
+                        background-color: green
+                        color: white
+                    .classed_not_processed
+                        background-color: crimson
+                        color: white
