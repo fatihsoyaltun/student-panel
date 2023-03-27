@@ -8,6 +8,7 @@ $color5:#222831
 $color6:#393E46
 $color7:#00ADB5
 $color8:#EEEEEE
+$backroundimg:"/ayhan_img/neos_teacher_header_img.jfif"
 
 
 body
@@ -726,3 +727,344 @@ img
         .row>*
             padding-left: 0 !important
             padding-right: 0 !important
+
+
+
+
+
+
+//* AYHAN CSS-->
+
+//* teacher.html (ayhan)
+.teacher_header
+    .teacher_head_bottom
+        .teacher_header_head_bottom_image
+        // background-color: gray
+        background: linear-gradient(rgba(33, 45, 70, 0.7), rgba(33,45,70,.5)) ,  url($backroundimg)
+        background-position: center
+        background-size: cover
+        // background-size: contain
+        background-repeat: no-repeat
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+        width: 100%
+        height: 300px
+    .teacher_head_bottom_profile
+        // height: 100px
+        padding: 1.5rem
+        background-color: white
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px
+        .teacher_head_bottom_profile_summary_area_left
+            position: relative
+            img
+                width: 150px
+                border-radius: 50%
+                border: 5px solid white
+                position: absolute
+                left: 50px
+                top: -90px
+        .teacher_head_bottom_profile_summary_area_center
+            display: flex
+            flex-direction: column
+            gap: 0px
+            justify-content: center
+            .teacher_name
+                font-weight: bold
+        .teacher_head_bottom_profile_summary_area_right_one
+            .teacher_head_bottom_profile_summary_area_right_social_media
+                display: flex
+                align-items: center
+                justify-content: start
+                .social_media_button
+                    font-size: 14px
+                    font-weight: bold
+                    height: 40px
+                    background-color: white
+                    color: black
+                    border: none
+                .social_media_body
+                    height: 40px
+                    border: none
+                    display: flex
+                    flex-direction: row
+                    gap: 1rem
+                    align-items: center
+                    a
+                        text-decoration: none
+                        color: black
+                        i
+                            font-size: 24px
+                            transition: .2s
+                            &:hover
+                                scale: 1.2
+                        .fa-linkedin
+                            color: #0072b1
+                        .fa-github
+                            color: #171515
+                        .fa-instagram
+                            color: #C13584
+                        .fa-facebook
+                            color: #3b5998
+        .teacher_head_bottom_profile_summary_area_right_two
+            display: flex
+            align-items: center
+            button
+                margin-right: .2rem
+                background-color: #3b5998
+                color: white
+                padding: .5rem
+                border: none
+                border-radius: 10px
+                &:hover
+                    background-color: #283a60
+.teacher_about
+    .teacher_about_left
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        border-radius: 10px
+        background-color: white
+        padding: 1.5rem
+        h5
+            font-weight: bold
+            margin-bottom: 1.5rem
+        ul
+            margin: 0
+            padding: 0
+            li
+                list-style-type: none
+                h6
+                    margin-bottom: .2rem
+                    font-weight: bold
+                    i
+                        color: #3b5998
+                        font-size: 14px
+                        margin-right: .5rem
+                .teacher_about_left_name, 
+                .teacher_about_left_profession,
+                .teacher_about_left_mobil,
+                .teacher_about_left_mail,
+                .teacher_about_left_birth,
+                .teacher_about_left_language,
+                .teacher_about_left_adress
+                    margin-left: 1.5rem
+                    font-weight: lighter
+                    color: #a3a3a3
+    .teacher_about_right
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        background-color: white
+        padding: 1.5rem
+        border-radius: 10px
+        h5
+            font-weight: bold
+            margin-bottom: 1.5rem
+        .teacher_about_right_aboutme
+            color: #a3a3a3
+        ul
+            margin: 0
+            padding: 0
+            li
+                list-style-type: none 
+                h6
+                    font-size: 14px
+                .teacher_about_right_school
+                    font-size: 16px
+                    color: #a3a3a3
+.teacher_analyces
+    .cards
+        .card
+            h6
+                color: #a3a3a3
+                font-size: small
+            h5 
+                font-weight: bold
+    .teacher_analyce_survey_score
+        padding: 1rem
+        border-radius: 10px
+        background-color: white
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+    .upcoming_lesson
+        overflow: scroll
+        height: 250px
+        position: relative
+        .time_left
+            position: absolute
+            right: 50px
+            top: 20px
+            color: #a3a3a3
+        .upcoming_lesson_line
+            .class_name
+                font-weight: bold
+            .lesson_number
+                font-size: 14px
+            span
+                font-size: small
+                color: #a3a3a3
+.teacher_my_classes
+    .my_classes
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        .accordion-item 
+            .accordion-body
+                .person
+                    li
+                        padding: .5rem
+                        &:hover
+                            background-color: #faf8f8
+                            border-radius: 10px
+                        a
+                            text-decoration: none
+                            color: black
+                            img
+                                width: 35px
+                                border-radius: 50%
+                            h6
+                                margin-bottom: 0
+            .accordion-header
+                .accordion-button
+                    position: relative
+                    .class_name
+                        margin-bottom: 0
+                        font-weight: bold
+                    .class_average
+                        margin-bottom: 0
+                        position: absolute
+                        right: 100px
+                        font-weight: bold
+                        .ort
+                            font-weight: lighter
+
+
+//* departments.html (ayhan)
+.departments_header
+    .departments_search_field
+        .departments_search_field_form
+            display: flex
+            justify-content: space-between
+            input
+                padding: .3rem
+                width: 25%
+                border-radius: 10px
+                border: 1px solid gray
+            button
+                width: 10%
+                background-color: #3b5998
+                color: white
+                padding: .5rem
+                border: none
+                border-radius: 10px
+                &:hover
+                    background-color: #283a60
+.departments
+    .container
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        padding: 1.5rem
+        background-color: white
+        border-radius: 10px
+    .departments_heading
+        display: flex
+        justify-content: space-between
+        .departments_buttons
+            button
+                width: 100px
+                background-color: #3b5998
+                color: white
+                padding: .5rem
+                border: none
+                border-radius: 10px
+                &:hover
+                    background-color: #283a60
+.number_of_elements
+    padding: .5rem
+    border-radius: 5px
+.departments_heading_role
+    .col-2,
+    .col-1
+        display: flex
+        align-items: center
+    h5
+        margin-bottom: 0
+        font-weight: bold
+        font-size: 18px
+        cursor: pointer
+        i
+            color: #a3a3a3
+            font-size: 12px
+.departments_details_role
+    .col-2,
+    .col-1
+        display: flex
+        align-items: center
+        padding: 1rem
+        h6
+            margin-bottom: 0
+        a
+            text-decoration: none
+            font-weight: bold
+            color: black
+            &:hover
+                color: blue
+
+
+
+//! classes.html //
+
+//* classes.html (ayhan)
+.classes_header
+    .classes_search_field
+        .classes_search_field_form
+            display: flex
+            justify-content: end
+            input
+                padding: .3rem
+                width: 25%
+                border-radius: 10px
+                border: 1px solid gray
+            button
+                width: 10%
+                background-color: #3b5998
+                color: white
+                padding: .5rem
+                border: none
+                border-radius: 10px
+                &:hover
+                    background-color: #283a60
+.classes
+    .classes_information_card
+        background-color: white
+        display: flex
+        flex-direction: column
+        gap: 2rem
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 
+        border-radius: 10px
+        padding: 1rem
+    .classes_bar
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 
+        background-color: white
+        border-radius: 10px
+        display: flex
+        flex-direction: column
+        align-items: center
+    .classes_participation_rate
+        padding: 1rem             
+.classes_topics_section
+    .classes_topics
+        ol
+            margin: 0
+            li
+                display: flex
+                justify-content: space-between
+                margin-top: .5rem
+                a
+                    text-decoration: none
+                    color: gray
+                .classes_buttons
+                    button
+                        width: 40px
+                        border: none
+                        border-radius: 5px
+                    .classed_processed_button
+                        background-color: green
+                        color: white
+                    .classed_not_processed
+                        background-color: crimson
+                        color: white

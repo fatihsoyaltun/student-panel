@@ -809,4 +809,393 @@ img {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+}
+.teacher_header .teacher_head_bottom {
+  background: linear-gradient(rgba(33, 45, 70, 0.7), rgba(33, 45, 70, 0.5)), url("/ayhan_img/neos_teacher_header_img.jfif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 300px;
+}
+.teacher_header .teacher_head_bottom_profile {
+  padding: 1.5rem;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_left {
+  position: relative;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_left img {
+  width: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  position: absolute;
+  left: 50px;
+  top: -90px;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_center {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_center .teacher_name {
+  font-weight: bold;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_right_one .teacher_head_bottom_profile_summary_area_right_social_media {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_right_one .teacher_head_bottom_profile_summary_area_right_social_media .social_media_button {
+  font-size: 14px;
+  font-weight: bold;
+  height: 40px;
+  background-color: white;
+  color: black;
+  border: none;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_right_one .teacher_head_bottom_profile_summary_area_right_social_media .social_media_body {
+  height: 40px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_right_one .teacher_head_bottom_profile_summary_area_right_social_media .social_media_body a {
+  text-decoration: none;
+  color: black;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_right_one .teacher_head_bottom_profile_summary_area_right_social_media .social_media_body a i {
+  font-size: 24px;
+  transition: 0.2s;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_right_one .teacher_head_bottom_profile_summary_area_right_social_media .social_media_body a i:hover {
+  scale: 1.2;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_right_one .teacher_head_bottom_profile_summary_area_right_social_media .social_media_body a .fa-linkedin {
+  color: #0072b1;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_right_one .teacher_head_bottom_profile_summary_area_right_social_media .social_media_body a .fa-github {
+  color: #171515;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_right_one .teacher_head_bottom_profile_summary_area_right_social_media .social_media_body a .fa-instagram {
+  color: #C13584;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_right_one .teacher_head_bottom_profile_summary_area_right_social_media .social_media_body a .fa-facebook {
+  color: #3b5998;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_right_two {
+  display: flex;
+  align-items: center;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_right_two button {
+  margin-right: 0.2rem;
+  background-color: #3b5998;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_right_two button:hover {
+  background-color: #283a60;
+}
+
+.teacher_about .teacher_about_left {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  background-color: white;
+  padding: 1.5rem;
+}
+.teacher_about .teacher_about_left h5 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.teacher_about .teacher_about_left ul {
+  margin: 0;
+  padding: 0;
+}
+.teacher_about .teacher_about_left ul li {
+  list-style-type: none;
+}
+.teacher_about .teacher_about_left ul li h6 {
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+}
+.teacher_about .teacher_about_left ul li h6 i {
+  color: #3b5998;
+  font-size: 14px;
+  margin-right: 0.5rem;
+}
+.teacher_about .teacher_about_left ul li .teacher_about_left_name,
+.teacher_about .teacher_about_left ul li .teacher_about_left_profession,
+.teacher_about .teacher_about_left ul li .teacher_about_left_mobil,
+.teacher_about .teacher_about_left ul li .teacher_about_left_mail,
+.teacher_about .teacher_about_left ul li .teacher_about_left_birth,
+.teacher_about .teacher_about_left ul li .teacher_about_left_language,
+.teacher_about .teacher_about_left ul li .teacher_about_left_adress {
+  margin-left: 1.5rem;
+  font-weight: lighter;
+  color: #a3a3a3;
+}
+.teacher_about .teacher_about_right {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+.teacher_about .teacher_about_right h5 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.teacher_about .teacher_about_right .teacher_about_right_aboutme {
+  color: #a3a3a3;
+}
+.teacher_about .teacher_about_right ul {
+  margin: 0;
+  padding: 0;
+}
+.teacher_about .teacher_about_right ul li {
+  list-style-type: none;
+}
+.teacher_about .teacher_about_right ul li h6 {
+  font-size: 14px;
+}
+.teacher_about .teacher_about_right ul li .teacher_about_right_school {
+  font-size: 16px;
+  color: #a3a3a3;
+}
+
+.teacher_analyces .cards .card h6 {
+  color: #a3a3a3;
+  font-size: small;
+}
+.teacher_analyces .cards .card h5 {
+  font-weight: bold;
+}
+.teacher_analyces .teacher_analyce_survey_score {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.teacher_analyces .upcoming_lesson {
+  overflow: scroll;
+  height: 250px;
+  position: relative;
+}
+.teacher_analyces .upcoming_lesson .time_left {
+  position: absolute;
+  right: 50px;
+  top: 20px;
+  color: #a3a3a3;
+}
+.teacher_analyces .upcoming_lesson .upcoming_lesson_line .class_name {
+  font-weight: bold;
+}
+.teacher_analyces .upcoming_lesson .upcoming_lesson_line .lesson_number {
+  font-size: 14px;
+}
+.teacher_analyces .upcoming_lesson .upcoming_lesson_line span {
+  font-size: small;
+  color: #a3a3a3;
+}
+
+.teacher_my_classes .my_classes {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.teacher_my_classes .my_classes .accordion-item .accordion-body .person li {
+  padding: 0.5rem;
+}
+.teacher_my_classes .my_classes .accordion-item .accordion-body .person li:hover {
+  background-color: #faf8f8;
+  border-radius: 10px;
+}
+.teacher_my_classes .my_classes .accordion-item .accordion-body .person li a {
+  text-decoration: none;
+  color: black;
+}
+.teacher_my_classes .my_classes .accordion-item .accordion-body .person li a img {
+  width: 35px;
+  border-radius: 50%;
+}
+.teacher_my_classes .my_classes .accordion-item .accordion-body .person li a h6 {
+  margin-bottom: 0;
+}
+.teacher_my_classes .my_classes .accordion-item .accordion-header .accordion-button {
+  position: relative;
+}
+.teacher_my_classes .my_classes .accordion-item .accordion-header .accordion-button .class_name {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.teacher_my_classes .my_classes .accordion-item .accordion-header .accordion-button .class_average {
+  margin-bottom: 0;
+  position: absolute;
+  right: 100px;
+  font-weight: bold;
+}
+.teacher_my_classes .my_classes .accordion-item .accordion-header .accordion-button .class_average .ort {
+  font-weight: lighter;
+}
+
+.departments_header .departments_search_field .departments_search_field_form {
+  display: flex;
+  justify-content: space-between;
+}
+.departments_header .departments_search_field .departments_search_field_form input {
+  padding: 0.3rem;
+  width: 25%;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+.departments_header .departments_search_field .departments_search_field_form button {
+  width: 10%;
+  background-color: #3b5998;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+}
+.departments_header .departments_search_field .departments_search_field_form button:hover {
+  background-color: #283a60;
+}
+
+.departments .container {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+}
+.departments .departments_heading {
+  display: flex;
+  justify-content: space-between;
+}
+.departments .departments_heading .departments_buttons button {
+  width: 100px;
+  background-color: #3b5998;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+}
+.departments .departments_heading .departments_buttons button:hover {
+  background-color: #283a60;
+}
+
+.number_of_elements {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.departments_heading_role .col-2,
+.departments_heading_role .col-1 {
+  display: flex;
+  align-items: center;
+}
+.departments_heading_role h5 {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+.departments_heading_role h5 i {
+  color: #a3a3a3;
+  font-size: 12px;
+}
+
+.departments_details_role .col-2,
+.departments_details_role .col-1 {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.departments_details_role .col-2 h6,
+.departments_details_role .col-1 h6 {
+  margin-bottom: 0;
+}
+.departments_details_role .col-2 a,
+.departments_details_role .col-1 a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+.departments_details_role .col-2 a:hover,
+.departments_details_role .col-1 a:hover {
+  color: blue;
+}
+
+.classes_header .classes_search_field .classes_search_field_form {
+  display: flex;
+  justify-content: end;
+}
+.classes_header .classes_search_field .classes_search_field_form input {
+  padding: 0.3rem;
+  width: 25%;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+.classes_header .classes_search_field .classes_search_field_form button {
+  width: 10%;
+  background-color: #3b5998;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+}
+.classes_header .classes_search_field .classes_search_field_form button:hover {
+  background-color: #283a60;
+}
+
+.classes .classes_information_card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.classes .classes_bar {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.classes .classes_participation_rate {
+  padding: 1rem;
+}
+
+.classes_topics_section .classes_topics ol {
+  margin: 0;
+}
+.classes_topics_section .classes_topics ol li {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.classes_topics_section .classes_topics ol li a {
+  text-decoration: none;
+  color: gray;
+}
+.classes_topics_section .classes_topics ol li .classes_buttons button {
+  width: 40px;
+  border: none;
+  border-radius: 5px;
+}
+.classes_topics_section .classes_topics ol li .classes_buttons .classed_processed_button {
+  background-color: green;
+  color: white;
+}
+.classes_topics_section .classes_topics ol li .classes_buttons .classed_not_processed {
+  background-color: crimson;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
