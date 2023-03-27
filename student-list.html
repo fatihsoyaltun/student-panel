@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Student Panel</title>
+    <title>Öğrenci Listesi</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,10 +50,10 @@
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="#">Öğrenci Listesi</a></li>
-                                                <li><a href="./student.html">Öğrenci Görüntüle</a></li>
-                                                <li><a href="#">Öğrenci Ekle</a></li>
-                                                <li><a href="#">Öğrenci Düzenle</a></li>
+                                                <li><a href="./student-list.html">Öğrenci Listesi</a></li>
+                                                <li><a href="./student-profil.html">Öğrenci Görüntüle</a></li>
+                                                <li><a href="./student-add.html">Öğrenci Ekle</a></li>
+                                                <li><a href="./student-edit.html">Öğrenci Düzenle</a></li>
                                             </ul>
                                         </li>
                                         <li class="submenu">
@@ -64,7 +64,7 @@
                                             </a>
                                             <ul class="submenu-content">
                                                 <li><a href="#">Eğitmen Listesi</a></li>
-                                                <li><a href="#">Eğitmen Görüntüle</a></li>
+                                                <li><a href="./teacher.html">Eğitmen Görüntüle</a></li>
                                                 <li><a href="#">Eğitmen Ekle</a></li>
                                                 <li><a href="#">Eğitmen Düzenle</a></li>
                                             </ul>
@@ -76,8 +76,8 @@
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="#">Sınıf Listesi</a></li>
-                                                <li><a href="#">Sınıfları Görüntüle</a></li>
+                                                <li><a href="./departments.html">Sınıf Listesi</a></li>
+                                                <li><a href="./classes.html">Sınıfları Görüntüle</a></li>
                                                 <li><a href="#">Sınıf Ekle</a></li>
                                                 <li><a href="#">Sınıf Düzenle</a></li>
                                             </ul>
@@ -257,10 +257,10 @@
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="#">Öğrenci Listesi</a></li>
-                            <li><a href="#">Öğrenci Görüntüle</a></li>
+                            <li><a href="./student-list.html">Öğrenci Listesi</a></li>
+                            <li><a href="./student-profil.html">Öğrenci Görüntüle</a></li>
                             <li><a href="./student-add.html">Öğrenci Ekle</a></li>
-                            <li><a href="#">Öğrenci Düzenle</a></li>
+                            <li><a href="./student-edit.html">Öğrenci Düzenle</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -271,7 +271,7 @@
                         </a>
                         <ul class="submenu-content">
                             <li><a href="#">Eğitmen Listesi</a></li>
-                            <li><a href="#">Eğitmen Görüntüle</a></li>
+                            <li><a href="./teacher.html">Eğitmen Görüntüle</a></li>
                             <li><a href="#">Eğitmen Ekle</a></li>
                             <li><a href="#">Eğitmen Düzenle</a></li>
                         </ul>
@@ -283,8 +283,8 @@
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="#">Sınıf Listesi</a></li>
-                            <li><a href="#">Sınıfları Görüntüle</a></li>
+                            <li><a href="./departments.html">Sınıf Listesi</a></li>
+                            <li><a href="./classes.html">Sınıfları Görüntüle</a></li>
                             <li><a href="#">Sınıf Ekle</a></li>
                             <li><a href="#">Sınıf Düzenle</a></li>
                         </ul>
@@ -330,7 +330,7 @@
                                     <li class="breadcrumb-item">
                                         <a href="./admin.html">Anasayfa</a>
                                     </li>
-                                    <li class="breadcrumb-item active"></li>
+                                    <li class="breadcrumb-item active">Öğrenciler</li>
                                 </ul>
                             </div>
                         </div>
@@ -370,6 +370,9 @@
                                             <h3 class="list-title">Öğrenciler</h3>
                                         </div>
                                         <div class="col ms-auto text-end">
+                                            <a href="./student-edit.html" class="btn btn-primary">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </a>
                                             <a href="./student-add.html" class="btn btn-primary">
                                                 <i class="fa-solid fa-plus"></i>
                                             </a>
@@ -399,7 +402,7 @@
                                                                 <div class="table-id">STD125</div>
                                                             </td>
                                                             <td class="text-table">
-                                                                <a href="#">
+                                                                <a href="./student-profil.html">
                                                                     <img class="rounded-circle"
                                                                         src="https://randomuser.me/api/portraits/men/51.jpg"
                                                                         width="25" alt="">

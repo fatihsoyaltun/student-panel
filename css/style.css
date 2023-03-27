@@ -583,8 +583,7 @@ img {
 .student-panel .content .student-card .card-body .student-profil .student-btn-group {
   width: 100%;
   display: flex;
-  display: -webkit-box;
-  justify-content: center;
+  justify-content: end;
 }
 .student-panel .content .student-card .card-body .student-profil .student-btn-group .btn-info {
   min-width: 127px;
@@ -778,14 +777,14 @@ img {
   .sidebar {
     display: none;
   }
-  .section {
+  .section, .student-panel {
     width: 100%;
     margin-left: 0 !important;
   }
-  .section .col-sm-6 {
+  .section .col-sm-6, .student-panel .col-sm-6 {
     margin-bottom: 1rem;
   }
-  .section .card {
+  .section .card, .student-panel .card {
     margin-bottom: 1rem;
   }
 }
