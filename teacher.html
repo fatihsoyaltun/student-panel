@@ -314,17 +314,16 @@
         </div>
         <div class="section" style="min-height: 387px;">
             <div class="content container-fluid">
-                <header class="teacher_header mt-5">
+                <header class="teacher_header">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-6">
                                 <div class="teacher_header_head_left d-flex justify-content-start">
-                                    <h4>Eğitmen Ayrıntıları</h4>
+                                    <h4>Eğitmenler</h4>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="teacher_header_head_right d-flex justify-content-end">
-                                    <h4>Eğitmenler /</h4>
                                     <h4>Eğitmen Ayrıntıları</h4>
                                 </div>
                             </div>
@@ -338,25 +337,15 @@
                                 </div>
                                 <div class="teacher_head_bottom_profile">
                                     <div class="row">
-                                        <div class="col-2">
-                                            <div class="teacher_head_bottom_profile_summary_area_left">
-                                                <img src="/ayhan_img/avatar-18.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="teacher_head_bottom_profile_summary_area_center">
-                                                <h5 class="teacher_name">Ayşe Aslan </h5>
-                                                <h6 class="teacher_job">Front-end Dev</h6>
-                                            </div>
-                                        </div>
-                                        <div class="col-7 d-flex align-items-center justify-content-between">
+                                        <div class="col-lg-4 teacher_head_bottom_col_left d-flex align-items-center  ">
                                             <div class="teacher_head_bottom_profile_summary_area_right_one">
                                                 <div class=" teacher_head_bottom_profile_summary_area_right_social_media">
                                                     <button class="btn btn-primary social_media_button" type="button"
                                                         data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
                                                         aria-expanded="false" aria-controls="collapseWidthExample">
-                                                        <i class="fa-solid fa-user-group"></i> Sosyal Medya <i
-                                                            class="fa-solid fa-arrow-right fa-beat-fade"></i>
+                                                        <span>
+                                                            <img src="/ayhan_img/social-media.png" alt="">
+                                                        </span> 
                                                     </button>
                                                     <div>
                                                         <div class="collapse collapse-horizontal" id="collapseWidthExample">
@@ -370,10 +359,23 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="col-lg-4 teacher_head_bottom_col_center d-flex align-items-center justify-content-center">
+                                            <div class="teacher_head_bottom_profile_summary_area_center">
+                                                <div class="teacher_head_bottom_profile_summary_area_center_profile_photo">
+                                                    <img src="/ayhan_img/avatar-18.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="teacher_head_bottom_profile_summary_area_center_b">
+                                                <h5 class="teacher_name">Ayşe Aslan </h5>
+                                                <h6 class="teacher_job">Front-end Dev</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 teacher_head_bottom_col_right d-flex align-items-center justify-content-end ">
                                             <div class="teacher_head_bottom_profile_summary_area_right_two">
-                                                <button><i class="fa-solid fa-plus"></i> Takip et</button>
-                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#exampleModal" data-bs-whatever="@mdo"><i class="fa-regular fa-envelope"></i> Mesaj Gönder</button>
+                                                <button class="follow"><i class="fa-solid fa-plus"></i> <span>Takip et</span></button>
+                                                <button type="button" class="btn btn-primary message_send" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal" data-bs-whatever="@mdo"><i class="fa-regular fa-envelope"></i> <span>Mesaj Gönder</span></button>
                                                 <div class="modal fade" id="exampleModal" tabindex="-1"
                                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog">
@@ -416,7 +418,7 @@
                 <section class="teacher_about mt-5">
                     <div class="container">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-xl-4">
                                 <div class="teacher_about_left">
                                     <h5>Kişisel Detaylar : </h5>
                                     <ul>
@@ -452,7 +454,7 @@
             
                                 </div>
                             </div>
-                            <div class="col-8">
+                            <div class="col-xl-8">
                                 <div class="teacher_about_right">
                                     <h5>Hakkında :</h5>
                                     <h6>Merhaba Ben <span class="teacher_about_right_name">Ayşe Aslan</span></h6>
@@ -487,47 +489,27 @@
                             </div>
                         </div>
                     </div>
-            
-            
-            
                 </section>
+
                 <section class="teacher_analyces">
                     <div class="container">
                         <div class="row">
-                            <div class="col-6">
-                                <div class="cards mt-5 d-flex justify-content-around">
+                            <div class="col-xl-6">
+                                <div class="cards mt-5">
                                     <div class="card p-3">
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <h6>Toplam Sınıflar</h6>
-                                                <h5>4</h5>
-                                            </div>
-                                            <div class="col-4 d-flex align-items-center">
-                                                <img src="/ayhan_img/laptop-icon-01.svg" alt="">
-                                            </div>
-                                        </div>
+                                        <img src="/ayhan_img/blackboard.png" alt="" width="40px">
+                                        <h6>Toplam Sınıf</h6>
+                                        <h5 class="total_class">5</h5>
                                     </div>
                                     <div class="card p-3">
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <h6>Toplam Öğrenci</h6>
-                                                <h5>40</h5>
-                                            </div>
-                                            <div class="col-4 d-flex align-items-center">
-                                                <img src="/ayhan_img/student-icon-01.svg" alt="">
-                                            </div>
-                                        </div>
+                                        <img src="/ayhan_img/graduate.png" alt="" width="40px">
+                                        <h6>Toplam Öğrenci</h6>
+                                        <h5 class="total_student">40</h5>
                                     </div>
                                     <div class="card p-3">
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <h6>Toplam Ders</h6>
-                                                <h5>30 / 20</h5>
-                                            </div>
-                                            <div class="col-4 d-flex align-items-center">
-                                                <img src="/ayhan_img/lesson-icon-02.svg" alt="">
-                                            </div>
-                                        </div>
+                                        <img src="/ayhan_img/lesson.png" alt="" width="40px">
+                                        <h6>Toplam Ders</h6>
+                                        <h5 class="total_lesson">40</h5>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -565,10 +547,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-xl-6">
                                 <div class="teacher_analyce_survey_score mt-5">
-                                    <h5 class="text-center">Başarı Yüzdeniz: % <span class="average_score fw-bold"></span></h5>
-                                    <canvas class="mt-4" id="myChart" style="width:100%;max-width:600px"></canvas>
+                                    <h5 class="text-center">Başarı Yüzdeniz: % <span class="teacher_average_score fw-bold"></span></h5>
+                                    <div id="teacher_success_average">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -577,7 +560,7 @@
                 <section class="teacher_my_classes mt-5">
                     <div class="container">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-md-6">
                                 <h5 class="ms-1 mb-3"><i class="fa-solid fa-laptop"></i> Sınıflarım</h5>
                                 <div class="accordion accordion-flush my_classes" id="accordionFlushExample">
                                     <div class="accordion-item">
@@ -1122,9 +1105,8 @@
         </div>
     </div>
 
-
-    <!-- google charts -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- apex charts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
@@ -1133,6 +1115,7 @@
 
     <!-- app js -->
     <script src="/app.js"></script>
+    
 </body>
 
 </html>
