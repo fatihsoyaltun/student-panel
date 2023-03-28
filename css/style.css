@@ -1112,6 +1112,10 @@ img {
 .teacher_my_classes .my_classes .accordion-item .accordion-header .accordion-button .class_average .ort {
   font-weight: lighter;
 }
+.teacher_my_classes .teacher_abilities {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1rem;
+}
 
 .departments_header .departments_search_field .departments_search_field_form {
   display: flex;
@@ -1268,6 +1272,18 @@ img {
   color: white;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(238, 238, 238, 0.9333333333);
+}
+footer .footer_text {
+  margin: 0;
+  color: #393E46;
+}
+
 @media screen and (max-width: 992px) {
   .teacher_head_bottom_col_left {
     justify-content: center;
@@ -1300,5 +1316,8 @@ img {
   }
   .teacher_about_right {
     margin-top: 1rem;
+  }
+  .teacher_my_classes .teacher_abilities {
+    margin-top: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */
