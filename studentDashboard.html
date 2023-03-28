@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Calendar.js -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
     <!-- Main Css -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -51,7 +53,7 @@
                                             </a>
                                             <ul class="submenu-content">
                                                 <li><a href="#">Eğitmen Listesi</a></li>
-                                                <li><a href="./teacher.html">Eğitmen Görüntüle</a></li>
+                                                <li><a href="#">Eğitmen Görüntüle</a></li>
                                             </ul>
                                         </li>
                                         <li class="submenu">
@@ -441,6 +443,78 @@
                         </div>
                     </div>
                 </div>
+                <div class="row mt-5">
+                    <div class="col-xl-6 d-flex">
+                        <div class="card star-students flex-fill">
+                            <div class="card-header d-flex align-items-center">
+                                <h5>Yaklaşan Aktiviteler</h5>
+                                <ul class="list-out">
+                                    <li class="star-menus">
+                                        <a href="#">
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <div class="upcoming-activity">
+                                    <div class="activity-box">
+                                        <div class="activity-box-img">
+                                            <img src="./img/activity4.png" alt="">
+                                        </div>
+                                        <div class="activity-box-text">
+                                            <h4>Kariyer Günleri</h4>
+                                            <h5>Proje tanıtımı ve öğreciler ile tanışma.</h5>
+                                        </div>
+                                        <div class="activity-box-time">
+                                            <span>3 Gün Sonra</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-box">
+                                        <div class="activity-box-img">
+                                            <img src="./img/activity3.png" alt="">
+                                        </div>
+                                        <div class="activity-box-text">
+                                            <h4>Yapay Zeka</h4>
+                                            <h5>Yapay Zeka'ya giriş. Temel Bilgiler.</h5>
+                                        </div>
+                                        <div class="activity-box-time">
+                                            <span>1 Hafta Sonra</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-box">
+                                        <div class="activity-box-img">
+                                            <img src="./img/activity1.png" alt="">
+                                        </div>
+                                        <div class="activity-box-text">
+                                            <h4>Konferans</h4>
+                                            <h5>Staj ve Sektör Simülasyonu Hakkında</h5>
+                                        </div>
+                                        <div class="activity-box-time">
+                                            <span>2 Hafta Sonra</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-box">
+                                        <div class="activity-box-img">
+                                            <img src="./img/activity2.png" alt="">
+                                        </div>
+                                        <div class="activity-box-text">
+                                            <h4>Kariyer Günleri</h4>
+                                            <h5>Proje tanıtımı ve öğreciler ile tanışma</h5>
+                                        </div>
+                                        <div class="activity-box-time">
+                                            <span>3 Gün Önce</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <!-- <div id='calendar'></div> -->
+                        <input type="text" id="litepicker" class="form-control form-control-sm"/>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -454,6 +528,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.2/apexcharts.min.js"
         integrity="sha512-yWglrpRYz/pD0pp1cSpWmSVvcFwuuc739X4WHy7hRKB11BGijnz7fuqKRQB7Ksot42IN365OGvuOhSgUejKbmA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Lightpick -->
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
     <!-- Main Js -->
     <script src="./app.js"></script>
     <script>
@@ -514,6 +590,21 @@
 
         var stdDash_chart = new ApexCharts(document.querySelector("#performance"), stdDash);
         stdDash_chart.render();
+
+        // Calendar.js
+    //     document.addEventListener('DOMContentLoaded', function() {
+    //     var calendarEl = document.getElementById('calendar');
+    //     var calendar = new FullCalendar.Calendar(calendarEl, {
+    //       initialView: 'dayGridMonth'
+    //     });
+    //     calendar.render();
+    //   });
+
+    
+    const picker = new Litepicker({ 
+    element: document.getElementById('litepicker') 
+    });
+
     </script>
 </body>
 
