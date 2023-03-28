@@ -16,9 +16,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- jsCalendar v1.4.4 Javascript and CSS -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/simple-jscalendar@1.4.4/source/jsCalendar.min.js" integrity="sha384-0LaRLH/U5g8eCAwewLGQRyC/O+g0kXh8P+5pWpzijxwYczD3nKETIqUyhuA8B/UB" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-jscalendar@1.4.4/source/jsCalendar.min.css" integrity="sha384-44GnAqZy9yUojzFPjdcUpP822DGm1ebORKY8pe6TkHuqJ038FANyfBYBpRvw8O9w" crossorigin="anonymous"> -->
     <!-- jsCalendar -->
 	<link rel="stylesheet" type="text/css" href="./css/jsCalendar.css">
 	<link rel="stylesheet" type="text/css" href="./css/jsCalendar.clean.css">
@@ -238,7 +235,7 @@
                         </a>
                         <ul class="submenu-content">
                             <li><a href="#">Eğitmen Listesi</a></li>
-                            <li><a href="./teacher.html">Eğitmen Görüntüle</a></li>
+                            <li><a href="#">Eğitmen Görüntüle</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -499,10 +496,10 @@
             let m = Math.floor((gap % (hour)) / (minute))
             let s = Math.floor((gap % (minute)) / (second));
 
-            document.getElementById('day').innerText = d;
-            document.getElementById('hour').innerText = h;
-            document.getElementById('minute').innerText = m;
-            document.getElementById('second').innerText = s;
+            document.getElementById('day').innerText = `${d}g`;
+            document.getElementById('hour').innerText = `${h}s`;
+            document.getElementById('minute').innerText = `${m}d`;
+            document.getElementById('second').innerText = `${s}s`;
         }
         setInterval(function () {
             nextLesson()
