@@ -11,6 +11,8 @@ $color8:#EEEEEE
 $backroundimg:"/ayhan_img/neos_teacher_header_img.jfif"
 
 
+
+
 body
     font-family: 'Roboto', sans-serif
 ul
@@ -23,6 +25,7 @@ a
 img
     max-width: 100%
     vertical-align: middle
+
 
 
 
@@ -610,9 +613,28 @@ img
                                         font-size: 14px
                                         font-weight: 400
                                         color: #828282
-
-
-
+            .accordion
+                .accordion-button
+                    background-color: #eee
+                .accordion-button:focus
+                    box-shadow: none
+                .accordion-button:not(.collapsed)
+                    background-color: #eee
+                    color: black
+        .certificate_area
+            h6
+                font-weight: bold
+                margin: 0
+            .certificate_area_sec
+                display: flex
+                flex-direction: column
+                align-items: center
+                gap: 1rem
+                .cert_div_photo
+                    .cert_photo
+                        filter: grayscale(100%)
+                        width: 250px
+                        border-radius: 10px
 
         .list-header
             margin-bottom: 1.875rem
