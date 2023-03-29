@@ -1280,6 +1280,42 @@ img {
   padding: 1rem;
 }
 
+.attendance .continuation_table .accordion-body {
+  display: flex;
+  justify-content: center;
+}
+.attendance .continuation_table .accordion-body table {
+  width: -moz-max-content;
+  width: max-content;
+}
+.attendance .continuation_table .accordion-body table thead tr th {
+  background-color: #eee;
+  color: black;
+  padding: 0.5em 1em;
+}
+.attendance .continuation_table .accordion-body table thead tr .missed-col {
+  background-color: #eee;
+}
+.attendance .continuation_table .accordion-body table thead tr .name-col {
+  text-align: left;
+}
+.attendance .continuation_table .accordion-body table tbody tr td {
+  border-top: 1px solid #eee;
+  padding: 0.5em 1em;
+}
+.attendance .continuation_table .accordion-body table tbody tr td .missed-col {
+  background-color: #ffecec;
+  color: #f00;
+  text-align: center;
+  font-weight: bold;
+}
+.attendance .continuation_table .accordion-body table tbody tr td input {
+  cursor: pointer;
+}
+
+/* Column types */
+ *          th
+ *          td */
 .classes_topics_section .classes_topics ol {
   margin: 0;
 }
