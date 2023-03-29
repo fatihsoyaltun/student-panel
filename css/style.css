@@ -766,6 +766,15 @@ img {
 .student-panel .content .card .card-body .table-responsive .text-table a {
   color: #333;
 }
+.student-panel .content .card .card-body .table-responsive .text-table a:hover {
+  color: #00ADB5;
+}
+.student-panel .content .card .card-body .table-responsive .text-table a i {
+  color: #0F4C75;
+}
+.student-panel .content .card .card-body .table-responsive .text-table a i:hover {
+  color: #00ADB5;
+}
 .student-panel .content .card .card-body .myForm {
   position: relative;
   margin-bottom: 40px;
