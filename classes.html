@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/jsCalendar.clean.css">
+    <link rel="stylesheet" href="./css/jsCalendar.css">
+    <link rel="stylesheet" href="./css/jsCalendarMain.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -315,6 +318,7 @@
         </div>
         <div class="section" style="min-height: 387px;">
             <div class="content container-fluid">
+
                 <header class="classes_header">
                     <div class="container-fluid">
                         <div class="row">
@@ -325,8 +329,7 @@
                             </div>
                             <div class="col-6">
                                 <div class="classes_header_head_right d-flex justify-content-end">
-                                    <h4>Gösterge Paneli /</h4>
-                                    <h4>Sınıflar</h4>
+                                    <h5>Ana Sayfa / <span>Sınıflar</span></h5>
                                 </div>
                             </div>
                         </div>
@@ -346,10 +349,22 @@
                     </div>
                 </header>
 
+                <section class="classes_photo mt-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="class_photo">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section class="classes mt-5">
                     <div class="container">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-xl-4">
                                 <div class="classes_information_card">
                                     <h5 class="classes_name fw-bold mb-0 m-auto"><i class="fa-solid fa-laptop-code"></i>
                                         7 Kasım
@@ -373,16 +388,29 @@
                                             class="classes_students_number fw-bold">10</span></h6>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-xl-3">
                                 <div class="classes_bar">
                                     <div id="curriculum_progress" class="classes_curriculum_progress">
                                     </div>
                                     <div id="classes_average_id" class="classes_average"></div>
                                 </div>
                             </div>
-                            <div class="col-5">
+                            <div class="col-xl-5">
                                 <div id="classes_participation_rate_id" class="classes_participation_rate card">
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="calender mt-5">
+                    <div class="container">
+                        <div class="row" id="wrapper">
+                            <div class="col-lg-6 col-sm-12">
+                                <div id="events-calendar" data-language="tr"></div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div id="events"></div>
                             </div>
                         </div>
                     </div>
@@ -866,6 +894,11 @@
 
     <!-- jquery (yoklama) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <!-- calender (Takvim) -->
+    <script src="./js/jsCalendar.js"></script>
+    <script src="./js/jsCalendar.lang.tr.js"></script>
+    <script src="./js/jsCalenderMain.js"></script>
 
     <!-- app js -->
     <script src="/app.js"></script>
