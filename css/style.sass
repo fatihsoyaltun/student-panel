@@ -9,6 +9,8 @@ $color6:#393E46
 $color7:#00ADB5
 $color8:#EEEEEE
 $backroundimg:"/ayhan_img/neos_teacher_header_img.jfif"
+$backroundimg2:"/ayhan_img/7_Kasım.jpg"
+
 
 
 
@@ -1097,6 +1099,7 @@ img
 //! classes.html //
 
 //* classes.html (ayhan)
+
 .classes_header
     .classes_search_field
         .classes_search_field_form
@@ -1116,6 +1119,20 @@ img
                 border-radius: 10px
                 &:hover
                     background-color: #283a60
+
+.classes_photo
+    .class_photo
+        background: linear-gradient(rgba(33, 45, 70, 0.7), rgba(33,45,70,.5)) ,  url($backroundimg2)
+        background-position: center
+        background-size: cover
+        // background-size: contain
+        background-repeat: no-repeat
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+        width: 100%
+        height: 300px
+        
+
 .classes
     .classes_information_card
         background-color: white
@@ -1137,33 +1154,35 @@ img
 
 .attendance
     .continuation_table
-            .accordion-body
-                display: flex
-                justify-content: center
-                table
-                    width: max-content
-                    thead
-                        tr
-                            th
-                                background-color: #eee
-                                color: black
-                                padding: 0.5em 1em
-                            .missed-col 
-                                background-color: #eee
-                            .name-col 
-                                text-align: left
-                    tbody
-                        tr
-                            td 
-                                border-top: 1px solid #eee
-                                padding: 0.5em 1em
-                                .missed-col 
-                                    background-color: #ffecec
-                                    color: #f00
-                                    text-align: center
-                                    font-weight: bold
-                                input 
-                                    cursor: pointer
+        .accordion-body
+            overflow: scroll
+            display: flex
+            justify-content: center
+            table
+                width: 100%
+                thead
+                    tr
+                        th
+                            background-color: #eee
+                            color: black
+                            padding: 0.5em
+                        .missed-col 
+                            background-color: #eee
+                        .name-col 
+                            text-align: left
+                            width: 300px
+                tbody
+                    tr
+                        td 
+                            border-top: 1px solid #eee
+                            padding: 0.5em
+                        .missed-col 
+                            background-color: #ffecec !important
+                            text-align: center
+                            font-weight: bold
+                            input 
+                                cursor: pointer
+                                background: red
             
 
             
