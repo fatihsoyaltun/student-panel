@@ -223,6 +223,10 @@ img {
   padding: 10px 15px;
   border-bottom: 1px solid #EEEEEE;
 }
+.main-wrapper .header .navbar .user-menu .dropdown-menu .dropdown-item:active {
+  color: #000;
+  background-color: transparent;
+}
 .main-wrapper .header .navbar .user-menu .show {
   visibility: visible;
   opacity: 1;
@@ -798,6 +802,9 @@ img {
   color: #333;
   font-size: 15px;
   height: 45px;
+}
+.student-panel .content .card .card-body .myForm .formAbout {
+  height: auto;
 }
 .student-panel .content .card .card-body .upFile label {
   font-size: 15px;
