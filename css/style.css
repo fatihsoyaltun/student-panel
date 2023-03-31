@@ -1333,9 +1333,6 @@ img {
   background: red;
 }
 
-/* Column types */
- *          th
- *          td */
 .classes_topics_section .classes_topics ol {
   margin: 0;
 }
@@ -1372,6 +1369,55 @@ footer {
 footer .footer_text {
   margin: 0;
   color: #393E46;
+}
+
+.subjects_section .nav-tabs .nav-link {
+  color: black;
+}
+.subjects_section .nav-tabs .nav-link img {
+  width: 20px;
+}
+.subjects_section .nav-tabs .active {
+  color: black;
+  font-weight: bold;
+}
+.subjects_section .tab-content .tab-pane .frontend img {
+  width: 30px;
+}
+.subjects_section .tab-content .tab-pane .accordion {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.subjects_section .tab-content .tab-pane .accordion .accordion-button {
+  padding: 0.5rem;
+  background: none;
+  color: black;
+}
+.subjects_section .tab-content .tab-pane .accordion .accordion-button:focus {
+  box-shadow: none;
+  background: none;
+  color: black;
+  font-weight: bold;
+}
+.subjects_section .tab-content .tab-pane .accordion .accordion-collapse .accordion-body ol li {
+  padding: 0.5rem;
+}
+.subjects_section .tab-content .tab-pane .accordion .accordion-collapse .accordion-body ol li a {
+  text-decoration: none;
+  color: black;
+}
+.subjects_section .tab-content .tab-pane .accordion .accordion-collapse .accordion-body ol li a:hover {
+  font-weight: bold;
+}
+.subjects_section .tab-content .tab-pane .backend img {
+  width: 30px;
+}
+.subjects_section .subjectsadd .subjects_add_form {
+  position: relative;
+}
+.subjects_section .subjectsadd .subjects_add_form .subject_alert {
+  position: absolute;
 }
 
 @media screen and (max-width: 992px) {

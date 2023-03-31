@@ -1189,20 +1189,6 @@ img
                                 background: red
             
 
-            
-
-
-/* Column types */
-            th
-            
-
-            td
-            
-
-                
-                
-        
-        
 
 
 .classes_topics_section
@@ -1236,6 +1222,69 @@ footer
     .footer_text
         margin: 0
         color: $color6
+
+//* Subjects.html
+
+
+.subjects_section
+    .nav-tabs   
+        .nav-link
+            color: black
+            img
+                width: 20px
+        .active
+            color: black
+            font-weight: bold
+            
+            // background: rgb(15,76,117)
+            // background: linear-gradient(90deg, rgba(15,76,117,1) 0%, rgba(50,130,184,1) 49%, rgba(0,173,181,1) 100%)
+    .tab-content
+        .tab-pane
+            .frontend
+                img
+                    width: 30px
+            .accordion
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+                border-radius: 10px
+                overflow: hidden
+                .accordion-button
+                    padding: .5rem
+                    background: none
+                    color: black
+                    &:focus
+                        box-shadow: none
+                        background: none
+                        color: black
+                        font-weight: bold
+                .accordion-collapse
+                    .accordion-body
+                        ol
+                            li
+                                padding: .5rem
+                                a
+                                    text-decoration: none
+                                    color: black
+                                    &:hover
+                                        font-weight: bold
+                                        
+
+
+                                    
+
+            .backend
+                img
+                    width: 30px
+            
+
+
+
+    .subjectsadd
+        .subjects_add_form
+            position: relative
+            .subject_alert
+                position: absolute
+
+
 
 @media screen and (max-width: 992px)
     .teacher_head_bottom_col_left
