@@ -348,7 +348,7 @@
                                         <img src="./img/profile-bg.jpg" alt="">
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-4 col-md-4">
+                                        <div class="col-lg-6 col-md-12">
                                             <div class="student-profil-box">
                                                 <div class="student-profil-box-img">
                                                     <img src="https://randomuser.me/api/portraits/men/18.jpg" alt="">
@@ -359,14 +359,43 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-4">
-
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 d-flex align-items-center">
+                                        <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-end">
                                             <div class="student-btn-group">
                                                 <a href="./student-edit.html"><button type="submit"
                                                         class="btn btn-info fal-btn">Düzenle</button></a>
-                                                <a href="#"><button type="submit" class="btn btn-info mes-btn">Mesaj</button></a>
+                                                <a href="#"><button type="submit" class="btn btn-info mes-btn" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal" data-bs-whatever="@mdo">Mesaj</button></a>
+                                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Yeni Mesaj</h1>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                    aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form>
+                                                                    <div class="mb-3">
+                                                                        <label for="recipient-name"
+                                                                            class="col-form-label"><i class="fa-solid fa-user-tie"></i> Alıcı:</label>
+                                                                        <input type="text" class="form-control" id="recipient-name">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="message-text"
+                                                                            class="col-form-label"><i class="fa-regular fa-envelope"></i> Mesaj:</label>
+                                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-bs-dismiss="modal"><i class="fa-solid fa-power-off"></i> Kapat</button>
+                                                                <button type="button" class="btn btn-primary"><i class="fa-regular fa-paper-plane fa-fade"></i> Gönder</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

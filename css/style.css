@@ -601,10 +601,10 @@ img {
 .student-panel .content .student-card .card-body .student-profil .student-profil-box .student-profil-box-img img {
   border-radius: 50%;
   border: 9px solid #fff;
-  width: 141px;
+  width: 120px;
 }
 .student-panel .content .student-card .card-body .student-profil .student-profil-box .student-profil-box-name h4 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: #000;
   margin-bottom: 3px;
@@ -616,12 +616,12 @@ img {
   margin-bottom: 0;
 }
 .student-panel .content .student-card .card-body .student-profil .student-btn-group {
-  width: 100%;
   display: flex;
-  justify-content: end;
+  width: 100%;
+  justify-content: flex-end;
 }
 .student-panel .content .student-card .card-body .student-profil .student-btn-group .btn-info {
-  min-width: 127px;
+  min-width: 120px;
   font-size: 16px;
   font-weight: 500;
   color: #fff;
