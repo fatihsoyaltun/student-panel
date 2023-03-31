@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Öğrenci Profili</title>
+    <title>Profil</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +33,7 @@
                         <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
                             tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                             <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Admin Menu</h5>
+                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Student Menu</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                     aria-label="Close"></button>
                             </div>
@@ -41,20 +41,7 @@
                                 <div class="sidebar-menu">
                                     <ul>
                                         <li class="menu-title">
-                                            <span>Admin Dashboard</span>
-                                        </li>
-                                        <li class="submenu">
-                                            <a href="#">
-                                                <i class="fas fa-graduation-cap"></i>
-                                                <span>Öğrenci</span>
-                                                <span class="menu-arrow"></span>
-                                            </a>
-                                            <ul class="submenu-content">
-                                                <li><a href="./student-list.html">Öğrenci Listesi</a></li>
-                                                <li><a href="./student-profil.html">Öğrenci Görüntüle</a></li>
-                                                <li><a href="./student-add.html">Öğrenci Ekle</a></li>
-                                                <li><a href="./student-edit.html">Öğrenci Düzenle</a></li>
-                                            </ul>
+                                            <span>Student Dashboard</span>
                                         </li>
                                         <li class="submenu">
                                             <a href="#">
@@ -63,50 +50,35 @@
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="./teacher-list.html">Eğitmen Listesi</a></li>
-                                                <li><a href="./teacher.html">Eğitmen Görüntüle</a></li>
-                                                <li><a href="./teacher-add.html">Eğitmen Ekle</a></li>
-                                                <li><a href="./teacher-edit.html">Eğitmen Düzenle</a></li>
+                                                <li><a href="#">Eğitmen Listesi</a></li>
+                                                <li><a href="#">Eğitmen Görüntüle</a></li>
                                             </ul>
                                         </li>
                                         <li class="submenu">
                                             <a href="#">
                                                 <i class="fas fa-building"></i>
-                                                <span>Sınıflar</span>
+                                                <span>Dersler</span>
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="./departments.html">Sınıf Listesi</a></li>
-                                                <li><a href="./classes.html">Sınıfları Görüntüle</a></li>
-                                                <li><a href="./departments-add.html">Sınıf Ekle</a></li>
-                                                <li><a href="./departments-edit.html">Sınıf Düzenle</a></li>
+                                                <li><a href="#">Ders Videoları</a></li>
+                                                <li><a href="#">Müfredat</a></li>
+                                                <li><a href="#">Quizler</a></li>
+                                                <li><a href="#">Projeler</a></li>
                                             </ul>
                                         </li>
                                         <li class="submenu">
                                             <a href="#">
                                                 <i class="fas fa-book-reader"></i>
-                                                <span>Müfredat</span>
+                                                <span>Öğrenci İşleri</span>
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="#">Müfredat Görüntüle</a></li>
-                                                <li><a href="#">Müfredat Düzenle</a></li>
-                                                <li><a href="#">Quizler</a></li>
-                                                <li><a href="#">Quizleri Düzenle</a></li>
-                                                <li><a href="#">Projeler </a></li>
-                                                <li><a href="#">Projeleri Düzenle</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="submenu">
-                                            <a href="#">
-                                                <i class="fas fa-newspaper"></i>
-                                                <span>Bloglar</span>
-                                                <span class="menu-arrow"></span>
-                                            </a>
-                                            <ul class="submenu-content">
-                                                <li><a href="#">Tüm Bloglar</a></li>
-                                                <li><a href="#">Blog Ekle</a></li>
-                                                <li><a href="#">Blog Düzenle</a></li>
+                                                <li><a href="#">Staj Seçimi</a></li>
+                                                <li><a href="#">Etüt Talebi</a></li>
+                                                <li><a href="#">Eğitim Dondurma</a></li>
+                                                <li><a href="#">Yurtdışı Eğitim</a></li>
+                                                <li><a href="#">Ödemelerim</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -115,8 +87,8 @@
                         </div>
                     </div>
                     <!-- Off Canvas -->
-                    <a href="#" class="navbar-brand"><img src="https://neosyazilim.com/static/img/neosLogo2.png"
-                            width="100" alt=""></a>
+                    <a href="./studentDashboard.html" class="navbar-brand"><img
+                            src="https://neosyazilim.com/static/img/neosLogo2.png" width="100" alt=""></a>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     </form>
@@ -229,12 +201,12 @@
                                             width="31" alt="">
                                         <div class="user-text">
                                             <h6>Fatih Soyaltun</h6>
-                                            <p class="text-muted mb-0">Admin</p>
+                                            <p class="text-muted mb-0">Öğrenci</p>
                                         </div>
                                     </span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Profil</a></li>
+                                    <li><a class="dropdown-item" href="./studentDashboard-profil.html">Profil</a></li>
                                     <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
                                     <li><a class="dropdown-item" href="#">Çıkış</a></li>
                                 </ul>
@@ -248,20 +220,7 @@
             <div class="sidebar-menu">
                 <ul>
                     <li class="menu-title">
-                        <span>Admin Dashboard</span>
-                    </li>
-                    <li class="submenu">
-                        <a href="#">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Öğrenci</span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <ul class="submenu-content">
-                            <li><a href="./student-list.html">Öğrenci Listesi</a></li>
-                            <li><a href="./student-profil.html">Öğrenci Görüntüle</a></li>
-                            <li><a href="./student-add.html">Öğrenci Ekle</a></li>
-                            <li><a href="./student-edit.html">Öğrenci Düzenle</a></li>
-                        </ul>
+                        <span>Student Dashboard</span>
                     </li>
                     <li class="submenu">
                         <a href="#">
@@ -270,50 +229,35 @@
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="./teacher-list.html">Eğitmen Listesi</a></li>
-                            <li><a href="./teacher.html">Eğitmen Görüntüle</a></li>
-                            <li><a href="./teacher-add.html">Eğitmen Ekle</a></li>
-                            <li><a href="./teacher-edit.html">Eğitmen Düzenle</a></li>
+                            <li><a href="#">Eğitmen Listesi</a></li>
+                            <li><a href="#">Eğitmen Görüntüle</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="#">
                             <i class="fas fa-building"></i>
-                            <span>Sınıflar</span>
+                            <span>Dersler</span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="./departments.html">Sınıf Listesi</a></li>
-                            <li><a href="./classes.html">Sınıfları Görüntüle</a></li>
-                            <li><a href="./departments-add.html">Sınıf Ekle</a></li>
-                            <li><a href="./departments-edit.html">Sınıf Düzenle</a></li>
+                            <li><a href="#">Ders Videoları</a></li>
+                            <li><a href="#">Müfredat</a></li>
+                            <li><a href="#">Quizler</a></li>
+                            <li><a href="#">Projeler</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="#">
                             <i class="fas fa-book-reader"></i>
-                            <span>Müfredat</span>
+                            <span>Öğrenci İşleri</span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="#">Müfredat Görüntüle</a></li>
-                            <li><a href="#">Müfredat Düzenle</a></li>
-                            <li><a href="#">Quizler</a></li>
-                            <li><a href="#">Quizleri Düzenle</a></li>
-                            <li><a href="#">Projeler </a></li>
-                            <li><a href="#">Projeleri Düzenle</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#">
-                            <i class="fas fa-newspaper"></i>
-                            <span>Bloglar</span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <ul class="submenu-content">
-                            <li><a href="#">Tüm Bloglar</a></li>
-                            <li><a href="#">Blog Ekle</a></li>
-                            <li><a href="#">Blog Düzenle</a></li>
+                            <li><a href="#">Staj Seçimi</a></li>
+                            <li><a href="#">Etüt Talebi</a></li>
+                            <li><a href="#">Eğitim Dondurma</a></li>
+                            <li><a href="#">Yurtdışı Eğitim</a></li>
+                            <li><a href="#">Ödemelerim</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -325,12 +269,12 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="student-header-text">
-                                <h3 class="text-title">Öğrenci Profili</h3>
+                                <h3 class="text-title">Profil</h3>
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item">
-                                        <a href="./admin.html">Anasayfa</a>
+                                        <a href="./studentDashboard.html">Anasayfa</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Öğrenci Profili</li>
+                                    <li class="breadcrumb-item active">Profil</li>
                                 </ul>
                             </div>
                         </div>
@@ -361,11 +305,9 @@
                                         </div>
                                         <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-end">
                                             <div class="student-btn-group">
-                                                <a href="./student-edit.html"><button type="submit"
-                                                        class="btn btn-info fal-btn">Düzenle</button></a>
-                                                <a href="#"><button type="submit" class="btn btn-info mes-btn"
-                                                        data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                        data-bs-whatever="@mdo">Mesaj</button></a>
+                                                <a href="./edit-profile.html"><button type="submit"
+                                                        class="btn btn-info fal-btn">Düzenle</button>
+                                                </a>
                                                 <div class="modal fade" id="exampleModal" tabindex="-1"
                                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog">
@@ -438,8 +380,8 @@
                                                                     <i class="fa-solid fa-user"></i>
                                                                 </div>
                                                                 <div class="stu-dt-view">
-                                                                    <h4>Fatih Soyaltun</h4>
-                                                                    <h5>FrontEnd Developer</h5>
+                                                                    <h4 id="firstname"></h4>
+                                                                    <h5></h5>
                                                                 </div>
                                                             </div>
                                                             <div class="student-detail-content">
@@ -457,7 +399,7 @@
                                                                 </div>
                                                                 <div class="stu-dt-view">
                                                                     <h4>Telefon</h4>
-                                                                    <h5>+(90) 536 494 5675</h5>
+                                                                    <h5 id="userPhone"></h5>
                                                                 </div>
                                                             </div>
                                                             <div class="student-detail-content">
@@ -466,7 +408,7 @@
                                                                 </div>
                                                                 <div class="stu-dt-view">
                                                                     <h4>E-mail</h4>
-                                                                    <h5>soyaltunfatih@gmail.com</h5>
+                                                                    <h5 id="userEmail"></h5>
                                                                 </div>
                                                             </div>
                                                             <div class="student-detail-content">
@@ -475,7 +417,7 @@
                                                                 </div>
                                                                 <div class="stu-dt-view">
                                                                     <h4>Doğum Tarihi</h4>
-                                                                    <h5>27 Eylül 1992</h5>
+                                                                    <h5 id="userBirthDate"></h5>
                                                                 </div>
                                                             </div>
                                                             <div class="student-detail-content">
@@ -484,7 +426,7 @@
                                                                 </div>
                                                                 <div class="stu-dt-view">
                                                                     <h4>Adres</h4>
-                                                                    <h5>İstanbul</h5>
+                                                                    <h5 id="userAdress"></h5>
                                                                 </div>
                                                             </div>
                                                             <div class="student-detail-content">
@@ -494,7 +436,7 @@
                                                                 <div class="stu-dt-view">
                                                                     <h4>Github</h4>
                                                                     <a href="#">
-                                                                        <h5>github.com</h5>
+                                                                        <h5 id="userGithub">github.com</h5>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -505,7 +447,7 @@
                                                                 <div class="stu-dt-view">
                                                                     <h4>Portfolio</h4>
                                                                     <a href="#">
-                                                                        <h5>www.myPortfolio.com</h5>
+                                                                        <h5 id="userLink"></h5>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -741,7 +683,28 @@
         var chart = new ApexCharts(document.querySelector("#participation_rate_id"), options_participation);
         chart.render();
 
+        // <--  -->
+        const urlParams = new URLSearchParams(window.location.search);
+        const encodedData = urlParams.get("data");
+        let data = {};
 
+        if (encodedData) {
+            try {
+                // URL parametresindeki şifrelenmiş verileri decode et ve JSON'a dönüştür
+                data = JSON.parse(decodeURIComponent(encodedData));
+            } catch (error) {
+                console.error("Geçersiz veri", error);
+            }
+        }
+
+        document.getElementById("firstname").innerText = data.userFirstName + " " + data.userLastName || "Bilgi yok";
+        document.getElementById("userEmail").innerText = data.userEmail || "Bilgi yok";
+        document.getElementById("userPhone").innerText = data.userPhone || "Bilgi yok";
+        document.getElementById("userAdress").innerText = data.userAdress || "Bilgi yok";
+        document.getElementById("userGithub").innerText = data.userGithub || "Bilgi yok";
+        document.getElementById("userLink").innerText = data.userLink || "Bilgi yok";
+        document.getElementById("userBirthDate").innerText = data.userBirthDate || "Bilgi yok";
+        
     </script>
 </body>
 
