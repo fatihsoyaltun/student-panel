@@ -450,6 +450,7 @@
             const userGithub = document.getElementById("userGithub").value;
             const userLink = document.getElementById("userLink").value;
             const userBirthDate = document.getElementById("birth_date").value;
+            const exampleFormControlTextarea1 = document.getElementById("exampleFormControlTextarea1").value;
 
             // Verileri URL parametrelerine kodla
             const encodedData = encodeURIComponent(JSON.stringify({
@@ -461,6 +462,7 @@
                 userGithub,
                 userLink,
                 userBirthDate,
+                exampleFormControlTextarea1,
             }));
 
             window.location.href = `/studentDashboard-profil.html?data=${encodedData}`;

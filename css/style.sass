@@ -8,6 +8,7 @@ $color5:#222831
 $color6:#393E46
 $color7:#00ADB5
 $color8:#EEEEEE
+$color9:#FFFFFF
 $backroundimg:"/ayhan_img/neos_teacher_header_img.jfif"
 $backroundimg2:"/ayhan_img/7_Kasım.jpg"
 
@@ -36,7 +37,6 @@ img
     height: 100vh
     min-height: 100vh
     .header
-        border-bottom: 1px solid #f3f3f4
         left: 0
         position: fixed
         right: 0
@@ -44,12 +44,12 @@ img
         z-index: 1001
         height: 60px
         .navbar
-            background: $color8
+            background: $color9
             margin: 0
             padding: 0
             box-sizing: border-box
             .form-control
-                background: $color8
+                background: $color9
                 width: 300px
                 color: $color5
                 &:focus
@@ -160,6 +160,29 @@ img
                 -o-transition: all 0.5s ease
                 -ms-transition: all 0.5s ease
                 -webkit-transition: all 0.5s ease
+            .dark-mode
+                width: 40px
+                height: 20px
+                position: relative
+                background-color: #000
+                border-radius: 30px
+                display: flex
+                align-items: center
+                justify-content: space-around
+                margin-right: .5rem
+                cursor: pointer
+                i
+                    color: goldenrod
+                    font-size: 14px
+                .toggle-ball
+                    width: 18px
+                    height: 18px
+                    background-color: #fff
+                    border-radius: 50%
+                    cursor: pointer
+                    position: absolute
+                    right: 1px
+                    transition: 0.5s ease all
             .user-menu
                 .user-img-hero
                     color: #a0a0a0
@@ -225,7 +248,7 @@ img
         transition: all 0.2s ease-in-out 0s
         width: 259px
         z-index: 1000
-        background: $color8
+        background: $color9
         overflow: scroll
     .offcanvas-body
         .sidebar-menu
@@ -246,7 +269,7 @@ img
                         padding: 12px 15px
                         position: relative
                         transition: all 0.2s ease-in-out 0s
-                        color: #6f6f6f
+                        color: $color1
                         font-size: 16px
                         height: auto
                         &:hover
@@ -582,6 +605,7 @@ img
                             .student-detail-content
                                 display: flex
                                 margin-bottom: 20px
+                                align-items: center
                                 .stu-dt-icons
                                     i
                                         color: $color3
@@ -747,7 +771,42 @@ img
                         background: #3D5EE1
                         border: 1px solid #3D5EE1
 
+//? dark mode start
+.dark-mode.dark-mode-active
+    background-color: $color9 !important
+.toggle-ball.dark-mode-active
+    background-color: #000 !important
+    transform: translateX(-20px)
+.navbar.dark-mode-active
+    background-color: $color1 !important
+    .user-text
+        h6
+            color: $color9 !important
+.sidebar.dark-mode-active
+    background-color: $color1!important
+    a:hover
+        background-color: $color2 !important
+    .submenu
+        a
+            color: $color9 !important
+.section.dark-mode-active
+    background-color: $color1!important
+    .section-header
+        .section-title
+            color: $color9 !important
+        .breadcrumb
+            .breadcrumb-item
+                a
+                    color: $color9!important
+footer.dark-mode-active
+    background-color: $color1!important
+    .footer_text
+        color: $color9 !important
 
+
+
+
+//? dark mode end
 
 
 @media screen and (max-width: 768px)

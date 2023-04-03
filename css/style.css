@@ -26,7 +26,6 @@ img {
   min-height: 100vh;
 }
 .main-wrapper .header {
-  border-bottom: 1px solid #f3f3f4;
   left: 0;
   position: fixed;
   right: 0;
@@ -35,13 +34,13 @@ img {
   height: 60px;
 }
 .main-wrapper .header .navbar {
-  background: #EEEEEE;
+  background: #FFFFFF;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 .main-wrapper .header .navbar .form-control {
-  background: #EEEEEE;
+  background: #FFFFFF;
   width: 300px;
   color: #222831;
 }
@@ -174,6 +173,32 @@ img {
   -ms-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
 }
+.main-wrapper .header .navbar .dark-mode {
+  width: 40px;
+  height: 20px;
+  position: relative;
+  background-color: #000;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.main-wrapper .header .navbar .dark-mode i {
+  color: goldenrod;
+  font-size: 14px;
+}
+.main-wrapper .header .navbar .dark-mode .toggle-ball {
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 1px;
+  transition: 0.5s ease all;
+}
 .main-wrapper .header .navbar .user-menu .user-img-hero {
   color: #a0a0a0;
   font-size: 14px;
@@ -246,7 +271,7 @@ img {
   transition: all 0.2s ease-in-out 0s;
   width: 259px;
   z-index: 1000;
-  background: #EEEEEE;
+  background: #FFFFFF;
   overflow: scroll;
 }
 .main-wrapper .offcanvas-body .sidebar-menu {
@@ -270,7 +295,7 @@ img {
   padding: 12px 15px;
   position: relative;
   transition: all 0.2s ease-in-out 0s;
-  color: #6f6f6f;
+  color: #1B262C;
   font-size: 16px;
   height: auto;
 }
@@ -655,6 +680,7 @@ img {
 .student-panel .content .student-card .card-body .student-details-card .card .card-body .student-detail-content {
   display: flex;
   margin-bottom: 20px;
+  align-items: center;
 }
 .student-panel .content .student-card .card-body .student-details-card .card .card-body .student-detail-content .stu-dt-icons i {
   color: #3282B8;
@@ -844,6 +870,49 @@ img {
   border-radius: 10px;
   background: #3D5EE1;
   border: 1px solid #3D5EE1;
+}
+
+.dark-mode.dark-mode-active {
+  background-color: #FFFFFF !important;
+}
+
+.toggle-ball.dark-mode-active {
+  background-color: #000 !important;
+  transform: translateX(-20px);
+}
+
+.navbar.dark-mode-active {
+  background-color: #1B262C !important;
+}
+.navbar.dark-mode-active .user-text h6 {
+  color: #FFFFFF !important;
+}
+
+.sidebar.dark-mode-active {
+  background-color: #1B262C !important;
+}
+.sidebar.dark-mode-active a:hover {
+  background-color: #0F4C75 !important;
+}
+.sidebar.dark-mode-active .submenu a {
+  color: #FFFFFF !important;
+}
+
+.section.dark-mode-active {
+  background-color: #1B262C !important;
+}
+.section.dark-mode-active .section-header .section-title {
+  color: #FFFFFF !important;
+}
+.section.dark-mode-active .section-header .breadcrumb .breadcrumb-item a {
+  color: #FFFFFF !important;
+}
+
+footer.dark-mode-active {
+  background-color: #1B262C !important;
+}
+footer.dark-mode-active .footer_text {
+  color: #FFFFFF !important;
 }
 
 @media screen and (max-width: 768px) {

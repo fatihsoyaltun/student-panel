@@ -127,7 +127,6 @@ chart2.render();
 // });
 // <div id="calendar" class="calendar-container"></div>
 
-//* SAyfa yönlendirme
 
 
 //! AYHAN APP JS //
