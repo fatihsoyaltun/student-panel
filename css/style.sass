@@ -1243,6 +1243,9 @@ footer
             .frontend
                 img
                     width: 30px
+            .backend
+                img
+                    width: 30px
             .accordion
                 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
                 border-radius: 10px
@@ -1260,6 +1263,14 @@ footer
                     .accordion-body
                         ol
                             li
+                                button
+                                    margin-left: 1rem
+                                    border: none
+                                    background: none
+                                    color: crimson
+                                    transition: .4s
+                                    &:hover
+                                        transform: scale(1.1)
                                 padding: .5rem
                                 a
                                     text-decoration: none
@@ -1267,22 +1278,41 @@ footer
                                     &:hover
                                         font-weight: bold
                                         
-
-
-                                    
-
-            .backend
-                img
-                    width: 30px
-            
-
-
-
     .subjectsadd
         .subjects_add_form
             position: relative
-            .subject_alert
-                position: absolute
+            select
+                padding: .34rem
+                border-radius: 10px
+            input
+                border: 1px solid black
+                border-radius: 10px
+                padding: .3rem
+            .alert_section
+                display: flex
+                justify-content: center
+                .subject_alert_danger
+                    background: rgb(117,15,15)
+                    background: linear-gradient(90deg, rgba(117,15,15,1) 0%, rgba(184,50,50,1) 49%, rgba(181,0,0,1) 100%)
+                    color: white
+                    padding: .5rem
+                .subject_alert_success
+                    background: rgb(46,117,15)
+                    background: linear-gradient(90deg, rgba(46,117,15,1) 0%, rgba(86,184,50,1) 49%, rgba(0,181,139,1) 100%)
+                    color: white
+                    padding: .5rem
+            button
+                border: none
+                background: crimson
+                padding: .5rem
+                border-radius: 10px
+                width: 100px
+                color: white
+                text-align: center
+                transition: .4s
+                &:hover
+                    transform: translateY(5px)
+            
 
 
 

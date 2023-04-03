@@ -329,9 +329,9 @@
                         <button class="nav-link active" id="nav-subjects-tab" data-bs-toggle="tab"
                             data-bs-target="#nav-subjects" type="button" role="tab" aria-controls="nav-subjects"
                             aria-selected="true"><img src="./ayhan_img/sowtware_book.png" alt=""> Müfredat</button>
-                        <button class="nav-link" id="nav-subjectsedit-tab" data-bs-toggle="tab"
+                        <!-- <button class="nav-link" id="nav-subjectsedit-tab" data-bs-toggle="tab"
                             data-bs-target="#nav-subjectsedit" type="button" role="tab" aria-controls="nav-subjectsedit"
-                            aria-selected="false"><img src="./ayhan_img/subject_edit.png" alt=""> Müfredat Düzenle</button>
+                            aria-selected="false"><img src="./ayhan_img/subject_edit.png" alt=""> Müfredat Düzenle</button> -->
                         <button class="nav-link" id="nav-subjectsadd-tab" data-bs-toggle="tab"
                             data-bs-target="#nav-subjectsadd" type="button" role="tab" aria-controls="nav-subjectsadd"
                             aria-selected="false"><img src="./ayhan_img/subject_plus.png" alt=""> Müfredat Ekle</button>
@@ -341,7 +341,7 @@
                     <div class="tab-pane fade show active" id="nav-subjects" role="tabpanel"
                         aria-labelledby="nav-subjects-tab" tabindex="0">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-xl-6">
                                 <h6 class="frontend mt-5 fw-bold"><img src="./ayhan_img/subject_frontend.png" alt=""> FRONT-END</h6>
 
                                 <div class="accordion accordion-flush frontend_subjects mt-3" id="accordionFlushExample">
@@ -398,7 +398,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-xl-6">
                                 <h6 class="backend mt-5 fw-bold"><img src="./ayhan_img/subject_backend.png" alt=""> BACK-END</h6>
 
 
@@ -440,47 +440,48 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- <h6 class="frontend mt-5">Müfredat Listesi</h6>
-                        <ol>
-                            <h5 class="frontend_subjects_head">HTML</h5>
-                            <li><a href="">Klavye Kullanımı</a></li>
-                        </ol> -->
-
                     </div>
-
-
-                    <div class="tab-pane fade" id="nav-subjectsedit" role="tabpanel"
+                    <!-- <div class="tab-pane fade" id="nav-subjectsedit" role="tabpanel"
                         aria-labelledby="nav-subjectsedit-tab" tabindex="0">
-
                         Düzenle gelecek
-
-                    </div>
+                    </div> -->
                     <div class="tab-pane fade subjectsadd" id="nav-subjectsadd" role="tabpanel"
                         aria-labelledby="nav-subjectsadd-tab" tabindex="0">
 
                         <h6 class="subjects_add mt-5 fw-bold">Müfredat Ekle</h6>
 
                         <form class="subjects_add_form" action="">
-                            <label for="">Ana Başlık Seçin : </label>
-                            <select name="mainTitle" id="mainTitle">
-                                <option class="op_front-end" value="frontend_subjects">FRONT-END</option>
-                                <option class="op_back-end" value="backend_subjects">BACK-END</option>
-                            </select>
+                            <div class="row">
+                                <div class="col-xl-2 d-flex flex-column gap-2 mt-3">
+                                    <label for="">Ana Başlık: </label>
+                                    <select name="mainTitle" id="mainTitle">
+                                        <option class="op_front-end" value="frontend_subjects">FRONT-END</option>
+                                        <option class="op_back-end" value="backend_subjects">BACK-END</option>
+                                    </select>
+                                </div>
+                                <div class="col-xl-2 d-flex flex-column gap-2 mt-3">
+                                    <label for="">Konu Başlığı: </label>
+                                    <select name="subTitle" id="subTitle">
+                                        <option class="op_html" value="html_subjects_list">HTML</option>
+                                        <option class="op_css" value="css_subjects_list">CSS</option>
+                                        <option class="op_js" value="js_subjects_list">Javascript</option>
+                                    </select>
+                                </div>
+                                <div class="col-xl-4 d-flex flex-column gap-2 mt-3">
+                                    <label for="">Konuyu Giriniz : </label>
+                                    <input class="inp_subject" type="text" name="subject" id="subject">
+                                </div>
+                                <div class="col-xl-4 d-flex flex-column gap-2 mt-3">
+                                    <label for="">Link Ekleyin : </label>
+                                    <input class="link_item" type="text">
+                                </div>
+                            </div>
 
-                            <label for="">Konu Başlığını Seçin : </label>
-                            <select name="subTitle" id="subTitle">
-                                <option class="op_html" value="html_subjects_list">HTML</option>
-                                <option class="op_css" value="css_subjects_list">CSS</option>
-                                <option class="op_js" value="js_subjects_list">Javascript</option>
-                            </select>
+                            <button class="d-block m-auto mt-3" type="button" onclick="addSubject()">Ekle <i class="fa-solid fa-plus"></i></button>
+                            <div class="alert_section">
 
-                            <label for="">Konuyu Giriniz : </label>
-                            <input class="inp_subject" type="text" name="subject" id="subject">
-
-                            <button type="button" onclick="addSubject()">Ekle</button>
+                            </div>
                         </form>
-
                     </div>
                 </div>
             </div>
@@ -516,7 +517,76 @@
     <script src="/app.js"></script>
 
     <script>
-        const mainTitleSelect = document.getElementById('mainTitle');
+//         const mainTitleSelect = document.getElementById('mainTitle');
+//         const subTitleSelect = document.getElementById('subTitle');
+//         const form = document.querySelector('.subjects_add_form');
+
+//         mainTitleSelect.addEventListener('change', () => {
+//             // seçilen ana başlık değerine göre, alt başlık seçeneklerini değiştir
+//             if (mainTitleSelect.value === 'frontend_subjects') {
+//                 subTitleSelect.innerHTML = `
+//       <option class="op_html" value="html_subjects_list">HTML</option>
+//       <option class="op_css" value="css_subjects_list">CSS</option>
+//       <option class="op_js" value="js_subjects_list">Javascript</option>
+//     `;
+//             } else if (mainTitleSelect.value === 'backend_subjects') {
+//                 subTitleSelect.innerHTML = `
+//       <option class="op_python" value="python_subjects_list">Python</option>
+//       <option class="op_django" value="django_subjects_list">Django</option>
+//     `;
+//             }
+//         });
+
+//         function addSubject() {
+//     // Seçeneklerin seçilmesi
+//     const mainTitleSelect = document.getElementById("mainTitle");
+//     const mainTitleValue = mainTitleSelect.value;
+//     const subTitleSelect = document.getElementById("subTitle");
+//     const subTitleValue = subTitleSelect.value;
+//     const subjectInput = document.getElementById("subject");
+//     const subjectValue = subjectInput.value;
+//     const linkItem = document.querySelector(".link_item");
+
+
+//     // Input alanı boş ise uyarı mesajı gösterme
+//     if (subjectValue === '') {
+//         const emptyAlertDiv = document.createElement("div");
+//         emptyAlertDiv.classList.add("alert", "alert-danger", "mt-3", "subject_alert");
+//         emptyAlertDiv.textContent = "Lütfen bir konu girin.";
+//         form.appendChild(emptyAlertDiv);
+//         setTimeout(() => {
+//             emptyAlertDiv.remove();
+//         }, 3000);
+//         return;
+//     }
+
+//     // Doğru konu altına öğe ekleme
+//     const list = document.querySelector(`.${subTitleValue}`);
+//     const listItem = document.createElement("li");
+//     const link = document.createElement("a");
+//     link.textContent = subjectValue;
+//     link.href = linkItem.value;
+//     link.target = "_blank";
+//     listItem.appendChild(link);
+//     list.appendChild(listItem);
+
+//     // Başarı mesajı gösterme
+//     const successAlertDiv = document.createElement("div");
+//     successAlertDiv.classList.add("alert", "alert-success", "mt-3", "subject_alert");
+//     successAlertDiv.textContent = "Konu başarıyla eklendi.";
+//     form.appendChild(successAlertDiv);
+//     setTimeout(() => {
+//         successAlertDiv.remove();
+//     }, 3000);
+
+//     // Input alanını boşaltma
+//     subjectInput.value = "";
+//     linkItem.value = "";
+
+// } 
+
+// ----------Burası kullanıclakacak en kötü
+const mainTitleSelect = document.getElementById('mainTitle');
         const subTitleSelect = document.getElementById('subTitle');
         const form = document.querySelector('.subjects_add_form');
 
@@ -537,47 +607,66 @@
         });
 
         function addSubject() {
-            // Seçeneklerin seçilmesi
-            const mainTitleSelect = document.getElementById("mainTitle");
-            const mainTitleValue = mainTitleSelect.value;
-            const subTitleSelect = document.getElementById("subTitle");
-            const subTitleValue = subTitleSelect.value;
-            const subjectInput = document.getElementById("subject");
-            const subjectValue = subjectInput.value;
+    // Seçeneklerin seçilmesi
+    const mainTitleSelect = document.getElementById("mainTitle");
+    const mainTitleValue = mainTitleSelect.value;
+    const subTitleSelect = document.getElementById("subTitle");
+    const subTitleValue = subTitleSelect.value;
+    const subjectInput = document.getElementById("subject");
+    const subjectValue = subjectInput.value;
+    const linkItem = document.querySelector(".link_item");
+    const alert_section = document.querySelector(".alert_section");
 
-            // Input alanı boş ise uyarı mesajı gösterme
-            if (subjectValue === '') {
-                const emptyAlertDiv = document.createElement("div");
-                emptyAlertDiv.classList.add("alert", "alert-danger", "mt-3", "subject_alert");
-                emptyAlertDiv.textContent = "Lütfen bir konu girin.";
-                form.appendChild(emptyAlertDiv);
-                setTimeout(() => {
-                    emptyAlertDiv.remove();
-                }, 3000);
-                return;
-            }
+    // Input alanı boş ise uyarı mesajı gösterme
+    if (subjectValue, linkItem.value === '') {
+        const emptyAlertDiv = document.createElement("div");
+        emptyAlertDiv.classList.add("alert", "alert-danger", "mt-3", "subject_alert_danger");
+        emptyAlertDiv.textContent = "Lütfen boş alan bırakmayın !";
+        alert_section.appendChild(emptyAlertDiv);
+        setTimeout(() => {
+            emptyAlertDiv.remove();
+        }, 3000);
+        return;
+    }
 
-            // Doğru konu altına öğe ekleme
-            const list = document.querySelector(`.${subTitleValue}`);
-            const listItem = document.createElement("li");
-            const link = document.createElement("a");
-            link.textContent = subjectValue;
-            link.href = "#";
-            listItem.appendChild(link);
-            list.appendChild(listItem);
+    // Doğru konu altına öğe ekleme
+const list = document.querySelector(`.${subTitleValue}`);
+const listItem = document.createElement("li");
+const link = document.createElement("a");
+link.textContent = subjectValue;
+link.href = linkItem.value;
+link.target = "_blank";
+listItem.appendChild(link);
 
-            // Başarı mesajı gösterme
-            const successAlertDiv = document.createElement("div");
-            successAlertDiv.classList.add("alert", "alert-success", "mt-3", "subject_alert");
-            successAlertDiv.textContent = "Konu başarıyla eklendi.";
-            form.appendChild(successAlertDiv);
-            setTimeout(() => {
-                successAlertDiv.remove();
-            }, 3000);
+// Sil butonu ekleme
+const deleteButton = document.createElement("button");
+deleteButton.innerHTML = '<i class="fa-regular fa-square-minus"></i>';
+deleteButton.classList.add("delete_button");
+deleteButton.addEventListener("click", () => {
+    list.removeChild(listItem);
+});
+listItem.appendChild(deleteButton);
 
-            // Input alanını boşaltma
-            subjectInput.value = "";
-        }
+list.appendChild(listItem);
+
+
+    // Başarı mesajı gösterme
+    const successAlertDiv = document.createElement("div");
+    successAlertDiv.classList.add("alert", "alert-success", "mt-3", "subject_alert_success");
+    successAlertDiv.textContent = "Konu başarıyla eklendi.";
+    alert_section.appendChild(successAlertDiv);
+    setTimeout(() => {
+        successAlertDiv.remove();
+    }, 3000);
+
+    // Input alanını boşaltma
+    subjectInput.value = "";
+    linkItem.value = "";
+}
+
+// ------------Son--------
+
+
 
 
     </script>
