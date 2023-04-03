@@ -34,7 +34,7 @@ img {
   height: 60px;
 }
 .main-wrapper .header .navbar {
-  background: #FFFFFF;
+  background: #EEEEEE;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -186,8 +186,11 @@ img {
   cursor: pointer;
 }
 .main-wrapper .header .navbar .dark-mode i {
-  color: goldenrod;
+  color: #3282B8;
   font-size: 14px;
+}
+.main-wrapper .header .navbar .dark-mode .fa-sun {
+  color: goldenrod;
 }
 .main-wrapper .header .navbar .dark-mode .toggle-ball {
   width: 18px;
@@ -271,8 +274,7 @@ img {
   transition: all 0.2s ease-in-out 0s;
   width: 259px;
   z-index: 1000;
-  background: #FFFFFF;
-  overflow: scroll;
+  background: #EEEEEE;
 }
 .main-wrapper .offcanvas-body .sidebar-menu {
   padding: 15px;
