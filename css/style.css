@@ -1455,6 +1455,9 @@ footer .footer_text {
 .subjects_section .tab-content .tab-pane .frontend img {
   width: 30px;
 }
+.subjects_section .tab-content .tab-pane .backend img {
+  width: 30px;
+}
 .subjects_section .tab-content .tab-pane .accordion {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
@@ -1474,6 +1477,16 @@ footer .footer_text {
 .subjects_section .tab-content .tab-pane .accordion .accordion-collapse .accordion-body ol li {
   padding: 0.5rem;
 }
+.subjects_section .tab-content .tab-pane .accordion .accordion-collapse .accordion-body ol li button {
+  margin-left: 1rem;
+  border: none;
+  background: none;
+  color: crimson;
+  transition: 0.4s;
+}
+.subjects_section .tab-content .tab-pane .accordion .accordion-collapse .accordion-body ol li button:hover {
+  transform: scale(1.1);
+}
 .subjects_section .tab-content .tab-pane .accordion .accordion-collapse .accordion-body ol li a {
   text-decoration: none;
   color: black;
@@ -1481,14 +1494,46 @@ footer .footer_text {
 .subjects_section .tab-content .tab-pane .accordion .accordion-collapse .accordion-body ol li a:hover {
   font-weight: bold;
 }
-.subjects_section .tab-content .tab-pane .backend img {
-  width: 30px;
-}
 .subjects_section .subjectsadd .subjects_add_form {
   position: relative;
 }
-.subjects_section .subjectsadd .subjects_add_form .subject_alert {
-  position: absolute;
+.subjects_section .subjectsadd .subjects_add_form select {
+  padding: 0.34rem;
+  border-radius: 10px;
+}
+.subjects_section .subjectsadd .subjects_add_form input {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+.subjects_section .subjectsadd .subjects_add_form .alert_section {
+  display: flex;
+  justify-content: center;
+}
+.subjects_section .subjectsadd .subjects_add_form .alert_section .subject_alert_danger {
+  background: rgb(117, 15, 15);
+  background: linear-gradient(90deg, rgb(117, 15, 15) 0%, rgb(184, 50, 50) 49%, rgb(181, 0, 0) 100%);
+  color: white;
+  padding: 0.5rem;
+}
+.subjects_section .subjectsadd .subjects_add_form .alert_section .subject_alert_success {
+  background: rgb(46, 117, 15);
+  background: linear-gradient(90deg, rgb(46, 117, 15) 0%, rgb(86, 184, 50) 49%, rgb(0, 181, 139) 100%);
+  color: white;
+  padding: 0.5rem;
+}
+.subjects_section .subjectsadd .subjects_add_form button {
+  border: none;
+  background: crimson;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 100px;
+  color: white;
+  text-align: center;
+  transition: 0.4s;
+}
+.subjects_section .subjectsadd .subjects_add_form button:hover {
+  transform: translateY(5px);
 }
 
 @media screen and (max-width: 992px) {
