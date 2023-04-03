@@ -11,6 +11,7 @@ $color8:#EEEEEE
 $color9:#FFFFFF
 $backroundimg:"/ayhan_img/neos_teacher_header_img.jfif"
 $backroundimg2:"/ayhan_img/7_Kasım.jpg"
+$backroundimg3:'/img/yaprakgri.png'
 
 
 
@@ -44,7 +45,7 @@ img
         z-index: 1001
         height: 60px
         .navbar
-            background: $color9
+            background: $color8
             margin: 0
             padding: 0
             box-sizing: border-box
@@ -172,8 +173,10 @@ img
                 margin-right: .5rem
                 cursor: pointer
                 i
-                    color: goldenrod
+                    color: $color3
                     font-size: 14px
+                .fa-sun
+                    color: goldenrod
                 .toggle-ball
                     width: 18px
                     height: 18px
@@ -248,8 +251,7 @@ img
         transition: all 0.2s ease-in-out 0s
         width: 259px
         z-index: 1000
-        background: $color9
-        overflow: scroll
+        background: $color8
     .offcanvas-body
         .sidebar-menu
             padding: 15px
