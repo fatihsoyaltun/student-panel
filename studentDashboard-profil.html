@@ -641,27 +641,16 @@
         chart.render();
 
         // <--  -->
-        const urlParams = new URLSearchParams(window.location.search);
-        const encodedData = urlParams.get("data");
-        let data = {};
+        const profilData = JSON.parse(localStorage.getItem('profilData'));
+        document.getElementById('firstname').innerHTML = `${profilData.userFirstName} ${profilData.userLastName}`
+        document.getElementById('userPhone').innerHTML = profilData.userPhone
+        document.getElementById('userEmail').innerHTML = profilData.userEmail
+        document.getElementById('userBirthDate').innerHTML = profilData.userBirthDate
+        document.getElementById('userAdress').innerHTML = profilData.userAdress
+        document.getElementById('userGithub').innerHTML = profilData.userGithub
+        document.getElementById('userLink').innerHTML = profilData.userLink
+        document.getElementById('std-about').innerHTML = profilData.exampleFormControlTextarea1
 
-        if (encodedData) {
-            try {
-                // URL parametresindeki şifrelenmiş verileri decode et ve JSON'a dönüştür
-                data = JSON.parse(decodeURIComponent(encodedData));
-            } catch (error) {
-                console.error("Geçersiz veri", error);
-            }
-        }
-
-        document.getElementById("firstname").innerText = data.userFirstName + " " + data.userLastName || "Bilgi yok";
-        document.getElementById("userEmail").innerText = data.userEmail || "Bilgi yok";
-        document.getElementById("userPhone").innerText = data.userPhone || "Bilgi yok";
-        document.getElementById("userAdress").innerText = data.userAdress || "Bilgi yok";
-        document.getElementById("userGithub").innerText = data.userGithub || "Bilgi yok";
-        document.getElementById("userLink").innerText = data.userLink || "Bilgi yok";
-        document.getElementById("userBirthDate").innerText = data.userBirthDate || "Bilgi yok";
-        document.getElementById("std-about").innerText = data.exampleFormControlTextarea1 || "Bilgi yok";
         
     </script>
 </body>
