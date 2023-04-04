@@ -910,6 +910,16 @@ img {
   color: #FFFFFF !important;
 }
 
+.student-panel.dark-mode-active {
+  background-color: #1B262C !important;
+}
+.student-panel.dark-mode-active .list-header .list-title {
+  color: #FFFFFF !important;
+}
+.student-panel.dark-mode-active .list-header .breadcrumb .breadcrumb-item a {
+  color: #FFFFFF !important;
+}
+
 footer.dark-mode-active {
   background-color: #1B262C !important;
 }

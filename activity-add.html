@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Eğitmen Düzenle</title>
+    <title>Aktivite Ekle</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -320,12 +320,12 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="list-sub-header">
-                                <h3 class="list-title">Sınıf Düzenle</h3>
+                                <h3 class="list-title">Aktivite Ekle</h3>
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item">
                                         <a href="./admin.html">Anasayfa</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Sınıf Düzenle</li>
+                                    <li class="breadcrumb-item active">Aktivite Ekle</li>
                                 </ul>
                             </div>
                         </div>
@@ -338,82 +338,51 @@
                                 <form action="#">
                                     <div class="row">
                                         <div class="col-12">
-                                            <h5 class="mb-5">Sınıf Bilgileri</h5>
+                                            <h5 class="mb-5">Aktivite Bilgileri</h5>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group myForm">
                                                 <label>
-                                                    Şube
+                                                    Aktivite Adı
                                                     <span>*</span>
                                                 </label>
-                                                <input type="text" class="form-control" placeholder="Şube Adı" value="İstanbul">
+                                                <input id="activityName" type="text" class="form-control" placeholder="Aktivite Adı">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group myForm">
                                                 <label>
-                                                    Eğitim Türü
+                                                    Aktivite İçeriği
                                                     <span>*</span>
                                                 </label>
-                                                <select class="form-control select">
-                                                    <option selected>Eğitim Türü Seçin</option>
-                                                    <option value="1">Online</option>
-                                                    <option value="2">Yüz Yüze</option>
-                                                </select>
+                                                <input id="activityContent" type="text" class="form-control" placeholder="Aktivite İçeriği">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group myForm">
                                                 <label>
-                                                    Sınıf Adı
+                                                    Aktivite Tarihi
                                                     <span>*</span>
                                                 </label>
-                                                <input type="text" class="form-control" placeholder="Sınıf Adı" value="7 Kasım">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Eğitmen Adı
-                                                    <span>*</span>
-                                                </label>
-                                                <input type="text" class="form-control" placeholder="Eğitmen Adı" value="Mehmet Çoban">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Başlama Tarihi
-                                                    <span>*</span>
-                                                </label>
-                                                <input class="form-control" placeholder="Taih Seçiniz" id="kt_datepicker_1" value="2022-11-07"/>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Öğrenci Sayısı
-                                                    <span>*</span>
-                                                </label>
-                                                <input type="text" class="form-control" placeholder="Öğrenci Sayısı" value="10">
+                                                <input class="form-control" placeholder="Aktivite Tarihi Seç" id="kt_datepicker_1"/>
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group upFile">
                                                 <label>
-                                                    Sınıf Fotoğrafı Yükle
+                                                    Aktivite Fotoğrafı Yükle
                                                 </label>
                                                 <div class="upload">
                                                     <label class="file-up img-file-btn mb-0">
                                                         Fotoğraf Yükle
-                                                        <input type="file">
+                                                        <input id="activityİmg" type="file">
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="submit-btn">
-                                                <button type="submit" class="btn btn-primary">Kaydet</button>
+                                                <button type="submit" class="btn btn-primary saveActivity">Kaydet</button>
                                             </div>
                                         </div>
                                     </div>
@@ -438,10 +407,31 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <!-- Main Js -->
     <script src="./app.js"></script>
+    <script src="./js/jsDarkMode.js"></script>
     <script>
         $("#kt_datepicker_1").flatpickr();
+
+        const activityBtn = document.querySelector('.saveActivity');
+        activityBtn.addEventListener('click', () => {
+            const activityName = document.getElementById('activityName').value;
+            const activityContent = document.getElementById('activityContent').value;
+            const kt_datepicker_1 = document.getElementById('kt_datepicker_1').value;
+            const activityİmg = document.getElementById('activityİmg').files[0];
+
+            const reader = new FileReader();
+            reader.readAsDataURL(activityİmg);
+
+            reader.onload = () => {
+                const activitydData = {
+                name : activityName,
+                content : activityContent,
+                date : kt_datepicker_1,
+                img : reader.result
+                };
+                localStorage.setItem('activitydData', JSON.stringify(activitydData));
+            }
+        });
     </script>
-    <script src="./js/jsDarkMode.js"></script>
 </body>
 
 </html>

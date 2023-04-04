@@ -411,7 +411,21 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="submit-btn">
-                                                <button type="button" class="btn btn-primary saveProfil">Kaydet</button>
+                                                <button id="liveToastBtn" type="button"
+                                                    class="btn btn-primary saveProfil">Kaydet</button>
+                                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                                    <div id="liveToast" class="toast" role="alert" aria-live="assertive"
+                                                        aria-atomic="true">
+                                                        <div class="toast-header">
+                                                            <strong class="me-auto">Neos Yazılım</strong>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="toast" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="toast-body bg-info">
+                                                            Bilgileriniz Başarıyla Güncellendi
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -438,8 +452,6 @@
     <script src="./app.js"></script>
     <script>$("#birth_date").flatpickr();</script>
     <script>
-
-
         const saveBtn = document.querySelector(".saveProfil");
         saveBtn.addEventListener("click", () => {
             const userFirstName = document.getElementById("firstname").value;
@@ -451,9 +463,26 @@
             const userLink = document.getElementById("userLink").value;
             const userBirthDate = document.getElementById("birth_date").value;
             const exampleFormControlTextarea1 = document.getElementById("exampleFormControlTextarea1").value;
+            const toastTrigger = document.getElementById('liveToastBtn');
+            const toastLiveExample = document.getElementById('liveToast');
+            const toastBody = document.querySelector('.toast-body');
 
-            // Verileri URL parametrelerine kodla
-            const encodedData = encodeURIComponent(JSON.stringify({
+            if (
+                !userFirstName ||
+                !userLastName ||
+                !userEmail ||
+                !userPhone ||
+                !userBirthDate ||
+                !exampleFormControlTextarea1
+            ) {
+                toastBody.classList="toast-body bg-danger text-white";
+                toastBody.innerHTML = "Boş Alan Bırakmayınız!";
+                const toast = new bootstrap.Toast(toastLiveExample)
+                toast.show()
+                return;
+            }
+
+            const profilData = {
                 userFirstName,
                 userLastName,
                 userEmail,
@@ -463,11 +492,23 @@
                 userLink,
                 userBirthDate,
                 exampleFormControlTextarea1,
-            }));
+            };
+            localStorage.setItem("profilData", JSON.stringify(profilData));
 
-            window.location.href = `/studentDashboard-profil.html?data=${encodedData}`;
+            const toast = new bootstrap.Toast(toastLiveExample)
+            toast.show()
+
+            document.getElementById("firstname").value = "";
+            document.getElementById("lastname").value = "";
+            document.getElementById("userEmail").value = "";
+            document.getElementById("userPhone").value = "";
+            document.getElementById("userAdress").value = "";
+            document.getElementById("userGithub").value = "";
+            document.getElementById("userLink").value = "";
+            document.getElementById("birth_date").value = "";
+            document.getElementById("exampleFormControlTextarea1").value = "";
         });
-        
+
     </script>
 </body>
 

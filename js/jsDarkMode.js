@@ -3,7 +3,7 @@
 
 const ball = document.querySelector(".dark-mode");
 const items = document.querySelectorAll(
-  ".navbar,.sidebar,.toggle-ball,.dark-mode,.section,footer"
+  ".navbar,.sidebar,.toggle-ball,.dark-mode,.section,.student-panel,footer"
 );
 
 ball.addEventListener("click", function () {

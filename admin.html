@@ -88,24 +88,18 @@
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="#">Müfredat Görüntüle</a></li>
-                                                <li><a href="#">Müfredat Düzenle</a></li>
-                                                <li><a href="#">Quizler</a></li>
-                                                <li><a href="#">Quizleri Düzenle</a></li>
-                                                <li><a href="#">Projeler </a></li>
-                                                <li><a href="#">Projeleri Düzenle</a></li>
+                                                <li><a href="./subjects.html">Müfredat Ekle ve Düzenle</a></li>
                                             </ul>
                                         </li>
                                         <li class="submenu">
                                             <a href="#">
                                                 <i class="fas fa-newspaper"></i>
-                                                <span>Bloglar</span>
+                                                <span>İşlemler</span>
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="#">Tüm Bloglar</a></li>
-                                                <li><a href="#">Blog Ekle</a></li>
-                                                <li><a href="#">Blog Düzenle</a></li>
+                                                <li><a href="#">Anket Oluştur</a></li>
+                                                <li><a href="./activity-add.html">Aktivite Oluştur</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -300,24 +294,18 @@
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="#">Müfredat Görüntüle</a></li>
-                            <li><a href="#">Müfredat Düzenle</a></li>
-                            <li><a href="#">Quizler</a></li>
-                            <li><a href="#">Quizleri Düzenle</a></li>
-                            <li><a href="#">Projeler </a></li>
-                            <li><a href="#">Projeleri Düzenle</a></li>
+                            <li><a href="./subjects.html">Müfredat Ekle ve Düzenle</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="#">
                             <i class="fas fa-newspaper"></i>
-                            <span>Bloglar</span>
+                            <span>İşlemler</span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="#">Tüm Bloglar</a></li>
-                            <li><a href="#">Blog Ekle</a></li>
-                            <li><a href="#">Blog Düzenle</a></li>
+                            <li><a href="#">Anket Oluştur</a></li>
+                            <li><a href="./activity-add.html">Aktivite Oluştur</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -545,14 +533,14 @@
                                     <div class="upcoming-activity">
                                         <div class="activity-box">
                                             <div class="activity-box-img">
-                                                <img src="./img/activity4.png" alt="">
+                                                <img class="activity-img" src="" alt="">
                                             </div>
                                             <div class="activity-box-text">
-                                                <h4>Kariyer Günleri</h4>
-                                                <h5>Proje tanıtımı ve öğreciler ile tanışma.</h5>
+                                                <h4 class="activity-text-up"></h4>
+                                                <h5 class="activity-text-down"></h5>
                                             </div>
                                             <div class="activity-box-time">
-                                                <span>3 Gün Sonra</span>
+                                                <span class="activity-date"></span>
                                             </div>
                                         </div>
                                         <div class="activity-box">
@@ -645,6 +633,14 @@
     <!-- Main Js -->
     <script src="./app.js"></script>
     <script src="./js/jsDarkMode.js"></script>
+    <script>
+        const activity = JSON.parse(localStorage.getItem('activitydData'));
+        document.querySelector('.activity-text-up').innerHTML = activity.name
+        document.querySelector('.activity-text-down').innerHTML = activity.content
+        document.querySelector('.activity-date').innerHTML = activity.date
+        let img = document.querySelector('.activity-img')
+        img.src = `data:image/png;base64,${activity.img}`;
+    </script>
 </body>
 
 </html>
