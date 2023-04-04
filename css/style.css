@@ -1546,6 +1546,67 @@ footer .footer_text {
   transform: translateY(5px);
 }
 
+.survey_section .create_survey_form {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+.survey_section .create_survey_form button {
+  margin-top: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #0F4C75;
+  color: white;
+  padding: 0.5rem;
+  width: 120px;
+  align-self: center;
+  transition: 0.4s;
+}
+.survey_section .create_survey_form button:hover {
+  transform: translateY(-3px);
+}
+.survey_section .create_survey_form .form_parents {
+  width: 100%;
+}
+.survey_section .create_survey_form .form_parents input {
+  width: 50%;
+  padding: 0.3rem;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.survey_section .create_survey_form .form_parents label {
+  width: 30%;
+}
+.survey_section .create_survey_form .form_parents select {
+  padding: 0.3rem;
+  width: 50%;
+}
+.survey_section .newForm_class {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.survey_section .newForm_class #newForm .newForm_item {
+  padding: 1rem;
+  display: flex;
+  align-items: start;
+  font-size: small;
+  flex-direction: column;
+}
+.survey_section .newForm_class #newForm .newForm_item button {
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  background: #0F4C75;
+  padding: 0.5rem;
+  color: white;
+  margin-top: 1rem;
+}
+.survey_section .newForm_class #newForm .newForm_item label input {
+  margin-right: 0.5rem;
+}
+
 @media screen and (max-width: 992px) {
   .teacher_head_bottom_col_left {
     justify-content: center;
