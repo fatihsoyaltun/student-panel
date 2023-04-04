@@ -301,7 +301,7 @@
                                             data-bs-parent="#accordionFlushExample">
                                             <div class="accordion-body">
                                                 <ol class="html_subjects_list">
-                                                    <li><a class="subject" href="">Klavye</a></li>
+                                                    <li><a class="subject" href="">Klayve</a></li>
                                                 </ol>
                                             </div>
                                         </div>
@@ -461,7 +461,66 @@
     <script src="/app.js"></script>
 
     <script>
-//         const mainTitleSelect = document.getElementById('mainTitle');
+
+    const subjectData = JSON.parse(localStorage.getItem("deneme"));
+    console.log(subjectData);
+
+    const olHtml = document.querySelector(".html_subjects_list");
+    const olCss = document.querySelector(".css_subjects_list");
+    const olJs = document.querySelector(".js_subjects_list");
+    const olPy = document.querySelector(".python_subjects_list");
+    const olDj = document.querySelector(".django_subjects_list");
+
+    for(let i=0; i<subjectData.length; i++){
+        if(subjectData[i].subTitle === olHtml.className){
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.classList.add('subject');
+            a.href = subjectData[i].linkItem;
+            a.textContent = subjectData[i].subject;
+            li.appendChild(a);
+            olHtml.appendChild(li);
+        }else if(subjectData[i].subTitle === olCss.className){
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.classList.add('subject');
+            a.href = subjectData[i].linkItem;
+            a.textContent = subjectData[i].subject;
+            li.appendChild(a);
+            olCss.appendChild(li);
+        }else if(subjectData[i].subTitle === olJs.className){
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.classList.add('subject');
+            a.href = subjectData[i].linkItem;
+            a.textContent = subjectData[i].subject;
+            li.appendChild(a);
+            olJs.appendChild(li);
+        }else if(subjectData[i].subTitle === olPy.className){
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.classList.add('subject');
+            a.href = subjectData[i].linkItem;
+            a.textContent = subjectData[i].subject;
+            li.appendChild(a);
+            olPy.appendChild(li);
+        }else{
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.classList.add('subject');
+            a.href = subjectData[i].linkItem;
+            a.textContent = subjectData[i].subject;
+            li.appendChild(a);
+            olDj.appendChild(li);
+        }
+    }
+
+
+    
+
+
+
+// const mainTitleSelect = document.getElementById('mainTitle');
 //         const subTitleSelect = document.getElementById('subTitle');
 //         const form = document.querySelector('.subjects_add_form');
 
@@ -490,14 +549,14 @@
 //     const subjectInput = document.getElementById("subject");
 //     const subjectValue = subjectInput.value;
 //     const linkItem = document.querySelector(".link_item");
-
+//     const alert_section = document.querySelector(".alert_section");
 
 //     // Input alanı boş ise uyarı mesajı gösterme
-//     if (subjectValue === '') {
+//     if (subjectValue, linkItem.value === '') {
 //         const emptyAlertDiv = document.createElement("div");
-//         emptyAlertDiv.classList.add("alert", "alert-danger", "mt-3", "subject_alert");
-//         emptyAlertDiv.textContent = "Lütfen bir konu girin.";
-//         form.appendChild(emptyAlertDiv);
+//         emptyAlertDiv.classList.add("alert", "alert-danger", "mt-3", "subject_alert_danger");
+//         emptyAlertDiv.textContent = "Lütfen boş alan bırakmayın !";
+//         alert_section.appendChild(emptyAlertDiv);
 //         setTimeout(() => {
 //             emptyAlertDiv.remove();
 //         }, 3000);
@@ -505,20 +564,31 @@
 //     }
 
 //     // Doğru konu altına öğe ekleme
-//     const list = document.querySelector(`.${subTitleValue}`);
-//     const listItem = document.createElement("li");
-//     const link = document.createElement("a");
-//     link.textContent = subjectValue;
-//     link.href = linkItem.value;
-//     link.target = "_blank";
-//     listItem.appendChild(link);
-//     list.appendChild(listItem);
+// const list = document.querySelector(`.${subTitleValue}`);
+// const listItem = document.createElement("li");
+// const link = document.createElement("a");
+// link.textContent = subjectValue;
+// link.href = linkItem.value;
+// link.target = "_blank";
+// listItem.appendChild(link);
+
+// // Sil butonu ekleme
+// const deleteButton = document.createElement("button");
+// deleteButton.innerHTML = '<i class="fa-regular fa-square-minus"></i>';
+// deleteButton.classList.add("delete_button");
+// deleteButton.addEventListener("click", () => {
+//     list.removeChild(listItem);
+// });
+// listItem.appendChild(deleteButton);
+
+// list.appendChild(listItem);
+
 
 //     // Başarı mesajı gösterme
 //     const successAlertDiv = document.createElement("div");
-//     successAlertDiv.classList.add("alert", "alert-success", "mt-3", "subject_alert");
+//     successAlertDiv.classList.add("alert", "alert-success", "mt-3", "subject_alert_success");
 //     successAlertDiv.textContent = "Konu başarıyla eklendi.";
-//     form.appendChild(successAlertDiv);
+//     alert_section.appendChild(successAlertDiv);
 //     setTimeout(() => {
 //         successAlertDiv.remove();
 //     }, 3000);
@@ -527,86 +597,6 @@
 //     subjectInput.value = "";
 //     linkItem.value = "";
 
-// } 
-
-// ----------Burası kullanıclakacak en kötü
-const mainTitleSelect = document.getElementById('mainTitle');
-        const subTitleSelect = document.getElementById('subTitle');
-        const form = document.querySelector('.subjects_add_form');
-
-        mainTitleSelect.addEventListener('change', () => {
-            // seçilen ana başlık değerine göre, alt başlık seçeneklerini değiştir
-            if (mainTitleSelect.value === 'frontend_subjects') {
-                subTitleSelect.innerHTML = `
-      <option class="op_html" value="html_subjects_list">HTML</option>
-      <option class="op_css" value="css_subjects_list">CSS</option>
-      <option class="op_js" value="js_subjects_list">Javascript</option>
-    `;
-            } else if (mainTitleSelect.value === 'backend_subjects') {
-                subTitleSelect.innerHTML = `
-      <option class="op_python" value="python_subjects_list">Python</option>
-      <option class="op_django" value="django_subjects_list">Django</option>
-    `;
-            }
-        });
-
-        function addSubject() {
-    // Seçeneklerin seçilmesi
-    const mainTitleSelect = document.getElementById("mainTitle");
-    const mainTitleValue = mainTitleSelect.value;
-    const subTitleSelect = document.getElementById("subTitle");
-    const subTitleValue = subTitleSelect.value;
-    const subjectInput = document.getElementById("subject");
-    const subjectValue = subjectInput.value;
-    const linkItem = document.querySelector(".link_item");
-    const alert_section = document.querySelector(".alert_section");
-
-    // Input alanı boş ise uyarı mesajı gösterme
-    if (subjectValue, linkItem.value === '') {
-        const emptyAlertDiv = document.createElement("div");
-        emptyAlertDiv.classList.add("alert", "alert-danger", "mt-3", "subject_alert_danger");
-        emptyAlertDiv.textContent = "Lütfen boş alan bırakmayın !";
-        alert_section.appendChild(emptyAlertDiv);
-        setTimeout(() => {
-            emptyAlertDiv.remove();
-        }, 3000);
-        return;
-    }
-
-    // Doğru konu altına öğe ekleme
-const list = document.querySelector(`.${subTitleValue}`);
-const listItem = document.createElement("li");
-const link = document.createElement("a");
-link.textContent = subjectValue;
-link.href = linkItem.value;
-link.target = "_blank";
-listItem.appendChild(link);
-
-// Sil butonu ekleme
-const deleteButton = document.createElement("button");
-deleteButton.innerHTML = '<i class="fa-regular fa-square-minus"></i>';
-deleteButton.classList.add("delete_button");
-deleteButton.addEventListener("click", () => {
-    list.removeChild(listItem);
-});
-listItem.appendChild(deleteButton);
-
-list.appendChild(listItem);
-
-
-    // Başarı mesajı gösterme
-    const successAlertDiv = document.createElement("div");
-    successAlertDiv.classList.add("alert", "alert-success", "mt-3", "subject_alert_success");
-    successAlertDiv.textContent = "Konu başarıyla eklendi.";
-    alert_section.appendChild(successAlertDiv);
-    setTimeout(() => {
-        successAlertDiv.remove();
-    }, 3000);
-
-    // Input alanını boşaltma
-    subjectInput.value = "";
-    linkItem.value = "";
-}
 
 // ------------Son--------
 
