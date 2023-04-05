@@ -874,6 +874,10 @@ img {
   border: 1px solid #3D5EE1;
 }
 
+
+body.dark-mode-active {
+  background-color: #1B262C !important;
+  }
 .login-form {
   display: table;
   height: 100vh;
@@ -1051,6 +1055,7 @@ img {
 .login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap .login-social-icons a:hover {
   background-color: #00ADB5;
   color: #fff;
+
 }
 
 .dark-mode.dark-mode-active {
@@ -1063,14 +1068,18 @@ img {
 }
 
 .navbar.dark-mode-active {
-  background-color: #1B262C !important;
+  background: rgb(57, 62, 70);
+  background: linear-gradient(135deg, rgb(57, 62, 70) 0%, rgb(57, 62, 70) 7%, rgb(27, 38, 44) 34%) !important;
+  border-bottom: 3px solid #393E46 !important;
 }
 .navbar.dark-mode-active .user-text h6 {
   color: #FFFFFF !important;
 }
 
 .sidebar.dark-mode-active {
-  background-color: #1B262C !important;
+  background: rgb(57, 62, 70);
+  background: linear-gradient(135deg, rgb(57, 62, 70) 0%, rgb(57, 62, 70) 7%, rgb(27, 38, 44) 55%) !important;
+  border-right: 3px solid #393E46 !important;
 }
 .sidebar.dark-mode-active a:hover {
   background-color: #0F4C75 !important;
@@ -1081,6 +1090,7 @@ img {
 
 .section.dark-mode-active {
   background-color: #1B262C !important;
+  color: white !important;
 }
 .section.dark-mode-active .section-header .section-title {
   color: #FFFFFF !important;
@@ -1104,6 +1114,260 @@ footer.dark-mode-active {
 }
 footer.dark-mode-active .footer_text {
   color: #FFFFFF !important;
+}
+
+.classes_information_card.dark-mode-active {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+
+.classes_bar.dark-mode-active {
+  background-color: #393E46 !important;
+}
+
+.classes_participation_rate.dark-mode-active {
+  background-color: #393E46 !important;
+}
+.classes_participation_rate.dark-mode-active text {
+  fill: white;
+}
+.classes_participation_rate.dark-mode-active #SvgjsText1097 {
+  fill: white !important;
+}
+.classes_participation_rate.dark-mode-active .apexcharts-legend-text {
+  color: white !important;
+}
+
+.apexcharts-zoomin-icon.dark-mode-active svg {
+  fill: white !important;
+}
+
+.apexcharts-zoomout-icon.dark-mode-active svg {
+  fill: white !important;
+}
+
+.apexcharts-selected.dark-mode-active svg {
+  fill: white !important;
+}
+
+.apexcharts-reset-icon.dark-mode-active svg {
+  fill: white !important;
+}
+
+.apexcharts-menu-icon.dark-mode-active svg {
+  fill: white !important;
+}
+
+#events-calendar.dark-mode-active {
+  background-color: #393E46 !important;
+}
+#events-calendar.dark-mode-active thead {
+  color: white !important;
+}
+#events-calendar.dark-mode-active tbody {
+  color: white !important;
+}
+#events-calendar.dark-mode-active tbody .jsCalendar-current {
+  color: #3282B8 !important;
+  border-bottom: 1px solid #3282B8 !important;
+}
+#events-calendar.dark-mode-active tbody .jsCalendar-next {
+  color: #0F4C75 !important;
+}
+
+#events.dark-mode-active .subtitle {
+  color: white !important;
+}
+#events.dark-mode-active .list {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+#events.dark-mode-active .title {
+  color: white !important;
+  border-bottom: 1px solid white !important;
+  border-top: 1px solid white !important;
+}
+
+.continuation_table.dark-mode-active .accordion-item {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.continuation_table.dark-mode-active .accordion-item .accordion-button {
+  background-color: #222831 !important;
+  color: white !important;
+}
+.continuation_table.dark-mode-active .accordion-item .accordion-button:focus {
+  box-shadow: none !important;
+}
+.continuation_table.dark-mode-active .accordion-item .accordion-body table thead tr th {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.continuation_table.dark-mode-active .accordion-item .accordion-body table tbody tr .missed-col {
+  background-color: #393E46 !important;
+  color: black !important;
+}
+
+.departments_add_section .card.dark-mode-active {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.departments_add_section .card.dark-mode-active input {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.departments_add_section .card.dark-mode-active input::-moz-placeholder {
+  color: #a6a0a0 !important;
+}
+.departments_add_section .card.dark-mode-active input::placeholder {
+  color: #a6a0a0 !important;
+}
+.departments_add_section .card.dark-mode-active label {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.departments_add_section .card.dark-mode-active select {
+  background-color: #393E46 !important;
+  color: #a6a0a0 !important;
+}
+.departments_add_section .card.dark-mode-active .img-file-btn {
+  background-color: #1B262C !important;
+}
+
+.departments_edit_section .card.dark-mode-active {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.departments_edit_section .card.dark-mode-active input {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.departments_edit_section .card.dark-mode-active input::-moz-placeholder {
+  color: #a6a0a0 !important;
+}
+.departments_edit_section .card.dark-mode-active input::placeholder {
+  color: #a6a0a0 !important;
+}
+.departments_edit_section .card.dark-mode-active label {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.departments_edit_section .card.dark-mode-active select {
+  background-color: #393E46 !important;
+  color: #a6a0a0 !important;
+}
+.departments_edit_section .card.dark-mode-active .img-file-btn {
+  background-color: #1B262C !important;
+}
+
+.departments_list_section .card.dark-mode-active {
+  background-color: #393E46 !important;
+}
+.departments_list_section .card.dark-mode-active .star-student {
+  background-color: #393E46 !important;
+}
+.departments_list_section .card.dark-mode-active .star-student tr th {
+  color: white !important;
+}
+.departments_list_section .card.dark-mode-active .star-student tr td {
+  color: white !important;
+}
+.departments_list_section .card.dark-mode-active .star-student a {
+  color: white !important;
+}
+.departments_list_section .card.dark-mode-active .star-student a i {
+  color: white !important;
+}
+.departments_list_section .card.dark-mode-active .list-title {
+  color: white !important;
+}
+.departments_list_section .card.dark-mode-active .pagination .page-link {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.departments_list_section .card.dark-mode-active .pagination .page-link:hover {
+  background-color: #3282B8 !important;
+}
+
+.student_add_section .card.dark-mode-active {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.student_add_section .card.dark-mode-active input {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.student_add_section .card.dark-mode-active input::-moz-placeholder {
+  color: #a6a0a0 !important;
+}
+.student_add_section .card.dark-mode-active input::placeholder {
+  color: #a6a0a0 !important;
+}
+.student_add_section .card.dark-mode-active label {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.student_add_section .card.dark-mode-active select {
+  background-color: #393E46 !important;
+  color: #a6a0a0 !important;
+}
+.student_add_section .card.dark-mode-active .img-file-btn {
+  background-color: #1B262C !important;
+}
+
+.student-edit_section .card.dark-mode-active {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.student-edit_section .card.dark-mode-active input {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.student-edit_section .card.dark-mode-active input::-moz-placeholder {
+  color: #a6a0a0 !important;
+}
+.student-edit_section .card.dark-mode-active input::placeholder {
+  color: #a6a0a0 !important;
+}
+.student-edit_section .card.dark-mode-active label {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.student-edit_section .card.dark-mode-active select {
+  background-color: #393E46 !important;
+  color: #a6a0a0 !important;
+}
+.student-edit_section .card.dark-mode-active .img-file-btn {
+  background-color: #1B262C !important;
+}
+
+.student_list_section .card.dark-mode-active {
+  background-color: #393E46 !important;
+}
+.student_list_section .card.dark-mode-active .star-student {
+  background-color: #393E46 !important;
+}
+.student_list_section .card.dark-mode-active .star-student tr th {
+  color: white !important;
+}
+.student_list_section .card.dark-mode-active .star-student tr td {
+  color: white !important;
+}
+.student_list_section .card.dark-mode-active .star-student a {
+  color: white !important;
+}
+.student_list_section .card.dark-mode-active .star-student a i {
+  color: white !important;
+}
+.student_list_section .card.dark-mode-active .list-title {
+  color: white !important;
+}
+.student_list_section .card.dark-mode-active .pagination .page-link {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.student_list_section .card.dark-mode-active .pagination .page-link:hover {
+  background-color: #3282B8 !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -1568,36 +1832,40 @@ footer.dark-mode-active .footer_text {
   padding: 1rem;
 }
 
-.attendance .continuation_table .accordion-body {
+.attendance .continuation_table .accordion-item .accordion-button {
+  background-color: #EEEEEE;
+  color: black;
+}
+.attendance .continuation_table .accordion-item .accordion-body {
   overflow: scroll;
   display: flex;
   justify-content: center;
 }
-.attendance .continuation_table .accordion-body table {
+.attendance .continuation_table .accordion-item .accordion-body table {
   width: 100%;
 }
-.attendance .continuation_table .accordion-body table thead tr th {
+.attendance .continuation_table .accordion-item .accordion-body table thead tr th {
   background-color: #eee;
   color: black;
   padding: 0.5em;
 }
-.attendance .continuation_table .accordion-body table thead tr .missed-col {
+.attendance .continuation_table .accordion-item .accordion-body table thead tr .missed-col {
   background-color: #eee;
 }
-.attendance .continuation_table .accordion-body table thead tr .name-col {
+.attendance .continuation_table .accordion-item .accordion-body table thead tr .name-col {
   text-align: left;
   width: 300px;
 }
-.attendance .continuation_table .accordion-body table tbody tr td {
+.attendance .continuation_table .accordion-item .accordion-body table tbody tr td {
   border-top: 1px solid #eee;
   padding: 0.5em;
 }
-.attendance .continuation_table .accordion-body table tbody tr .missed-col {
+.attendance .continuation_table .accordion-item .accordion-body table tbody tr .missed-col {
   background-color: #ffecec !important;
   text-align: center;
   font-weight: bold;
 }
-.attendance .continuation_table .accordion-body table tbody tr .missed-col input {
+.attendance .continuation_table .accordion-item .accordion-body table tbody tr .missed-col input {
   cursor: pointer;
   background: red;
 }
