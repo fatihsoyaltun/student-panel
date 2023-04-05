@@ -775,18 +775,24 @@ img
 
 
 //? dark mode start
+body.dark-mode-active
+    background-color: $color1 !important
 .dark-mode.dark-mode-active
     background-color: $color9 !important
 .toggle-ball.dark-mode-active
     background-color: #000 !important
     transform: translateX(-20px)
 .navbar.dark-mode-active
-    background-color: $color1 !important
+    background: rgb(57,62,70)
+    background: linear-gradient(135deg, rgba(57,62,70,1) 0%, rgba(57,62,70,1) 7%, rgba(27,38,44,1) 34%) !important
+    border-bottom: 3px solid $color6 !important
     .user-text
         h6
             color: $color9 !important
 .sidebar.dark-mode-active
-    background-color: $color1!important
+    background: rgb(57,62,70)
+    background: linear-gradient(135deg, rgba(57,62,70,1) 0%, rgba(57,62,70,1) 7%, rgba(27,38,44,1) 55%) !important
+    border-right: 3px solid $color6 !important
     a:hover
         background-color: $color2 !important
     .submenu
@@ -794,6 +800,7 @@ img
             color: $color9 !important
 .section.dark-mode-active
     background-color: $color1!important
+    color: white !important
     .section-header
         .section-title
             color: $color9 !important
@@ -815,10 +822,229 @@ footer.dark-mode-active
     .footer_text
         color: $color9 !important
 
+//classes.html dark mode
+.classes_information_card.dark-mode-active
+    background-color: $color6 !important
+    color: white !important
+.classes_bar.dark-mode-active
+    background-color: $color6 !important
+.classes_participation_rate.dark-mode-active
+    background-color: $color6 !important
+    text
+        fill: white
+    #SvgjsText1097
+        fill: white !important
+    .apexcharts-legend-text
+        color: white !important
+.apexcharts-zoomin-icon.dark-mode-active
+    svg
+        fill: white !important
+.apexcharts-zoomout-icon.dark-mode-active
+    svg
+        fill: white !important
+.apexcharts-selected.dark-mode-active
+    svg
+        fill: white !important
+.apexcharts-reset-icon.dark-mode-active
+    svg
+        fill: white !important
+.apexcharts-menu-icon.dark-mode-active
+    svg
+        fill: white !important    
+#events-calendar.dark-mode-active
+    background-color: $color6 !important
+    thead
+        color: white !important
+    tbody
+        color: white !important
+        .jsCalendar-current
+            color: $color3 !important
+            border-bottom: 1px solid $color3 !important
+        .jsCalendar-next
+            color: $color2 !important
+#events.dark-mode-active
+    .subtitle
+        color: white !important
+    .list
+        background-color: $color6 !important
+        color: white !important
+    .title
+        color: white !important
+        border-bottom: 1px solid white !important
+        border-top: 1px solid white !important
+.continuation_table.dark-mode-active
+    .accordion-item
+        background-color: $color6 !important
+        color: white !important
+        .accordion-button
+            background-color: $color5 !important
+            color: white !important
+            &:focus
+                box-shadow: none !important
+        .accordion-body
+            table
+                thead
+                    tr
+                        th
+                            background-color: $color6 !important
+                            color: white !important
+                tbody
+                    tr
+                        .missed-col
+                            background-color: $color6 !important
+                            color: black !important
+
+// departments-add.html
+
+.departments_add_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        color: white !important
+        input
+            background-color: $color6 !important
+            color: white !important
+        input::placeholder
+            color: #a6a0a0 !important
+                
+        label
+            background-color: $color6 !important
+            color: white !important
+        select
+            background-color: $color6 !important
+            color: #a6a0a0 !important
+        .img-file-btn
+            background-color: $color1 !important
+
+// deparmetns-edit.html
+.departments_edit_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        color: white !important
+        input
+            background-color: $color6 !important
+            color: white !important
+        input::placeholder
+            color: #a6a0a0 !important
+                
+        label
+            background-color: $color6 !important
+            color: white !important
+        select
+            background-color: $color6 !important
+            color: #a6a0a0 !important
+        .img-file-btn
+            background-color: $color1 !important
+
+    //? dark mode end
+
+// departments.html
+.departments_list_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        .star-student
+            background-color: $color6 !important
+            tr
+                th
+                    color: white !important
+                td
+                    color: white !important
+            a
+                color: white !important
+                i
+                    color: white !important
+        .list-title
+            color: white !important
+        .pagination
+            .page-link
+                background-color: $color6 !important
+                color: white !important
+                &:hover
+                    background-color: $color3 !important
+                    
+// student-profile.html
+.student_add_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        color: white !important
+        input
+            background-color: $color6 !important
+            color: white !important
+        input::placeholder
+            color: #a6a0a0 !important
+                
+        label
+            background-color: $color6 !important
+            color: white !important
+        select
+            background-color: $color6 !important
+            color: #a6a0a0 !important
+        .img-file-btn
+            background-color: $color1 !important
+
+// student-edit.html
+.student-edit_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        color: white !important
+        input
+            background-color: $color6 !important
+            color: white !important
+        input::placeholder
+            color: #a6a0a0 !important
+                
+        label
+            background-color: $color6 !important
+            color: white !important
+        select
+            background-color: $color6 !important
+            color: #a6a0a0 !important
+        .img-file-btn
+            background-color: $color1 !important
+
+// student-list.html
+.student_list_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        .star-student
+            background-color: $color6 !important
+            tr
+                th
+                    color: white !important
+                td
+                    color: white !important
+            a
+                color: white !important
+                i
+                    color: white !important
+        .list-title
+            color: white !important
+        .pagination
+            .page-link
+                background-color: $color6 !important
+                color: white !important
+                &:hover
+                    background-color: $color3 !important
+
+// student-profile.html
+// .student_profile_section
+//     // background-color: $color6 !important
+//     .student-panel-header.dark-mode-active
+//         color: white !important
+
+//     .student-info.dark-mode-active
+//         h4
+//             color: white !important
+//         .student-header-text.dark-mode-active
+//             h3
+//                 color: white !important
+//             ul
+//                 li
+//                     color: white !important
+//                     a
+//                         color: white !important
+    
 
 
-
-//? dark mode end
 
 
 @media screen and (max-width: 768px)
@@ -1229,39 +1455,40 @@ footer.dark-mode-active
 
 .attendance
     .continuation_table
-        .accordion-body
-            overflow: scroll
-            display: flex
-            justify-content: center
-            table
-                width: 100%
-                thead
-                    tr
-                        th
-                            background-color: #eee
-                            color: black
-                            padding: 0.5em
-                        .missed-col 
-                            background-color: #eee
-                        .name-col 
-                            text-align: left
-                            width: 300px
-                tbody
-                    tr
-                        td 
-                            border-top: 1px solid #eee
-                            padding: 0.5em
-                        .missed-col 
-                            background-color: #ffecec !important
-                            text-align: center
-                            font-weight: bold
-                            input 
-                                cursor: pointer
-                                background: red
+        .accordion-item
+            .accordion-button
+                background-color: $color8
+                color: black
+            .accordion-body
+                overflow: scroll
+                display: flex
+                justify-content: center
+                table
+                    width: 100%
+                    thead
+                        tr
+                            th
+                                background-color: #eee
+                                color: black
+                                padding: 0.5em
+                            .missed-col 
+                                background-color: #eee
+                            .name-col 
+                                text-align: left
+                                width: 300px
+                    tbody
+                        tr
+                            td 
+                                border-top: 1px solid #eee
+                                padding: 0.5em
+                            .missed-col 
+                                background-color: #ffecec !important
+                                text-align: center
+                                font-weight: bold
+                                input 
+                                    cursor: pointer
+                                    background: red
             
-
-
-
 .classes_topics_section
     .classes_topics
         ol
@@ -1284,6 +1511,7 @@ footer.dark-mode-active
                     .classed_not_processed
                         background-color: crimson
                         color: white
+
 footer
     display: flex
     justify-content: center
