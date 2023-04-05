@@ -12,6 +12,7 @@ $color9:#FFFFFF
 $backroundimg:"/ayhan_img/neos_teacher_header_img.jfif"
 $backroundimg2:"/ayhan_img/7_Kasım.jpg"
 $backroundimg3:'/img/yaprakgri.png'
+$backroundimg4:'/img/'
 
 
 
@@ -774,6 +775,167 @@ img
                         border: 1px solid #3D5EE1
 
 
+
+
+//? Login Form
+.login-form
+    display: table
+    height: 100vh
+    min-height: 100vh
+    .login-body
+        width: 100%
+        height: 100%
+        display: table-cell
+        vertical-align: middle
+        .login-body-wrapper
+            background-color: #fff
+            border-radius: 8px
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+            display: flex
+            margin: 1.875rem auto
+            max-width: 800px
+            min-height: 500px
+            width: 100%
+            .loginLeftSide
+                align-items: center
+                background: $color3
+                flex-direction: column
+                justify-content: end
+                width: 400px
+                display: flex
+                background-blend-mode: multiply
+                border-radius: 8px 20px 20px 8px
+                position: relative
+                &::after
+                    // content: ""
+                    // background-image: url($backroundimg4)
+                    // position: absolute
+                    // top: 0
+                    // right: 0
+                    // width: 144px
+                    // height: 144px
+                .login-img
+                    max-width: 100%
+                    height: auto
+            .loginRightSide
+                align-items: center
+                display: flex
+                justify-content: center
+                padding: 40px
+                width: 400px
+                .login-right-wrap
+                    max-width: 100%
+                    flex: 0 0 100%
+                    h1
+                        font-size: 25px
+                        font-weight: 600
+                        margin-bottom: 5px
+                        text-align: left
+                    .signIn
+                        color: #AAAAAA
+                        font-size: 16px
+                        margin-bottom: 1.875rem
+                        text-align: left
+                        a
+                            color: $color7
+                    h2
+                        font-size: 23px
+                        font-weight: 500
+                        color: #000
+                        margin-bottom: 28px
+                    form
+                        .form-group
+                            position: relative
+                            margin-bottom: 1.25rem
+                            label
+                                font-size: 13px
+                                color: #ABABAB
+                                font-weight: 500
+                                position: absolute
+                                top: -10px
+                                left: 10px
+                                background: #fff
+                                margin-bottom: 0
+                                padding: 0px 5px
+                                .login-danger
+                                    color: red
+                            .form-control
+                                border: 1px solid #ddd
+                                box-shadow: none
+                                color: #333
+                                font-size: 15px
+                                height: 45px
+                                &:focus
+                                    border-color: #3d5ee1
+                                    box-shadow: none
+                                    outline: 0 none
+                            .login-icon
+                                position: absolute
+                                right: 17px
+                                top: 50%
+                                transform: translateY(-50%)
+                                .fa-eye
+                                    position: relative
+                        .form-forget
+                            display: flex
+                            margin-bottom: 20px
+                            .remember
+                                .check
+                                    color: #878787
+                                    font-size: 14px
+                                    font-weight: 400
+                                    cursor: pointer
+                                    input
+                                        margin-right: 5px
+                                a
+                                    color: $color7
+                                    font-size: 15px
+                                    margin-left: auto
+                        .btn-primary
+                            background-color: $color3
+                            border-color: $color3
+                            &:hover
+                                opacity: .8
+                    .loginOr
+                        color: #a0a0a0
+                        margin-bottom: 20px
+                        margin-top: 20px
+                        padding-bottom: 10px
+                        padding-top: 10px
+                        position: relative
+                        .login-or-line
+                            background-color: #e5e5e5
+                            height: 1px
+                            margin-bottom: 0
+                            margin-top: 0
+                            display: block
+                        .login-or-text
+                            background-color: #fff
+                            display: block
+                            left: 50%
+                            margin-left: -20px
+                            position: absolute
+                            text-align: center
+                            text-transform: uppercase
+                            top: 0
+                            width: 42px
+                    .login-social-icons
+                        text-align: center
+                        a
+                            background-color: $color8
+                            border-radius: 4px
+                            color: #000
+                            display: inline-block
+                            font-size: 18px
+                            height: 32px
+                            line-height: 32px
+                            margin-right: 6px
+                            text-align: center
+                            width: 32px
+                            transition: all .3s ease
+                            &:hover
+                                background-color: $color7
+                                color: #fff
 //? dark mode start
 body.dark-mode-active
     background-color: $color1 !important
@@ -1059,6 +1221,10 @@ footer.dark-mode-active
             margin-bottom: 1rem
         .card
             margin-bottom: 1rem
+    .loginLeftSide
+        display: none !important
+    .loginRightSide
+        width: 100% !important
 
 
 
@@ -1081,6 +1247,8 @@ footer.dark-mode-active
         .row>*
             padding-left: 0 !important
             padding-right: 0 !important
+    .loginrightSide
+        width: 100% !important
 
 
 
