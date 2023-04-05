@@ -330,14 +330,16 @@
                         aria-labelledby="nav-subjects-tab" tabindex="0">
                         <div class="row">
                             <div class="col-xl-6">
-                                <h6 class="frontend mt-5 fw-bold"><img src="./ayhan_img/subject_frontend.png" alt=""> FRONT-END</h6>
+                                <h6 class="frontend mt-5 fw-bold"><img src="./ayhan_img/subject_frontend.png" alt="">
+                                    FRONT-END</h6>
 
-                                <div class="accordion accordion-flush frontend_subjects mt-3" id="accordionFlushExample">
+                                <div class="accordion accordion-flush frontend_subjects mt-3"
+                                    id="accordionFlushExample">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                                aria-controls="flush-collapseOne">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                                aria-expanded="false" aria-controls="flush-collapseOne">
                                                 <span class="frontend_subjects_head_html">HTML</span>
                                             </button>
                                         </h2>
@@ -352,9 +354,9 @@
                                     </div>
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                                aria-controls="flush-collapseTwo">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                                aria-expanded="false" aria-controls="flush-collapseTwo">
                                                 <span class="frontend_subjects_head_css">CSS</span>
                                             </button>
                                         </h2>
@@ -369,9 +371,9 @@
                                     </div>
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                                aria-controls="flush-collapseThree">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                                aria-expanded="false" aria-controls="flush-collapseThree">
                                                 <span class="frontend_subjects_head_js">Javascript</span>
                                             </button>
                                         </h2>
@@ -387,15 +389,16 @@
                                 </div>
                             </div>
                             <div class="col-xl-6">
-                                <h6 class="backend mt-5 fw-bold"><img src="./ayhan_img/subject_backend.png" alt=""> BACK-END</h6>
+                                <h6 class="backend mt-5 fw-bold"><img src="./ayhan_img/subject_backend.png" alt="">
+                                    BACK-END</h6>
 
 
                                 <div class="accordion accordion-flush backend_subjects mt-3" id="accordionFlushExample">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#flush-collapseFour" aria-expanded="false"
-                                                aria-controls="flush-collapseFour">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                                                aria-expanded="false" aria-controls="flush-collapseFour">
                                                 <span class="backend_subjects_head_python">PYTHON</span>
                                             </button>
                                         </h2>
@@ -410,9 +413,9 @@
                                     </div>
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#flush-collapseFive" aria-expanded="false"
-                                                aria-controls="flush-collapseFive">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                                                aria-expanded="false" aria-controls="flush-collapseFive">
                                                 <span class="backend_subjects_head_django">DJANGO</span>
                                             </button>
                                         </h2>
@@ -465,7 +468,8 @@
                                 </div>
                             </div>
 
-                            <button class="d-block m-auto mt-3" type="button" onclick="addSubject()">Ekle <i class="fa-solid fa-plus"></i></button>
+                            <button class="d-block m-auto mt-3" type="button" onclick="addSubject()">Ekle <i
+                                    class="fa-solid fa-plus"></i></button>
                             <div class="alert_section">
 
                             </div>
@@ -505,76 +509,9 @@
     <script src="/app.js"></script>
 
     <script>
-//         const mainTitleSelect = document.getElementById('mainTitle');
-//         const subTitleSelect = document.getElementById('subTitle');
-//         const form = document.querySelector('.subjects_add_form');
-
-//         mainTitleSelect.addEventListener('change', () => {
-//             // seçilen ana başlık değerine göre, alt başlık seçeneklerini değiştir
-//             if (mainTitleSelect.value === 'frontend_subjects') {
-//                 subTitleSelect.innerHTML = `
-//       <option class="op_html" value="html_subjects_list">HTML</option>
-//       <option class="op_css" value="css_subjects_list">CSS</option>
-//       <option class="op_js" value="js_subjects_list">Javascript</option>
-//     `;
-//             } else if (mainTitleSelect.value === 'backend_subjects') {
-//                 subTitleSelect.innerHTML = `
-//       <option class="op_python" value="python_subjects_list">Python</option>
-//       <option class="op_django" value="django_subjects_list">Django</option>
-//     `;
-//             }
-//         });
-
-//         function addSubject() {
-//     // Seçeneklerin seçilmesi
-//     const mainTitleSelect = document.getElementById("mainTitle");
-//     const mainTitleValue = mainTitleSelect.value;
-//     const subTitleSelect = document.getElementById("subTitle");
-//     const subTitleValue = subTitleSelect.value;
-//     const subjectInput = document.getElementById("subject");
-//     const subjectValue = subjectInput.value;
-//     const linkItem = document.querySelector(".link_item");
 
 
-//     // Input alanı boş ise uyarı mesajı gösterme
-//     if (subjectValue === '') {
-//         const emptyAlertDiv = document.createElement("div");
-//         emptyAlertDiv.classList.add("alert", "alert-danger", "mt-3", "subject_alert");
-//         emptyAlertDiv.textContent = "Lütfen bir konu girin.";
-//         form.appendChild(emptyAlertDiv);
-//         setTimeout(() => {
-//             emptyAlertDiv.remove();
-//         }, 3000);
-//         return;
-//     }
-
-//     // Doğru konu altına öğe ekleme
-//     const list = document.querySelector(`.${subTitleValue}`);
-//     const listItem = document.createElement("li");
-//     const link = document.createElement("a");
-//     link.textContent = subjectValue;
-//     link.href = linkItem.value;
-//     link.target = "_blank";
-//     listItem.appendChild(link);
-//     list.appendChild(listItem);
-
-//     // Başarı mesajı gösterme
-//     const successAlertDiv = document.createElement("div");
-//     successAlertDiv.classList.add("alert", "alert-success", "mt-3", "subject_alert");
-//     successAlertDiv.textContent = "Konu başarıyla eklendi.";
-//     form.appendChild(successAlertDiv);
-//     setTimeout(() => {
-//         successAlertDiv.remove();
-//     }, 3000);
-
-//     // Input alanını boşaltma
-//     subjectInput.value = "";
-//     linkItem.value = "";
-
-// } 
-
-// ----------Burası kullanıclakacak en kötü
-const mainTitleSelect = document.getElementById('mainTitle');
+        const mainTitleSelect = document.getElementById('mainTitle');
         const subTitleSelect = document.getElementById('subTitle');
         const form = document.querySelector('.subjects_add_form');
 
@@ -593,66 +530,76 @@ const mainTitleSelect = document.getElementById('mainTitle');
     `;
             }
         });
-
+        const deneme = JSON.parse(localStorage.getItem('deneme')) || [];
         function addSubject() {
-    // Seçeneklerin seçilmesi
-    const mainTitleSelect = document.getElementById("mainTitle");
-    const mainTitleValue = mainTitleSelect.value;
-    const subTitleSelect = document.getElementById("subTitle");
-    const subTitleValue = subTitleSelect.value;
-    const subjectInput = document.getElementById("subject");
-    const subjectValue = subjectInput.value;
-    const linkItem = document.querySelector(".link_item");
-    const alert_section = document.querySelector(".alert_section");
+            // Seçeneklerin seçilmesi
+            const mainTitleSelect = document.getElementById("mainTitle");
+            const mainTitleValue = mainTitleSelect.value;
+            const subTitleSelect = document.getElementById("subTitle");
+            const subTitleValue = subTitleSelect.value;
+            const subjectInput = document.getElementById("subject");
+            const subjectValue = subjectInput.value;
+            const linkItem = document.querySelector(".link_item");
+            const linkItemText = linkItem.value;
+            const alert_section = document.querySelector(".alert_section");
 
-    // Input alanı boş ise uyarı mesajı gösterme
-    if (subjectValue, linkItem.value === '') {
-        const emptyAlertDiv = document.createElement("div");
-        emptyAlertDiv.classList.add("alert", "alert-danger", "mt-3", "subject_alert_danger");
-        emptyAlertDiv.textContent = "Lütfen boş alan bırakmayın !";
-        alert_section.appendChild(emptyAlertDiv);
-        setTimeout(() => {
-            emptyAlertDiv.remove();
-        }, 3000);
-        return;
-    }
+            // Input alanı boş ise uyarı mesajı gösterme
+            if (subjectValue, linkItem.value === '') {
+                const emptyAlertDiv = document.createElement("div");
+                emptyAlertDiv.classList.add("alert", "alert-danger", "mt-3", "subject_alert_danger");
+                emptyAlertDiv.textContent = "Lütfen boş alan bırakmayın !";
+                alert_section.appendChild(emptyAlertDiv);
+                setTimeout(() => {
+                    emptyAlertDiv.remove();
+                }, 3000);
+                return;
+            }
 
-    // Doğru konu altına öğe ekleme
-const list = document.querySelector(`.${subTitleValue}`);
-const listItem = document.createElement("li");
-const link = document.createElement("a");
-link.textContent = subjectValue;
-link.href = linkItem.value;
-link.target = "_blank";
-listItem.appendChild(link);
+            // Doğru konu altına öğe ekleme
+            const list = document.querySelector(`.${subTitleValue}`);
+            const listItem = document.createElement("li");
+            const link = document.createElement("a");
+            link.textContent = subjectValue;
+            link.href = linkItem.value;
+            link.target = "_blank";
+            listItem.appendChild(link);
 
-// Sil butonu ekleme
-const deleteButton = document.createElement("button");
-deleteButton.innerHTML = '<i class="fa-regular fa-square-minus"></i>';
-deleteButton.classList.add("delete_button");
-deleteButton.addEventListener("click", () => {
-    list.removeChild(listItem);
-});
-listItem.appendChild(deleteButton);
+            // Sil butonu ekleme
+            const deleteButton = document.createElement("button");
+            deleteButton.innerHTML = '<i class="fa-regular fa-square-minus"></i>';
+            deleteButton.classList.add("delete_button");
+            deleteButton.addEventListener("click", () => {
+                list.removeChild(listItem);
+            });
+            listItem.appendChild(deleteButton);
 
-list.appendChild(listItem);
+            list.appendChild(listItem);
 
 
-    // Başarı mesajı gösterme
-    const successAlertDiv = document.createElement("div");
-    successAlertDiv.classList.add("alert", "alert-success", "mt-3", "subject_alert_success");
-    successAlertDiv.textContent = "Konu başarıyla eklendi.";
-    alert_section.appendChild(successAlertDiv);
-    setTimeout(() => {
-        successAlertDiv.remove();
-    }, 3000);
+            // Başarı mesajı gösterme
+            const successAlertDiv = document.createElement("div");
+            successAlertDiv.classList.add("alert", "alert-success", "mt-3", "subject_alert_success");
+            successAlertDiv.textContent = "Konu başarıyla eklendi.";
+            alert_section.appendChild(successAlertDiv);
+            setTimeout(() => {
+                successAlertDiv.remove();
+            }, 3000);
 
-    // Input alanını boşaltma
-    subjectInput.value = "";
-    linkItem.value = "";
-}
+            // Input alanını boşaltma
+            subjectInput.value = "";
+            linkItem.value = "";
 
-// ------------Son--------
+            deneme.push({
+                mainTitle: mainTitleValue,
+                subTitle: subTitleValue,
+                subject: subjectValue,
+                linkItem: linkItemText
+            });
+            console.log(deneme);
+            localStorage.setItem("deneme",JSON.stringify(deneme));
+        }
+
+        
 
 
 
