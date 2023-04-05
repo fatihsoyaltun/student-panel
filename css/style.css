@@ -874,6 +874,185 @@ img {
   border: 1px solid #3D5EE1;
 }
 
+.login-form {
+  display: table;
+  height: 100vh;
+  min-height: 100vh;
+}
+.login-form .login-body {
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+.login-form .login-body .login-body-wrapper {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin: 1.875rem auto;
+  max-width: 800px;
+  min-height: 500px;
+  width: 100%;
+}
+.login-form .login-body .login-body-wrapper .loginLeftSide {
+  align-items: center;
+  background: #3282B8;
+  flex-direction: column;
+  justify-content: end;
+  width: 400px;
+  display: flex;
+  background-blend-mode: multiply;
+  border-radius: 8px 20px 20px 8px;
+  position: relative;
+}
+.login-form .login-body .login-body-wrapper .loginLeftSide .login-img {
+  max-width: 100%;
+  height: auto;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  width: 400px;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap {
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap h1 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap .signIn {
+  color: #AAAAAA;
+  font-size: 16px;
+  margin-bottom: 1.875rem;
+  text-align: left;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap .signIn a {
+  color: #00ADB5;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap h2 {
+  font-size: 23px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 28px;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap form .form-group {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap form .form-group label {
+  font-size: 13px;
+  color: #ABABAB;
+  font-weight: 500;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: #fff;
+  margin-bottom: 0;
+  padding: 0px 5px;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap form .form-group label .login-danger {
+  color: red;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap form .form-group .form-control {
+  border: 1px solid #ddd;
+  box-shadow: none;
+  color: #333;
+  font-size: 15px;
+  height: 45px;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap form .form-group .form-control:focus {
+  border-color: #3d5ee1;
+  box-shadow: none;
+  outline: 0 none;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap form .form-group .login-icon {
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap form .form-group .login-icon .fa-eye {
+  position: relative;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap form .form-forget {
+  display: flex;
+  margin-bottom: 20px;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap form .form-forget .remember .check {
+  color: #878787;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap form .form-forget .remember .check input {
+  margin-right: 5px;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap form .form-forget .remember a {
+  color: #00ADB5;
+  font-size: 15px;
+  margin-left: auto;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap form .btn-primary {
+  background-color: #3282B8;
+  border-color: #3282B8;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap form .btn-primary:hover {
+  opacity: 0.8;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap .loginOr {
+  color: #a0a0a0;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: relative;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap .loginOr .login-or-line {
+  background-color: #e5e5e5;
+  height: 1px;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: block;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap .loginOr .login-or-text {
+  background-color: #fff;
+  display: block;
+  left: 50%;
+  margin-left: -20px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  width: 42px;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap .login-social-icons {
+  text-align: center;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap .login-social-icons a {
+  background-color: #EEEEEE;
+  border-radius: 4px;
+  color: #000;
+  display: inline-block;
+  font-size: 18px;
+  height: 32px;
+  line-height: 32px;
+  margin-right: 6px;
+  text-align: center;
+  width: 32px;
+  transition: all 0.3s ease;
+}
+.login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap .login-social-icons a:hover {
+  background-color: #00ADB5;
+  color: #fff;
+}
+
 .dark-mode.dark-mode-active {
   background-color: #FFFFFF !important;
 }
@@ -944,6 +1123,12 @@ footer.dark-mode-active .footer_text {
   .section .card, .student-panel .card {
     margin-bottom: 1rem;
   }
+  .loginLeftSide {
+    display: none !important;
+  }
+  .loginRightSide {
+    width: 100% !important;
+  }
 }
 @media screen and (max-width: 576px) {
   .header .navbar .user-text {
@@ -964,6 +1149,9 @@ footer.dark-mode-active .footer_text {
   .section .row > * {
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+  .loginrightSide {
+    width: 100% !important;
   }
 }
 .teacher_header .teacher_head_bottom {
