@@ -82,8 +82,8 @@
                         </div>
                     </div>
                     <!-- Off Canvas -->
-                    <a href="./studentDashboard.html" class="navbar-brand"><img src="https://neosyazilim.com/static/img/neosLogo2.png"
-                            width="100" alt=""></a>
+                    <a href="./studentDashboard.html" class="navbar-brand"><img
+                            src="https://neosyazilim.com/static/img/neosLogo2.png" width="100" alt=""></a>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     </form>
@@ -360,79 +360,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-body pcb">
-                                <div class="prog-bar-content">
-                                    <div class="statistics-bar">
-                                        <div class="barHead">
-                                            <h5>Html</h5>
-                                            <p>100%</p>
-                                        </div>
-                                        <div class="progress mb-0">
-                                            <div class="progress-bar bg-html" role="progressbar" style="width: 100%;"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="statistics-bar">
-                                        <div class="barHead">
-                                            <h5>Css</h5>
-                                            <p>100%</p>
-                                        </div>
-                                        <div class="progress mb-1">
-                                            <div class="progress-bar bg-css" role="progressbar" style="width: 100%;"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="statistics-bar">
-                                        <div class="barHead">
-                                            <h5>Bootstrap</h5>
-                                            <p>100%</p>
-                                        </div>
-                                        <div class="progress mb-1">
-                                            <div class="progress-bar bg-bootstrap" role="progressbar"
-                                                style="width: 100%;" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="statistics-bar">
-                                        <div class="barHead">
-                                            <h5>jQuery</h5>
-                                            <p>100%</p>
-                                        </div>
-                                        <div class="progress mb-1">
-                                            <div class="progress-bar bg-jQuery" role="progressbar" style="width: 100%;"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="statistics-bar">
-                                        <div class="barHead">
-                                            <h5>JavaScript</h5>
-                                            <p>100%</p>
-                                        </div>
-                                        <div class="progress mb-1">
-                                            <div class="progress-bar bg-js" role="progressbar" style="width: 100%;"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="statistics-bar">
-                                        <div class="barHead">
-                                            <h5>Python</h5>
-                                            <p>70%</p>
-                                        </div>
-                                        <div class="progress mb-1">
-                                            <div class="progress-bar bg-py" role="progressbar" style="width: 70%;"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="statistics-bar">
-                                        <div class="barHead">
-                                            <h5>Django</h5>
-                                            <p>0%</p>
-                                        </div>
-                                        <div class="progress mb-1">
-                                            <div class="progress-bar bg-dj" role="progressbar" style="width: 0%;"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="card-body">
+                                <div id="progresBar"></div>
                             </div>
                         </div>
                     </div>
@@ -549,6 +478,36 @@
 
         var stdDash_chart = new ApexCharts(document.querySelector("#performance"), stdDash);
         stdDash_chart.render();
+
+        //<-- ProgressBar->
+
+        var prgBar = {
+            series: [{
+                data: [1300, 1000, 800, 600, 500, 300, 200,]
+            }],
+            chart: {
+                type: 'bar',
+                height: 350
+            },
+            plotOptions: {
+                bar: {
+                    borderRadius: 4,
+                    horizontal: true,
+                }
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            fill:{
+                colors : ['#F44336', '#E91E63', '#9C27B0']
+            },
+            xaxis: {
+                categories: ['Html', 'Css', 'Javascript', 'Python', 'Django',],
+            }
+        };
+
+        var prgBar_chart = new ApexCharts(document.querySelector("#progresBar"), prgBar);
+        prgBar_chart.render();
     </script>
 </body>
 

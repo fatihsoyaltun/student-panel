@@ -476,31 +476,6 @@ img
                 .card-body
                     padding: 8px
 
-.stdDash
-    .card-body
-        position: relative
-        padding: 25px !important
-        .prog-bar-content
-            .barHead
-                display: flex
-                align-items: center
-                justify-content: space-between
-            .progress
-                height: 8px !important
-                .bg-html
-                    background-color: #7149C6
-                .bg-css
-                    background-color: #FC2947
-                .bg-bootstrap
-                    background-color: #FE6244
-                .bg-jQuery
-                    background-color: #FFDEB9
-                .bg-js
-                    background-color: #16FF00
-                .bg-py
-                    background-color: #9DF1DF
-                .bg-dj
-                    background-color: #A555EC
 
 //! Student Profil Css
 .student-panel
@@ -983,6 +958,25 @@ footer.dark-mode-active
     background-color: $color1!important
     .footer_text
         color: $color9 !important
+
+
+//studentdDashboara.html dark mode
+.stdDash.dark-mode-active
+    .card
+        background-color: $color1 !important
+        .card-body
+            color: $color9!important
+            .card-info
+                color: $color9!important
+                h6
+                    color: $color9!important
+                h3
+                    color: $color9!important
+            .apexcharts-canvas
+                svg
+                    text
+                        fill: $color9!important
+
 
 //classes.html dark mode
 .classes_information_card.dark-mode-active
@@ -1886,7 +1880,7 @@ footer
                 border-radius: 10px
                 overflow: hidden
                 .accordion-button
-                    padding: .5rem
+                    padding: 1.5rem
                     background: none
                     color: black
                     &:focus
