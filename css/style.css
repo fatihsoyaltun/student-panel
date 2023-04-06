@@ -1403,6 +1403,165 @@ footer.dark-mode-active .footer_text {
 .student_profile_section .student_profil_card_chart.dark-mode-active h6 {
   color: white !important;
 }
+
+.subjects_section .student-subjects-nav-btn.dark-mode-active {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.subjects_section .tab-pane .frontend_subjects.dark-mode-active .accordion-item {
+  background-color: #393E46 !important;
+}
+.subjects_section .tab-pane .frontend_subjects.dark-mode-active .accordion-item button {
+  color: white !important;
+}
+.subjects_section .tab-pane .frontend_subjects.dark-mode-active .accordion-item .accordion-body li {
+  color: white !important;
+}
+.subjects_section .tab-pane .frontend_subjects.dark-mode-active .accordion-item .accordion-body li a {
+  color: white !important;
+}
+.subjects_section .tab-pane .backend_subjects.dark-mode-active .accordion-item {
+  background-color: #393E46 !important;
+}
+.subjects_section .tab-pane .backend_subjects.dark-mode-active .accordion-item button {
+  color: white !important;
+}
+.subjects_section .tab-pane .backend_subjects.dark-mode-active .accordion-item .accordion-body li {
+  color: white !important;
+}
+.subjects_section .tab-pane .backend_subjects.dark-mode-active .accordion-item .accordion-body li a {
+  color: white !important;
+}
+
+.subjects-nav-btn.dark-mode-active {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+
+.teacher_add_section .card.dark-mode-active {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.teacher_add_section .card.dark-mode-active input {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.teacher_add_section .card.dark-mode-active input::-moz-placeholder {
+  color: #a6a0a0 !important;
+}
+.teacher_add_section .card.dark-mode-active input::placeholder {
+  color: #a6a0a0 !important;
+}
+.teacher_add_section .card.dark-mode-active label {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.teacher_add_section .card.dark-mode-active select {
+  background-color: #393E46 !important;
+  color: #a6a0a0 !important;
+}
+.teacher_add_section .card.dark-mode-active .img-file-btn {
+  background-color: #1B262C !important;
+}
+
+.teacher_edit_section .card.dark-mode-active {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.teacher_edit_section .card.dark-mode-active input {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.teacher_edit_section .card.dark-mode-active input::-moz-placeholder {
+  color: #a6a0a0 !important;
+}
+.teacher_edit_section .card.dark-mode-active input::placeholder {
+  color: #a6a0a0 !important;
+}
+.teacher_edit_section .card.dark-mode-active label {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.teacher_edit_section .card.dark-mode-active select {
+  background-color: #393E46 !important;
+  color: #a6a0a0 !important;
+}
+.teacher_edit_section .card.dark-mode-active .img-file-btn {
+  background-color: #1B262C !important;
+}
+
+.teacher_list_section .card.dark-mode-active {
+  background-color: #393E46 !important;
+}
+.teacher_list_section .card.dark-mode-active .star-student {
+  background-color: #393E46 !important;
+}
+.teacher_list_section .card.dark-mode-active .star-student tr th {
+  color: white !important;
+}
+.teacher_list_section .card.dark-mode-active .star-student tr td {
+  color: white !important;
+}
+.teacher_list_section .card.dark-mode-active .star-student a {
+  color: white !important;
+}
+.teacher_list_section .card.dark-mode-active .star-student a i {
+  color: white !important;
+}
+.teacher_list_section .card.dark-mode-active .list-title {
+  color: white !important;
+}
+.teacher_list_section .card.dark-mode-active .pagination .page-link {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.teacher_list_section .card.dark-mode-active .pagination .page-link:hover {
+  background-color: #3282B8 !important;
+}
+
+.teacher-profile .teacher_head_bottom_profile.dark-mode-active {
+  background-color: #393E46;
+  color: white;
+}
+.teacher-profile .teacher_head_bottom_profile.dark-mode-active .teacher_head_bottom_profile_summary_area_right_social_media .social_media_button {
+  background-color: #393E46 !important;
+}
+.teacher-profile .teacher_head_bottom_profile.dark-mode-active .teacher_head_bottom_profile_summary_area_right_social_media .social_media_body {
+  background-color: #393E46 !important;
+}
+.teacher-profile .teacher_about.dark-mode-active .teacher_about_left {
+  background-color: #393E46 !important;
+}
+.teacher-profile .teacher_about.dark-mode-active .teacher_about_right {
+  background-color: #393E46 !important;
+}
+.teacher-profile .teacher_analyces.dark-mode-active .card {
+  background-color: #393E46 !important;
+}
+.teacher-profile .teacher_analyces.dark-mode-active .teacher_analyce_survey_score {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.teacher-profile .teacher_analyces.dark-mode-active .teacher_analyce_survey_score text {
+  fill: white !important;
+}
+.teacher-profile .teacher_analyces.dark-mode-active .teacher_analyce_survey_score .apexcharts-menu {
+  background-color: #1B262C !important;
+}
+.teacher-profile .teacher_analyces.dark-mode-active .apexcharts-tooltip,
+.teacher-profile .teacher_analyces.dark-mode-active .apexcharts-tooltip-title {
+  background-color: #1B262C !important;
+}
+.teacher-profile .teacher_abilities.dark-mode-active {
+  background-color: #393E46 !important;
+}
+.teacher-profile .teacher_abilities.dark-mode-active .apexcharts-title-text {
+  fill: white !important;
+}
+.teacher-profile .teacher_abilities.dark-mode-active .apexcharts-menu {
+  background-color: #1B262C !important;
+}
+
 @media screen and (max-width: 768px) {
   .off-canvas {
     display: block !important;
