@@ -51,17 +51,6 @@
                                         </li>
                                         <li class="submenu">
                                             <a href="#">
-                                                <i class="fas fa-chalkboard-teacher"></i>
-                                                <span>Eğitmen</span>
-                                                <span class="menu-arrow"></span>
-                                            </a>
-                                            <ul class="submenu-content">
-                                                <li><a href="#">Eğitmen Listesi</a></li>
-                                                <li><a href="#">Eğitmen Görüntüle</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="submenu">
-                                            <a href="#">
                                                 <i class="fas fa-building"></i>
                                                 <span>Dersler</span>
                                                 <span class="menu-arrow"></span>
@@ -93,12 +82,17 @@
                         </div>
                     </div>
                     <!-- Off Canvas -->
-                    <a href="#" class="navbar-brand"><img src="https://neosyazilim.com/static/img/neosLogo2.png"
+                    <a href="./studentDashboard.html" class="navbar-brand"><img src="https://neosyazilim.com/static/img/neosLogo2.png"
                             width="100" alt=""></a>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     </form>
                     <div class="right d-flex align-items-center">
+                        <div class="dark-mode">
+                            <i class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-sun"></i>
+                            <div class="toggle-ball"></div>
+                        </div>
                         <div class="dropdown">
                             <a class="myBtn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -214,7 +208,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="./studentDashboard-profil.html">Profil</a></li>
                                     <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
-                                    <li><a class="dropdown-item" href="#">Çıkış</a></li>
+                                    <li><a class="dropdown-item" href="./login.html">Çıkış</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -227,17 +221,6 @@
                 <ul>
                     <li class="menu-title">
                         <span>Student Dashboard</span>
-                    </li>
-                    <li class="submenu">
-                        <a href="#">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            <span>Eğitmen</span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <ul class="submenu-content">
-                            <li><a href="#">Eğitmen Listesi</a></li>
-                            <li><a href="#">Eğitmen Görüntüle</a></li>
-                        </ul>
                     </li>
                     <li class="submenu">
                         <a href="#">
@@ -490,32 +473,8 @@
     <script src="./js/jsCalenderMain.js"></script>
     <!-- Main Js -->
     <script src="./app.js"></script>
+    <script src="./js/jsDarkMode.js"></script>
     <script>
-        //CountDown
-        // const countDate = new Date('April 7,2023 15:00:00').getTime();
-        // function nextLesson() {
-        //     const now = new Date().getTime();
-        //     let gap = countDate - now;
-
-        //     let second = 1000;
-        //     let minute = second * 60;
-        //     let hour = minute * 60;
-        //     let day = hour * 24;
-
-        //     let d = Math.floor(gap / (day));
-        //     let h = Math.floor((gap % (day)) / (hour));
-        //     let m = Math.floor((gap % (hour)) / (minute))
-        //     let s = Math.floor((gap % (minute)) / (second));
-
-        //     document.getElementById('day').innerText = `${d}g`;
-        //     document.getElementById('hour').innerText = `${h}s`;
-        //     document.getElementById('minute').innerText = `${m}d`;
-        //     document.getElementById('second').innerText = `${s}s`;
-        // }
-        // setInterval(function () {
-        //     nextLesson()
-        // }, 1000);
-
         //<--CountDown2-->
         function getNextLessonDate() {
             const today = new Date();
