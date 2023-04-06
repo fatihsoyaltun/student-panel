@@ -3,7 +3,7 @@
 
 const ball = document.querySelector(".dark-mode");
 const items = document.querySelectorAll(
-  "body, .navbar,.sidebar,.toggle-ball,.dark-mode,.student-panel, footer, .section, .classes_information_card, .classes_bar, .classes_participation_rate, #SvgjsText1097, .apexcharts-zoomin-icon, .apexcharts-zoomout-icon, .apexcharts-selected.dark, .apexcharts-reset-icon, apexcharts-menu-icon, text, #events-calendar, #events, .continuation_table, .card, .student-panel-header, .student-header-text, .student-info"
+  "body, .navbar,.sidebar,.toggle-ball,.dark-mode,.student-panel, footer, .section, .classes_information_card, .classes_bar, .classes_participation_rate, #SvgjsText1097, .apexcharts-zoomin-icon, .apexcharts-zoomout-icon, .apexcharts-selected.dark, .apexcharts-reset-icon, apexcharts-menu-icon, text, #events-calendar, #events, .continuation_table, .card, .student-header-text, .student-info, .student-profil, .card-body, .student-accordion-button, .student-accordion-body, .student_profil_card_header, .student-profil-card-title"
 );
 
 ball.addEventListener("click", function () {
