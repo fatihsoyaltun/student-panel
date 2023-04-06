@@ -874,10 +874,6 @@ img {
   border: 1px solid #3D5EE1;
 }
 
-
-body.dark-mode-active {
-  background-color: #1B262C !important;
-  }
 .login-form {
   display: table;
   height: 100vh;
@@ -1055,7 +1051,10 @@ body.dark-mode-active {
 .login-form .login-body .login-body-wrapper .loginRightSide .login-right-wrap .login-social-icons a:hover {
   background-color: #00ADB5;
   color: #fff;
+}
 
+body.dark-mode-active {
+  background-color: #1B262C !important;
 }
 
 .dark-mode.dark-mode-active {
@@ -1370,6 +1369,55 @@ footer.dark-mode-active .footer_text {
   background-color: #3282B8 !important;
 }
 
+.student_profile_section .student-panel-header .student-header-text.dark-mode-active {
+  background-color: #1B262C !important;
+}
+.student_profile_section .student-panel-header .student-header-text.dark-mode-active .text-title {
+  color: white !important;
+}
+.student_profile_section .student-panel-header .student-header-text.dark-mode-active .breadcrumb li {
+  color: white !important;
+}
+.student_profile_section .student-panel-header .student-header-text.dark-mode-active .breadcrumb li a {
+  color: white !important;
+}
+.student_profile_section .student-card .card-body.dark-mode-active {
+  background-color: #393E46 !important;
+}
+.student_profile_section .student-card .card-body.dark-mode-active .student-info.dark-mode-active h4 {
+  color: white !important;
+}
+.student_profile_section .student-card .card-body.dark-mode-active .student-profil.dark-mode-active .row {
+  background-color: #393E46 !important;
+}
+.student_profile_section .student-card .card-body.dark-mode-active .student-profil.dark-mode-active .row .student-profil-box .student-profil-box-name h4, .student_profile_section .student-card .card-body.dark-mode-active .student-profil.dark-mode-active .row .student-profil-box .student-profil-box-name h5 {
+  color: white !important;
+}
+.student_profile_section .student-card .card-body.dark-mode-active .accordion .accordion-item .accordion-header .student-accordion-button.dark-mode-active {
+  background-color: #222831 !important;
+  color: white !important;
+}
+.student_profile_section .student-card .card-body.dark-mode-active .accordion .accordion-item .accordion-collapse .student-accordion-body.dark-mode-active {
+  background-color: #222831 !important;
+}
+.student_profile_section .student-card .card-body.dark-mode-active .accordion .accordion-item .accordion-collapse .student-accordion-body.dark-mode-active .student-details-card h4, .student_profile_section .student-card .card-body.dark-mode-active .accordion .accordion-item .accordion-collapse .student-accordion-body.dark-mode-active .student-details-card h5, .student_profile_section .student-card .card-body.dark-mode-active .accordion .accordion-item .accordion-collapse .student-accordion-body.dark-mode-active .student-details-card p {
+  color: white !important;
+}
+.student_profile_section .student_profil_card_chart.dark-mode-active {
+  background-color: #393E46 !important;
+}
+.student_profile_section .student_profil_card_chart.dark-mode-active .student_profil_card_header.dark-mode-active {
+  background-color: #222831 !important;
+}
+.student_profile_section .student_profil_card_chart.dark-mode-active .student_profil_card_header.dark-mode-active .student-profil-card-title.dark-mode-active {
+  color: white !important;
+}
+.student_profile_section .student_profil_card_chart.dark-mode-active .apexcharts-datalabel-value {
+  fill: white !important;
+}
+.student_profile_section .student_profil_card_chart.dark-mode-active h6 {
+  color: white !important;
+}
 @media screen and (max-width: 768px) {
   .off-canvas {
     display: block !important;
