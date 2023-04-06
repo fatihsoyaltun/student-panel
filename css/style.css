@@ -529,40 +529,6 @@ img {
   padding: 8px;
 }
 
-.stdDash .card-body {
-  position: relative;
-  padding: 25px !important;
-}
-.stdDash .card-body .prog-bar-content .barHead {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.stdDash .card-body .prog-bar-content .progress {
-  height: 8px !important;
-}
-.stdDash .card-body .prog-bar-content .progress .bg-html {
-  background-color: #7149C6;
-}
-.stdDash .card-body .prog-bar-content .progress .bg-css {
-  background-color: #FC2947;
-}
-.stdDash .card-body .prog-bar-content .progress .bg-bootstrap {
-  background-color: #FE6244;
-}
-.stdDash .card-body .prog-bar-content .progress .bg-jQuery {
-  background-color: #FFDEB9;
-}
-.stdDash .card-body .prog-bar-content .progress .bg-js {
-  background-color: #16FF00;
-}
-.stdDash .card-body .prog-bar-content .progress .bg-py {
-  background-color: #9DF1DF;
-}
-.stdDash .card-body .prog-bar-content .progress .bg-dj {
-  background-color: #A555EC;
-}
-
 .student-panel {
   margin-left: 259px;
   padding-top: 60px;
@@ -1113,6 +1079,25 @@ footer.dark-mode-active {
 }
 footer.dark-mode-active .footer_text {
   color: #FFFFFF !important;
+}
+
+.stdDash.dark-mode-active .card {
+  background-color: #1B262C !important;
+}
+.stdDash.dark-mode-active .card .card-body {
+  color: #FFFFFF !important;
+}
+.stdDash.dark-mode-active .card .card-body .card-info {
+  color: #FFFFFF !important;
+}
+.stdDash.dark-mode-active .card .card-body .card-info h6 {
+  color: #FFFFFF !important;
+}
+.stdDash.dark-mode-active .card .card-body .card-info h3 {
+  color: #FFFFFF !important;
+}
+.stdDash.dark-mode-active .card .card-body .apexcharts-canvas svg text {
+  fill: #FFFFFF !important;
 }
 
 .classes_information_card.dark-mode-active {
@@ -1978,7 +1963,7 @@ footer .footer_text {
   overflow: hidden;
 }
 .subjects_section .tab-content .tab-pane .accordion .accordion-button {
-  padding: 0.5rem;
+  padding: 1.5rem;
   background: none;
   color: black;
 }
