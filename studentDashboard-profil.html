@@ -45,24 +45,13 @@
                                         </li>
                                         <li class="submenu">
                                             <a href="#">
-                                                <i class="fas fa-chalkboard-teacher"></i>
-                                                <span>Eğitmen</span>
-                                                <span class="menu-arrow"></span>
-                                            </a>
-                                            <ul class="submenu-content">
-                                                <li><a href="#">Eğitmen Listesi</a></li>
-                                                <li><a href="#">Eğitmen Görüntüle</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="submenu">
-                                            <a href="#">
                                                 <i class="fas fa-building"></i>
                                                 <span>Dersler</span>
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
                                                 <li><a href="#">Ders Videoları</a></li>
-                                                <li><a href="#">Müfredat</a></li>
+                                                <li><a href="./student-subjects.html">Müfredat</a></li>
                                                 <li><a href="#">Quizler</a></li>
                                                 <li><a href="#">Projeler</a></li>
                                             </ul>
@@ -93,6 +82,11 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     </form>
                     <div class="right d-flex align-items-center">
+                        <div class="dark-mode">
+                            <i class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-sun"></i>
+                            <div class="toggle-ball"></div>
+                        </div>
                         <div class="dropdown">
                             <a class="myBtn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -208,7 +202,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="./studentDashboard-profil.html">Profil</a></li>
                                     <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
-                                    <li><a class="dropdown-item" href="#">Çıkış</a></li>
+                                    <li><a class="dropdown-item" href="./login.html">Çıkış</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -224,24 +218,13 @@
                     </li>
                     <li class="submenu">
                         <a href="#">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            <span>Eğitmen</span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <ul class="submenu-content">
-                            <li><a href="#">Eğitmen Listesi</a></li>
-                            <li><a href="#">Eğitmen Görüntüle</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#">
                             <i class="fas fa-building"></i>
                             <span>Dersler</span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
                             <li><a href="#">Ders Videoları</a></li>
-                            <li><a href="#">Müfredat</a></li>
+                            <li><a href="./student-subjects.html">Müfredat</a></li>
                             <li><a href="#">Quizler</a></li>
                             <li><a href="#">Projeler</a></li>
                         </ul>
@@ -542,6 +525,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Main Js -->
     <script src="./app.js"></script>
+    <script src="./js/jsDarkMode.js"></script>
 
     <script>
         // grade average_id

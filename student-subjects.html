@@ -42,17 +42,6 @@
                                         </li>
                                         <li class="submenu">
                                             <a href="#">
-                                                <i class="fas fa-chalkboard-teacher"></i>
-                                                <span>Eğitmen</span>
-                                                <span class="menu-arrow"></span>
-                                            </a>
-                                            <ul class="submenu-content">
-                                                <li><a href="#">Eğitmen Listesi</a></li>
-                                                <li><a href="#">Eğitmen Görüntüle</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="submenu">
-                                            <a href="#">
                                                 <i class="fas fa-building"></i>
                                                 <span>Dersler</span>
                                                 <span class="menu-arrow"></span>
@@ -84,12 +73,17 @@
                         </div>
                     </div>
                     <!-- Off Canvas -->
-                    <a href="#" class="navbar-brand"><img src="https://neosyazilim.com/static/img/neosLogo2.png"
+                    <a href="./studentDashboard.html" class="navbar-brand"><img src="https://neosyazilim.com/static/img/neosLogo2.png"
                             width="100" alt=""></a>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     </form>
                     <div class="right d-flex align-items-center">
+                        <div class="dark-mode">
+                            <i class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-sun"></i>
+                            <div class="toggle-ball"></div>
+                        </div>
                         <div class="dropdown">
                             <a class="myBtn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -205,7 +199,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="./studentDashboard-profil.html">Profil</a></li>
                                     <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
-                                    <li><a class="dropdown-item" href="#">Çıkış</a></li>
+                                    <li><a class="dropdown-item" href="./login.html">Çıkış</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -218,17 +212,6 @@
                 <ul>
                     <li class="menu-title">
                         <span>Student Dashboard</span>
-                    </li>
-                    <li class="submenu">
-                        <a href="#">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            <span>Eğitmen</span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <ul class="submenu-content">
-                            <li><a href="#">Eğitmen Listesi</a></li>
-                            <li><a href="#">Eğitmen Görüntüle</a></li>
-                        </ul>
                     </li>
                     <li class="submenu">
                         <a href="#">
@@ -459,10 +442,11 @@
 
     <!-- app js -->
     <script src="/app.js"></script>
+    <script src="./js/jsDarkMode.js"></script>
 
     <script>
 
-    const subjectData = JSON.parse(localStorage.getItem("deneme"));
+    const subjectData = JSON.parse(localStorage.getItem("subjectData"));
     console.log(subjectData);
 
     const olHtml = document.querySelector(".html_subjects_list");
@@ -476,6 +460,7 @@
             const li = document.createElement('li');
             const a = document.createElement('a');
             a.classList.add('subject');
+            a.setAttribute('target', '_blank');
             a.href = subjectData[i].linkItem;
             a.textContent = subjectData[i].subject;
             li.appendChild(a);
@@ -484,6 +469,7 @@
             const li = document.createElement('li');
             const a = document.createElement('a');
             a.classList.add('subject');
+            a.setAttribute('target', '_blank');
             a.href = subjectData[i].linkItem;
             a.textContent = subjectData[i].subject;
             li.appendChild(a);
@@ -492,6 +478,7 @@
             const li = document.createElement('li');
             const a = document.createElement('a');
             a.classList.add('subject');
+            a.setAttribute('target', '_blank');
             a.href = subjectData[i].linkItem;
             a.textContent = subjectData[i].subject;
             li.appendChild(a);
@@ -500,6 +487,7 @@
             const li = document.createElement('li');
             const a = document.createElement('a');
             a.classList.add('subject');
+            a.setAttribute('target', '_blank');
             a.href = subjectData[i].linkItem;
             a.textContent = subjectData[i].subject;
             li.appendChild(a);
@@ -508,6 +496,7 @@
             const li = document.createElement('li');
             const a = document.createElement('a');
             a.classList.add('subject');
+            a.setAttribute('target', '_blank');
             a.href = subjectData[i].linkItem;
             a.textContent = subjectData[i].subject;
             li.appendChild(a);

@@ -112,6 +112,11 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     </form>
                     <div class="right d-flex align-items-center">
+                        <div class="dark-mode">
+                            <i class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-sun"></i>
+                            <div class="toggle-ball"></div>
+                        </div>
                         <div class="dropdown">
                             <a class="myBtn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -227,7 +232,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Profil</a></li>
                                     <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
-                                    <li><a class="dropdown-item" href="#">Çıkış</a></li>
+                                    <li><a class="dropdown-item" href="./login.html">Çıkış</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -507,7 +512,7 @@
 
     <!-- app js -->
     <script src="/app.js"></script>
-
+    <script src="./js/jsDarkMode.js"></script>
     <script>
 
 
@@ -530,7 +535,7 @@
     `;
             }
         });
-        const deneme = JSON.parse(localStorage.getItem('deneme')) || [];
+        const subjectData = JSON.parse(localStorage.getItem('subjectData')) || [];
         function addSubject() {
             // Seçeneklerin seçilmesi
             const mainTitleSelect = document.getElementById("mainTitle");
@@ -589,14 +594,14 @@
             subjectInput.value = "";
             linkItem.value = "";
 
-            deneme.push({
+            subjectData.push({
                 mainTitle: mainTitleValue,
                 subTitle: subTitleValue,
                 subject: subjectValue,
                 linkItem: linkItemText
             });
-            console.log(deneme);
-            localStorage.setItem("deneme",JSON.stringify(deneme));
+            console.log(subjectData);
+            localStorage.setItem("subjectData",JSON.stringify(subjectData));
         }
 
         
