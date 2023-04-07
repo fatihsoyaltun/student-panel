@@ -2088,6 +2088,23 @@ footer.dark-mode-active .footer_text {
   color: white;
 }
 
+.exam_grade_entry .entering_student_exam_results input {
+  width: 80px;
+}
+.exam_grade_entry .see_student_exam_results table tr {
+  border: 1px solid black;
+}
+.exam_grade_entry .see_student_exam_results table tr th {
+  border: 1px solid black;
+  width: 80px;
+}
+.exam_grade_entry .see_student_exam_results table tr .student_name_header {
+  width: 200px;
+}
+.exam_grade_entry .see_student_exam_results table tr td {
+  border: 1px solid black;
+}
+
 footer {
   display: flex;
   justify-content: center;
