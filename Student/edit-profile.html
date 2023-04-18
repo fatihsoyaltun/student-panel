@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Student Panel</title>
+    <title>Profil Düzenle</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,15 +16,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- jsCalendar -->
-    <link rel="stylesheet" type="text/css" href="./css/jsCalendar.css">
-    <link rel="stylesheet" type="text/css" href="./css/jsCalendar.clean.css">
-    <script type="text/javascript" src="./js/jsCalendar.js"></script>
-    <script type="text/javascript" src="./js/jsCalendar.lang.tr.js"></script>
-    <!-- js calendar main css -->
-    <link rel="stylesheet" href="./css/jsCalendarMain.css">
+    <!-- Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <!-- Main Css -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
 
 <body>
     <div class="main-wrapper">
@@ -57,7 +53,7 @@
                                             </a>
                                             <ul class="submenu-content">
                                                 <li><a href="#">Ders Videoları</a></li>
-                                                <li><a href="student-subjects.html">Müfredat</a></li>
+                                                <li><a href="./student-subjects.html">Müfredat</a></li>
                                                 <li><a href="#">Quizler</a></li>
                                                 <li><a href="#">Projeler</a></li>
                                             </ul>
@@ -208,7 +204,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="./studentDashboard-profil.html">Profil</a></li>
                                     <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
-                                    <li><a class="dropdown-item" href="./login.html">Çıkış</a></li>
+                                    <li><a class="dropdown-item" href="../login.html">Çıkış</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -230,7 +226,7 @@
                         </a>
                         <ul class="submenu-content">
                             <li><a href="#">Ders Videoları</a></li>
-                            <li><a href="student-subjects.html">Müfredat</a></li>
+                            <li><a href="./student-subjects.html">Müfredat</a></li>
                             <li><a href="#">Quizler</a></li>
                             <li><a href="#">Projeler</a></li>
                         </ul>
@@ -252,132 +248,171 @@
                 </ul>
             </div>
         </div>
-        <div class="section stdDash" style="min-height: 387px;">
-            <div class="content container-fluid">
-                <div class="section-header mb-4">
+        <div class="student-panel" style="min-height: 387px;">
+            <div id="content" class="content container-fluid edit_profile_section">
+                <div class="list-header">
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="section-sub-header d-flex">
-                                <h3 class="section-title">Hoşgeldiniz</h3>
+                            <div class="list-sub-header">
+                                <h3 class="list-title">Profil Düzenle</h3>
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item">
                                         <a href="./studentDashboard.html">Anasayfa</a>
                                     </li>
-                                    <li class="breadcrumb-item active"></li>
+                                    <li class="breadcrumb-item active">Profil Düzenle</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
-                        <div class="card myBg w-100">
+                    <div class="col-sm-12">
+                        <div class="card">
                             <div class="card-body">
-                                <div class="card-body-content d-flex justify-content-between align-items-center">
-                                    <div class="card-info">
-                                        <h6>Derse Kalan Süre</h6>
-                                        <div class="count d-flex justify-content-between">
-                                            <div id="day">00</div>
-                                            <div id="hour">00</div>
-                                            <div id="minute">00</div>
-                                            <div id="second">00</div>
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h5 class="mb-5">Profil Bilgileri</h5>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Adı
+                                                    <span>*</span>
+                                                </label>
+                                                <input id="firstname" type="text" class="form-control"
+                                                    placeholder="Adınızı Giriniz">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Soyadı
+                                                    <span>*</span>
+                                                </label>
+                                                <input id="lastname" type="text" class="form-control"
+                                                    placeholder="Soyadını Giriniz">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Cinsiyet
+                                                    <span>*</span>
+                                                </label>
+                                                <select class="form-control select">
+                                                    <option selected>Cinsiyet Seçin</option>
+                                                    <option value="1">Erkek</option>
+                                                    <option value="2">Kadın</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Doğum Tarihi
+                                                    <span>*</span>
+                                                </label>
+                                                <input class="form-control" placeholder="Doğum Tarihinizi Giriniz"
+                                                    id="birth_date">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    E-mail
+                                                    <span>*</span>
+                                                </label>
+                                                <input id="userEmail" type="text" class="form-control"
+                                                    placeholder="E-mail Adresinizi Giriniz">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Telefon
+                                                    <span>*</span>
+                                                </label>
+                                                <input id="userPhone" type="text" class="form-control"
+                                                    placeholder="Telefon Numaranızı Giriniz">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Adres
+                                                    <span>*</span>
+                                                </label>
+                                                <input id="userAdress" type="text" class="form-control"
+                                                    placeholder="Adres Bilgilerinizi Giriniz">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Github
+                                                    <span>*</span>
+                                                </label>
+                                                <input id="userGithub" type="text" class="form-control"
+                                                    placeholder="Github Adresinizi Giriniz">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Portfolio
+                                                    <span>*</span>
+                                                </label>
+                                                <input id="userLink" type="text" class="form-control"
+                                                    placeholder="Portfolio Linkini Giriniz">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="form-group myForm">
+                                                <div class="">
+                                                    <label for="exampleFormControlTextarea1"
+                                                        class="form-label">Hakkında</label>
+                                                    <textarea class="form-control formAbout"
+                                                        id="exampleFormControlTextarea1" rows="7"></textarea>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="card-icon">
-                                        <img src="./img/countdown.png" alt="">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group upFile">
+                                                <label>
+                                                    Profil Fotoğrafı Yükle
+                                                </label>
+                                                <div class="upload">
+                                                    <label class="file-up img-file-btn mb-0">
+                                                        Fotoğraf Yükle
+                                                        <input type="file">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="submit-btn">
+                                                <button id="liveToastBtn" type="button"
+                                                    class="btn btn-primary saveProfil">Kaydet</button>
+                                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                                    <div id="liveToast" class="toast" role="alert" aria-live="assertive"
+                                                        aria-atomic="true">
+                                                        <div class="toast-header">
+                                                            <strong class="me-auto">Neos Yazılım</strong>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="toast" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="toast-body bg-info">
+                                                            Bilgileriniz Başarıyla Güncellendi
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
-                        <div class="card myBg w-100">
-                            <div class="card-body">
-                                <div class="card-body-content d-flex justify-content-between align-items-center">
-                                    <div class="card-info">
-                                        <h6>Not Ortalaması</h6>
-                                        <h3>87</h3>
-                                    </div>
-                                    <div class="card-icon">
-                                        <img src="./img/average.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
-                        <div class="card myBg w-100">
-                            <div class="card-body">
-                                <div class="card-body-content d-flex justify-content-between align-items-center">
-                                    <div class="card-info">
-                                        <h6>Katılım Yüzdesi</h6>
-                                        <h3>%90</h3>
-                                    </div>
-                                    <div class="card-icon">
-                                        <img src="./img/attend.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
-                        <div class="card myBg w-100">
-                            <div class="card-body">
-                                <div class="card-body-content d-flex justify-content-between align-items-center">
-                                    <div class="card-info">
-                                        <h6>Sınıf Başarı Ortalaması</h6>
-                                        <h3>85</h3>
-                                    </div>
-                                    <div class="card-icon">
-                                        <img src="./img/class.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-md-12 col-lg-6">
-                        <div class="card card-chart">
-                            <div class="card-header">
-                                <div class="row align-items-center">
-                                    <div class="col-6">
-                                        <h5 class="card-title">Performans Grafiği</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div id="performance"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-6">
-                        <div class="card card-chart">
-                            <div class="card-header">
-                                <div class="row align-items-center">
-                                    <div class="col-6">
-                                        <h5 class="card-title">Ders İlerleme Durumu</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div id="progresBar"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-xl-12">
-                        <div class="description">
-                            <div style="font-size: 1.4em;">Takvim</div>
-                            <div>TEST</div>
-                        </div>
-                        <div class="row" id="wrapper">
-                            <div class="col-lg-6 col-sm-12">
-                                <div id="events-calendar" data-language="tr"></div>
-                            </div>
-                            <div class="col-lg-6 col-sm-12">
-                                <div id="events"></div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -393,121 +428,75 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <!-- jQuery -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <!-- ApexCharts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.2/apexcharts.min.js"
-        integrity="sha512-yWglrpRYz/pD0pp1cSpWmSVvcFwuuc739X4WHy7hRKB11BGijnz7fuqKRQB7Ksot42IN365OGvuOhSgUejKbmA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- JsCalendar Main Js -->
-    <script src="./js/jsCalenderMain.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Dark Mode -->
+    <script src="../js/jsDarkMode.js"></script>
     <!-- Main Js -->
-    <script src="./app.js"></script>
-    <script src="./js/jsDarkMode.js"></script>
+    <script src="../js/app.js"></script>
+    
     <script>
-        //<--CountDown2-->
-        function getNextLessonDate() {
-            const today = new Date();
-            const dayOfWeek = today.getDay();
-            // calculate the number of milliseconds until the next lesson starts
-            let countdown;
-            if (dayOfWeek === 1 || dayOfWeek === 3 || dayOfWeek === 5) {
-                const lessonStart = new Date();
-                lessonStart.setHours(19, 0, 0, 0); // set lesson start time to 19:00
-                if (today.getTime() > lessonStart.getTime()) {
-                    // today's lesson has already started, so schedule the countdown for the next lesson
-                    lessonStart.setDate(lessonStart.getDate() + (8 - dayOfWeek) % 7); // next lesson is on Monday, Wednesday, or Friday
-                }
-                countdown = lessonStart.getTime() - today.getTime();
-            } else {
-                // today is not a lesson day, so schedule the countdown for the next lesson
-                const nextLesson = new Date();
-                nextLesson.setDate(today.getDate() + (8 - dayOfWeek) % 7); // next lesson is on Monday, Wednesday, or Friday
-                nextLesson.setHours(19, 0, 0, 0); // set lesson start time to 19:00
-                countdown = nextLesson.getTime() - today.getTime();
+
+        $("#birth_date").flatpickr();
+
+        const saveBtn = document.querySelector(".saveProfil");
+        saveBtn.addEventListener("click", () => {
+            const userFirstName = document.getElementById("firstname").value;
+            const userLastName = document.getElementById("lastname").value;
+            const userEmail = document.getElementById("userEmail").value;
+            const userPhone = document.getElementById("userPhone").value;
+            const userAdress = document.getElementById("userAdress").value;
+            const userGithub = document.getElementById("userGithub").value;
+            const userLink = document.getElementById("userLink").value;
+            const userBirthDate = document.getElementById("birth_date").value;
+            const exampleFormControlTextarea1 = document.getElementById("exampleFormControlTextarea1").value;
+            const toastTrigger = document.getElementById('liveToastBtn');
+            const toastLiveExample = document.getElementById('liveToast');
+            const toastBody = document.querySelector('.toast-body');
+
+            if (
+                !userFirstName ||
+                !userLastName ||
+                !userEmail ||
+                !userPhone ||
+                !userBirthDate ||
+                !exampleFormControlTextarea1
+            ) {
+                toastBody.classList="toast-body bg-danger text-white";
+                toastBody.innerHTML = "Boş Alan Bırakmayınız!";
+                const toast = new bootstrap.Toast(toastLiveExample)
+                toast.show()
+                return;
             }
-            // start the countdown
-            const countdownInterval = setInterval(function () {
-                countdown -= 1000;
-                if (countdown < 0) {
-                    clearInterval(countdownInterval);
-                    getNextLessonDate(); // start the countdown for the next lesson
-                } else {
-                    const seconds = Math.floor((countdown / 1000) % 60);
-                    const minutes = Math.floor((countdown / 1000 / 60) % 60);
-                    const hours = Math.floor((countdown / (1000 * 60 * 60)) % 24);
-                    const days = Math.floor(countdown / (1000 * 60 * 60 * 24));
-                    // update the countdown display
-                    document.getElementById('day').innerText = `${days}g`;
-                    document.getElementById('hour').innerText = `${hours}s`;
-                    document.getElementById('minute').innerText = `${minutes}d`;
-                    document.getElementById('second').innerText = `${seconds}s`;
-                }
-            }, 1000);
-        }
-        getNextLessonDate();
 
-        //Apex Charts
-        var stdDash = {
-            series: [{
-                name: 'series1',
-                data: [31, 40, 28, 51, 42, 109, 100]
-            }, {
-                name: 'series2',
-                data: [11, 32, 45, 32, 34, 52, 41]
-            }],
-            chart: {
-                height: 350,
-                type: 'area'
-            },
-            dataLabels: {
-                enabled: false
-            },
-            stroke: {
-                curve: 'smooth'
-            },
-            xaxis: {
-                type: 'datetime',
-                categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-            },
-            tooltip: {
-                x: {
-                    format: 'dd/MM/yy HH:mm'
-                },
-            },
-        };
+            const profilData = {
+                userFirstName,
+                userLastName,
+                userEmail,
+                userPhone,
+                userAdress,
+                userGithub,
+                userLink,
+                userBirthDate,
+                exampleFormControlTextarea1,
+            };
+            localStorage.setItem("profilData", JSON.stringify(profilData));
 
-        var stdDash_chart = new ApexCharts(document.querySelector("#performance"), stdDash);
-        stdDash_chart.render();
+            const toast = new bootstrap.Toast(toastLiveExample)
+            toast.show()
 
-        //<-- ProgressBar->
+            document.getElementById("firstname").value = "";
+            document.getElementById("lastname").value = "";
+            document.getElementById("userEmail").value = "";
+            document.getElementById("userPhone").value = "";
+            document.getElementById("userAdress").value = "";
+            document.getElementById("userGithub").value = "";
+            document.getElementById("userLink").value = "";
+            document.getElementById("birth_date").value = "";
+            document.getElementById("exampleFormControlTextarea1").value = "";
+        });
 
-        var prgBar = {
-            series: [{
-                data: [1300, 1000, 800, 600, 500, 300, 200,]
-            }],
-            chart: {
-                type: 'bar',
-                height: 350
-            },
-            plotOptions: {
-                bar: {
-                    borderRadius: 4,
-                    horizontal: true,
-                }
-            },
-            dataLabels: {
-                enabled: false,
-            },
-            fill:{
-                colors : ['#F44336', '#E91E63', '#9C27B0']
-            },
-            xaxis: {
-                categories: ['Html', 'Css', 'Javascript', 'Python', 'Django',],
-            }
-        };
-
-        var prgBar_chart = new ApexCharts(document.querySelector("#progresBar"), prgBar);
-        prgBar_chart.render();
     </script>
 </body>
 
