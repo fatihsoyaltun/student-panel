@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Staj Seçimi</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap Cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Main Css -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <!-- Off Canvas -->
+                    <div class="off-canvas d-none">
+                        <button class="btn" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
+                                class="fa-solid fa-bars"></i></button>
+                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+                            tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Student Menu</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="sidebar-menu">
+                                    <ul>
+                                        <li class="menu-title">
+                                            <span>Student Dashboard</span>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-building"></i>
+                                                <span>Dersler</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Ders Videoları</a></li>
+                                                <li><a href="./student-subjects.html">Müfredat</a></li>
+                                                <li><a href="#">Quizler</a></li>
+                                                <li><a href="#">Projeler</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-book-reader"></i>
+                                                <span>Öğrenci İşleri</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="#">Staj Seçimi</a></li>
+                                                <li><a href="#">Etüt Talebi</a></li>
+                                                <li><a href="#">Eğitim Dondurma</a></li>
+                                                <li><a href="#">Yurtdışı Eğitim</a></li>
+                                                <li><a href="#">Ödemelerim</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Off Canvas -->
+                    <a href="./studentDashboard.html" class="navbar-brand"><img
+                            src="https://neosyazilim.com/static/img/neosLogo2.png" width="100" alt=""></a>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <div class="right d-flex align-items-center">
+                        <div class="dark-mode">
+                            <i class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-sun"></i>
+                            <div class="toggle-ball"></div>
+                        </div>
+                        <div class="dropdown">
+                            <a class="myBtn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-regular fa-bell"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <div class="drop-top">
+                                    <span class="drop-top-title">Bildirimler</span>
+                                    <a class="clear-not" href="#">Tümünü Sil</a>
+                                </div>
+                                <div class="drop-center">
+                                    <ul class="drop-center-list">
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="drop-bottom">
+                                    <a class="drp-btm-text" href="#">Tüm Bildirimleri Aç</a>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="user-menu">
+                            <div class="dropdown">
+                                <a class="user-img-hero dropdown-toggle d-flex" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="user-img">
+                                        <img class="rounded-circle" src="https://randomuser.me/api/portraits/men/47.jpg"
+                                            width="31" alt="">
+                                        <div class="user-text">
+                                            <h6>Fatih Soyaltun</h6>
+                                            <p class="text-muted mb-0">Öğrenci</p>
+                                        </div>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./studentDashboard-profil.html">Profil</a></li>
+                                    <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
+                                    <li><a class="dropdown-item" href="../login.html">Çıkış</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="sidebar offcanvas-body">
+            <div class="sidebar-menu">
+                <ul>
+                    <li class="menu-title">
+                        <span>Student Dashboard</span>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-building"></i>
+                            <span>Dersler</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="#">Ders Videoları</a></li>
+                            <li><a href="./student-subjects.html">Müfredat</a></li>
+                            <li><a href="#">Quizler</a></li>
+                            <li><a href="#">Projeler</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-book-reader"></i>
+                            <span>Öğrenci İşleri</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="#">Staj Seçimi</a></li>
+                            <li><a href="#">Etüt Talebi</a></li>
+                            <li><a href="#">Eğitim Dondurma</a></li>
+                            <li><a href="#">Yurtdışı Eğitim</a></li>
+                            <li><a href="#">Ödemelerim</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="student-panel" style="min-height: 387px;">
+            <div id="content" class="content container-fluid internship-selection">
+                <div class="list-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="list-sub-header">
+                                <h3 class="list-title">Staj Seçimi</h3>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="./studentDashboard.html">Anasayfa</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Staj Seçimi</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h5 class="mb-5">Staj Formu</h5>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Adı
+                                                    <span>*</span>
+                                                </label>
+                                                <input id="firstname" type="text" class="form-control"
+                                                    placeholder="Adınızı Giriniz">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Soyadı
+                                                    <span>*</span>
+                                                </label>
+                                                <input id="lastname" type="text" class="form-control"
+                                                    placeholder="Soyadını Giriniz">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Staj/Şehir
+                                                    <span>*</span>
+                                                </label>
+                                                <select class="form-control select" style="color:#6c757d;">
+                                                    <option selected>Staj Yapmak İstediğiniz Şehir</option>
+                                                    <option value="1">İstanbul</option>
+                                                    <option value="2">İzmir</option>
+                                                    <option value="3">Ankara</option>
+                                                    <option value="4">Online</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Eğitim Bitiş
+                                                    <span>*</span>
+                                                </label>
+                                                <input class="form-control" placeholder="Eğitim Bitiş Tarihini Giriniz"
+                                                    id="birth_date">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    E-mail
+                                                    <span>*</span>
+                                                </label>
+                                                <input id="userEmail" type="text" class="form-control"
+                                                    placeholder="E-mail Adresinizi Giriniz">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Telefon
+                                                    <span>*</span>
+                                                </label>
+                                                <input id="userPhone" type="text" class="form-control"
+                                                    placeholder="Telefon Numaranızı Giriniz">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <div class="dropdown">
+                                                    <label for="" class="btn btn-secondary dropdown-toggle p-2 w-100 text-start iss1" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Eğitmenleriniz
+                                                        <span>*</span>
+                                                    </label>
+                                                    <ul class="dropdown-menu">
+                                                        <li>
+                                                            <input class="ms-2" type="checkbox" name="" id="">
+                                                            <label for="" style="position: relative !important; top: -2px; background-color: transparent; color: black; ">Mervan Koncuk</label>
+                                                        </li>
+                                                        <li>
+                                                            <input class="ms-2" type="checkbox" name="" id="">
+                                                            <label for="" style="position: relative !important; top: -2px; background-color: transparent;color: black; ">Basri Berkay Ülger</label>
+                                                        </li>
+                                                        <li>
+                                                            <input class="ms-2" type="checkbox" name="" id="">
+                                                            <label for="" style="position: relative !important; top: -2px; background-color: transparent;color: black; ">Mehmet Çoban</label>
+                                                        </li>
+                                                        <li>
+                                                            <input class="ms-2" type="checkbox" name="" id="">
+                                                            <label for="" style="position: relative !important; top: -2px; background-color: transparent;color: black; ">Ömer Ocak</label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <div class="dropdown">
+                                                    <label for="" class="btn btn-secondary dropdown-toggle text-start  p-2 w-100 iss1 iss_2 " type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Kişisel Veri Onayı
+                                                        <span>*</span>
+                                                    </label>
+                                                    <ul class="dropdown-menu pe-4">
+                                                        <li class="p-2 d-flex">
+                                                            <input class="ms-2" type="radio" name="kvkk1" id="kvkk1">
+                                                            <label  for="kvkk1" style="position: relative !important; top: -2px; background-color: transparent;color: black; ">Staj boyunca video/görsel oluşturulabileceği ve yayınlayabileceği; etkinlik, proje sunumu, tanışma aktiviteleri vb çalışmalarda yer almak ve çalışmalarımın Neos'un resmi hesaplarında yer almasını istiyorum</label>
+                                                        </li>
+                                                        <li class="p-2 d-flex">
+                                                            <input class="ms-2" type="radio" name="kvkk1" id="kvkk2">
+                                                            <label for="kvkk2" style="position: relative !important; top: -2px; background-color: transparent;color: black; ">Staj boyunca video/görsel içeriklerin oluşturulabileceği hiçbir aktivite de yer almak istemiyorum, çalışmalarımın Neos'un resmi hesaplarında yer almasını istemiyorum. (Bu tercih değiştirilemez)</label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                        </div>
+                                        <div class="col-sm-12 mt-4">
+                                            <div class="form-group myForm iss_3">
+                                                <div class="">
+                                                    <label for="exampleFormControlTextarea1"
+                                                        class="form-label">Mesajınız</label>
+                                                    <textarea class="form-control formAbout"
+                                                        id="exampleFormControlTextarea1" rows="7"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="submit-btn">
+                                                <button id="liveToastBtn" type="button"
+                                                    class="btn btn-primary saveProfil">Kaydet</button>
+                                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                                    <div id="liveToast" class="toast" role="alert" aria-live="assertive"
+                                                        aria-atomic="true">
+                                                        <div class="toast-header">
+                                                            <strong class="me-auto">Neos Yazılım</strong>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="toast" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="toast-body bg-info">
+                                                            Bilgileriniz Başarıyla Güncellendi
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="mt-5">
+            <h6 class="footer_text">TELİF HAKKI © 2023 NEOS YAZILIM.</h6>
+        </footer>
+    </div>
+    <!-- Bootstrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Dark Mode -->
+    <script src="../js/jsDarkMode.js"></script>
+    <!-- Main Js -->
+    <script src="../js/app.js"></script>
+
+    <script>
+
+        $("#birth_date").flatpickr();
+
+        const saveBtn = document.querySelector(".saveProfil");
+        saveBtn.addEventListener("click", () => {
+            const userFirstName = document.getElementById("firstname").value;
+            const userLastName = document.getElementById("lastname").value;
+            const userEmail = document.getElementById("userEmail").value;
+            const userPhone = document.getElementById("userPhone").value;
+            const userAdress = document.getElementById("userAdress").value;
+            const userGithub = document.getElementById("userGithub").value;
+            const userLink = document.getElementById("userLink").value;
+            const userBirthDate = document.getElementById("birth_date").value;
+            const exampleFormControlTextarea1 = document.getElementById("exampleFormControlTextarea1").value;
+            const toastTrigger = document.getElementById('liveToastBtn');
+            const toastLiveExample = document.getElementById('liveToast');
+            const toastBody = document.querySelector('.toast-body');
+
+            if (
+                !userFirstName ||
+                !userLastName ||
+                !userEmail ||
+                !userPhone ||
+                !userBirthDate ||
+                !exampleFormControlTextarea1
+            ) {
+                toastBody.classList = "toast-body bg-danger text-white";
+                toastBody.innerHTML = "Boş Alan Bırakmayınız!";
+                const toast = new bootstrap.Toast(toastLiveExample)
+                toast.show()
+                return;
+            }
+
+            const profilData = {
+                userFirstName,
+                userLastName,
+                userEmail,
+                userPhone,
+                userAdress,
+                userGithub,
+                userLink,
+                userBirthDate,
+                exampleFormControlTextarea1,
+            };
+            localStorage.setItem("profilData", JSON.stringify(profilData));
+
+            const toast = new bootstrap.Toast(toastLiveExample)
+            toast.show()
+
+            document.getElementById("firstname").value = "";
+            document.getElementById("lastname").value = "";
+            document.getElementById("userEmail").value = "";
+            document.getElementById("userPhone").value = "";
+            document.getElementById("userAdress").value = "";
+            document.getElementById("userGithub").value = "";
+            document.getElementById("userLink").value = "";
+            document.getElementById("birth_date").value = "";
+            document.getElementById("exampleFormControlTextarea1").value = "";
+        });
+
+    </script>
+</body>
+
+</html>

@@ -774,6 +774,19 @@ img {
 .student-panel .content .card .card-body .table-responsive .text-table a i:hover {
   color: #00ADB5;
 }
+.student-panel .content .card .card-body .iss1 {
+  font-size: 15px !important;
+  color: #6c757d !important;
+  font-weight: 500;
+  position: absolute;
+  top: -10px;
+  left: 0 !important;
+  background: #fff;
+  margin-bottom: 0;
+  padding: 0px 5px;
+  z-index: 99;
+  border: 1px solid #ddd;
+}
 .student-panel .content .card .card-body .myForm {
   position: relative;
   margin-bottom: 40px;
@@ -1418,6 +1431,74 @@ footer.dark-mode-active .footer_text {
   background-color: #1B262C !important;
 }
 
+.internship-selection .card.dark-mode-active {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.internship-selection .card.dark-mode-active input {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.internship-selection .card.dark-mode-active input::-moz-placeholder {
+  color: #a6a0a0 !important;
+}
+.internship-selection .card.dark-mode-active input::placeholder {
+  color: #a6a0a0 !important;
+}
+.internship-selection .card.dark-mode-active label {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.internship-selection .card.dark-mode-active select {
+  background-color: #393E46 !important;
+  color: #a6a0a0 !important;
+}
+.internship-selection .card.dark-mode-active .img-file-btn {
+  background-color: #1B262C !important;
+}
+.internship-selection .card.dark-mode-active textarea {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.internship-selection .card.dark-mode-active .dropdown-menu {
+  overflow: hidden !important;
+  background-color: #393E46 !important;
+  border: 1px solid white !important;
+}
+.internship-selection .card.dark-mode-active .iss1 {
+  color: #6c757d !important;
+}
+
+.edit_profile_section .card.dark-mode-active {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.edit_profile_section .card.dark-mode-active input {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.edit_profile_section .card.dark-mode-active input::-moz-placeholder {
+  color: #a6a0a0 !important;
+}
+.edit_profile_section .card.dark-mode-active input::placeholder {
+  color: #a6a0a0 !important;
+}
+.edit_profile_section .card.dark-mode-active label {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.edit_profile_section .card.dark-mode-active select {
+  background-color: #393E46 !important;
+  color: #a6a0a0 !important;
+}
+.edit_profile_section .card.dark-mode-active .img-file-btn {
+  background-color: #1B262C !important;
+}
+.edit_profile_section .card.dark-mode-active textarea {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+
 .student-edit_section .card.dark-mode-active {
   background-color: #393E46 !important;
   color: white !important;
@@ -1703,6 +1784,12 @@ footer.dark-mode-active .footer_text {
   }
   .loginRightSide {
     width: 100% !important;
+  }
+  .iss_2 {
+    margin-top: 2rem !important;
+  }
+  .iss_3 {
+    margin-top: 2rem !important;
   }
 }
 @media screen and (max-width: 576px) {
