@@ -11,10 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/jsCalendar.clean.css">
-    <link rel="stylesheet" href="./css/jsCalendar.css">
-    <link rel="stylesheet" href="./css/jsCalendarMain.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/jsCalendar.clean.css">
+    <link rel="stylesheet" href="../css/jsCalendar.css">
+    <link rel="stylesheet" href="../css/jsCalendarMain.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -232,7 +232,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Profil</a></li>
                                     <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
-                                    <li><a class="dropdown-item" href="#">Çıkış</a></li>
+                                    <li><a class="dropdown-item" href="../login.html">Çıkış</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -310,183 +310,307 @@
             </div>
         </div>
         <div class="section" style="min-height: 387px;">
-            <div class="content container-fluid">
-                <section class="survey_section">
-                    <div class="container">
+            <div class="content container-fluid subjects_section">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between">
+                        <h5>Müfredat</h5>
+                        <h5>Müfredat Ayrıntıları</h5>
+                    </div>
+                </div>
+                <nav class="mt-5">
+                    <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+                        <button class="nav-link active subjects-nav-btn" id="nav-subjects-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-subjects" type="button" role="tab" aria-controls="nav-subjects"
+                            aria-selected="true"><img src="../img/sowtware_book.png" alt=""> Müfredat</button>
+                        <!-- <button class="nav-link" id="nav-subjectsedit-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-subjectsedit" type="button" role="tab" aria-controls="nav-subjectsedit"
+                            aria-selected="false"><img src="./ayhan_img/subject_edit.png" alt=""> Müfredat Düzenle</button> -->
+                        <button class="nav-link subjects-nav-btn" id="nav-subjectsadd-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-subjectsadd" type="button" role="tab" aria-controls="nav-subjectsadd"
+                            aria-selected="false"><img src="../img/subject_plus.png" alt=""> Müfredat Ekle</button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-subjects" role="tabpanel"
+                        aria-labelledby="nav-subjects-tab" tabindex="0">
                         <div class="row">
                             <div class="col-xl-6">
-                                <form class="create_survey_form">
-                                    <h3>Anket Oluştur</h3>
+                                <h6 class="frontend mt-5 fw-bold"><img src="../img/subject_frontend.png" alt="">
+                                    FRONT-END</h6>
 
-                                    <div class="form_parents">
-                                        <label for="survey-header">Anket Başlığı Yazın: </label>
-                                        <input id="survey-header" class="survey-header" type="text" autocomplete="off">
+                                <div class="accordion accordion-flush frontend_subjects mt-3"
+                                    id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                                aria-expanded="false" aria-controls="flush-collapseOne">
+                                                <span class="frontend_subjects_head_html">HTML</span>
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <ol class="html_subjects_list">
+                                                    <li><a class="subject" href="">Klavye</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form_parents">
-                                        <label for="question">Soru:</label>
-                                        <input type="text" id="question" name="question" autocomplete="off">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                                aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                <span class="frontend_subjects_head_css">CSS</span>
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <ol class="css_subjects_list">
+                                                    <li><a class="subject" href="">Color</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form_parents">
-                                        <label for="option1">Seçenek 1:</label>
-                                        <input type="text" id="option1" name="option1" autocomplete="off">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                                aria-expanded="false" aria-controls="flush-collapseThree">
+                                                <span class="frontend_subjects_head_js">Javascript</span>
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <ol class="js_subjects_list">
+                                                    <li><a class="subject" href="">Fonksiyonlar</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form_parents">
-                                        <label for="option2">Seçenek 2:</label>
-                                        <input type="text" id="option2" name="option2" autocomplete="off">
-                                    </div>
-                                    <div class="form_parents">
-                                        <label for="option3">Seçenek 3:</label>
-                                        <input type="text" id="option3" name="option3" autocomplete="off">
-                                    </div>
-                                    <div class="form_parents">
-                                        <label for="option4">Seçenek 4:</label>
-                                        <input type="text" id="option4" name="option4" autocomplete="off">
-                                    </div>
-                                    <div class="form_parents">
-                                        <label for="community">Topluluk Seç : </label>
-                                        <select name="community" id="community">
-                                            <option value="egitmenler">Eğitmenlere</option>
-                                            <option value="ogrenciler">Öğrencilere</option>
-                                            <option value="herkese">Herkese</option>
-                                        </select>
-                                    </div>
-
-                                    <button type="button" id="create-button" onclick="createSurvey()">Anketi Oluştur <i
-                                            class="fa-solid fa-plus"></i></button>
-                                </form>
+                                </div>
                             </div>
-                            <div class="col-xl-6 newForm_class">
-                                <div id="newForm"></div>
+                            <div class="col-xl-6">
+                                <h6 class="backend mt-5 fw-bold"><img src="../img/subject_backend.png" alt="">
+                                    BACK-END</h6>
+
+
+                                <div class="accordion accordion-flush backend_subjects mt-3" id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                                                aria-expanded="false" aria-controls="flush-collapseFour">
+                                                <span class="backend_subjects_head_python">PYTHON</span>
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <ol class="python_subjects_list">
+                                                    <li><a class="subject" href="">Defler</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                                                aria-expanded="false" aria-controls="flush-collapseFive">
+                                                <span class="backend_subjects_head_django">DJANGO</span>
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <ol class="django_subjects_list">
+                                                    <li><a class="subject" href="">Djangoya giriş</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                    <!-- <div class="tab-pane fade" id="nav-subjectsedit" role="tabpanel"
+                        aria-labelledby="nav-subjectsedit-tab" tabindex="0">
+                        Düzenle gelecek
+                    </div> -->
+                    <div class="tab-pane fade subjectsadd" id="nav-subjectsadd" role="tabpanel"
+                        aria-labelledby="nav-subjectsadd-tab" tabindex="0">
+
+                        <h6 class="subjects_add mt-5 fw-bold">Müfredat Ekle</h6>
+
+                        <form class="subjects_add_form" action="">
+                            <div class="row">
+                                <div class="col-xl-2 d-flex flex-column gap-2 mt-3">
+                                    <label for="">Ana Başlık: </label>
+                                    <select name="mainTitle" id="mainTitle">
+                                        <option class="op_front-end" value="frontend_subjects">FRONT-END</option>
+                                        <option class="op_back-end" value="backend_subjects">BACK-END</option>
+                                    </select>
+                                </div>
+                                <div class="col-xl-2 d-flex flex-column gap-2 mt-3">
+                                    <label for="">Konu Başlığı: </label>
+                                    <select name="subTitle" id="subTitle">
+                                        <option class="op_html" value="html_subjects_list">HTML</option>
+                                        <option class="op_css" value="css_subjects_list">CSS</option>
+                                        <option class="op_js" value="js_subjects_list">Javascript</option>
+                                    </select>
+                                </div>
+                                <div class="col-xl-4 d-flex flex-column gap-2 mt-3">
+                                    <label for="">Konuyu Giriniz : </label>
+                                    <input class="inp_subject" type="text" name="subject" id="subject">
+                                </div>
+                                <div class="col-xl-4 d-flex flex-column gap-2 mt-3">
+                                    <label for="">Link Ekleyin : </label>
+                                    <input class="link_item" type="text">
+                                </div>
+                            </div>
+
+                            <button class="d-block m-auto mt-3" type="button" onclick="addSubject()">Ekle <i
+                                    class="fa-solid fa-plus"></i></button>
+                            <div class="alert_section">
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <!-- <footer class="mt-5">
+        </div>
+        <!-- <footer class="mt-5">
             <h6 class="footer_text">TELİF HAKKI © 2023 NEOS YAZILIM.</h6>
         </footer> -->
-        </div>
+    </div>
 
 
 
 
-        <!-- apex charts -->
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- apex charts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-        <!-- google charts -->
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- google charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-        <!-- bs js -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- bs js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-        <!-- jquery (yoklama) -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <!-- jquery (yoklama) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
-        <!-- calender (Takvim) -->
-        <script src="./js/jsCalendar.js"></script>
-        <script src="./js/jsCalendar.lang.tr.js"></script>
-        <script src="./js/jsCalenderMain.js"></script>
-
-        <!-- dark mode js -->
-        <script src="./js/jsDarkMode.js"></script>
-        <!-- app js -->
-
-        <script src="/app.js"></script>
-
-        <script>
-            function createSurvey() {
-                const header = document.querySelector("#survey-header").value;
-                const question = document.querySelector("#question").value;
-                const option1 = document.querySelector("#option1").value;
-                const option2 = document.querySelector("#option2").value;
-                const option3 = document.querySelector("#option3").value;
-                const option4 = document.querySelector("#option4").value;
-                const community = document.querySelector("#community").value;
-                const newForm = document.querySelector("#newForm");
-
-                const newForm_item = document.createElement("div");
-                newForm_item.className = "newForm_item";
-
-                // Survey header
-                const headerEl = document.createElement("h3");
-                headerEl.textContent = header;
-                newForm_item.appendChild(headerEl);
-
-                // Survey question
-                const questionEl = document.createElement("p");
-                questionEl.textContent = question;
-                newForm_item.appendChild(questionEl);
-
-                // Survey options
-                const optionEls = [];
-
-                for (let i = 1; i <= 4; i++) {
-                    const option = document.querySelector(`#option${i}`).value.trim();
-
-                    if (option !== "") {
-                        const optionEl = createOptionElement(option);
-                        optionEls.push(optionEl);
-                    }
-                }
-
-                optionEls.forEach((el) => newForm_item.appendChild(el));
-
-                // Submit button
-                const submitButton = document.createElement("button");
-                submitButton.textContent = "Submit";
-                submitButton.addEventListener("click", submitSurvey);
-                newForm_item.appendChild(submitButton);
-
-                // Delete button
-                const deleteButton = document.createElement("button");
-                deleteButton.textContent = "Delete";
-                deleteButton.addEventListener("click", deleteSurvey);
-                newForm_item.appendChild(deleteButton);
-
-                newForm.appendChild(newForm_item);
-
-                document.querySelector("#survey-header").value = "";
-                document.querySelector("#question").value = "";
-                document.querySelector("#option1").value = "";
-                document.querySelector("#option2").value = "";
-                document.querySelector("#option3").value = "";
-                document.querySelector("#option4").value = "";
+    <!-- calender (Takvim) -->
+    <script src="../js/jsCalendar.js"></script>
+    <script src="../js/jsCalendar.lang.tr.js"></script>
+    <script src="../js/jsCalenderMain.js"></script>
+    <!-- Dark Mode -->
+    <script src="../js/jsDarkMode.js"></script>
+    <!-- app js -->
+    <script src="../js/app.js"></script>
+    
+    <script>
 
 
+        const mainTitleSelect = document.getElementById('mainTitle');
+        const subTitleSelect = document.getElementById('subTitle');
+        const form = document.querySelector('.subjects_add_form');
+
+        mainTitleSelect.addEventListener('change', () => {
+            // seçilen ana başlık değerine göre, alt başlık seçeneklerini değiştir
+            if (mainTitleSelect.value === 'frontend_subjects') {
+                subTitleSelect.innerHTML = `
+      <option class="op_html" value="html_subjects_list">HTML</option>
+      <option class="op_css" value="css_subjects_list">CSS</option>
+      <option class="op_js" value="js_subjects_list">Javascript</option>
+    `;
+            } else if (mainTitleSelect.value === 'backend_subjects') {
+                subTitleSelect.innerHTML = `
+      <option class="op_python" value="python_subjects_list">Python</option>
+      <option class="op_django" value="django_subjects_list">Django</option>
+    `;
+            }
+        });
+        const subjectData = JSON.parse(localStorage.getItem('subjectData')) || [];
+        function addSubject() {
+            // Seçeneklerin seçilmesi
+            const mainTitleSelect = document.getElementById("mainTitle");
+            const mainTitleValue = mainTitleSelect.value;
+            const subTitleSelect = document.getElementById("subTitle");
+            const subTitleValue = subTitleSelect.value;
+            const subjectInput = document.getElementById("subject");
+            const subjectValue = subjectInput.value;
+            const linkItem = document.querySelector(".link_item");
+            const linkItemText = linkItem.value;
+            const alert_section = document.querySelector(".alert_section");
+
+            // Input alanı boş ise uyarı mesajı gösterme
+            if (subjectValue, linkItem.value === '') {
+                const emptyAlertDiv = document.createElement("div");
+                emptyAlertDiv.classList.add("alert", "alert-danger", "mt-3", "subject_alert_danger");
+                emptyAlertDiv.textContent = "Lütfen boş alan bırakmayın !";
+                alert_section.appendChild(emptyAlertDiv);
+                setTimeout(() => {
+                    emptyAlertDiv.remove();
+                }, 3000);
+                return;
             }
 
-            function createOptionElement(optionText) {
-                const labelEl = document.createElement("label");
-                const inputEl = document.createElement("input");
-                inputEl.type = "radio";
-                inputEl.name = "option";
-                labelEl.appendChild(inputEl);
+            // Doğru konu altına öğe ekleme
+            const list = document.querySelector(`.${subTitleValue}`);
+            const listItem = document.createElement("li");
+            const link = document.createElement("a");
+            link.textContent = subjectValue;
+            link.href = linkItem.value;
+            link.target = "_blank";
+            listItem.appendChild(link);
 
-                const spanEl = document.createElement("span");
-                spanEl.textContent = optionText;
-                labelEl.appendChild(spanEl);
+            // Sil butonu ekleme
+            const deleteButton = document.createElement("button");
+            deleteButton.innerHTML = '<i class="fa-regular fa-square-minus"></i>';
+            deleteButton.classList.add("delete_button");
+            deleteButton.addEventListener("click", () => {
+                list.removeChild(listItem);
+            });
+            listItem.appendChild(deleteButton);
 
-                return labelEl;
-            }
+            list.appendChild(listItem);
 
-            function submitSurvey(event) {
-                event.preventDefault();
-                const selectedOption = document.querySelector("input[name='option']:checked");
-                if (selectedOption) {
-                    alert("Thank you for your response!");
-                } else {
-                    alert("Please select an option!");
-                }
-            }
 
-            function deleteSurvey(event) {
-                if (confirm("Are you sure you want to delete this survey?")) {
-                    event.target.parentNode.remove();
-                    const newForm_item = document.querySelector(".newForm_item");
-                    newForm_item.innerHTML = "";
-                }
-            }
+            // Başarı mesajı gösterme
+            const successAlertDiv = document.createElement("div");
+            successAlertDiv.classList.add("alert", "alert-success", "mt-3", "subject_alert_success");
+            successAlertDiv.textContent = "Konu başarıyla eklendi.";
+            alert_section.appendChild(successAlertDiv);
+            setTimeout(() => {
+                successAlertDiv.remove();
+            }, 3000);
 
-        </script>
+            // Input alanını boşaltma
+            subjectInput.value = "";
+            linkItem.value = "";
+
+            subjectData.push({
+                mainTitle: mainTitleValue,
+                subTitle: subTitleValue,
+                subject: subjectValue,
+                linkItem: linkItemText
+            });
+            console.log(subjectData);
+            localStorage.setItem("subjectData",JSON.stringify(subjectData));
+        }
+
+        
+
+
+
+
+    </script>
+</body>
+
+</html>

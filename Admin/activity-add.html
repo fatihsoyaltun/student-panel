@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profil Düzenle</title>
+    <title>Aktivite Ekle</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
     <!-- Flatpickr -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <!-- Main Css -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -35,7 +35,7 @@
                         <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
                             tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                             <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Student Menu</h5>
+                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Admin Menu</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                     aria-label="Close"></button>
                             </div>
@@ -43,33 +43,66 @@
                                 <div class="sidebar-menu">
                                     <ul>
                                         <li class="menu-title">
-                                            <span>Student Dashboard</span>
+                                            <span>Admin Dashboard</span>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-graduation-cap"></i>
+                                                <span>Öğrenci</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="./student-list.html">Öğrenci Listesi</a></li>
+                                                <li><a href="./student-profil.html">Öğrenci Görüntüle</a></li>
+                                                <li><a href="./student-add.html">Öğrenci Ekle</a></li>
+                                                <li><a href="./student-edit.html">Öğrenci Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                                <span>Eğitmen</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="./teacher-list.html">Eğitmen Listesi</a></li>
+                                                <li><a href="./teacher.html">Eğitmen Görüntüle</a></li>
+                                                <li><a href="./teacher-add.html">Eğitmen Ekle</a></li>
+                                                <li><a href="./teacher-edit.html">Eğitmen Düzenle</a></li>
+                                            </ul>
                                         </li>
                                         <li class="submenu">
                                             <a href="#">
                                                 <i class="fas fa-building"></i>
-                                                <span>Dersler</span>
+                                                <span>Sınıflar</span>
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="#">Ders Videoları</a></li>
-                                                <li><a href="./student-subjects.html">Müfredat</a></li>
-                                                <li><a href="#">Quizler</a></li>
-                                                <li><a href="#">Projeler</a></li>
+                                                <li><a href="./departments.html">Sınıf Listesi</a></li>
+                                                <li><a href="./classes.html">Sınıfları Görüntüle</a></li>
+                                                <li><a href="./departments-add.html">Sınıf Ekle</a></li>
+                                                <li><a href="./departments-edit.html">Sınıf Düzenle</a></li>
                                             </ul>
                                         </li>
                                         <li class="submenu">
                                             <a href="#">
                                                 <i class="fas fa-book-reader"></i>
-                                                <span>Öğrenci İşleri</span>
+                                                <span>Müfredat</span>
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="#">Staj Seçimi</a></li>
-                                                <li><a href="#">Etüt Talebi</a></li>
-                                                <li><a href="#">Eğitim Dondurma</a></li>
-                                                <li><a href="#">Yurtdışı Eğitim</a></li>
-                                                <li><a href="#">Ödemelerim</a></li>
+                                                <li><a href="./subjects.html">Müfredat Ekle ve Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-newspaper"></i>
+                                                <span>İşlemler</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="./survey.html">Anket Oluştur</a></li>
+                                                <li><a href="./activity-add.html">Aktivite Oluştur</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -78,8 +111,8 @@
                         </div>
                     </div>
                     <!-- Off Canvas -->
-                    <a href="./studentDashboard.html" class="navbar-brand"><img
-                            src="https://neosyazilim.com/static/img/neosLogo2.png" width="100" alt=""></a>
+                    <a href="./admin.html" class="navbar-brand"><img src="https://neosyazilim.com/static/img/neosLogo2.png"
+                            width="100" alt=""></a>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     </form>
@@ -197,14 +230,14 @@
                                             width="31" alt="">
                                         <div class="user-text">
                                             <h6>Fatih Soyaltun</h6>
-                                            <p class="text-muted mb-0">Öğrenci</p>
+                                            <p class="text-muted mb-0">Admin</p>
                                         </div>
                                     </span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="./studentDashboard-profil.html">Profil</a></li>
+                                    <li><a class="dropdown-item" href="#">Profil</a></li>
                                     <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
-                                    <li><a class="dropdown-item" href="./login.html">Çıkış</a></li>
+                                    <li><a class="dropdown-item" href="../login.html">Çıkış</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -216,50 +249,83 @@
             <div class="sidebar-menu">
                 <ul>
                     <li class="menu-title">
-                        <span>Student Dashboard</span>
+                        <span>Admin Dashboard</span>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Öğrenci</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="./student-list.html">Öğrenci Listesi</a></li>
+                            <li><a href="./student-profil.html">Öğrenci Görüntüle</a></li>
+                            <li><a href="./student-add.html">Öğrenci Ekle</a></li>
+                            <li><a href="./student-edit.html">Öğrenci Düzenle</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Eğitmen</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="./teacher-list.html">Eğitmen Listesi</a></li>
+                            <li><a href="./teacher.html">Eğitmen Görüntüle</a></li>
+                            <li><a href="./teacher-add.html">Eğitmen Ekle</a></li>
+                            <li><a href="./teacher-edit.html">Eğitmen Düzenle</a></li>
+                        </ul>
                     </li>
                     <li class="submenu">
                         <a href="#">
                             <i class="fas fa-building"></i>
-                            <span>Dersler</span>
+                            <span>Sınıflar</span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="#">Ders Videoları</a></li>
-                            <li><a href="./student-subjects.html">Müfredat</a></li>
-                            <li><a href="#">Quizler</a></li>
-                            <li><a href="#">Projeler</a></li>
+                            <li><a href="./departments.html">Sınıf Listesi</a></li>
+                            <li><a href="./classes.html">Sınıfları Görüntüle</a></li>
+                            <li><a href="./departments-add.html">Sınıf Ekle</a></li>
+                            <li><a href="./departments-edit.html">Sınıf Düzenle</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="#">
                             <i class="fas fa-book-reader"></i>
-                            <span>Öğrenci İşleri</span>
+                            <span>Müfredat</span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="#">Staj Seçimi</a></li>
-                            <li><a href="#">Etüt Talebi</a></li>
-                            <li><a href="#">Eğitim Dondurma</a></li>
-                            <li><a href="#">Yurtdışı Eğitim</a></li>
-                            <li><a href="#">Ödemelerim</a></li>
+                            <li><a href="./subjects.html">Müfredat Ekle ve Düzenle</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-newspaper"></i>
+                            <span>İşlemler</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="./survey.html">Anket Oluştur</a></li>
+                            <li><a href="./activity-add.html">Aktivite Oluştur</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="student-panel" style="min-height: 387px;">
-            <div id="content" class="content container-fluid edit_profile_section">
+            <div id="content" class="content container-fluid">
                 <div class="list-header">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="list-sub-header">
-                                <h3 class="list-title">Profil Düzenle</h3>
+                                <h3 class="list-title">Aktivite Ekle</h3>
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item">
-                                        <a href="./studentDashboard.html">Anasayfa</a>
+                                        <a href="./admin.html">Anasayfa</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Profil Düzenle</li>
+                                    <li class="breadcrumb-item active">Aktivite Ekle</li>
                                 </ul>
                             </div>
                         </div>
@@ -272,143 +338,51 @@
                                 <form action="#">
                                     <div class="row">
                                         <div class="col-12">
-                                            <h5 class="mb-5">Profil Bilgileri</h5>
+                                            <h5 class="mb-5">Aktivite Bilgileri</h5>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group myForm">
                                                 <label>
-                                                    Adı
+                                                    Aktivite Adı
                                                     <span>*</span>
                                                 </label>
-                                                <input id="firstname" type="text" class="form-control"
-                                                    placeholder="Adınızı Giriniz">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Soyadı
-                                                    <span>*</span>
-                                                </label>
-                                                <input id="lastname" type="text" class="form-control"
-                                                    placeholder="Soyadını Giriniz">
+                                                <input id="activityName" type="text" class="form-control" placeholder="Aktivite Adı">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group myForm">
                                                 <label>
-                                                    Cinsiyet
+                                                    Aktivite İçeriği
                                                     <span>*</span>
                                                 </label>
-                                                <select class="form-control select">
-                                                    <option selected>Cinsiyet Seçin</option>
-                                                    <option value="1">Erkek</option>
-                                                    <option value="2">Kadın</option>
-                                                </select>
+                                                <input id="activityContent" type="text" class="form-control" placeholder="Aktivite İçeriği">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group myForm">
                                                 <label>
-                                                    Doğum Tarihi
+                                                    Aktivite Tarihi
                                                     <span>*</span>
                                                 </label>
-                                                <input class="form-control" placeholder="Doğum Tarihinizi Giriniz"
-                                                    id="birth_date">
+                                                <input class="form-control" placeholder="Aktivite Tarihi Seç" id="kt_datepicker_1"/>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    E-mail
-                                                    <span>*</span>
-                                                </label>
-                                                <input id="userEmail" type="text" class="form-control"
-                                                    placeholder="E-mail Adresinizi Giriniz">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Telefon
-                                                    <span>*</span>
-                                                </label>
-                                                <input id="userPhone" type="text" class="form-control"
-                                                    placeholder="Telefon Numaranızı Giriniz">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Adres
-                                                    <span>*</span>
-                                                </label>
-                                                <input id="userAdress" type="text" class="form-control"
-                                                    placeholder="Adres Bilgilerinizi Giriniz">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Github
-                                                    <span>*</span>
-                                                </label>
-                                                <input id="userGithub" type="text" class="form-control"
-                                                    placeholder="Github Adresinizi Giriniz">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Portfolio
-                                                    <span>*</span>
-                                                </label>
-                                                <input id="userLink" type="text" class="form-control"
-                                                    placeholder="Portfolio Linkini Giriniz">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group myForm">
-                                                <div class="">
-                                                    <label for="exampleFormControlTextarea1"
-                                                        class="form-label">Hakkında</label>
-                                                    <textarea class="form-control formAbout"
-                                                        id="exampleFormControlTextarea1" rows="7"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group upFile">
                                                 <label>
-                                                    Profil Fotoğrafı Yükle
+                                                    Aktivite Fotoğrafı Yükle
                                                 </label>
                                                 <div class="upload">
                                                     <label class="file-up img-file-btn mb-0">
                                                         Fotoğraf Yükle
-                                                        <input type="file">
+                                                        <input id="activityİmg" type="file">
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="submit-btn">
-                                                <button id="liveToastBtn" type="button"
-                                                    class="btn btn-primary saveProfil">Kaydet</button>
-                                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                                                    <div id="liveToast" class="toast" role="alert" aria-live="assertive"
-                                                        aria-atomic="true">
-                                                        <div class="toast-header">
-                                                            <strong class="me-auto">Neos Yazılım</strong>
-                                                            <button type="button" class="btn-close"
-                                                                data-bs-dismiss="toast" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="toast-body bg-info">
-                                                            Bilgileriniz Başarıyla Güncellendi
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <button type="submit" class="btn btn-primary saveActivity">Kaydet</button>
                                             </div>
                                         </div>
                                     </div>
@@ -419,9 +393,9 @@
                 </div>
             </div>
         </div>
-        <footer class="mt-5">
+        <!-- <footer class="mt-5">
             <h6 class="footer_text">TELİF HAKKI © 2023 NEOS YAZILIM.</h6>
-        </footer>
+        </footer> -->
     </div>
     <!-- Bootstrap Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -432,69 +406,31 @@
     <!-- Flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <!-- Main Js -->
-    <script src="./app.js"></script>
-    <script src="./js/jsDarkMode.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/jsDarkMode.js"></script>
     <script>
+        $("#kt_datepicker_1").flatpickr();
 
-        $("#birth_date").flatpickr();
+        const activityBtn = document.querySelector('.saveActivity');
+        activityBtn.addEventListener('click', () => {
+            const activityName = document.getElementById('activityName').value;
+            const activityContent = document.getElementById('activityContent').value;
+            const kt_datepicker_1 = document.getElementById('kt_datepicker_1').value;
+            const activityİmg = document.getElementById('activityİmg').files[0];
 
-        const saveBtn = document.querySelector(".saveProfil");
-        saveBtn.addEventListener("click", () => {
-            const userFirstName = document.getElementById("firstname").value;
-            const userLastName = document.getElementById("lastname").value;
-            const userEmail = document.getElementById("userEmail").value;
-            const userPhone = document.getElementById("userPhone").value;
-            const userAdress = document.getElementById("userAdress").value;
-            const userGithub = document.getElementById("userGithub").value;
-            const userLink = document.getElementById("userLink").value;
-            const userBirthDate = document.getElementById("birth_date").value;
-            const exampleFormControlTextarea1 = document.getElementById("exampleFormControlTextarea1").value;
-            const toastTrigger = document.getElementById('liveToastBtn');
-            const toastLiveExample = document.getElementById('liveToast');
-            const toastBody = document.querySelector('.toast-body');
+            const reader = new FileReader();
+            reader.readAsDataURL(activityİmg);
 
-            if (
-                !userFirstName ||
-                !userLastName ||
-                !userEmail ||
-                !userPhone ||
-                !userBirthDate ||
-                !exampleFormControlTextarea1
-            ) {
-                toastBody.classList="toast-body bg-danger text-white";
-                toastBody.innerHTML = "Boş Alan Bırakmayınız!";
-                const toast = new bootstrap.Toast(toastLiveExample)
-                toast.show()
-                return;
+            reader.onload = () => {
+                const activitydData = {
+                name : activityName,
+                content : activityContent,
+                date : kt_datepicker_1,
+                img : reader.result
+                };
+                localStorage.setItem('activitydData', JSON.stringify(activitydData));
             }
-
-            const profilData = {
-                userFirstName,
-                userLastName,
-                userEmail,
-                userPhone,
-                userAdress,
-                userGithub,
-                userLink,
-                userBirthDate,
-                exampleFormControlTextarea1,
-            };
-            localStorage.setItem("profilData", JSON.stringify(profilData));
-
-            const toast = new bootstrap.Toast(toastLiveExample)
-            toast.show()
-
-            document.getElementById("firstname").value = "";
-            document.getElementById("lastname").value = "";
-            document.getElementById("userEmail").value = "";
-            document.getElementById("userPhone").value = "";
-            document.getElementById("userAdress").value = "";
-            document.getElementById("userGithub").value = "";
-            document.getElementById("userLink").value = "";
-            document.getElementById("birth_date").value = "";
-            document.getElementById("exampleFormControlTextarea1").value = "";
         });
-
     </script>
 </body>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sınıf Ekle</title>
+    <title>Student Panel</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +16,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Flatpickr -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- jsCalendar -->
+    <link rel="stylesheet" type="text/css" href="../css/jsCalendar.css">
+    <link rel="stylesheet" type="text/css" href="../css/jsCalendar.clean.css">
+    <script type="text/javascript" src="../js/jsCalendar.js"></script>
+    <script type="text/javascript" src="../js/jsCalendar.lang.tr.js"></script>
+    <!-- js calendar main css -->
+    <link rel="stylesheet" href="../css/jsCalendarMain.css">
     <!-- Main Css -->
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+    <link rel="stylesheet" href="../css/style.css">
 
 <body>
     <div class="main-wrapper">
@@ -35,7 +39,7 @@
                         <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
                             tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                             <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Admin Menu</h5>
+                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Student Menu</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                     aria-label="Close"></button>
                             </div>
@@ -43,66 +47,33 @@
                                 <div class="sidebar-menu">
                                     <ul>
                                         <li class="menu-title">
-                                            <span>Admin Dashboard</span>
-                                        </li>
-                                        <li class="submenu">
-                                            <a href="#">
-                                                <i class="fas fa-graduation-cap"></i>
-                                                <span>Öğrenci</span>
-                                                <span class="menu-arrow"></span>
-                                            </a>
-                                            <ul class="submenu-content">
-                                                <li><a href="./student-list.html">Öğrenci Listesi</a></li>
-                                                <li><a href="./student-profil.html">Öğrenci Görüntüle</a></li>
-                                                <li><a href="./student-add.html">Öğrenci Ekle</a></li>
-                                                <li><a href="./student-edit.html">Öğrenci Düzenle</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="submenu">
-                                            <a href="#">
-                                                <i class="fas fa-chalkboard-teacher"></i>
-                                                <span>Eğitmen</span>
-                                                <span class="menu-arrow"></span>
-                                            </a>
-                                            <ul class="submenu-content">
-                                                <li><a href="./teacher-list.html">Eğitmen Listesi</a></li>
-                                                <li><a href="./teacher.html">Eğitmen Görüntüle</a></li>
-                                                <li><a href="./teacher-add.html">Eğitmen Ekle</a></li>
-                                                <li><a href="./teacher-edit.html">Eğitmen Düzenle</a></li>
-                                            </ul>
+                                            <span>Student Dashboard</span>
                                         </li>
                                         <li class="submenu">
                                             <a href="#">
                                                 <i class="fas fa-building"></i>
-                                                <span>Sınıflar</span>
+                                                <span>Dersler</span>
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="./departments.html">Sınıf Listesi</a></li>
-                                                <li><a href="./classes.html">Sınıfları Görüntüle</a></li>
-                                                <li><a href="./departments-add.html">Sınıf Ekle</a></li>
-                                                <li><a href="./departments-edit.html">Sınıf Düzenle</a></li>
+                                                <li><a href="#">Ders Videoları</a></li>
+                                                <li><a href="student-subjects.html">Müfredat</a></li>
+                                                <li><a href="#">Quizler</a></li>
+                                                <li><a href="#">Projeler</a></li>
                                             </ul>
                                         </li>
                                         <li class="submenu">
                                             <a href="#">
                                                 <i class="fas fa-book-reader"></i>
-                                                <span>Müfredat</span>
+                                                <span>Öğrenci İşleri</span>
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="./subjects.html">Müfredat Ekle ve Düzenle</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="submenu">
-                                            <a href="#">
-                                                <i class="fas fa-newspaper"></i>
-                                                <span>İşlemler</span>
-                                                <span class="menu-arrow"></span>
-                                            </a>
-                                            <ul class="submenu-content">
-                                                <li><a href="./survey.html">Anket Oluştur</a></li>
-                                                <li><a href="./activity-add.html">Aktivite Oluştur</a></li>
+                                                <li><a href="#">Staj Seçimi</a></li>
+                                                <li><a href="#">Etüt Talebi</a></li>
+                                                <li><a href="#">Eğitim Dondurma</a></li>
+                                                <li><a href="#">Yurtdışı Eğitim</a></li>
+                                                <li><a href="#">Ödemelerim</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -111,8 +82,8 @@
                         </div>
                     </div>
                     <!-- Off Canvas -->
-                    <a href="./admin.html" class="navbar-brand"><img src="https://neosyazilim.com/static/img/neosLogo2.png"
-                            width="100" alt=""></a>
+                    <a href="./studentDashboard.html" class="navbar-brand"><img
+                            src="https://neosyazilim.com/static/img/neosLogo2.png" width="100" alt=""></a>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     </form>
@@ -230,14 +201,14 @@
                                             width="31" alt="">
                                         <div class="user-text">
                                             <h6>Fatih Soyaltun</h6>
-                                            <p class="text-muted mb-0">Admin</p>
+                                            <p class="text-muted mb-0">Öğrenci</p>
                                         </div>
                                     </span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Profil</a></li>
+                                    <li><a class="dropdown-item" href="./studentDashboard-profil.html">Profil</a></li>
                                     <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
-                                    <li><a class="dropdown-item" href="#">Çıkış</a></li>
+                                    <li><a class="dropdown-item" href="./login.html">Çıkış</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -249,182 +220,171 @@
             <div class="sidebar-menu">
                 <ul>
                     <li class="menu-title">
-                        <span>Admin Dashboard</span>
-                    </li>
-                    <li class="submenu">
-                        <a href="#">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Öğrenci</span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <ul class="submenu-content">
-                            <li><a href="./student-list.html">Öğrenci Listesi</a></li>
-                            <li><a href="./student-profil.html">Öğrenci Görüntüle</a></li>
-                            <li><a href="./student-add.html">Öğrenci Ekle</a></li>
-                            <li><a href="./student-edit.html">Öğrenci Düzenle</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            <span>Eğitmen</span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <ul class="submenu-content">
-                            <li><a href="./teacher-list.html">Eğitmen Listesi</a></li>
-                            <li><a href="./teacher.html">Eğitmen Görüntüle</a></li>
-                            <li><a href="./teacher-add.html">Eğitmen Ekle</a></li>
-                            <li><a href="./teacher-edit.html">Eğitmen Düzenle</a></li>
-                        </ul>
+                        <span>Student Dashboard</span>
                     </li>
                     <li class="submenu">
                         <a href="#">
                             <i class="fas fa-building"></i>
-                            <span>Sınıflar</span>
+                            <span>Dersler</span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="./departments.html">Sınıf Listesi</a></li>
-                            <li><a href="./classes.html">Sınıfları Görüntüle</a></li>
-                            <li><a href="./departments-add.html">Sınıf Ekle</a></li>
-                            <li><a href="./departments-edit.html">Sınıf Düzenle</a></li>
+                            <li><a href="#">Ders Videoları</a></li>
+                            <li><a href="student-subjects.html">Müfredat</a></li>
+                            <li><a href="#">Quizler</a></li>
+                            <li><a href="#">Projeler</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="#">
                             <i class="fas fa-book-reader"></i>
-                            <span>Müfredat</span>
+                            <span>Öğrenci İşleri</span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="./subjects.html">Müfredat Ekle ve Düzenle</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#">
-                            <i class="fas fa-newspaper"></i>
-                            <span>İşlemler</span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <ul class="submenu-content">
-                            <li><a href="./survey.html">Anket Oluştur</a></li>
-                            <li><a href="./activity-add.html">Aktivite Oluştur</a></li>
+                            <li><a href="#">Staj Seçimi</a></li>
+                            <li><a href="#">Etüt Talebi</a></li>
+                            <li><a href="#">Eğitim Dondurma</a></li>
+                            <li><a href="#">Yurtdışı Eğitim</a></li>
+                            <li><a href="#">Ödemelerim</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="student-panel" style="min-height: 387px;">
-            <div id="content" class="content container-fluid departments_add_section">
-                <div class="list-header">
+        <div class="section stdDash" style="min-height: 387px;">
+            <div class="content container-fluid">
+                <div class="section-header mb-4">
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="list-sub-header">
-                                <h3 class="list-title">Sınıf Ekle</h3>
+                            <div class="section-sub-header d-flex">
+                                <h3 class="section-title">Hoşgeldiniz</h3>
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item">
-                                        <a href="./admin.html">Anasayfa</a>
+                                        <a href="./studentDashboard.html">Anasayfa</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Sınıf Ekle</li>
+                                    <li class="breadcrumb-item active"></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="card">
+                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                        <div class="card myBg w-100">
                             <div class="card-body">
-                                <form action="#">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <h5 class="mb-5">Sınıf Bilgileri</h5>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Şube
-                                                    <span>*</span>
-                                                </label>
-                                                <input type="text" class="form-control" placeholder="Şube Adı">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Eğitim Türü
-                                                    <span>*</span>
-                                                </label>
-                                                <select class="form-control select">
-                                                    <option selected>Eğitim Türü Seçin</option>
-                                                    <option value="1">Online</option>
-                                                    <option value="2">Yüz Yüze</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Sınıf Adı
-                                                    <span>*</span>
-                                                </label>
-                                                <input type="text" class="form-control" placeholder="Sınıf Adı">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Eğitmen
-                                                    <span>*</span>
-                                                </label>
-                                                <input type="text" class="form-control" placeholder="Eğitmen Adı">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Başlama Tarihi
-                                                    <span>*</span>
-                                                </label>
-                                                <input class="form-control" placeholder="Tarih Seçiniz" id="kt_datepicker_1"/>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Öğrenci Sayısı
-                                                    <span>*</span>
-                                                </label>
-                                                <input type="text" class="form-control" placeholder="Öğrenci Sayısı">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group upFile">
-                                                <label>
-                                                    Sınıf Fotoğrafı Yükle
-                                                </label>
-                                                <div class="upload">
-                                                    <label class="file-up img-file-btn mb-0">
-                                                        Fotoğraf Yükle
-                                                        <input type="file">
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="submit-btn">
-                                                <button type="submit" class="btn btn-primary">Kaydet</button>
-                                            </div>
+                                <div class="card-body-content d-flex justify-content-between align-items-center">
+                                    <div class="card-info">
+                                        <h6>Derse Kalan Süre</h6>
+                                        <div class="count d-flex justify-content-between">
+                                            <div id="day">00</div>
+                                            <div id="hour">00</div>
+                                            <div id="minute">00</div>
+                                            <div id="second">00</div>
                                         </div>
                                     </div>
-                                </form>
+                                    <div class="card-icon">
+                                        <img src="../img/countdown.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                        <div class="card myBg w-100">
+                            <div class="card-body">
+                                <div class="card-body-content d-flex justify-content-between align-items-center">
+                                    <div class="card-info">
+                                        <h6>Not Ortalaması</h6>
+                                        <h3>87</h3>
+                                    </div>
+                                    <div class="card-icon">
+                                        <img src="../img/average.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                        <div class="card myBg w-100">
+                            <div class="card-body">
+                                <div class="card-body-content d-flex justify-content-between align-items-center">
+                                    <div class="card-info">
+                                        <h6>Katılım Yüzdesi</h6>
+                                        <h3>%90</h3>
+                                    </div>
+                                    <div class="card-icon">
+                                        <img src="../img/attend.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                        <div class="card myBg w-100">
+                            <div class="card-body">
+                                <div class="card-body-content d-flex justify-content-between align-items-center">
+                                    <div class="card-info">
+                                        <h6>Sınıf Başarı Ortalaması</h6>
+                                        <h3>85</h3>
+                                    </div>
+                                    <div class="card-icon">
+                                        <img src="../img/class.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="card card-chart">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <h5 class="card-title">Performans Grafiği</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="performance"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="card card-chart">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <h5 class="card-title">Ders İlerleme Durumu</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="progresBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-xl-12">
+                        <div class="description">
+                            <div style="font-size: 1.4em;">Takvim</div>
+                            <div>TEST</div>
+                        </div>
+                        <div class="row" id="wrapper">
+                            <div class="col-lg-6 col-sm-12">
+                                <div id="events-calendar" data-language="tr"></div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div id="events"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="position-fixed bottom-0 w-100 ">
+        <footer class="mt-5">
             <h6 class="footer_text">TELİF HAKKI © 2023 NEOS YAZILIM.</h6>
         </footer>
     </div>
@@ -433,15 +393,124 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Flatpickr -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.2/apexcharts.min.js"
+        integrity="sha512-yWglrpRYz/pD0pp1cSpWmSVvcFwuuc739X4WHy7hRKB11BGijnz7fuqKRQB7Ksot42IN365OGvuOhSgUejKbmA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- JsCalendar Main Js -->
+    <script src="../js/jsCalenderMain.js"></script>
+    <!-- Dark Mode -->
+    <script src="../js/jsDarkMode.js"></script>
     <!-- Main Js -->
-    <script src="./app.js"></script>
+    <script src="../js/app.js"></script>
+    
     <script>
-        $("#kt_datepicker_1").flatpickr();
+        //<--CountDown2-->
+        function getNextLessonDate() {
+            const today = new Date();
+            const dayOfWeek = today.getDay();
+            // calculate the number of milliseconds until the next lesson starts
+            let countdown;
+            if (dayOfWeek === 1 || dayOfWeek === 3 || dayOfWeek === 5) {
+                const lessonStart = new Date();
+                lessonStart.setHours(19, 0, 0, 0); // set lesson start time to 19:00
+                if (today.getTime() > lessonStart.getTime()) {
+                    // today's lesson has already started, so schedule the countdown for the next lesson
+                    lessonStart.setDate(lessonStart.getDate() + (8 - dayOfWeek) % 7); // next lesson is on Monday, Wednesday, or Friday
+                }
+                countdown = lessonStart.getTime() - today.getTime();
+            } else {
+                // today is not a lesson day, so schedule the countdown for the next lesson
+                const nextLesson = new Date();
+                nextLesson.setDate(today.getDate() + (8 - dayOfWeek) % 7); // next lesson is on Monday, Wednesday, or Friday
+                nextLesson.setHours(19, 0, 0, 0); // set lesson start time to 19:00
+                countdown = nextLesson.getTime() - today.getTime();
+            }
+            // start the countdown
+            const countdownInterval = setInterval(function () {
+                countdown -= 1000;
+                if (countdown < 0) {
+                    clearInterval(countdownInterval);
+                    getNextLessonDate(); // start the countdown for the next lesson
+                } else {
+                    const seconds = Math.floor((countdown / 1000) % 60);
+                    const minutes = Math.floor((countdown / 1000 / 60) % 60);
+                    const hours = Math.floor((countdown / (1000 * 60 * 60)) % 24);
+                    const days = Math.floor(countdown / (1000 * 60 * 60 * 24));
+                    // update the countdown display
+                    document.getElementById('day').innerText = `${days}g`;
+                    document.getElementById('hour').innerText = `${hours}s`;
+                    document.getElementById('minute').innerText = `${minutes}d`;
+                    document.getElementById('second').innerText = `${seconds}s`;
+                }
+            }, 1000);
+        }
+        getNextLessonDate();
+
+        //Apex Charts
+        var stdDash = {
+            series: [{
+                name: 'series1',
+                data: [31, 40, 28, 51, 42, 109, 100]
+            }, {
+                name: 'series2',
+                data: [11, 32, 45, 32, 34, 52, 41]
+            }],
+            chart: {
+                height: 350,
+                type: 'area'
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'smooth'
+            },
+            xaxis: {
+                type: 'datetime',
+                categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+            },
+            tooltip: {
+                x: {
+                    format: 'dd/MM/yy HH:mm'
+                },
+            },
+        };
+
+        var stdDash_chart = new ApexCharts(document.querySelector("#performance"), stdDash);
+        stdDash_chart.render();
+
+        //<-- ProgressBar->
+
+        var prgBar = {
+            series: [{
+                data: [1300, 1000, 800, 600, 500, 300, 200,]
+            }],
+            chart: {
+                type: 'bar',
+                height: 350
+            },
+            plotOptions: {
+                bar: {
+                    borderRadius: 4,
+                    horizontal: true,
+                }
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            fill:{
+                colors : ['#F44336', '#E91E63', '#9C27B0']
+            },
+            xaxis: {
+                categories: ['Html', 'Css', 'Javascript', 'Python', 'Django',],
+            }
+        };
+
+        var prgBar_chart = new ApexCharts(document.querySelector("#progresBar"), prgBar);
+        prgBar_chart.render();
     </script>
-    <script src="./js/jsDarkMode.js"></script>
 </body>
 
 </html>

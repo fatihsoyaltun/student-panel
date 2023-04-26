@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aktivite Ekle</title>
+    <title>Sınıf Düzenle</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
     <!-- Flatpickr -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <!-- Main Css -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -237,7 +237,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Profil</a></li>
                                     <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
-                                    <li><a class="dropdown-item" href="#">Çıkış</a></li>
+                                    <li><a class="dropdown-item" href="../login.html">Çıkış</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -307,7 +307,7 @@
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="./survey.html">Anket Oluştur</a></li>
+                            <li><a href="#">Anket Oluştur</a></li>
                             <li><a href="./activity-add.html">Aktivite Oluştur</a></li>
                         </ul>
                     </li>
@@ -315,17 +315,17 @@
             </div>
         </div>
         <div class="student-panel" style="min-height: 387px;">
-            <div id="content" class="content container-fluid">
+            <div id="content" class="content container-fluid departments_edit_section">
                 <div class="list-header">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="list-sub-header">
-                                <h3 class="list-title">Aktivite Ekle</h3>
+                                <h3 class="list-title">Sınıf Düzenle</h3>
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item">
                                         <a href="./admin.html">Anasayfa</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Aktivite Ekle</li>
+                                    <li class="breadcrumb-item active">Sınıf Düzenle</li>
                                 </ul>
                             </div>
                         </div>
@@ -338,51 +338,82 @@
                                 <form action="#">
                                     <div class="row">
                                         <div class="col-12">
-                                            <h5 class="mb-5">Aktivite Bilgileri</h5>
+                                            <h5 class="mb-5">Sınıf Bilgileri</h5>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group myForm">
                                                 <label>
-                                                    Aktivite Adı
+                                                    Şube
                                                     <span>*</span>
                                                 </label>
-                                                <input id="activityName" type="text" class="form-control" placeholder="Aktivite Adı">
+                                                <input type="text" class="form-control" placeholder="Şube Adı" value="İstanbul">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group myForm">
                                                 <label>
-                                                    Aktivite İçeriği
+                                                    Eğitim Türü
                                                     <span>*</span>
                                                 </label>
-                                                <input id="activityContent" type="text" class="form-control" placeholder="Aktivite İçeriği">
+                                                <select class="form-control select">
+                                                    <option selected>Eğitim Türü Seçin</option>
+                                                    <option value="1">Online</option>
+                                                    <option value="2">Yüz Yüze</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group myForm">
                                                 <label>
-                                                    Aktivite Tarihi
+                                                    Sınıf Adı
                                                     <span>*</span>
                                                 </label>
-                                                <input class="form-control" placeholder="Aktivite Tarihi Seç" id="kt_datepicker_1"/>
+                                                <input type="text" class="form-control" placeholder="Sınıf Adı" value="7 Kasım">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Eğitmen Adı
+                                                    <span>*</span>
+                                                </label>
+                                                <input type="text" class="form-control" placeholder="Eğitmen Adı" value="Mehmet Çoban">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Başlama Tarihi
+                                                    <span>*</span>
+                                                </label>
+                                                <input class="form-control" placeholder="Taih Seçiniz" id="kt_datepicker_1" value="2022-11-07"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Öğrenci Sayısı
+                                                    <span>*</span>
+                                                </label>
+                                                <input type="text" class="form-control" placeholder="Öğrenci Sayısı" value="10">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group upFile">
                                                 <label>
-                                                    Aktivite Fotoğrafı Yükle
+                                                    Sınıf Fotoğrafı Yükle
                                                 </label>
                                                 <div class="upload">
                                                     <label class="file-up img-file-btn mb-0">
                                                         Fotoğraf Yükle
-                                                        <input id="activityİmg" type="file">
+                                                        <input type="file">
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="submit-btn">
-                                                <button type="submit" class="btn btn-primary saveActivity">Kaydet</button>
+                                                <button type="submit" class="btn btn-primary">Kaydet</button>
                                             </div>
                                         </div>
                                     </div>
@@ -393,9 +424,9 @@
                 </div>
             </div>
         </div>
-        <footer class="mt-5">
+        <!-- <footer class="position-fixed bottom-0 w-100">
             <h6 class="footer_text">TELİF HAKKI © 2023 NEOS YAZILIM.</h6>
-        </footer>
+        </footer> -->
     </div>
     <!-- Bootstrap Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -405,33 +436,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Dark Mode -->
+    <script src="../js/jsDarkMode.js"></script>
     <!-- Main Js -->
-    <script src="./app.js"></script>
-    <script src="./js/jsDarkMode.js"></script>
+    <script src="../js/app.js"></script>
     <script>
         $("#kt_datepicker_1").flatpickr();
-
-        const activityBtn = document.querySelector('.saveActivity');
-        activityBtn.addEventListener('click', () => {
-            const activityName = document.getElementById('activityName').value;
-            const activityContent = document.getElementById('activityContent').value;
-            const kt_datepicker_1 = document.getElementById('kt_datepicker_1').value;
-            const activityİmg = document.getElementById('activityİmg').files[0];
-
-            const reader = new FileReader();
-            reader.readAsDataURL(activityİmg);
-
-            reader.onload = () => {
-                const activitydData = {
-                name : activityName,
-                content : activityContent,
-                date : kt_datepicker_1,
-                img : reader.result
-                };
-                localStorage.setItem('activitydData', JSON.stringify(activitydData));
-            }
-        });
     </script>
+    
 </body>
 
 </html>
