@@ -853,120 +853,32 @@ img {
   border: 1px solid #3D5EE1;
 }
 
-.upload-wrapper {
-  overflow-x: hidden;
-  overflow-y: hidden;
-  width: 100%;
-  background: white;
+.projectCard {
+  background: #eeeeee;
+  border: 1px solid #dd2476;
+  color: #1B262C;
+  margin-bottom: 2rem;
 }
-.upload-wrapper form {
-  width: 100%;
+.projectCard .projectBtn {
+  border: 5px solid;
+  border-image-slice: 1;
+  background: linear-gradient(to left top, #d05793 10%, #b1412b 90%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  border-image-source: linear-gradient(to left top, #d05793 10%, #b1412b 90%) !important;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  border-radius: 10px;
 }
-.upload-wrapper form p {
-  padding: 10px 5px;
-  font-size: 25px;
-}
-.upload-wrapper form div {
-  margin: 20px auto;
-  padding: 5px;
-}
-.upload-wrapper form div label {
-  background: #f5f5f5;
-  display: block;
-  padding: 12px;
-  border-radius: 4px;
-  width: 90%;
-  line-height: 25px;
-  border: 2px solid #e5e5e5;
-  position: relative;
-}
-.upload-wrapper form div label::before {
-  position: absolute;
-  content: "Gözat";
-  right: -2px;
-  top: -2px;
-  width: 100px;
-  height: 107%;
-  line-height: 50px;
-  background: #cccccc;
-  text-align: center;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-}
-.upload-wrapper form .pr {
-  height: 110px;
-  display: none;
-}
-.upload-wrapper form .pr strong {
-  width: 100%;
-  height: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.upload-wrapper form .pr strong h4 {
-  background: purple;
-  padding: 8px 20px;
-  color: white;
-  border-radius: 5px;
-}
-.upload-wrapper form .pr progress {
-  width: 100%;
-  height: 30px;
-  -webkit-appearance: none;
-  border-radius: 5px;
-}
-.upload-wrapper form .pr progress::-webkit-progress-bar {
-  width: 100%;
-  height: 20px;
-  background: whitesmoke;
-}
-.upload-wrapper form .pr progress::-webkit-progress-value {
-  background: #00aced;
-}
-.upload-wrapper form button {
-  margin: 10px;
-  padding: 12px 18px;
-  color: white;
-  font-size: 18px;
-  outline: none;
-  border: none;
-  background: #00aced;
-  cursor: pointer;
-}
-.upload-wrapper form button .uploading {
-  position: relative;
-  padding-left: 20px;
-}
-.upload-wrapper form button .uploading::before {
-  position: absolute;
-  content: "";
-  left: -12px;
-  top: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  border: 1px solid;
-  border-color: white transparent white transparent;
-  animation: rotate 1s infinite;
-}
-.upload-wrapper form button span:nth-child(2),
-.upload-wrapper form button.active span:first-child {
-  display: none;
-}
-.upload-wrapper form button.active span:nth-child(2) {
-  display: inline-block;
-}
-.upload-wrapper form button.cancle {
-  background: #959595;
-  visibility: hidden;
+.projectCard .projectBtn:hover, .projectCard .projectBtn:focus {
+  background: linear-gradient(to left top, #d05793 10%, #b1412b 90%) !important;
+  -webkit-background-clip: none !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 5px solid #fff !important;
+  box-shadow: #222 1px 0 10px;
+  text-decoration: underline;
 }
 
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
 .login-form {
   display: table;
   height: 100vh;
