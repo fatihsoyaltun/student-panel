@@ -29,12 +29,12 @@ file.oninput = () => {
 let upload = () => {
     if (load >= 100) {
         clearInterval(proces);
-        p_i.innerHTML = '100%' + ' ' + 'Upload Completed';
+        p_i.innerHTML = '100%' + ' ' + 'Yükleme Tamamlandı';
         document.querySelector('.mind.active').classList.remove('active');
     } else {
         load++;
         progress.value = load;
-        p_i.innerHTML = load + '%' + ' ' + 'Upload ';
+        p_i.innerHTML = load + '%' + ' ' + 'Yükleniyor ';
     }
 }
 

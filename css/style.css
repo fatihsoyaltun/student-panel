@@ -854,24 +854,19 @@ img {
 }
 
 .upload-wrapper {
-  width: 1000px;
-  height: 420px;
-  margin: 150px auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
   background: white;
 }
 .upload-wrapper form {
-  width: 96%;
-  height: 100%;
-  margin: auto;
-  padding: 20px;
+  width: 100%;
 }
 .upload-wrapper form p {
   padding: 10px 5px;
   font-size: 25px;
-  margin: 20px auto;
 }
 .upload-wrapper form div {
-  height: 60px;
   margin: 20px auto;
   padding: 5px;
 }
