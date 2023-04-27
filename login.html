@@ -142,11 +142,11 @@
             let userName = document.querySelector('.user-log-name').value;
             let userPass = document.querySelector('.user-log-password').value;
             let isAuthenticated = false;
-            console.log("çalıştı 1")
+            //console.log("doğrulama başarılı 1")
             for (let i=0; i<userAccountData.length; i++){
-                console.log("doğrulama başarılı 2")
+                //console.log("doğrulama başarılı 2")
                 if (userAccountData[i].name === userName && userAccountData[i].password === userPass){
-                    console.log("doğrulama başarılı 3")
+                    //console.log("doğrulama başarılı 3")
                     isAuthenticated = true;
                     break;
                 }
@@ -158,13 +158,13 @@
                 const toast = new bootstrap.Toast(toastLiveExample)
                 toast.show()
                 setTimeout(() => {
-                    window.location.href = "admin.html";
+                    window.location.href = "Admin/admin.html";
                 }, 3000);
             }else if(isAuthenticated){
                 const toast = new bootstrap.Toast(toastLiveExample)
                 toast.show()
                 setTimeout(() => {
-                    window.location.href = "studentDashboard.html";
+                    window.location.href = "Student/studentDashboard.html";
                 }, 3000);
             }else{
                 document.querySelector('.user-log-name').value = "";

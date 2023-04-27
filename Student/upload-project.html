@@ -52,10 +52,9 @@
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="#">Ders Videoları</a></li>
                                                 <li><a href="student-subjects.html">Müfredat</a></li>
-                                                <li><a href="#">Quizler</a></li>
-                                                <li><a href="upload-project.html">Projeler</a></li>
+                                                <li><a href="#">Quiz ve Proje Notlarım</a></li>
+                                                <li><a href="upload-project-page.html">Projeler</a></li>
                                             </ul>
                                         </li>
                                         <li class="submenu">
@@ -68,8 +67,7 @@
                                                 <li><a href="internship-selection.html">Staj Seçimi</a></li>
                                                 <li><a href="study-request.html">Etüt Talebi</a></li>
                                                 <li><a href="stop-training.html">Eğitim Dondurma</a></li>
-                                                <li><a href="#">Yurtdışı Eğitim</a></li>
-                                                <li><a href="#">Ödemelerim</a></li>
+                                                <li><a href="payments.html">Ödemelerim</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -225,10 +223,9 @@
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="#">Ders Videoları</a></li>
                             <li><a href="student-subjects.html">Müfredat</a></li>
-                            <li><a href="#">Quizler</a></li>
-                            <li><a href="upload-project.html">Projeler</a></li>
+                            <li><a href="#">Quiz ve Proje Notlarım</a></li>
+                            <li><a href="upload-project-page.html">Projeler</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -241,8 +238,7 @@
                             <li><a href="internship-selection.html">Staj Seçimi</a></li>
                             <li><a href="study-request.html">Etüt Talebi</a></li>
                             <li><a href="stop-training.html">Eğitim Dondurma</a></li>
-                            <li><a href="#">Yurtdışı Eğitim</a></li>
-                            <li><a href="#">Ödemelerim</a></li>
+                            <li><a href="payments.html">Ödemelerim</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -267,7 +263,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="card">
+                        <!-- <div class="card">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12">
@@ -295,6 +291,91 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div> -->
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h5 class="mb-5">Proje Bilgileri</h5>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Proje Adı
+                                                    <span>*</span>
+                                                </label>
+                                                <input id="firstname" type="text" class="form-control"
+                                                    placeholder="Proje Adını Giriniz">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Github
+                                                    <span>*</span>
+                                                </label>
+                                                <input id="userGithub" type="text" class="form-control"
+                                                    placeholder="Projenin Github Linkini Giriniz">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group myForm">
+                                                <label>
+                                                    Proje Linki
+                                                    <span>*</span>
+                                                </label>
+                                                <input id="userLink" type="text" class="form-control"
+                                                    placeholder="Projenin Linkini Giriniz">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="form-group myForm">
+                                                <div class="">
+                                                    <label for="exampleFormControlTextarea1"
+                                                        class="form-label">Proje Hakkında Açıklama</label>
+                                                    <textarea class="form-control formAbout" style="resize: none;"
+                                                        id="exampleFormControlTextarea1" rows="3" cols="3" maxlength="100"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group upFile">
+                                                <label>
+                                                    Profil Fotoğrafı Yükle
+                                                </label>
+                                                <div class="upload">
+                                                    <label class="file-up img-file-btn mb-0">
+                                                        Fotoğraf Yükle
+                                                        <input type="file">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="submit-btn">
+                                                <button id="liveToastBtn" type="button"
+                                                    class="btn btn-primary saveProfil">Kaydet</button>
+                                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                                    <div id="liveToast" class="toast" role="alert" aria-live="assertive"
+                                                        aria-atomic="true">
+                                                        <div class="toast-header">
+                                                            <strong class="me-auto">Neos Yazılım</strong>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="toast" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="toast-body bg-info">
+                                                            Bilgileriniz Başarıyla Güncellendi
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

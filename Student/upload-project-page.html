@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Eğitim Dondurma</title>
+    <title>Proje ve Ödev Yükle</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -245,17 +245,17 @@
             </div>
         </div>
         <div class="student-panel" style="min-height: 387px;">
-            <div id="content" class="content container-fluid internship-selection">
+            <div id="content" class="content container-fluid edit_profile_section">
                 <div class="list-header">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="list-sub-header">
-                                <h3 class="list-title">Eğitim Dondurma</h3>
+                                <h3 class="list-title">Proje ve Ödev Yükle</h3>
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item">
                                         <a href="./studentDashboard.html">Anasayfa</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Eğitim Dondurma</li>
+                                    <li class="breadcrumb-item active">Proje ve Ödev Yükle</li>
                                 </ul>
                             </div>
                         </div>
@@ -263,182 +263,53 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <form action="#">
+                        <div class="container mx-auto mt-4">
+                            <div class="row">
+                                <div class="col-md-12">
                                     <div class="row">
-                                        <div class="col-12">
-                                            <h5 class="mb-5">Eğitim Dondurma Formu</h5>
+                                        <div class="col-md-6">
+                                            <h3>Yüklenmiş Projeniz Bulunmamaktadır!</h3>
                                         </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Adı
-                                                    <span>*</span>
-                                                </label>
-                                                <input id="firstname" type="text" class="form-control"
-                                                    placeholder="Adınızı Giriniz">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Soyadı
-                                                    <span>*</span>
-                                                </label>
-                                                <input id="lastname" type="text" class="form-control"
-                                                    placeholder="Soyadını Giriniz">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Telefon
-                                                    <span>*</span>
-                                                </label>
-                                                <input id="userPhone" type="text" class="form-control"
-                                                    placeholder="Telefon Numaranızı Giriniz">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Eğitim Dondurma Tarihi
-                                                    <span>*</span>
-                                                </label>
-                                                <input class="form-control" placeholder="Dondurmak İstediğiniz Tarihi Seçiniz"
-                                                    id="birth_date">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    E-mail
-                                                    <span>*</span>
-                                                </label>
-                                                <input id="userEmail" type="text" class="form-control"
-                                                    placeholder="E-mail Adresinizi Giriniz">
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="col-sm-12 mt-4">
-                                            <div class="form-group myForm iss_3">
-                                                <div class="">
-                                                    <label for="exampleFormControlTextarea1"
-                                                        class="form-label">Mesajınız</label>
-                                                    <textarea class="form-control formAbout p-4" placeholder="Eğitiminizi neden dondurmak istediğinizi yazınız..."
-                                                        id="exampleFormControlTextarea1" rows="7"></textarea>
-                                                </div>
-                                            </div>
+                                        <div class="col-md-6 text-end">
+                                            <a href="upload-project.html" class="btn btn-primary">Proje Yükle</a>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="submit-btn">
-                                                <button id="liveToastBtn" type="button"
-                                                    class="btn btn-primary saveProfil">Kaydet</button>
-                                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                                                    <div id="liveToast" class="toast" role="alert" aria-live="assertive"
-                                                        aria-atomic="true">
-                                                        <div class="toast-header">
-                                                            <strong class="me-auto">Neos Yazılım</strong>
-                                                            <button type="button" class="btn-close"
-                                                                data-bs-dismiss="toast" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="toast-body bg-info">
-                                                            Bilgileriniz Başarıyla Güncellendi
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                </div>
+                                <!-- <div class="col-md-4">
+                                    <div class="card projectCard" style="width: 18rem;">
+                                        <img src="/img/7_Kasım.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn mr-2 projectBtn"><i class="fas fa-link"></i> Visit Site</a>
+                                            <a href="#" class="btn projectBtn"><i class="fab fa-github"></i> Github</a>
                                         </div>
                                     </div>
-                                </form>
+                                </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="mt-5">
+        <!-- <footer class="mt-5">
             <h6 class="footer_text">TELİF HAKKI © 2023 NEOS YAZILIM.</h6>
-        </footer>
+        </footer> -->
     </div>
     <!-- Bootstrap Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <!-- Dark Mode -->
-    <script src="../js/jsDarkMode.js"></script>
+    <script src="../js/jsDarkMode.js"></script>,
     <!-- Main Js -->
     <script src="../js/app.js"></script>
-
-    <script>
-
-        $("#birth_date").flatpickr();
-
-        const saveBtn = document.querySelector(".saveProfil");
-        saveBtn.addEventListener("click", () => {
-            const userFirstName = document.getElementById("firstname").value;
-            const userLastName = document.getElementById("lastname").value;
-            const userEmail = document.getElementById("userEmail").value;
-            const userPhone = document.getElementById("userPhone").value;
-            const userAdress = document.getElementById("userAdress").value;
-            const userGithub = document.getElementById("userGithub").value;
-            const userLink = document.getElementById("userLink").value;
-            const userBirthDate = document.getElementById("birth_date").value;
-            const exampleFormControlTextarea1 = document.getElementById("exampleFormControlTextarea1").value;
-            const toastTrigger = document.getElementById('liveToastBtn');
-            const toastLiveExample = document.getElementById('liveToast');
-            const toastBody = document.querySelector('.toast-body');
-
-            if (
-                !userFirstName ||
-                !userLastName ||
-                !userEmail ||
-                !userPhone ||
-                !userBirthDate ||
-                !exampleFormControlTextarea1
-            ) {
-                toastBody.classList = "toast-body bg-danger text-white";
-                toastBody.innerHTML = "Boş Alan Bırakmayınız!";
-                const toast = new bootstrap.Toast(toastLiveExample)
-                toast.show()
-                return;
-            }
-
-            const profilData = {
-                userFirstName,
-                userLastName,
-                userEmail,
-                userPhone,
-                userAdress,
-                userGithub,
-                userLink,
-                userBirthDate,
-                exampleFormControlTextarea1,
-            };
-            localStorage.setItem("profilData", JSON.stringify(profilData));
-
-            const toast = new bootstrap.Toast(toastLiveExample)
-            toast.show()
-
-            document.getElementById("firstname").value = "";
-            document.getElementById("lastname").value = "";
-            document.getElementById("userEmail").value = "";
-            document.getElementById("userPhone").value = "";
-            document.getElementById("userAdress").value = "";
-            document.getElementById("userGithub").value = "";
-            document.getElementById("userLink").value = "";
-            document.getElementById("birth_date").value = "";
-            document.getElementById("exampleFormControlTextarea1").value = "";
-        });
-
-    </script>
 </body>
 
 </html>
