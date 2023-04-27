@@ -1146,6 +1146,16 @@ img {
   color: #fff;
 }
 
+.internship-selection .choices {
+  z-index: 100 !important;
+}
+.internship-selection .choices .choices__inner {
+  background-color: white !important;
+}
+.internship-selection .choices .choices__inner .choices__input {
+  background-color: white !important;
+}
+
 body.dark-mode-active {
   background-color: #1B262C !important;
 }
@@ -1440,8 +1450,20 @@ footer.dark-mode-active .footer_text {
 .internship-selection .card.dark-mode-active input::placeholder {
   color: #a6a0a0 !important;
 }
+.internship-selection .card.dark-mode-active .modal .modal-header {
+  background-color: #393E46 !important;
+}
+.internship-selection .card.dark-mode-active .modal .modal-body {
+  background-color: #393E46 !important;
+}
+.internship-selection .card.dark-mode-active .modal .modal-footer {
+  background-color: #393E46 !important;
+}
 .internship-selection .card.dark-mode-active label {
   background-color: #393E46 !important;
+  color: white !important;
+}
+.internship-selection .card.dark-mode-active label button {
   color: white !important;
 }
 .internship-selection .card.dark-mode-active select {
@@ -1462,6 +1484,25 @@ footer.dark-mode-active .footer_text {
 }
 .internship-selection .card.dark-mode-active .iss1 {
   color: #6c757d !important;
+}
+.internship-selection .card.dark-mode-active .choices {
+  z-index: 100 !important;
+}
+.internship-selection .card.dark-mode-active .choices .choices__inner {
+  background-color: #393E46 !important;
+}
+.internship-selection .card.dark-mode-active .choices .choices__inner .choices__input {
+  background-color: #393E46 !important;
+}
+.internship-selection .card.dark-mode-active .choices .choices__list {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.internship-selection .card.dark-mode-active .choices .choices__list .choices__item:hover {
+  color: #393E46 !important;
+}
+.internship-selection .card.dark-mode-active .choices .choices__list .is-highlighted {
+  color: #393E46 !important;
 }
 
 .edit_profile_section .card.dark-mode-active {

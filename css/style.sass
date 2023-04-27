@@ -1028,7 +1028,15 @@ img
                                 color: #fff
 
 
+.internship-selection
+    .choices
+        z-index: 100 !important
+        .choices__inner
+            background-color: white !important
+            .choices__input
+                background-color: white !important
 
+            
 
 
 //? dark mode start
@@ -1267,10 +1275,18 @@ footer.dark-mode-active
             color: white !important
         input::placeholder
             color: #a6a0a0 !important
-                
+        .modal
+            .modal-header
+                background-color: $color6 !important
+            .modal-body
+                background-color: $color6 !important
+            .modal-footer
+                background-color: $color6 !important
         label
             background-color: $color6 !important
             color: white !important
+            button
+                color: white !important
         select
             background-color: $color6 !important
             color: #a6a0a0 !important
@@ -1285,6 +1301,20 @@ footer.dark-mode-active
             border: 1px solid white !important
         .iss1
             color: #6c757d !important 
+        .choices
+            z-index: 100 !important
+            .choices__inner
+                background-color: $color6 !important
+                .choices__input
+                    background-color: $color6 !important
+            .choices__list
+                background-color: $color6 !important
+                color: white !important
+                .choices__item
+                    &:hover
+                        color: $color6 !important
+                .is-highlighted
+                    color: $color6 !important
 
 //edit-profile.html
 .edit_profile_section
