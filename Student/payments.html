@@ -384,16 +384,28 @@
                             <div class="payment-info card p-3">
                                 <h5 style="font-weight: bold; margin-bottom: 1.5rem;">Ödeme Detayları : </h5>
                                 <div class="payment-total d-flex align-items-center ">
-                                    <h6 class="mb-0 fw-bold" style="font-size: 1rem; width: 130px;" ><i class="fa-solid fa-turkish-lira-sign" style="color:#3b5998;"></i> Toplam Tutar :</h6>
+                                    <h6 class="mb-0 fw-bold" style="font-size: 1rem; width: 220px;" ><i class="fa-solid fa-turkish-lira-sign" style="color:#3b5998; width: 20px"></i> Toplam Tutar :</h6>
                                     <p class="mb-0 ms-2" id="total-amount" style="font-size: 16px;">0</p> <span style="font-size: 16px;">TL</span>
                                 </div>
                                 <div class="payment-paid d-flex align-items-center mt-2">
-                                    <h6 class="mb-0 fw-bold" style="font-size: 1rem; width: 130px; "><i class="fa-regular fa-credit-card" style="color:#3b5998;"></i> Ödenen Tutar :</h6>
+                                    <h6 class="mb-0 fw-bold" style="font-size: 1rem; width: 220px; "><i class="fa-regular fa-credit-card" style="color:#3b5998; width: 20px;"></i> Ödenen Tutar :</h6>
                                     <p class="mb-0 ms-2" id="paid-amount" style="font-size: 16px;">0</p> <span style="font-size: 16px;">TL</span>
                                 </div>
                                 <div class="payment-paid d-flex align-items-center mt-2">
-                                    <h6 class="mb-0 fw-bold" style="font-size: 1rem; width: 130px; "><i class="fa-solid fa-chart-pie" style="color:#3b5998;"></i> Kalan Tutar :</h6>
+                                    <h6 class="mb-0 fw-bold" style="font-size: 1rem; width: 220px; "><i class="fa-solid fa-chart-pie" style="color:#3b5998; width: 20px"></i> Kalan Tutar :</h6>
                                     <p class="mb-0 ms-2" id="paid-remainder" style="font-size: 16px;">0</p> <span style="font-size: 16px;"> TL</span>
+                                </div>
+                                <div class="payment-paid d-flex align-items-center mt-2">
+                                    <h6 class="mb-0 fw-bold" style="font-size: 1rem; width: 220px; "><i class="fa-regular fa-calendar-check" style="color:#3b5998; width: 20px"></i> Kalan Taksit Sayısı :</h6>
+                                    <p class="mb-0 ms-2" style="font-size: 16px;">2</p>
+                                </div>
+                                <div class="payment-paid d-flex align-items-center mt-2">
+                                    <h6 class="mb-0 fw-bold" style="font-size: 1rem; width: 220px; "><i class="fa-regular fa-calendar-days" style="color:#3b5998; width: 20px"></i> Bir Sonraki Ödeme Tarihi :</h6>
+                                    <p class="mb-0 ms-2" style="font-size: 16px;">01.05.2023</p>
+                                </div>
+                                <div class="payment-paid d-flex align-items-center mt-2">
+                                    <h6 class="mb-0 fw-bold" style="font-size: 1rem; width: 220px; "><i class="fa-solid fa-arrow-trend-up" style="color:#3b5998; width: 20px"></i> Bir Sonraki Taksit Tutarı :</h6>
+                                    <p class="mb-0 ms-2" style="font-size: 16px;">5000</p> <span style="font-size: 16px;"> TL</span>
                                 </div>
                                 <div class="progress mt-3">
                                     <span id="progress-text" class="progress-text" style="color: black">0 / 0</span>
@@ -444,7 +456,7 @@
         const paidRemainder = document.querySelector('#paid-remainder');
 
         let total = 25000; // toplam tutar değişkeni buraya gelecek
-        let paid = 11250; // ödenen tutar değişkeni buraya gelecek
+        let paid = 15000; // ödenen tutar değişkeni buraya gelecek
         let remainder = total-paid; // Burası kalan ödeme kısmı
 
         totalAmount.textContent = total;
