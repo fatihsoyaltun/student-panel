@@ -306,7 +306,7 @@
                                                     Proje Adı
                                                     <span>*</span>
                                                 </label>
-                                                <input id="firstname" type="text" class="form-control"
+                                                <input id="projectName" type="text" class="form-control"
                                                     placeholder="Proje Adını Giriniz">
                                             </div>
                                         </div>
@@ -316,7 +316,7 @@
                                                     Github
                                                     <span>*</span>
                                                 </label>
-                                                <input id="userGithub" type="text" class="form-control"
+                                                <input id="projectGithub" type="text" class="form-control"
                                                     placeholder="Projenin Github Linkini Giriniz">
                                             </div>
                                         </div>
@@ -326,7 +326,7 @@
                                                     Proje Linki
                                                     <span>*</span>
                                                 </label>
-                                                <input id="userLink" type="text" class="form-control"
+                                                <input id="projectLink" type="text" class="form-control"
                                                     placeholder="Projenin Linkini Giriniz">
                                             </div>
                                         </div>
@@ -335,7 +335,7 @@
                                                 <div class="">
                                                     <label for="exampleFormControlTextarea1"
                                                         class="form-label">Proje Hakkında Açıklama</label>
-                                                    <textarea class="form-control formAbout" style="resize: none;"
+                                                    <textarea class="form-control formAbout projectAbout" style="resize: none;"
                                                         id="exampleFormControlTextarea1" rows="3" cols="3" maxlength="100"></textarea>
                                                 </div>
                                             </div>
@@ -350,7 +350,7 @@
                                                 <div class="upload">
                                                     <label class="file-up img-file-btn mb-0">
                                                         Fotoğraf Yükle
-                                                        <input type="file">
+                                                        <input id="projectImg" type="file">
                                                     </label>
                                                 </div>
                                             </div>
@@ -358,7 +358,7 @@
                                         <div class="col-12">
                                             <div class="submit-btn">
                                                 <button id="liveToastBtn" type="button"
-                                                    class="btn btn-primary saveProfil">Kaydet</button>
+                                                    class="btn btn-primary saveProfil saveProject">Kaydet</button>
                                                 <div class="toast-container position-fixed bottom-0 end-0 p-3">
                                                     <div id="liveToast" class="toast" role="alert" aria-live="assertive"
                                                         aria-atomic="true">
