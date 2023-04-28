@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profil Düzenle</title>
+    <title>Ödemelerim</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +21,79 @@
     <!-- Main Css -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
+<style>
+    /* .progress-bar {
+        width: 100%;
+        height: 30px;
+        background-color: lightgray;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
+    #progress {
+        height: 100%;
+        background-color: rgb(31, 172, 219);
+    } */
+    .progress {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        align-items: center;
+        width: 100%;
+        height: 30px;
+        background-color: #f2f2f2;
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        width: 0%;
+        height: 30px;
+        background-color: #2a9bc7;
+        border-radius: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: width 0.5s ease-in-out;
+    }
+    .progress-text{
+        z-index: 99;
+        margin-left: 1rem;
+        font-size: 13px;
+
+    }
+
+    .progress-bar span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-weight: bold;
+    }
+
+    .amounts {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .amounts label {
+        font-size: 1.2rem;
+        margin-right: 10px;
+    }
+
+    .amounts input {
+        width: 100px;
+        padding: 5px;
+        font-size: 1rem;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
 
 <body>
     <div class="main-wrapper">
@@ -246,11 +319,96 @@
         </div>
         <div class="student-panel" style="min-height: 387px;">
             <div id="content" class="content container-fluid edit_profile_section">
+                <div class="list-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="list-sub-header">
+                                <h3 class="list-title">Ödemelerim</h3>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="./studentDashboard.html">Anasayfa</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Ödemelerim</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container teacher_about">
+                    <div class="row">
+                        
+                        <div class="col-xl-4 mt-4">
+                            <div class="teacher_about_left card p-3">
+                                <h5>Eğitim Detayları : </h5>
+                                <ul>
+                                    <li>
+                                        <h6><i class="fa-regular fa-user"></i> İsim :</h6>
+                                        <h6 class="teacher_about_left_name mb-3">Ayşe Aslan</h6>
+                                    </li>
+                                    <li>
+                                        <h6><i class="fa-regular fa-building"></i> Eğitim :</h6>
+                                        <h6 class="teacher_about_left_profession mb-3">Full-Stack
+                                        </h6>
+                                    </li>
+                                    <li>
+                                        <h6><i class="fa-solid fa-laptop-code"></i>Eğitim Türü :</h6>
+                                        <h6 class="teacher_about_left_mobil mb-3">Yüzyüze</h6>
+                                    </li>
+                                    <li>
+                                        <h6><i class="fa-regular fa-clock"></i> Eğitim Süresi :</h6>
+                                        <h6 class="teacher_about_left_mail mb-3">344 Saat</h6>
+                                    </li>
+                                    <li>
+                                        <h6><i class="fa-regular fa-calendar-days"></i> Eğitim Başlama Tarihi :</h6>
+                                        <h6 class="teacher_about_left_birth mb-3">07 Kasım 2022</h6>
+                                    </li>
+                                    <li>
+                                        <h6><i class="fa-solid fa-italic"></i> Eğitim İçeriği :</h6>
+                                        <h6 class="teacher_about_left_language mb-3">Html, Css, Sass/Scss, Bootstrap, Javascript, jquery, Python, Django</h6>
+                                    </li>
+                                    <li>
+                                        <h6><i class="fa-solid fa-location-dot"></i> Şube :</h6>
+                                        <h6 class="teacher_about_left_adress">İstanbul</h6>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 mt-4">
+                            <!-- <div class="card p-2">
+                                <p style="font-size: 14px;">Toplam Tutar: <span id="total" style="font-weight: bold;"></span><span style="font-weight: bold;"> TL</span></p>
+                                <p style="font-size: 14px;">Ödenen Tutar: <span id="paid" style="font-weight: bold;"></span><span style="font-weight: bold;"> TL</span></p>
+                                <div class="progress-bar mt-0">
+                                    <div id="progress"></div>
+                                </div>
+                            </div> -->
+                            <div class="payment-info card p-3">
+                                <h5 style="font-weight: bold; margin-bottom: 1.5rem;">Ödeme Detayları : </h5>
+                                <div class="payment-total d-flex align-items-center ">
+                                    <h6 class="mb-0 fw-bold" style="font-size: 1rem; width: 130px;" ><i class="fa-solid fa-turkish-lira-sign" style="color:#3b5998;"></i> Toplam Tutar :</h6>
+                                    <p class="mb-0 ms-2" id="total-amount" style="font-size: 16px;">0</p> <span style="font-size: 16px;">TL</span>
+                                </div>
+                                <div class="payment-paid d-flex align-items-center mt-2">
+                                    <h6 class="mb-0 fw-bold" style="font-size: 1rem; width: 130px; "><i class="fa-regular fa-credit-card" style="color:#3b5998;"></i> Ödenen Tutar :</h6>
+                                    <p class="mb-0 ms-2" id="paid-amount" style="font-size: 16px;">0</p> <span style="font-size: 16px;">TL</span>
+                                </div>
+                                <div class="payment-paid d-flex align-items-center mt-2">
+                                    <h6 class="mb-0 fw-bold" style="font-size: 1rem; width: 130px; "><i class="fa-solid fa-chart-pie" style="color:#3b5998;"></i> Kalan Tutar :</h6>
+                                    <p class="mb-0 ms-2" id="paid-remainder" style="font-size: 16px;">0</p> <span style="font-size: 16px;"> TL</span>
+                                </div>
+                                <div class="progress mt-3">
+                                    <span id="progress-text" class="progress-text" style="color: black">0 / 0</span>
+                                    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <footer class="mt-5">
+        <!-- <footer class="mt-5">
             <h6 class="footer_text">TELİF HAKKI © 2023 NEOS YAZILIM.</h6>
-        </footer>
+        </footer> -->
     </div>
     <!-- Bootstrap Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -262,8 +420,47 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <!-- Dark Mode -->
     <script src="../js/jsDarkMode.js"></script>
+    <!-- apexchart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <!-- Main Js -->
     <script src="../js/app.js"></script>
+
+    <script>
+        // // Ödeme bilgileri
+        // let total = 25000;
+        // let paid = 15500;
+
+
+        // document.getElementById("total").innerHTML = total;
+        // document.getElementById("paid").innerHTML = paid;
+
+
+        // let progress = paid / total * 100;
+        // document.getElementById("progress").style.width = progress + "%";
+        const progressBar = document.querySelector('.progress-bar');
+        const progressText = document.querySelector('.progress-text');
+        const totalAmount = document.querySelector('#total-amount');
+        const paidAmount = document.querySelector('#paid-amount');
+        const paidRemainder = document.querySelector('#paid-remainder');
+
+        let total = 25000; // toplam tutar değişkeni buraya gelecek
+        let paid = 11250; // ödenen tutar değişkeni buraya gelecek
+        let remainder = total-paid; // Burası kalan ödeme kısmı
+
+        totalAmount.textContent = total;
+        paidAmount.textContent = paid;
+        paidRemainder.textContent = remainder;
+
+        progressText.textContent = `${paid} / ${total} / ${remainder}`;
+
+        function updateProgress() {
+            let percent = (paid / total) * 100;
+            progressBar.style.width = `${percent}%`;
+            progressText.textContent = `${paid} / ${total}`;
+        }
+        updateProgress();
+
+    </script>
 </body>
 
 </html>
