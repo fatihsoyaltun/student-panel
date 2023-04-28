@@ -857,21 +857,21 @@ img {
   background: #eeeeee;
   border: 1px solid #dd2476;
   color: #1B262C;
-  margin-bottom: 2rem;
+  width: 100%;
 }
 .projectCard .projectBtn {
   border: 5px solid;
   border-image-slice: 1;
-  background: linear-gradient(to left top, #d05793 10%, #b1412b 90%) !important;
+  background: linear-gradient(to left top, #8b8b8b 10%, #a4a0a0 90%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
-  border-image-source: linear-gradient(to left top, #d05793 10%, #b1412b 90%) !important;
+  border-image-source: linear-gradient(to left top, #8b8b8b 10%, #a4a0a0 90%) !important;
   text-decoration: none;
   transition: all 0.4s ease;
   border-radius: 10px;
 }
 .projectCard .projectBtn:hover, .projectCard .projectBtn:focus {
-  background: linear-gradient(to left top, #d05793 10%, #b1412b 90%) !important;
+  background: linear-gradient(to left top, #8b8b8b 10%, #a4a0a0 90%) !important;
   -webkit-background-clip: none !important;
   -webkit-text-fill-color: #fff !important;
   border: 5px solid #fff !important;
@@ -1762,6 +1762,9 @@ footer.dark-mode-active .footer_text {
   }
   .loginrightSide {
     width: 100% !important;
+  }
+  .user-menu .dropdown-menu {
+    transform: translate(-120px, 0px) !important;
   }
 }
 .teacher_header .teacher_head_bottom {

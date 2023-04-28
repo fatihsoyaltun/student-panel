@@ -9,7 +9,7 @@ $color6:#393E46
 $color7:#00ADB5
 $color8:#EEEEEE
 $color9:#FFFFFF
-$projectCardGradient:linear-gradient(to left top, #d05793 10%, #b1412b 90%)
+$projectCardGradient:linear-gradient(to left top, #8b8b8b 10%, #a4a0a0 90%)
 $backroundimg:"../img/neos_teacher_header_img.jfif"
 $backroundimg2:"../img/7_Kasım.jpg"
 $backroundimg3:'../img/yaprakgri.png'
@@ -769,7 +769,9 @@ img
     background: #eeeeee
     border: 1px solid #dd2476
     color: $color1
-    margin-bottom: 2rem
+    width: 100%
+    // min-width: 18rem
+    // margin-bottom: 2rem
     .projectBtn
         border: 5px solid
         border-image-slice: 1
@@ -1540,7 +1542,9 @@ footer.dark-mode-active
             padding-right: 0 !important
     .loginrightSide
         width: 100% !important
-
+    .user-menu
+        .dropdown-menu
+            transform: translate(-120px, 0px) !important
 
 
 
