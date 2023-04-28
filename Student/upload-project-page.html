@@ -275,19 +275,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="col-md-4">
+                                <div class="col-md-4">
                                     <div class="card projectCard" style="width: 18rem;">
-                                        <img src="/img/7_Kasım.jpg" class="card-img-top" alt="...">
+                                        <img src="../img/7_Kasım.jpg" class="card-img-top pImg" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn mr-2 projectBtn"><i class="fas fa-link"></i> Visit Site</a>
-                                            <a href="#" class="btn projectBtn"><i class="fab fa-github"></i> Github</a>
+                                            <h5 class="card-title pName">Netflix</h5>
+                                            <p class="card-text pAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, excepturi?</p>
+                                            <a href="" class="btn mr-2 projectBtn pBtn_github"><i class="fas fa-link"></i>Proje Linki</a>
+                                            <a href="" class="btn projectBtn pBtn_link"><i class="fab fa-github"></i> Github</a>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -307,9 +305,20 @@
     <!-- Flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <!-- Dark Mode -->
-    <script src="../js/jsDarkMode.js"></script>,
+    <script src="../js/jsDarkMode.js"></script>
+    <!-- Upload Project Js -->
+    <!-- <script src="../js/jsUpload.js"></script> -->
     <!-- Main Js -->
     <script src="../js/app.js"></script>
+    <script>
+        // const projectData = JSON.parse(localStorage.getItem('projectData'))
+        // let projectImage = document.querySelector('.pImg');
+        // projectImage.src = projectData.projectImg; 
+        // document.querySelector('.pName').innerHTML = projectData.projectName
+        // document.querySelector('.pAbout').innerHTML = projectData.projectAbout
+        // document.querySelector('.pBtn_github').href = projectData.projectLink
+        // document.querySelector('.pBtn_link').href = projectData.projectGithub
+    </script>
 </body>
 
 </html>
