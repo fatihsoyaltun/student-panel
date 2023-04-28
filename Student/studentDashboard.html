@@ -374,6 +374,28 @@
                             </div>
                             <div class="col-lg-6 col-sm-12">
                                 <div id="events"></div>
+                                <!-- Modal -->
+                                <div class="modal fade addModal" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Etkinlik Ekle</h1>
+                                                <button type="button" class="btn-close modalClose" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <input style="width: 100%;" type="text" id="eventName" placeholder="Etkinlik Adını Girin...">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary modalClose"
+                                                    data-bs-dismiss="modal">Kapat</button>
+                                                <button type="button" class="btn btn-primary saveEvent">Kaydet</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
                             </div>
                         </div>
                     </div>
@@ -386,8 +408,8 @@
     </div>
     <!-- Bootstrap Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
     <!-- jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <!-- ApexCharts -->
@@ -400,7 +422,7 @@
     <script src="../js/jsDarkMode.js"></script>
     <!-- Main Js -->
     <script src="../js/app.js"></script>
-    
+
     <script>
         //<--CountDown2-->
         function getNextLessonDate() {
@@ -413,13 +435,15 @@
                 lessonStart.setHours(19, 0, 0, 0); // set lesson start time to 19:00
                 if (today.getTime() > lessonStart.getTime()) {
                     // today's lesson has already started, so schedule the countdown for the next lesson
-                    lessonStart.setDate(lessonStart.getDate() + (8 - dayOfWeek) % 7); // next lesson is on Monday, Wednesday, or Friday
+                    lessonStart.setDate(lessonStart.getDate() + (8 - dayOfWeek) %
+                    7); // next lesson is on Monday, Wednesday, or Friday
                 }
                 countdown = lessonStart.getTime() - today.getTime();
             } else {
                 // today is not a lesson day, so schedule the countdown for the next lesson
                 const nextLesson = new Date();
-                nextLesson.setDate(today.getDate() + (8 - dayOfWeek) % 7); // next lesson is on Monday, Wednesday, or Friday
+                nextLesson.setDate(today.getDate() + (8 - dayOfWeek) %
+                7); // next lesson is on Monday, Wednesday, or Friday
                 nextLesson.setHours(19, 0, 0, 0); // set lesson start time to 19:00
                 countdown = nextLesson.getTime() - today.getTime();
             }
@@ -465,7 +489,10 @@
             },
             xaxis: {
                 type: 'datetime',
-                categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z",
+                    "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z",
+                    "2018-09-19T06:30:00.000Z"
+                ]
             },
             tooltip: {
                 x: {
@@ -481,7 +508,7 @@
 
         var prgBar = {
             series: [{
-                data: [1300, 1000, 800, 600, 500, 300, 200,]
+                data: [1300, 1000, 800, 600, 500, 300, 200, ]
             }],
             chart: {
                 type: 'bar',
@@ -496,11 +523,11 @@
             dataLabels: {
                 enabled: false,
             },
-            fill:{
-                colors : ['#F44336', '#E91E63', '#9C27B0']
+            fill: {
+                colors: ['#F44336', '#E91E63', '#9C27B0']
             },
             xaxis: {
-                categories: ['Html', 'Css', 'Javascript', 'Python', 'Django',],
+                categories: ['Html', 'Css', 'Javascript', 'Python', 'Django', ],
             }
         };
 
