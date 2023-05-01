@@ -1749,6 +1749,11 @@ footer.dark-mode-active .footer_text {
   background-color: #1B262C !important;
 }
 
+.teacher-about-edit.dark-mode-active {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+
 @media screen and (max-width: 768px) {
   .off-canvas {
     display: block !important;

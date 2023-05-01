@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profil</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap Cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Main Css -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <!-- Off Canvas START -->
+                    <div class="off-canvas d-none">
+                        <button class="btn" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
+                                class="fa-solid fa-bars"></i></button>
+                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+                            tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Eğitmen Menu</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="sidebar-menu">
+                                    <ul>
+                                        <li class="menu-title">
+                                            <span>Eğitmen Dashboard</span>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-graduation-cap"></i>
+                                                <span>Öğrenci</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="teacher-student-list.html">Öğrenci Listesi</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                                <span>Eğitmen</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="teacher-teacher-list.html">Eğitmen Listesi</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-building"></i>
+                                                <span>Sınıflar</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="teacher-departments-list.html">Sınıf Listesi</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-book-reader"></i>
+                                                <span>Müfredat</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="teacher-subject.html">Müfredat Ekle ve Düzenle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a href="#">
+                                                <i class="fas fa-newspaper"></i>
+                                                <span>İşlemler</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="teacher-survey.html">Anket Oluştur</a></li>
+                                                <li><a href="teacher-activity.html">Aktivite Oluştur</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Off Canvas END -->
+                    <a href="teacher-profile.html" class="navbar-brand"><img class="navbar-brand_img"
+                            src="../img/neos.PNG" width="100" alt=""></a>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <div class="right d-flex align-items-center">
+                        <div class="dark-mode">
+                            <i class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-sun"></i>
+                            <div class="toggle-ball"></div>
+                        </div>
+                        <div class="dropdown">
+                            <a class="myBtn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-regular fa-bell"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <div class="drop-top">
+                                    <span class="drop-top-title">Bildirimler</span>
+                                    <a class="clear-not" href="#">Tümünü Sil</a>
+                                </div>
+                                <div class="drop-center">
+                                    <ul class="drop-center-list">
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="drop-bottom">
+                                    <a class="drp-btm-text" href="#">Tüm Bildirimleri Aç</a>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="user-menu">
+                            <div class="dropdown">
+                                <a class="user-img-hero dropdown-toggle d-flex" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="user-img">
+                                        <img class="rounded-circle" src="https://randomuser.me/api/portraits/men/47.jpg"
+                                            width="31" alt="">
+                                        <div class="user-text">
+                                            <h6>Fatih Soyaltun</h6>
+                                            <p class="text-muted mb-0">Eğitmen</p>
+                                        </div>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="teacher-profile.html">Profil</a></li>
+                                    <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
+                                    <li><a class="dropdown-item" href="../login.html">Çıkış</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="sidebar offcanvas-body"> <!--left main START -->
+            <div class="sidebar-menu">
+                <ul>
+                    <li class="menu-title">
+                        <span>Eğitmen Dashboard</span>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Öğrenci</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="teacher-student-list.html">Öğrenci Listesi</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Eğitmen</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="teacher-teacher-list.html">Eğitmen Listesi</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-building"></i>
+                            <span>Sınıflar</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="teacher-departments-list.html">Sınıf Listesi</a></li>
+                        
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-book-reader"></i>
+                            <span>Müfredat</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="teacher-subject.html">Müfredat Ekle ve Düzenle</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-newspaper"></i>
+                            <span>İşlemler</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="teacher-survey.html">Anket Oluştur</a></li>
+                            <li><a href="teacher-activity.html">Aktivite Oluştur</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div><!--left main END -->
+        <div class="student-panel" style="min-height: 387px;">
+            <div id="content" class="content container-fluid student_profile_section">
+                <div class="student-panel-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="student-header-text">
+                                <h3 class="text-title">Profil</h3>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="./studentDashboard.html">Anasayfa</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Profil</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" student-card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="student-info">
+                                    <h4>Profil</h4>
+                                </div>
+                                <div class="student-profil">
+                                    <div class="student-bg-img">
+                                        <img src="../img/profile-bg.jpg" alt="">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="student-profil-box">
+                                                <div class="student-profil-box-img">
+                                                    <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="">
+                                                </div>
+                                                <div class="student-profil-box-name">
+                                                    <h4>Ahmet Türk</h4>
+                                                    <h5>FrontEnd Developer</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-end">
+                                            <button class="follow btn btn-primary me-2"><i class="fa-solid fa-plus"></i> <span>Takip
+                                                et</span></button>
+                                        <button type="button" class="btn btn-primary message_send"
+                                            data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                            data-bs-whatever="@mdo"><i class="fa-regular fa-envelope"></i>
+                                            <span>Mesaj Gönder</span></button>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Yeni
+                                                            Mesaj</h1>
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form>
+                                                            <div class="mb-3">
+                                                                <label for="recipient-name"
+                                                                    class="col-form-label"><i
+                                                                        class="fa-solid fa-user-tie"></i>
+                                                                    Alıcı:</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="recipient-name">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="message-text"
+                                                                    class="col-form-label"><i
+                                                                        class="fa-regular fa-envelope"></i>
+                                                                    Mesaj:</label>
+                                                                <textarea class="form-control"
+                                                                    id="message-text"></textarea>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"><i
+                                                                class="fa-solid fa-power-off"></i>
+                                                            Kapat</button>
+                                                        <button type="button" class="btn btn-primary"><i
+                                                                class="fa-regular fa-paper-plane fa-fade"></i>
+                                                            Gönder</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion" id="accordionPanelsStayOpenExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button student-accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne">
+                                        <span class="fw-bold">Öğrenci Genel Bilgileri</span>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                    <div class="accordion-body student-accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="student-details-card">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="student-detail">
+                                                                <h4>Öğrenci Bilgileri</h4>
+                                                            </div>
+                                                            <div class="student-detail-content">
+                                                                <div class="stu-dt-icons">
+                                                                    <i class="fa-solid fa-user"></i>
+                                                                </div>
+                                                                <div class="stu-dt-view">
+                                                                    <h4 id="firstname"></h4>
+                                                                    <h5></h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="student-detail-content">
+                                                                <div class="stu-dt-icons">
+                                                                    <i class="fa-solid fa-landmark"></i>
+                                                                </div>
+                                                                <div class="stu-dt-view">
+                                                                    <h4>Sınıf</h4>
+                                                                    <h5>7 Kasım</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="student-detail-content">
+                                                                <div class="stu-dt-icons">
+                                                                    <i class="fa-solid fa-phone"></i>
+                                                                </div>
+                                                                <div class="stu-dt-view">
+                                                                    <h4>Telefon</h4>
+                                                                    <h5 id="userPhone"></h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="student-detail-content">
+                                                                <div class="stu-dt-icons">
+                                                                    <i class="fa-solid fa-envelope"></i>
+                                                                </div>
+                                                                <div class="stu-dt-view">
+                                                                    <h4>E-mail</h4>
+                                                                    <h5 id="userEmail"></h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="student-detail-content">
+                                                                <div class="stu-dt-icons">
+                                                                    <i class="fa-solid fa-cake-candles"></i>
+                                                                </div>
+                                                                <div class="stu-dt-view">
+                                                                    <h4>Doğum Tarihi</h4>
+                                                                    <h5 id="userBirthDate"></h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="student-detail-content">
+                                                                <div class="stu-dt-icons">
+                                                                    <i class="fa-solid fa-map-location-dot"></i>
+                                                                </div>
+                                                                <div class="stu-dt-view">
+                                                                    <h4>Adres</h4>
+                                                                    <h5 id="userAdress"></h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="student-detail-content">
+                                                                <div class="stu-dt-icons">
+                                                                    <i class="fa-brands fa-github"></i>
+                                                                </div>
+                                                                <div class="stu-dt-view">
+                                                                    <h4>Github</h4>
+                                                                    <a href="#">
+                                                                        <h5 id="userGithub">github.com</h5>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="student-detail-content">
+                                                                <div class="stu-dt-icons">
+                                                                    <i class="fa-solid fa-link"></i>
+                                                                </div>
+                                                                <div class="stu-dt-view">
+                                                                    <h4>Portfolio</h4>
+                                                                    <a href="#">
+                                                                        <h5 id="userLink"></h5>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <div class="student-details-card">
+                                                    <div class="card mb-0">
+                                                        <div class="card-body">
+                                                            <div class="student-detail-card">
+                                                                <div class="student-detail">
+                                                                    <h4>Hakkında</h4>
+                                                                </div>
+                                                                <div class="student-about">
+                                                                    <p id="std-about"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <div class="card card-chart student_profil_card_chart">
+                            <div class="card-header student_profil_card_header">
+                                <h5 class="card-title student-profil-card-title">Genel Bakış</h5>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card-body">
+                                        <div id="grade_average_id" class="grade_average"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card-body">
+                                        <div id="class_rank_id" class="class_rank"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card-body">
+                                        <div id="number_of_lessons_id" class="number_of_lessons"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card-body">
+                                        <div id="participation_rate_id" class="participation_rate"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="certificate_area">
+                                <div class="row">
+                                    <div class="col-12 p-4">
+                                        <div class="certificate_area_sec">
+                                            <div class="cert_div_photo d-flex align-items-center me-2">
+                                                <img class="cert_photo" src="../img/sertifikalarBasarii_1.png"
+                                                    alt="">
+                                            </div>
+                                            <h6 class="">Sertifika Durumu : </h6>
+                                            <h6 class="certificate_status"> </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="mt-5">
+            <h6 class="footer_text">TELİF HAKKI © 2023 NEOS YAZILIM.</h6>
+        </footer>
+    </div>
+    <!-- Bootstrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- Fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js"></script>
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.2/apexcharts.min.js"
+        integrity="sha512-yWglrpRYz/pD0pp1cSpWmSVvcFwuuc739X4WHy7hRKB11BGijnz7fuqKRQB7Ksot42IN365OGvuOhSgUejKbmA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Dark Mode -->
+    <script src="../js/jsDarkMode.js"></script>
+    <!-- Main Js -->
+    <script src="../js/app.js"></script>
+    
+
+    <script>
+        // grade average_id
+        const averageSeries = [70];
+
+        const options_average = {
+            series: averageSeries,
+            chart: {
+                height: 200,
+                type: 'radialBar',
+            },
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        size: '70%',
+                    }
+                },
+            },
+            labels: ['Not Ortalaması'],
+        };
+
+        var chart = new ApexCharts(document.querySelector("#grade_average_id"), options_average);
+        chart.render();
+
+        // certificate_status
+        const certificate_status = document.querySelector(".certificate_status");
+        const cert_photo = document.querySelector(".cert_photo");
+
+        if (averageSeries >= 80) {
+            certificate_status.innerHTML = `<span style="color: green;"><i class="fa fa-check-circle"></i> Not ortalaması sertifka almak için uygundur.</span>`
+            cert_photo.style.filter = "grayscale(1%)";
+        } else {
+            certificate_status.innerHTML = `<span style="color: red;"><i class="fa fa-times-circle"></i> Not Ortalaması sertifika almaya uygun değildir. Not ortalamasını % ${80 - averageSeries} oranında arttırması gerekmektedir.</span>`
+            cert_photo.style.filter = "grayscale(100%)";
+        }
+
+
+        // class_rank_id
+        var options_rank = {
+            series: [10],
+            chart: {
+                height: 200,
+                type: 'radialBar',
+            },
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        size: '70%',
+                    }
+                },
+            },
+            labels: ['Sınıf Sıra'],
+        };
+
+        var chart = new ApexCharts(document.querySelector("#class_rank_id"), options_rank);
+        chart.render();
+
+        // number_of_lessons_id
+        var options_lessons = {
+            series: [10],
+            chart: {
+                height: 200,
+                type: 'radialBar',
+            },
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        size: '70%',
+                    }
+                },
+            },
+            labels: ['Ders Sayısı'],
+        };
+
+        var chart = new ApexCharts(document.querySelector("#number_of_lessons_id"), options_lessons);
+        chart.render();
+
+
+        // participation_rate_id
+        var options_participation = {
+            series: [90],
+            chart: {
+                height: 200,
+                type: 'radialBar',
+            },
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        size: '70%',
+                    }
+                },
+            },
+            labels: ['Katılım Oranı'],
+        };
+
+        var chart = new ApexCharts(document.querySelector("#participation_rate_id"), options_participation);
+        chart.render();
+
+        // <--  -->
+        const profilData = JSON.parse(localStorage.getItem('profilData'));
+        document.getElementById('firstname').innerHTML = `${profilData.userFirstName} ${profilData.userLastName}`
+        document.getElementById('userPhone').innerHTML = profilData.userPhone
+        document.getElementById('userEmail').innerHTML = profilData.userEmail
+        document.getElementById('userBirthDate').innerHTML = profilData.userBirthDate
+        document.getElementById('userAdress').innerHTML = profilData.userAdress
+        document.getElementById('userGithub').innerHTML = profilData.userGithub
+        document.getElementById('userLink').innerHTML = profilData.userLink
+        document.getElementById('std-about').innerHTML = profilData.exampleFormControlTextarea1
+
+        
+    </script>
+</body>
+
+</html>
