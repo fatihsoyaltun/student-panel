@@ -852,6 +852,45 @@ img {
   background: #3D5EE1;
   border: 1px solid #3D5EE1;
 }
+.student-panel .compose-btn {
+  margin-bottom: 1.875rem;
+}
+.student-panel .compose-btn a {
+  font-weight: 600;
+  padding: 8px 15px;
+}
+.student-panel .compose-btn .btn-compose {
+  width: 100%;
+}
+.student-panel .inbox-menu {
+  display: inline-block;
+  margin: 0 0 1.875rem;
+  padding: 0;
+  width: 100%;
+}
+.student-panel .inbox-menu li.active a {
+  background: rgba(33, 33, 33, 0.05);
+}
+.student-panel .inbox-menu li {
+  display: inline-block;
+  width: 100%;
+}
+.student-panel .inbox-menu li a {
+  color: #333;
+  display: inline-block;
+  padding: 10px 15px;
+  width: 100%;
+  text-transform: capitalize;
+  transition: 0.3s ease;
+}
+.student-panel .inbox-menu li a i {
+  font-size: 16px;
+  padding-right: 10px;
+  color: #878787;
+}
+.student-panel .inbox-menu li:hover {
+  background: rgba(33, 33, 33, 0.05);
+}
 
 .projectCard {
   background: #eeeeee;
