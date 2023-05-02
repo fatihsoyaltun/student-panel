@@ -1,0 +1,2 @@
+// sınıf sayfasına girdikten sonra işlemlere not gir bölümü eklenecek.
+// bu sayfa olarak açılacak. devam edeceğim
