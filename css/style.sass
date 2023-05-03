@@ -764,11 +764,23 @@ img
 
     .compose-btn
         margin-bottom: 1.875rem
-        a
+        button
             font-weight: 600
             padding: 8px 15px
         .btn-compose
             width: 100%
+        .modal-content
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+            .modal-body
+                input:focus
+                    box-shadow: none
+            .text-editör
+                #example
+                    .fr-second-toolbar
+                        #fr-logo
+                            display: none
+            .modal-footer
+                justify-content: space-between !important
     .inbox-menu
         display: inline-block
         margin: 0 0 1.875rem
@@ -792,31 +804,34 @@ img
                     color: #878787
             &:hover
                 background: rgba(33, 33, 33, 0.05)
+    .inboxCard
+        border: 0
+        border-radius: 10px
+        box-shadow: 0px 0px 31px 3px rgb(44 50 63 / 2%)
+        margin-bottom: .875rem
+        .btn-white
+            background-color: #fff
+            border: 1px solid #ccc
+            color: #333
+        .dropdown-menu
+            font-size: 14px
+            border: 1px solid rgba(0, 0, 0, 0.1)
+            border-radius: 3px
+            transform-origin: left top 0
+            box-shadow: inherit
+            background-color: #fff
+        .inboxMessage
+            border-color: #ccc
+            border-radius: 4px
+            height: 38px
+            width: 180px
+            &:focus
+                box-shadow: none
     .tab-content
-        .tab-pane
-            .inboxCard
-                border: 0
-                border-radius: 10px
-                box-shadow: 0px 0px 31px 3px rgb(44 50 63 / 2%)
-                margin-bottom: 1.875rem
-                .btn-white
-                    background-color: #fff
-                    border: 1px solid #ccc
-                    color: #333
-                .dropdown-menu
-                    font-size: 14px
-                    border: 1px solid rgba(0, 0, 0, 0.1)
-                    border-radius: 3px
-                    transform-origin: left top 0
-                    box-shadow: inherit
-                    background-color: #fff
-                .inboxMessage
-                    border-color: #ccc
-                    border-radius: 4px
-                    height: 38px
-                    width: 180px
-                    &:focus
-                        box-shadow: none
+        .inbox-content
+            .table-responsive
+                .unread
+                    cursor: pointer
 
 
 

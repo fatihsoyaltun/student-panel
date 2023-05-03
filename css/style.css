@@ -855,12 +855,24 @@ img {
 .student-panel .compose-btn {
   margin-bottom: 1.875rem;
 }
-.student-panel .compose-btn a {
+.student-panel .compose-btn button {
   font-weight: 600;
   padding: 8px 15px;
 }
 .student-panel .compose-btn .btn-compose {
   width: 100%;
+}
+.student-panel .compose-btn .modal-content {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.student-panel .compose-btn .modal-content .modal-body input:focus {
+  box-shadow: none;
+}
+.student-panel .compose-btn .modal-content .text-editör #example .fr-second-toolbar #fr-logo {
+  display: none;
+}
+.student-panel .compose-btn .modal-content .modal-footer {
+  justify-content: space-between !important;
 }
 .student-panel .inbox-menu {
   display: inline-block;
@@ -891,18 +903,18 @@ img {
 .student-panel .inbox-menu li:hover {
   background: rgba(33, 33, 33, 0.05);
 }
-.student-panel .tab-content .tab-pane .inboxCard {
+.student-panel .inboxCard {
   border: 0;
   border-radius: 10px;
   box-shadow: 0px 0px 31px 3px rgba(44, 50, 63, 0.02);
-  margin-bottom: 1.875rem;
+  margin-bottom: 0.875rem;
 }
-.student-panel .tab-content .tab-pane .inboxCard .btn-white {
+.student-panel .inboxCard .btn-white {
   background-color: #fff;
   border: 1px solid #ccc;
   color: #333;
 }
-.student-panel .tab-content .tab-pane .inboxCard .dropdown-menu {
+.student-panel .inboxCard .dropdown-menu {
   font-size: 14px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 3px;
@@ -910,14 +922,17 @@ img {
   box-shadow: inherit;
   background-color: #fff;
 }
-.student-panel .tab-content .tab-pane .inboxCard .inboxMessage {
+.student-panel .inboxCard .inboxMessage {
   border-color: #ccc;
   border-radius: 4px;
   height: 38px;
   width: 180px;
 }
-.student-panel .tab-content .tab-pane .inboxCard .inboxMessage:focus {
+.student-panel .inboxCard .inboxMessage:focus {
   box-shadow: none;
+}
+.student-panel .tab-content .inbox-content .table-responsive .unread {
+  cursor: pointer;
 }
 
 .projectCard {
