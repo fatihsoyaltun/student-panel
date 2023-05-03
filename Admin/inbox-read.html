@@ -372,29 +372,29 @@
                         <!-- Nav tabs -->
                         <ul class="inbox-menu nav nav-tabs d-flex flex-column" id="myTab" role="tablist">
                             <li class="nav-item active" role="presentation">
-                                <a href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
-                                    role="tab" aria-controls="home" aria-selected="true">
+                                <a class="back-inbox" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                                role="tab" aria-controls="home" aria-selected="true">
                                     <i class="fas fa-download"></i>
                                     Gelenler
                                     <span class="mes-count">(5)</span>
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a href="#" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                <a class="back-inbox" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
                                     type="button" role="tab" aria-controls="profile" aria-selected="false">
                                     <i class="far fa-star"></i>
                                     Önemli
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a href="#" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages"
+                                <a class="back-inbox" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages"
                                     type="button" role="tab" aria-controls="messages" aria-selected="false">
                                     <i class="far fa-paper-plane"></i>
                                     Gönderilenler
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a href="#" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings"
+                                <a class="back-inbox" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings"
                                     type="button" role="tab" aria-controls="settings" aria-selected="false">
                                     <i class="far fa-file-alt"></i>
                                     Taslaklar
@@ -402,7 +402,7 @@
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a href="#" id="trash-tab" data-bs-toggle="tab" data-bs-target="#trash" type="button"
+                                <a class="back-inbox" id="trash-tab" data-bs-toggle="tab" data-bs-target="#trash" type="button"
                                     role="tab" aria-controls="settings" aria-selected="false">
                                     <i class="far fa-trash-alt"></i>
                                     Çöp
@@ -412,152 +412,16 @@
                     </div>
                     <div class="col-lg-9 col-md-8">
                         <div class="card inboxCard">
+                            <div class="card-header">
+                                <h3>Mesaj Oku</h3>
+                            </div>
                             <div class="card-body">
-                                <div class="inbox-header">
-                                    <div class="row">
-                                        <div class="col top-action-left">
-                                            <div class="float-start">
-                                                <div class="btn-group dropdown-action">
-                                                    <button type="button" class="btn btn-white dropdown-toggle"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        Seçin
-                                                    </button>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="">Hepsi</a>
-                                                        <a class="dropdown-item" href="">Hiçbiri</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item" href="">Okunmuş</a>
-                                                        <a class="dropdown-item" href="">Okunmamış</a>
-                                                    </div>
-                                                </div>
-                                                <div class="btn-group dropdown-action">
-                                                    <button type="button" class="btn btn-white dropdown-toggle"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        İşlemler
-                                                    </button>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="">Cevap ver</a>
-                                                        <a class="dropdown-item" href="">Arşiv</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item" href="">Okundu Olarak İşaretle</a>
-                                                        <a class="dropdown-item" href="">Okunmamış Olarak İşaretle</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item" href="">Sil</a>
-                                                    </div>
-                                                </div>
-                                                <div class="btn-group dropdown-action mail-search">
-                                                    <input type="text" placeholder="Mesaj Ara"
-                                                        class="form-control inboxMessage">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto top-action-right">
-                                            <div class="text-end">
-                                                <button type="button" data-bs-toggle="tooltip"
-                                                    class="btn btn-white d-none d-md-inline-block" aria-label="Refresh">
-                                                    <i class="fas fa-sync-alt"></i>
-                                                </button>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-white">
-                                                        <i class="fas fa-angle-left"></i>
-                                                    </a>
-                                                    <a class="btn btn-white">
-                                                        <i class="fas fa-angle-right"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="mail-media">
+                                    <div class="mt-0 d-sm-flex">
+                                        <img class="m-2 rounded-circle media-avatar" src="../img/avatar-18.jpg" alt="" width="48" height="48">
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                                <div class="card inboxCard">
-                                    <div class="card-body">
-                                        <div class="inbox-content">
-                                            <div class="table-responsive">
-                                                <table class="table table-inbox table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th colspan="6">
-                                                                <input type="checkbox" class="checkbox-all">
-                                                            </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr class="unread clickable-row">
-                                                            <td>
-                                                                <input type="checkbox" class="check-mail">
-                                                            </td>
-                                                            <td>
-                                                                <span class="mail-important">
-                                                                    <i class="far fa-star starred"></i>
-                                                                </span>
-                                                            </td>
-                                                            <td class="name">Fatih Soyaltun</td>
-                                                            <td class="subject">Lorem ipsum dolor sit amet, consectetuer
-                                                                adipiscing elit</td>
-                                                            <td class="mail-date">14.00</td>
-                                                        </tr>
-                                                        <tr class="unread clickable-row">
-                                                            <td>
-                                                                <input type="checkbox" class="check-mail">
-                                                            </td>
-                                                            <td>
-                                                                <span class="mail-important">
-                                                                    <i class="far fa-star starred"></i>
-                                                                </span>
-                                                            </td>
-                                                            <td class="name">Fatih Soyaltun</td>
-                                                            <td class="subject">Lorem ipsum dolor sit amet, consectetuer
-                                                                adipiscing elit</td>
-                                                            <td class="mail-date">14.00</td>
-                                                        </tr>
-                                                        <tr class="unread clickable-row">
-                                                            <td>
-                                                                <input type="checkbox" class="check-mail">
-                                                            </td>
-                                                            <td>
-                                                                <span class="mail-important">
-                                                                    <i class="far fa-star starred"></i>
-                                                                </span>
-                                                            </td>
-                                                            <td class="name">Fatih Soyaltun</td>
-                                                            <td class="subject">Lorem ipsum dolor sit amet, consectetuer
-                                                                adipiscing elit</td>
-                                                            <td class="mail-date">14.00</td>
-                                                        </tr>
-                                                        <tr class="unread clickable-row">
-                                                            <td>
-                                                                <input type="checkbox" class="check-mail">
-                                                            </td>
-                                                            <td>
-                                                                <span class="mail-important">
-                                                                    <i class="far fa-star starred"></i>
-                                                                </span>
-                                                            </td>
-                                                            <td class="name">Fatih Soyaltun</td>
-                                                            <td class="subject">Lorem ipsum dolor sit amet, consectetuer
-                                                                adipiscing elit</td>
-                                                            <td class="mail-date">14.00</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab"
-                                tabindex="0">Önemli</div>
-                            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab"
-                                tabindex="0">Gönderilenler</div>
-                            <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab"
-                                tabindex="0">Taslaklar</div>
-                            <div class="tab-pane" id="trash" role="tabpanel" aria-labelledby="trash-tab" tabindex="0">
-                                Çöp</div>
                         </div>
                     </div>
                 </div>
@@ -577,11 +441,11 @@
     <script>
     var editor = new FroalaEditor('#example');
 
-    let unread = document.querySelectorAll('.unread');
+    let backInbox = document.querySelectorAll('.back-inbox');
 
-    unread.forEach(element => {
+    backInbox.forEach(element => {
         element.addEventListener('click',()=>{
-            window.location.href="inbox-read.html"
+            window.location.href="inbox.html"
         });
     });
     </script>
