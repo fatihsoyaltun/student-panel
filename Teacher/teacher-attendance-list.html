@@ -25,7 +25,7 @@
         <div class="header">
             <nav class="navbar">
                 <div class="container-fluid">
-                    <!-- Off Canvas -->
+                    <!-- Off Canvas START -->
                     <div class="off-canvas d-none">
                         <button class="btn" type="button" data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
@@ -33,7 +33,7 @@
                         <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
                             tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                             <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Admin Menu</h5>
+                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Eğitmen Menu</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                     aria-label="Close"></button>
                             </div>
@@ -41,7 +41,7 @@
                                 <div class="sidebar-menu">
                                     <ul>
                                         <li class="menu-title">
-                                            <span>Admin Dashboard</span>
+                                            <span>Eğitmen Dashboard</span>
                                         </li>
                                         <li class="submenu">
                                             <a href="#">
@@ -50,10 +50,7 @@
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="./student-list.html">Öğrenci Listesi</a></li>
-                                                <li><a href="./student-profil.html">Öğrenci Görüntüle</a></li>
-                                                <li><a href="./student-add.html">Öğrenci Ekle</a></li>
-                                                <li><a href="./student-edit.html">Öğrenci Düzenle</a></li>
+                                                <li><a href="teacher-student-list.html">Öğrenci Listesi</a></li>
                                             </ul>
                                         </li>
                                         <li class="submenu">
@@ -63,10 +60,7 @@
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="./teacher-list.html">Eğitmen Listesi</a></li>
-                                                <li><a href="./teacher.html">Eğitmen Görüntüle</a></li>
-                                                <li><a href="./teacher-add.html">Eğitmen Ekle</a></li>
-                                                <li><a href="./teacher-edit.html">Eğitmen Düzenle</a></li>
+                                                <li><a href="teacher-teacher-list.html">Eğitmen Listesi</a></li>
                                             </ul>
                                         </li>
                                         <li class="submenu">
@@ -76,10 +70,7 @@
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="./departments.html">Sınıf Listesi</a></li>
-                                                <li><a href="./classes.html">Sınıfları Görüntüle</a></li>
-                                                <li><a href="./departments-add.html">Sınıf Ekle</a></li>
-                                                <li><a href="./departments-edit.html">Sınıf Düzenle</a></li>
+                                                <li><a href="teacher-departments-list.html">Sınıf Listesi</a></li>
                                             </ul>
                                         </li>
                                         <li class="submenu">
@@ -89,7 +80,7 @@
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="./subjects.html">Müfredat Ekle ve Düzenle</a></li>
+                                                <li><a href="teacher-subject.html">Müfredat Ekle ve Düzenle</a></li>
                                             </ul>
                                         </li>
                                         <li class="submenu">
@@ -99,8 +90,8 @@
                                                 <span class="menu-arrow"></span>
                                             </a>
                                             <ul class="submenu-content">
-                                                <li><a href="./survey.html">Anket Oluştur</a></li>
-                                                <li><a href="./activity-add.html">Aktivite Oluştur</a></li>
+                                                <li><a href="teacher-survey.html">Anket Oluştur</a></li>
+                                                <li><a href="teacher-activity.html">Aktivite Oluştur</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -108,9 +99,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Off Canvas -->
-                    <a href="./admin.html" class="navbar-brand"><img class="navbar-brand_img" src="../img/neos.PNG"
-                            width="100" alt=""></a>
+                    <!-- Off Canvas END -->
+                    <a href="teacher-profile.html" class="navbar-brand"><img class="navbar-brand_img"
+                            src="../img/neos.PNG" width="100" alt=""></a>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     </form>
@@ -228,13 +219,13 @@
                                             width="31" alt="">
                                         <div class="user-text">
                                             <h6>Fatih Soyaltun</h6>
-                                            <p class="text-muted mb-0">Admin</p>
+                                            <p class="text-muted mb-0">Eğitmen</p>
                                         </div>
                                     </span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Profil</a></li>
-                                    <li><a class="dropdown-item" href="inbox.html">Mesaj Kutusu</a></li>
+                                    <li><a class="dropdown-item" href="teacher-profile.html">Profil</a></li>
+                                    <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
                                     <li><a class="dropdown-item" href="../login.html">Çıkış</a></li>
                                 </ul>
                             </div>
@@ -243,11 +234,11 @@
                 </div>
             </nav>
         </div>
-        <div class="sidebar offcanvas-body">
+        <div class="sidebar offcanvas-body"> <!--left main START -->
             <div class="sidebar-menu">
                 <ul>
                     <li class="menu-title">
-                        <span>Admin Dashboard</span>
+                        <span>Eğitmen Dashboard</span>
                     </li>
                     <li class="submenu">
                         <a href="#">
@@ -256,10 +247,8 @@
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="./student-list.html">Öğrenci Listesi</a></li>
-                            <li><a href="./student-profil.html">Öğrenci Görüntüle</a></li>
-                            <li><a href="./student-add.html">Öğrenci Ekle</a></li>
-                            <li><a href="./student-edit.html">Öğrenci Düzenle</a></li>
+                            <li><a href="teacher-student-list.html">Öğrenci Listesi</a></li>
+
                         </ul>
                     </li>
                     <li class="submenu">
@@ -269,10 +258,8 @@
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="./teacher-list.html">Eğitmen Listesi</a></li>
-                            <li><a href="./teacher.html">Eğitmen Görüntüle</a></li>
-                            <li><a href="./teacher-add.html">Eğitmen Ekle</a></li>
-                            <li><a href="./teacher-edit.html">Eğitmen Düzenle</a></li>
+                            <li><a href="teacher-teacher-list.html">Eğitmen Listesi</a></li>
+
                         </ul>
                     </li>
                     <li class="submenu">
@@ -282,10 +269,8 @@
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="./departments.html">Sınıf Listesi</a></li>
-                            <li><a href="./classes.html">Sınıfları Görüntüle</a></li>
-                            <li><a href="./departments-add.html">Sınıf Ekle</a></li>
-                            <li><a href="./departments-edit.html">Sınıf Düzenle</a></li>
+                            <li><a href="teacher-departments-list.html">Sınıf Listesi</a></li>
+
                         </ul>
                     </li>
                     <li class="submenu">
@@ -295,7 +280,7 @@
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="./subjects.html">Müfredat Ekle ve Düzenle</a></li>
+                            <li><a href="teacher-subject.html">Müfredat Ekle ve Düzenle</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -305,13 +290,13 @@
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="./survey.html">Anket Oluştur</a></li>
-                            <li><a href="./activity-add.html">Aktivite Oluştur</a></li>
+                            <li><a href="teacher-survey.html">Anket Oluştur</a></li>
+                            <li><a href="teacher-activity.html">Aktivite Oluştur</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
-        </div>
+        </div><!--left main END -->
         <div class="student-panel" style="min-height: 387px;">
             <div id="content" class="content container-fluid student_list_section">
                 <div class="list-header">
@@ -321,7 +306,7 @@
                                 <h3 class="list-title">Yoklama Listesi</h3>
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item">
-                                        <a href="./admin.html">Anasayfa</a>
+                                        <a href="teacher-profile.html">Anasayfa</a>
                                     </li>
                                     <li class="breadcrumb-item active">Yoklama Listesi</li>
                                 </ul>
@@ -397,7 +382,7 @@
                                                                 <div class="table-id">STD125</div>
                                                             </td>
                                                             <td class="text-table" style="width: 190px;">
-                                                                <a href="./student-profil.html">
+                                                                <a href="teacher-student-profile.html">
                                                                     <img class="rounded-circle"
                                                                         src="https://randomuser.me/api/portraits/men/51.jpg"
                                                                         width="25" alt="">
@@ -456,7 +441,7 @@
                                                                 <div class="table-id">STD125</div>
                                                             </td>
                                                             <td class="text-table" style="width: 190px;">
-                                                                <a href="./student-profil.html">
+                                                                <a href="teacher-student-profile.html">
                                                                     <img class="rounded-circle"
                                                                         src="https://randomuser.me/api/portraits/men/51.jpg"
                                                                         width="25" alt="">
@@ -515,7 +500,7 @@
                                                                 <div class="table-id">STD125</div>
                                                             </td>
                                                             <td class="text-table" style="width: 190px;">
-                                                                <a href="./student-profil.html">
+                                                                <a href="teacher-student-profile.html">
                                                                     <img class="rounded-circle"
                                                                         src="https://randomuser.me/api/portraits/men/51.jpg"
                                                                         width="25" alt="">
@@ -573,7 +558,7 @@
                                                                 <div class="table-id">STD125</div>
                                                             </td>
                                                             <td class="text-table" style="width: 190px;">
-                                                                <a href="./student-profil.html">
+                                                                <a href="teacher-student-profile.html">
                                                                     <img class="rounded-circle"
                                                                         src="https://randomuser.me/api/portraits/men/51.jpg"
                                                                         width="25" alt="">
@@ -631,7 +616,7 @@
                                                                 <div class="table-id">STD125</div>
                                                             </td>
                                                             <td class="text-table" style="width: 190px;">
-                                                                <a href="./student-profil.html">
+                                                                <a href="teacher-student-profile.html">
                                                                     <img class="rounded-circle"
                                                                         src="https://randomuser.me/api/portraits/men/51.jpg"
                                                                         width="25" alt="">
