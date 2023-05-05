@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sınıf Düzenle</title>
+    <title>Mesajlar</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Flatpickr -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- froala editör cdn -->
+    <link href='https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css' rel='stylesheet' type='text/css' />
     <!-- Main Css -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -111,7 +111,7 @@
                         </div>
                     </div>
                     <!-- Off Canvas -->
-                    <a href="./admin.html" class="navbar-brand"><img class="navbar-brand_img" src="../img/neos.PNG"
+                    <a href="admin.html" class="navbar-brand"><img class="navbar-brand_img" src="../img/neos.PNG"
                             width="100" alt=""></a>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -307,7 +307,7 @@
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="submenu-content">
-                            <li><a href="#">Anket Oluştur</a></li>
+                            <li><a href="./survey.html">Anket Oluştur</a></li>
                             <li><a href="./activity-add.html">Aktivite Oluştur</a></li>
                         </ul>
                     </li>
@@ -315,135 +315,160 @@
             </div>
         </div>
         <div class="student-panel" style="min-height: 387px;">
-            <div id="content" class="content container-fluid departments_edit_section">
+            <div class="content container-fluid">
                 <div class="list-header">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="list-sub-header">
-                                <h3 class="list-title">Sınıf Düzenle</h3>
+                                <h3 class="list-title">Mesajlar</h3>
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item">
                                         <a href="./admin.html">Anasayfa</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Sınıf Düzenle</li>
+                                    <li class="breadcrumb-item active">Mesajlar</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="card">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="compose-btn">
+                            <button type="button" class="btn btn-primary btn-compose" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Mesaj
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <form class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Yeni Mesaj</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="mb-4">
+                                                <label for="form-compose_email" class="visually-hidden">Email Adresi</label>
+                                                <input type="email" class="form-control" id="form-compose_email" placeholder="neosiletisim@example.com" readonly>
+                                            </div>
+                                            <div class="mb-4 d-flex align-items-center">
+                                                <label for="form-compose_to" class="visually-hidden">Email Adresi</label>
+                                                <input type="email" class="form-control" id="form-compose_to" placeholder="Konu">
+                                            </div>
+                                            <div class="mb-4 text-editör">
+                                                <div id="example"></div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-warning"> <i class="far fa-paper-plane"></i> Gönder</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Çıkış</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Nav tabs -->
+                        <ul class="inbox-menu nav nav-tabs d-flex flex-column" id="myTab" role="tablist">
+                            <li class="nav-item active" role="presentation">
+                                <a class="back-inbox" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                                role="tab" aria-controls="home" aria-selected="true">
+                                    <i class="fas fa-download"></i>
+                                    Gelenler
+                                    <span class="mes-count">(5)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="back-inbox" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                    type="button" role="tab" aria-controls="profile" aria-selected="false">
+                                    <i class="far fa-star"></i>
+                                    Önemli
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="back-inbox" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages"
+                                    type="button" role="tab" aria-controls="messages" aria-selected="false">
+                                    <i class="far fa-paper-plane"></i>
+                                    Gönderilenler
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="back-inbox" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings"
+                                    type="button" role="tab" aria-controls="settings" aria-selected="false">
+                                    <i class="far fa-file-alt"></i>
+                                    Taslaklar
+                                    <span class="drafts-count">(13)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="back-inbox" id="trash-tab" data-bs-toggle="tab" data-bs-target="#trash" type="button"
+                                    role="tab" aria-controls="settings" aria-selected="false">
+                                    <i class="far fa-trash-alt"></i>
+                                    Çöp
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-9 col-md-8">
+                        <div class="card inboxCard">
+                            <div class="card-header">
+                                <h3>Mesaj Oku</h3>
+                            </div>
                             <div class="card-body">
-                                <form action="#">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <h5 class="mb-5">Sınıf Bilgileri</h5>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Şube
-                                                    <span>*</span>
-                                                </label>
-                                                <input type="text" class="form-control" placeholder="Şube Adı" value="İstanbul">
+                                <div class="mail-media">
+                                    <div class="mt-0 d-sm-flex">
+                                        <img class="m-2 rounded-circle media-avatar" src="../img/profile.png" alt="" width="48" height="48">
+                                        <div class="media-body d-flex justify-content-between align-self-center w-100">
+                                            <div class="media-user d-flex align-items-center">
+                                                <span class="media-user_name">Fatih Soyaltun</span>
+                                                <span class="media-user_email">(soyaltunfatih@gmail.com)</span>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Eğitim Türü
-                                                    <span>*</span>
-                                                </label>
-                                                <select class="form-control select">
-                                                    <option selected>Eğitim Türü Seçin</option>
-                                                    <option value="1">Online</option>
-                                                    <option value="2">Yüz Yüze</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Sınıf Adı
-                                                    <span>*</span>
-                                                </label>
-                                                <input type="text" class="form-control" placeholder="Sınıf Adı" value="7 Kasım">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Eğitmen Adı
-                                                    <span>*</span>
-                                                </label>
-                                                <input type="text" class="form-control" placeholder="Eğitmen Adı" value="Mehmet Çoban">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Başlama Tarihi
-                                                    <span>*</span>
-                                                </label>
-                                                <input class="form-control" placeholder="Taih Seçiniz" id="kt_datepicker_1" value="2022-11-07"/>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group myForm">
-                                                <label>
-                                                    Öğrenci Sayısı
-                                                    <span>*</span>
-                                                </label>
-                                                <input type="text" class="form-control" placeholder="Öğrenci Sayısı" value="10">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group upFile">
-                                                <label>
-                                                    Sınıf Fotoğrafı Yükle
-                                                </label>
-                                                <div class="upload">
-                                                    <label class="file-up img-file-btn mb-0">
-                                                        Fotoğraf Yükle
-                                                        <input type="file">
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="submit-btn">
-                                                <button type="submit" class="btn btn-primary">Kaydet</button>
+                                            <div class="media-gear d-flex gap-2">
+                                                <a href="" class="inbox-read-icon">
+                                                    <i class="fa-regular fa-star"></i>
+                                                </a>
+                                                <a href="" class="inbox-read-icon">
+                                                    <i class="fa-solid fa-reply"></i>
+                                                </a>
+                                                <a href="" class="inbox-read-icon">
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
-                                </form>
+                                    <div class="media-content mt-5 px-1">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, nesciunt eligendi dolore consequuntur dolor dignissimos nam, vel aut porro delectus corrupti sequi itaque cupiditate asperiores! Maxime nemo debitis ea deserunt itaque dolorum vel, recusandae deleniti magni veniam, explicabo qui nam officiis culpa quod. Dolorem illum veniam minus harum. Repellendus beatae nostrum architecto minus magni impedit recusandae unde quod ipsum labore voluptas, id doloremque quae doloribus eligendi ratione adipisci dolorum! Quia, molestias cumque. Ex esse tempore illum quod fugiat reprehenderit vitae distinctio cum! Quibusdam provident deserunt quia voluptates exercitationem odio blanditiis cum dolorum earum ex reiciendis praesentium, delectus sit hic adipisci?</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <footer class="position-fixed bottom-0 w-100">
-            <h6 class="footer_text">TELİF HAKKI © 2023 NEOS YAZILIM.</h6>
-        </footer> -->
     </div>
     <!-- Bootstrap Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Flatpickr -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <!-- Dark Mode -->
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <!-- Dark Mode Js -->
     <script src="../js/jsDarkMode.js"></script>
+    <!-- froala js -->
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'></script> 
     <!-- Main Js -->
     <script src="../js/app.js"></script>
     <script>
-        $("#kt_datepicker_1").flatpickr();
+    var editor = new FroalaEditor('#example');
+
+    let backInbox = document.querySelectorAll('.back-inbox');
+
+    backInbox.forEach(element => {
+        element.addEventListener('click',()=>{
+            window.location.href="inbox.html"
+        });
+    });
     </script>
-    
 </body>
 
 </html>
