@@ -292,7 +292,7 @@
                                 <div class="card-body-content d-flex justify-content-between align-items-center">
                                     <div class="card-info">
                                         <h6>Not Ortalaması</h6>
-                                        <h3>87</h3>
+                                        <h3 class="average">87</h3>
                                     </div>
                                     <div class="card-icon">
                                         <img src="../img/average.png" alt="">
@@ -363,12 +363,30 @@
                     </div>
                 </div>
                 <div class="row mt-5">
-                    <div class="col-xl-12">
-                        <div class="description">
-                            <div style="font-size: 1.4em;">Takvim</div>
-                            <div>TEST</div>
+                    <div class="col-12">
+                        <div class="certificate_area card p-3" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border-radius: 10px;">
+                            <h5 class="text-center mt-3"><i class="fa-solid fa-graduation-cap"></i> Sertifika</h5>
+                            <hr>
+                            <div class="row">
+                                <div class="col-12 p-4">
+                                    <div class="certificate_area_sec">
+                                        <div class="cert_div_photo d-flex align-items-center me-2">
+                                            <img class="cert_photo" src="/img/sertifikalarBasarii_1.png"
+                                                alt="">
+                                        </div>
+                                        <h6 class="">Sertifika Durumu : </h6>
+                                        <h6 class="certificate_status"> </h6>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="row" id="wrapper">
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-xl-12">
+                        <div class="row" id="wrapper" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border-radius: 10px">
+                            <h5 class="text-center mt-4 mb-4"><i class="fa-solid fa-calendar-days"></i> Takvim</h5>
+                            <hr style="width: 95%; margin: auto;">
                             <div class="col-lg-6 col-sm-12">
                                 <div id="events-calendar" data-language="tr"></div>
                             </div>
@@ -397,6 +415,102 @@
                                 </div>
                                 <!-- Modal -->
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-xl-12 d-flex">
+                        <div class="card star-students flex-fill">
+                            <h5 class="text-center mt-4 mb-4"><i class="fa-solid fa-chart-line"></i> Yaklaşan Aktiviteler</h5>
+                            <hr style="width: 95%; margin: auto;">
+                            <div class="card-header d-flex align-items-center">
+                                <ul class="list-out">
+                                    <li class="star-menus">
+                                        <a href="#">
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <div class="upcoming-activity">
+                                    <div class="activity-box">
+                                        <div class="activity-box-img">
+                                            <img class="activity-img" src="" alt="">
+                                        </div>
+                                        <div class="activity-box-text">
+                                            <h4 class="activity-text-up"></h4>
+                                            <h5 class="activity-text-down"></h5>
+                                        </div>
+                                        <div class="activity-box-time">
+                                            <span class="activity-date"></span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-box">
+                                        <div class="activity-box-img">
+                                            <img src="../img/activity3.png" alt="">
+                                        </div>
+                                        <div class="activity-box-text">
+                                            <h4>Yapay Zeka</h4>
+                                            <h5>Yapay Zeka'ya giriş. Temel Bilgiler.</h5>
+                                        </div>
+                                        <div class="activity-box-time">
+                                            <span>1 Hafta Sonra</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-box">
+                                        <div class="activity-box-img">
+                                            <img src="../img/activity1.png" alt="">
+                                        </div>
+                                        <div class="activity-box-text">
+                                            <h4>Konferans</h4>
+                                            <h5>Staj ve Sektör Simülasyonu Hakkında</h5>
+                                        </div>
+                                        <div class="activity-box-time">
+                                            <span>2 Hafta Sonra</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-box">
+                                        <div class="activity-box-img">
+                                            <img src="../img/activity2.png" alt="">
+                                        </div>
+                                        <div class="activity-box-text">
+                                            <h4>Kariyer Günleri</h4>
+                                            <h5>Proje tanıtımı ve öğreciler ile tanışma</h5>
+                                        </div>
+                                        <div class="activity-box-time">
+                                            <span>3 Gün Önce</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <h5 class="text-center mb-3"><i class="fa-solid fa-square-poll-horizontal"></i> Anketler</h5>
+                    <div class="col-xl-6 survey-section">
+                        <div class="card p-4" style="min-height: 300px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                            <form action="">
+                                <h6> Neos Yazılım Akademi'nin aktivitelerinden memnun musunuz? (Puanlayın)</h6>
+                                <input id="a1" name="anket" type="radio"> <label for="a1">1 Puan</label> <br>
+                                <input id="a2" name="anket" type="radio"> <label for="a2">2 Puan</label> <br>
+                                <input id="a3" name="anket" type="radio"> <label for="a3">3 Puan</label> <br>
+                                <input id="a4" name="anket" type="radio"> <label for="a4">4 Puan</label> <br>
+                                <input id="a5" name="anket" type="radio"> <label for="a5">5 Puan</label> <br>
+                                <button class="btn btn-primary mt-3" type="submit">Yanıtla</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 survey-section">
+                        <div class="card p-4" style="min-height: 300px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                            <form action="">
+                                <h6> Neos Yazılım Akademi'nin müfredatı yeterli mi?</h6>
+                                <input id="a6" name="anket" type="radio"> <label for="a6">Evet yeterli</label> <br>
+                                <input id="a7" name="anket" type="radio"> <label for="a7">Hayır yeterli değil</label> <br>
+                                <input id="a8" name="anket" type="radio"> <label for="a8">Geliştirilebilir</label> <br>
+                                <button class="btn btn-primary mt-3" type="submit">Yanıtla</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -533,6 +647,21 @@
 
         var prgBar_chart = new ApexCharts(document.querySelector("#progresBar"), prgBar);
         prgBar_chart.render();
+
+         // certificate_status
+        const average_note = 70 
+        const average_text = document.querySelector(".average");
+        average_text.innerHTML = average_note;
+        const certificate_status = document.querySelector(".certificate_status");
+        const cert_photo = document.querySelector(".cert_photo");
+
+        if (average_note >= 80) {
+            certificate_status.innerHTML = `<span style="color: green;"><i class="fa fa-check-circle"></i> Not ortalaması sertifka almak için uygundur.</span>`
+            cert_photo.style.filter = "grayscale(1%)";
+        } else {
+            certificate_status.innerHTML = `<span style="color: red;"><i class="fa fa-times-circle"></i> Not Ortalaması sertifika almaya uygun değildir. Not ortalamasını % ${80 - average_note} oranında arttırması gerekmektedir.</span>`
+            cert_photo.style.filter = "grayscale(100%)";
+        }
     </script>
 </body>
 

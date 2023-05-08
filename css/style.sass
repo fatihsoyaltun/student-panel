@@ -361,6 +361,20 @@ img
                 margin-left: auto
                 a
                     color: #333
+            .certificate_area
+                h6
+                    font-weight: bold
+                    margin: 0
+                .certificate_area_sec
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    gap: 1rem
+                    .cert_div_photo
+                        .cert_photo
+                            filter: grayscale(100%)
+                            width: 250px
+                            border-radius: 10px
             .myBg
                 background-color: $color8
                 border: 0
@@ -1138,9 +1152,15 @@ footer.dark-mode-active
 //studentdDashboara.html dark mode
 .stdDash.dark-mode-active
     .card
-        background-color: $color1 !important
+        background-color: $color6 !important
         .card-body
-            color: $color9 !important
+            color: $color9!important
+            .upcoming-activity
+                    .activity-box
+                        .activity-box-text
+                            h4, h5
+                                color: white !important
+
             .card-info
                 color: $color9 !important
                 h6
@@ -1150,7 +1170,10 @@ footer.dark-mode-active
             .apexcharts-canvas
                 svg
                     text
-                        fill: $color9 !important
+
+                        fill: $color9!important
+                        
+
 
 
 //classes.html dark mode
@@ -1224,28 +1247,6 @@ footer.dark-mode-active
                         .missed-col
                             background-color: $color6 !important
                             color: black !important
-// .list-table-responsive
-//     .table-responsive
-//         .dataTables_wrapper
-//             .dataTables_length.dark-mode-active
-//                 label
-//                     background-color: $color6 !important
-//                     color: white !important
-//                     select
-//                         background-color: $color6 !important
-//                         color: white !important
-//             #myTable
-//                 tbody
-//                     background-color: $color6 !important
-//                     color: white !important
-//                     tr
-//                         background-color: $color6 !important
-//                         color: white !important
-//                         td
-//                             div
-//                                 background-color: $color6 !important
-
-
 
 // departments-add.html
 
@@ -1641,8 +1642,43 @@ footer.dark-mode-active
             fill: white !important
         .apexcharts-menu
             background-color: $color1 !important
+    .teacher_my_classes.dark-mode-active
+        .card
+            .card-header
+                background-color: $color6 !important
+            .card-body
+                background-color: $color6 !important
+                .upcoming-activity
+                    .activity-box
+                        .activity-box-text
+                            h4, h5
+                                color: white !important
+        .my_classes.dark-mode-active
+            .accordion-item
+                .accordion-header
+                    .accordion-button
+                        background-color: $color6 !important
+                        color: white !important 
+                        &:focus
+                            box-shadow: none !important
+                .accordion-collapse
+                    .accordion-body
+                        background-color: $color6 !important
+                        .person
+                            li
+                                color: white !important
+                                a
+                                    color: white !important
+                                    &:hover
+                                        color: gray !important
+        .survey-section
+            .card
+                background-color: $color6 !important
+                color: white !important
+                        
 
 //teacher-edit-profile.html
+
 
 
 .teacher-about-edit.dark-mode-active
