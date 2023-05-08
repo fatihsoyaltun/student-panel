@@ -1217,6 +1217,36 @@ body.dark-mode-active {
 .section.dark-mode-active .section-header .breadcrumb .breadcrumb-item a {
   color: #FFFFFF !important;
 }
+.section.dark-mode-active .myBg {
+  background-color: #393E46 !important;
+}
+.section.dark-mode-active .myBg .card-info h6, .section.dark-mode-active .myBg .card-info h3 {
+  color: #FFFFFF !important;
+}
+.section.dark-mode-active .star-students {
+  background-color: #393E46 !important;
+}
+.section.dark-mode-active .star-students .text-table {
+  color: #FFFFFF !important;
+}
+.section.dark-mode-active .star-students .text-table a {
+  color: #FFFFFF !important;
+}
+.section.dark-mode-active .star-students .text-start {
+  color: #FFFFFF !important;
+}
+.section.dark-mode-active .star-students .upcoming-activity .activity-box .activity-box-text h4 {
+  color: #FFFFFF !important;
+}
+.section.dark-mode-active .card-chart {
+  background-color: #393E46 !important;
+}
+.section.dark-mode-active .card-chart .apexcharts-canvas svg text {
+  fill: #FFFFFF !important;
+}
+.section.dark-mode-active .card-chart .apexcharts-canvas .apexcharts-legend-text {
+  color: #FFFFFF !important;
+}
 
 .student-panel.dark-mode-active {
   background-color: #1B262C !important;
