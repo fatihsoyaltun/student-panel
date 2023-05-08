@@ -569,7 +569,106 @@
                 <section class="teacher_my_classes mt-5">
                     <div class="container">
                         <div class="row">
+                            <div class="col-xl-6 d-flex">
+                                <div class="card star-students flex-fill">
+                                    <div class="card-header d-flex align-items-center">
+                                        <h5>Yaklaşan Aktiviteler</h5>
+                                        <ul class="list-out">
+                                            <li class="star-menus">
+                                                <a href="#">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="upcoming-activity">
+                                            <div class="activity-box">
+                                                <div class="activity-box-img">
+                                                    <img class="activity-img" src="" alt="">
+                                                </div>
+                                                <div class="activity-box-text">
+                                                    <h4 class="activity-text-up"></h4>
+                                                    <h5 class="activity-text-down"></h5>
+                                                </div>
+                                                <div class="activity-box-time">
+                                                    <span class="activity-date"></span>
+                                                </div>
+                                            </div>
+                                            <div class="activity-box">
+                                                <div class="activity-box-img">
+                                                    <img src="../img/activity3.png" alt="">
+                                                </div>
+                                                <div class="activity-box-text">
+                                                    <h4>Yapay Zeka</h4>
+                                                    <h5>Yapay Zeka'ya giriş. Temel Bilgiler.</h5>
+                                                </div>
+                                                <div class="activity-box-time">
+                                                    <span>1 Hafta Sonra</span>
+                                                </div>
+                                            </div>
+                                            <div class="activity-box">
+                                                <div class="activity-box-img">
+                                                    <img src="../img/activity1.png" alt="">
+                                                </div>
+                                                <div class="activity-box-text">
+                                                    <h4>Konferans</h4>
+                                                    <h5>Staj ve Sektör Simülasyonu Hakkında</h5>
+                                                </div>
+                                                <div class="activity-box-time">
+                                                    <span>2 Hafta Sonra</span>
+                                                </div>
+                                            </div>
+                                            <div class="activity-box">
+                                                <div class="activity-box-img">
+                                                    <img src="../img/activity2.png" alt="">
+                                                </div>
+                                                <div class="activity-box-text">
+                                                    <h4>Kariyer Günleri</h4>
+                                                    <h5>Proje tanıtımı ve öğreciler ile tanışma</h5>
+                                                </div>
+                                                <div class="activity-box-time">
+                                                    <span>3 Gün Önce</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-xl-6">
+                                <div id="teacher_abilities_id" class="teacher_abilities card p-5">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <h5><i class="fa-solid fa-square-poll-horizontal"></i> Anketler</h5>
+                            <div class="col-xl-6 survey-section">
+                                <div class="card p-4" style="min-height: 300px;">
+                                    <form action="">
+                                        <h6> Neos Yazılım Akademi'nin aktivitelerinden memnun musunuz? (Puanlayın)</h6>
+                                        <input id="a1" name="anket" type="radio"> <label for="a1">1 Puan</label> <br>
+                                        <input id="a2" name="anket" type="radio"> <label for="a2">2 Puan</label> <br>
+                                        <input id="a3" name="anket" type="radio"> <label for="a3">3 Puan</label> <br>
+                                        <input id="a4" name="anket" type="radio"> <label for="a4">4 Puan</label> <br>
+                                        <input id="a5" name="anket" type="radio"> <label for="a5">5 Puan</label> <br>
+                                        <button class="btn btn-primary mt-3" type="submit">Yanıtla</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 survey-section">
+                                <div class="card p-4" style="min-height: 300px;">
+                                    <form action="">
+                                        <h6> Neos Yazılım Akademi'nin müfredatı yeterli mi?</h6>
+                                        <input id="a6" name="anket" type="radio"> <label for="a6">Evet yeterli</label> <br>
+                                        <input id="a7" name="anket" type="radio"> <label for="a7">Hayır yeterli değil</label> <br>
+                                        <input id="a8" name="anket" type="radio"> <label for="a8">Geliştirilebilir</label> <br>
+                                        <button class="btn btn-primary mt-3" type="submit">Yanıtla</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 mt-5">
                                 <h5 class="ms-1 mb-3"><i class="fa-solid fa-laptop"></i> Sınıflarım</h5>
                                 <div class="accordion accordion-flush my_classes" id="accordionFlushExample">
                                     <div class="accordion-item">
@@ -1287,10 +1386,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-6">
-                                <div id="teacher_abilities_id" class="teacher_abilities card">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </section>
@@ -1319,7 +1414,7 @@
     <script>
         //* teacher.html
         //teacher sayaç
-        var countDownDate = new Date("Mar 30, 2023 19:00:00").getTime();
+        var countDownDate = new Date("Jun 30, 2023 19:00:00").getTime();
 
 
         var x = setInterval(function () {
