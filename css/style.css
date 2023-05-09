@@ -1272,6 +1272,57 @@ body.dark-mode-active {
 .student-panel.dark-mode-active .list-header .breadcrumb .breadcrumb-item a {
   color: #FFFFFF !important;
 }
+.student-panel.dark-mode-active .card {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.student-panel.dark-mode-active .card label {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.student-panel.dark-mode-active .card input {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.student-panel.dark-mode-active .compose-btn .btn-compose {
+  background-color: #393E46 !important;
+  border: none;
+}
+.student-panel.dark-mode-active .compose-btn .modal-content {
+  background-color: #393E46;
+}
+.student-panel.dark-mode-active .compose-btn .modal-content .modal-header {
+  color: white;
+}
+.student-panel.dark-mode-active .inbox-menu {
+  background-color: #393E46;
+}
+.student-panel.dark-mode-active .inbox-menu .nav-item a {
+  color: white;
+}
+.student-panel.dark-mode-active .inbox-menu .nav-item:hover {
+  background-color: #222831;
+}
+.student-panel.dark-mode-active .inbox-header button {
+  background-color: #393E46;
+  color: white;
+}
+.student-panel.dark-mode-active .inbox-header .dropdown-menu {
+  background-color: #393E46;
+}
+.student-panel.dark-mode-active .inbox-header .dropdown-menu .dropdown-item {
+  color: white;
+}
+.student-panel.dark-mode-active .inbox-header .dropdown-menu .dropdown-item:hover {
+  background-color: #222831;
+}
+.student-panel.dark-mode-active .inbox-header .top-action-right .btn-group a {
+  background-color: #393E46;
+  color: white;
+}
+.student-panel.dark-mode-active .tab-content .table-responsive .unread {
+  color: white;
+}
 
 footer.dark-mode-active {
   background-color: #1B262C !important;
