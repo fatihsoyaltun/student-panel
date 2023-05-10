@@ -14,11 +14,6 @@ $backroundimg:"../img/neos_teacher_header_img.jfif"
 $backroundimg2:"../img/7_Kasım.jpg"
 $backroundimg3:'../img/yaprakgri.png'
 
-
-
-
-
-
 body
     font-family: 'Roboto', sans-serif
 ul
@@ -32,9 +27,7 @@ img
     max-width: 100%
     vertical-align: middle
 
-
-
-//! Admin Dashboard
+//! Admin Dashboard (GENEL)
 .main-wrapper
     width: 100%
     height: 100vh
@@ -491,8 +484,7 @@ img
                 .card-body
                     padding: 8px
 
-
-//! Student Profil Css
+//! Student Profil Css (GENEL)
 .student-panel
     margin-left: 259px
     padding-top: 60px
@@ -873,14 +865,13 @@ img
                         border: 1px solid #e6ebf1
                         color: #5c678f
 
-
-
-//project card
+// project card
 .projectCard
-    background: #eeeeee
+    background: white
     border: 1px solid #dd2476
     color: $color1
     width: 100%
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important
     // min-width: 18rem
     // margin-bottom: 2rem
     .projectBtn
@@ -902,7 +893,41 @@ img
             box-shadow: #222 1px 0 10px
             text-decoration: underline
 
-//? Login Form
+// payments.html
+.paymentsone
+    .payment-info
+        .progress
+            display: flex
+            justify-content: center
+            font-weight: bold
+            align-items: center
+            width: 100%
+            height: 30px
+            background-color: #f2f2f2
+            border-radius: 15px
+            position: relative
+            overflow: hidden
+            .progress-bar
+                width: 0%
+                height: 30px
+                background-color: #2a9bc7
+                border-radius: 15px
+                position: absolute
+                top: 0
+                left: 0
+                transition: width 0.5s ease-in-out
+            .progress-text
+                z-index: 99
+                margin-left: 1rem
+                font-size: 13px
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                color: white
+                font-weight: bold
+
+// login-register.html
 .login-form
     display: table
     height: 100vh
@@ -1062,7 +1087,7 @@ img
                                 background-color: $color7
                                 color: #fff
 
-
+// internship.html
 .internship-selection
     .choices
         z-index: 100 !important
@@ -1071,10 +1096,7 @@ img
             .choices__input
                 background-color: white !important
 
-            
-
-
-//? dark mode start
+//* dark mode start
 body.dark-mode-active
     background-color: $color1 !important
 .dark-mode.dark-mode-active
@@ -1191,8 +1213,7 @@ footer.dark-mode-active
     .footer_text
         color: $color9 !important
 
-
-//studentdDashboara.html dark mode
+//studentdDashboara.html //* dark-mode
 .stdDash.dark-mode-active
     .card
         background-color: $color6 !important
@@ -1215,11 +1236,8 @@ footer.dark-mode-active
                     text
 
                         fill: $color9!important
-                        
 
-
-
-//classes.html dark mode
+//classes.html //* dark-mode
 .classes_information_card.dark-mode-active
     background-color: $color6 !important
     color: white !important
@@ -1291,8 +1309,7 @@ footer.dark-mode-active
                             background-color: $color6 !important
                             color: black !important
 
-// departments-add.html
-
+// departments-add.html //* dark-mode
 .departments_add_section
     .card.dark-mode-active
         background-color: $color6 !important
@@ -1312,7 +1329,7 @@ footer.dark-mode-active
         .img-file-btn
             background-color: $color1 !important
 
-// deparmetns-edit.html
+// deparmetns-edit.html //* dark-mode
 .departments_edit_section
     .card.dark-mode-active
         background-color: $color6 !important
@@ -1332,9 +1349,41 @@ footer.dark-mode-active
         .img-file-btn
             background-color: $color1 !important
 
+//quiz-and-project-notes.html //* dark-mode
+.quiz-project-notes.dark-mode-active
+    .nav-tabs
+        border-bottom: 1px solid #eeeeee
+        .nav-link
+            background: none !important
+            color: black
+            border-bottom: none
+            &:hover
+                background-color: #faf9f9
+                border-top-left-radius: 10px !important
+                border-top-right-radius: 10px !important
+            &:focus
+                background-color: $color6 !important
+                border-top-left-radius: 10px !important
+                border-top-right-radius: 10px !important
+                border: 1px solid gray !important
+        .active
+            background-color: $color6 !important
+            border-top-left-radius: 10px !important
+            border-top-right-radius: 10px !important
+            border: 1px solid gray !important
+                
+            img
+                width: 20px
+    .modal
+        .modal-header
+            background-color: $color6 !important
+        .modal-body
+            background-color: $color6 !important
+        .modal-footer
+            background-color: $color6 !important
     //? dark mode end
 
-// departments.html
+// departments.html //* dark-mode
 .departments_list_section
     .card.dark-mode-active
         background-color: $color6 !important
@@ -1357,8 +1406,8 @@ footer.dark-mode-active
                 color: white !important
                 &:hover
                     background-color: $color3 !important
-                    
-// student-profile.html
+
+// student-profile.html //* dark-mode
 .student_add_section
     .card.dark-mode-active
         background-color: $color6 !important
@@ -1378,7 +1427,7 @@ footer.dark-mode-active
         .img-file-btn
             background-color: $color1 !important
 
-//internship-selection.html
+//internship-selection.html //* dark-mode
 .internship-selection
     .card.dark-mode-active
         background-color: $color6 !important
@@ -1429,7 +1478,7 @@ footer.dark-mode-active
                 .is-highlighted
                     color: $color6 !important
 
-//edit-profile.html
+//edit-profile.html //* dark-mode
 .edit_profile_section
     .card.dark-mode-active
         background-color: $color6 !important
@@ -1452,8 +1501,7 @@ footer.dark-mode-active
             background-color: $color6 !important
             color: white !important
 
-
-// student-edit.html
+// student-edit.html //* dark-mode
 .student-edit_section
     .card.dark-mode-active
         background-color: $color6 !important
@@ -1473,7 +1521,7 @@ footer.dark-mode-active
         .img-file-btn
             background-color: $color1 !important
 
-// student-list.html
+// student-list.html //* dark-mode
 .student_list_section
     .card.dark-mode-active
         background-color: $color6 !important
@@ -1499,7 +1547,7 @@ footer.dark-mode-active
                     background-color: $color3 !important
 
 // student-profile.html & // studentDashboard-profil.html     
-// (.student_profile_section,.student_profil_card_chart,.student_profil_card_header, .student-profil-card-title => bu classlar dark-mode için ortak oluşturuldu. Başka bir stillendirme için kullanılmadı.  )
+// (.student_profile_section,.student_profil_card_chart,.student_profil_card_header, .student-profil-card-title => bu classlar dark-mode için ortak oluşturuldu. Başka bir stillendirme için kullanılmadı.  ) //* dark-mode
 .student_profile_section
     .student-panel-header
         .student-header-text.dark-mode-active
@@ -1547,12 +1595,7 @@ footer.dark-mode-active
         h6
             color: white !important
 
-
-
-
-
-
-// student-subjects.html
+// student-subjects.html //* dark-mode
 .subjects_section
     .student-subjects-nav-btn.dark-mode-active
         background-color: $color6 !important
@@ -1580,12 +1623,12 @@ footer.dark-mode-active
                         a
                             color: white !important
 
-// subjects-html
+// subjects-html //* dark-mode
 .subjects-nav-btn.dark-mode-active
         background-color: $color6 !important
         color: white !important
 
-//teacher-add.html
+//teacher-add.html //* dark-mode
 .teacher_add_section
     .card.dark-mode-active
         background-color: $color6 !important
@@ -1605,7 +1648,7 @@ footer.dark-mode-active
         .img-file-btn
             background-color: $color1 !important
 
-//teacher-edit.html
+//teacher-edit.html //* dark-mode
 .teacher_edit_section
     .card.dark-mode-active
         background-color: $color6 !important
@@ -1625,8 +1668,7 @@ footer.dark-mode-active
         .img-file-btn
             background-color: $color1 !important
 
-
-//teacher-list.html
+//teacher-list.html //* dark-mode
 .teacher_list_section
     .card.dark-mode-active
         background-color: $color6 !important
@@ -1650,7 +1692,7 @@ footer.dark-mode-active
                 &:hover
                     background-color: $color3 !important
 
-//teacher.html
+//teacher.html //* dark-mode
 .teacher-profile
     .teacher_head_bottom_profile.dark-mode-active
         background-color: $color6
@@ -1718,16 +1760,11 @@ footer.dark-mode-active
             .card
                 background-color: $color6 !important
                 color: white !important
-                        
 
-//teacher-edit-profile.html
-
-
-
+//teacher-edit-profile.html //* dark-mode
 .teacher-about-edit.dark-mode-active
     background-color: $color6 !important
     color: white !important
-
 
 @media screen and (max-width: 768px)
     .off-canvas
@@ -1749,7 +1786,6 @@ footer.dark-mode-active
         margin-top: 2rem !important
     .iss_3
         margin-top: 2rem !important
-
 
 @media screen and (max-width: 576px)
     .header
@@ -1776,13 +1812,7 @@ footer.dark-mode-active
         .dropdown-menu
             transform: translate(-120px, 0px) !important
 
-
-
-
-
-//* AYHAN CSS-->
-
-//* teacher.html (ayhan)
+// teacher.html
 .teacher_header
     .teacher_head_bottom
         .teacher_header_head_bottom_image
@@ -1883,8 +1913,6 @@ footer.dark-mode-active
             .follow,
             .message_send
                 font-size: small
-
-
 .teacher_about
     .teacher_about_left
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
@@ -2017,8 +2045,7 @@ footer.dark-mode-active
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
         padding: 1rem
 
-
-//* departments.html (ayhan)
+//departments.html
 .departments_header
     .departments_search_field
         .departments_search_field_form
@@ -2088,12 +2115,7 @@ footer.dark-mode-active
             &:hover
                 color: blue
 
-
-
-//! classes.html //
-
-//* classes.html (ayhan)
-
+// classes.html
 .classes_header
     .classes_search_field
         .classes_search_field_form
@@ -2113,7 +2135,6 @@ footer.dark-mode-active
                 border-radius: 10px
                 &:hover
                     background-color: #283a60
-
 .classes_photo
     .class_photo
         background: linear-gradient(rgba(33, 45, 70, 0.7), rgba(33,45,70,.5)) ,  url($backroundimg2)
@@ -2125,7 +2146,6 @@ footer.dark-mode-active
         border-top-right-radius: 10px
         width: 100%
         height: 300px
-        
 .classes
     .classes_information_card
         background-color: white
@@ -2144,7 +2164,6 @@ footer.dark-mode-active
         align-items: center
     .classes_participation_rate
         padding: 1rem
-
 .attendance
     .continuation_table
         .accordion-item
@@ -2180,7 +2199,6 @@ footer.dark-mode-active
                                 input 
                                     cursor: pointer
                                     background: red
-            
 .classes_topics_section
     .classes_topics
         ol
@@ -2203,7 +2221,6 @@ footer.dark-mode-active
                     .classed_not_processed
                         background-color: crimson
                         color: white
-
 .exam_grade_entry
     .entering_student_exam_results
         input
@@ -2219,7 +2236,6 @@ footer.dark-mode-active
                     width: 200px
                 td
                     border: 1px solid black
-
 footer
     display: flex
     justify-content: center
@@ -2230,9 +2246,7 @@ footer
         margin: 0
         color: $color6
 
-//* Subjects.html
-
-
+// Subjects.html
 .subjects_section
     .nav-tabs   
         .nav-link
@@ -2317,58 +2331,32 @@ footer
                 transition: .4s
                 &:hover
                     transform: translateY(5px)
-            
 
 // quiz-and-project-notes.html
 .quiz-project-notes
-    .nav-tabs   
+    .nav-tabs
+        border-bottom: 1px solid #eeeeee
         .nav-link
             color: black
+            border-bottom: none
+            &:hover
+                background-color: #faf9f9
+                border-top-left-radius: 10px
+                border-top-right-radius: 10px
+            &:focus
+                background-color: #eeeeee
+                border-top-left-radius: 10px
+                border-top-right-radius: 10px
             img
                 width: 20px
         .active
             color: black
             font-weight: bold
+            background-color: #eeeeee
+            border-top-left-radius: 10px
+            border-top-right-radius: 10px
+
             
-    .tab-content
-        .tab-pane
-            .frontend
-                img
-                    width: 30px
-            .backend
-                img
-                    width: 30px
-            .accordion
-                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
-                border-radius: 10px
-                overflow: hidden
-                .accordion-button
-                    padding: 1.5rem
-                    background: none
-                    color: black
-                    &:focus
-                        box-shadow: none
-                        background: none
-                        color: black
-                        font-weight: bold
-                .accordion-collapse
-                    .accordion-body
-                        ol
-                            li
-                                button
-                                    margin-left: 1rem
-                                    border: none
-                                    background: none
-                                    color: crimson
-                                    transition: .4s
-                                    &:hover
-                                        transform: scale(1.1)
-                                padding: .5rem
-                                a
-                                    text-decoration: none
-                                    color: black
-                                    &:hover
-                                        font-weight: bold
                                         
     .subjectsadd
         .subjects_add_form
@@ -2405,7 +2393,7 @@ footer
                 &:hover
                     transform: translateY(5px)
 
-//! survey.html //
+// survey.html
 .survey_section
     .create_survey_form
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
@@ -2460,15 +2448,10 @@ footer
                 label
                     input
                         margin-right: .5rem
-            
-
-
-
 
 @media screen and (max-width: 992px)
     .teacher_head_bottom_col_left
         justify-content: center
-    
 
 @media screen and (max-width: 1200px)
 

@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <!-- datatables css -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.2/datatables.min.css" />
-
     <link rel="stylesheet" href="../css/jsCalendar.clean.css">
     <link rel="stylesheet" href="../css/jsCalendar.css">
     <link rel="stylesheet" href="../css/jsCalendarMain.css">
@@ -1109,7 +1108,7 @@
                 </section> -->
             </div>
         </div>
-        <footer>
+        <footer class="mt-5">
             <h6 class="footer_text">TELİF HAKKI © 2023 NEOS YAZILIM.</h6>
         </footer>
     </div>
@@ -1362,163 +1361,6 @@
         var chart = new ApexCharts(document.querySelector("#classes_participation_rate_id"), options);
         chart.render();
 
-        // classed_processed_button tıklandığında
-        const processedButtons = document.querySelectorAll('.classed_processed_button');
-        processedButtons.forEach(function (button) {
-            button.addEventListener('click', function () {
-                const listItem = this.closest('li');
-                const link = listItem.querySelector('a');
-                link.style.color = 'green';
-                link.style.fontWeight = 'bold';
-            });
-        });
-
-        // classed_not_processed tıklandığında
-        const notProcessedButtons = document.querySelectorAll('.classed_not_processed');
-        notProcessedButtons.forEach(function (button) {
-            button.addEventListener('click', function () {
-                const listItem = this.closest('li');
-                const link = listItem.querySelector('a');
-                link.style.color = 'gray';
-                link.style.fontWeight = 'normal';
-            });
-        });
-
-
-        // continuation_table/Yoklama alanı için
-//         (function() {
-//     if (!localStorage.attendance) {
-//         console.log('Creating attendance records...');
-//         function getRandom() {
-//             return (Math.random() >= 0.5);
-//         }
-
-//         var nameColumns = $('tbody .name-col'),
-//             attendance = {};
-
-//         nameColumns.each(function() {
-//             var name = this.innerText;
-//             attendance[name] = [];
-
-//             for (var i = 0; i <= 11; i++) {
-//                 attendance[name].push(getRandom());
-//             }
-//         });
-
-//         localStorage.attendance = JSON.stringify(attendance);
-//     }
-// }());
-
-
-/* STUDENT APPLICATION */
-$(function() {
-    var attendance = JSON.parse(localStorage.attendance),
-        $allMissed = $('tbody .missed-col'),
-        $allCheckboxes = $('tbody input');
-
-    // Count a student's missed days
-    function countMissing() {
-        $allMissed.each(function() {
-            var studentRow = $(this).parent('tr'),
-                dayChecks = $(studentRow).children('td').children('input'),
-                numMissed = 0;
-
-            dayChecks.each(function() {
-                if (!$(this).prop('checked')) {
-                    numMissed++;
-                }
-            });
-
-            $(this).text(numMissed);
-        });
-    }
-
-    // Check boxes, based on attendace records
-    $.each(attendance, function(name, days) {
-        var studentRow = $('tbody .name-col:contains("' + name + '")').parent('tr'),
-            dayChecks = $(studentRow).children('.attend-col').children('input');
-
-        dayChecks.each(function(i) {
-            $(this).prop('checked', days[i]);
-        });
-    });
-
-    // When a checkbox is clicked, update localStorage
-    $allCheckboxes.on('click', function() {
-        var studentRows = $('tbody .student'),
-            newAttendance = {};
-
-        studentRows.each(function() {
-            var name = $(this).children('.name-col').text(),
-                $allCheckboxes = $(this).children('td').children('input');
-
-            newAttendance[name] = [];
-
-            $allCheckboxes.each(function() {
-                newAttendance[name].push($(this).prop('checked'));
-            });
-        });
-
-        countMissing();
-        localStorage.attendance = JSON.stringify(newAttendance);
-    });
-
-    countMissing();
-}());
-
-$(document).ready(function () {
-            $('#myTable').DataTable();
-        });
-
-
-//Not girme ve görüntüleme
-// const sinav_kaydet_buton = document.querySelector("#sinav_kaydet_buton");
-
-// sinav_kaydet_buton.addEventListener("click", () =>{
-//     const ogrenci1_sinav1 = document.querySelector("#ogrenci1-sinav1").value;
-//     const ogrenci1_sinav2 = document.querySelector("#ogrenci1-sinav2").value;
-//     const ogrenci1_sinav3 = document.querySelector("#ogrenci1-sinav3").value;
-//     const ogrenci1_sinav4 = document.querySelector("#ogrenci1-sinav4").value;
-//     const ogrenci1_sinav5 = document.querySelector("#ogrenci1-sinav5").value;
-//     const ogrenci1_sinav6 = document.querySelector("#ogrenci1-sinav6").value;
-//     const ogrenci1_sinav7 = document.querySelector("#ogrenci1-sinav7").value;
-//     const ogrenci1_sinav8 = document.querySelector("#ogrenci1-sinav8").value;
-//     const ogrenci1_sinav9 = document.querySelector("#ogrenci1-sinav9").value;
-//     const ogrenci1_sinav10 = document.querySelector("#ogrenci1-sinav10").value;
-//     const ogrenci1_sonuc1 = document.querySelector("#ogrenci1-sonuc1");
-//     const ogrenci1_sonuc2 = document.querySelector("#ogrenci1-sonuc2");
-//     const ogrenci1_sonuc3 = document.querySelector("#ogrenci1-sonuc3");
-//     const ogrenci1_sonuc4 = document.querySelector("#ogrenci1-sonuc4");
-//     const ogrenci1_sonuc5 = document.querySelector("#ogrenci1-sonuc5");
-//     const ogrenci1_sonuc6 = document.querySelector("#ogrenci1-sonuc6");
-//     const ogrenci1_sonuc7 = document.querySelector("#ogrenci1-sonuc7");
-//     const ogrenci1_sonuc8 = document.querySelector("#ogrenci1-sonuc8");
-//     const ogrenci1_sonuc9 = document.querySelector("#ogrenci1-sonuc9");
-//     const ogrenci1_sonuc10 = document.querySelector("#ogrenci1-sonuc10");
-//     const grade_average_ogrenci1 = document.querySelector("#grade_average_ogrenci1");
-
-//     ogrenci1_sonuc1.innerHTML = ogrenci1_sinav1;
-//     ogrenci1_sonuc2.innerHTML = ogrenci1_sinav2;
-//     ogrenci1_sonuc3.innerHTML = ogrenci1_sinav3;
-//     ogrenci1_sonuc4.innerHTML = ogrenci1_sinav4;
-//     ogrenci1_sonuc5.innerHTML = ogrenci1_sinav5;
-//     ogrenci1_sonuc6.innerHTML = ogrenci1_sinav6;
-//     ogrenci1_sonuc7.innerHTML = ogrenci1_sinav7;
-//     ogrenci1_sonuc8.innerHTML = ogrenci1_sinav8;
-//     ogrenci1_sonuc9.innerHTML = ogrenci1_sinav9;
-//     ogrenci1_sonuc10.innerHTML = ogrenci1_sinav10;
-
-//     topla = ogrenci1_sinav1 + ogrenci1_sinav2 + ogrenci1_sinav3 + ogrenci1_sinav4 + ogrenci1_sinav5 + ogrenci1_sinav6 + ogrenci1_sinav7 + ogrenci1_sinav8 + ogrenci1_sinav9 + ogrenci1_sinav10;
-
-//     sonuc = topla / topla.length;
-//     alert(sonuc);
-
-// })
-
-
-
-
     </script>
 </body>
-
 </html>
