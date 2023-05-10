@@ -1,2 +1,0 @@
-// Sınıf sayfasında öğrenci Listesinin sağ üstüne buton olarak not girme eklendi (farklı sayfada açılıyor)
-// Sınıf sayfasında öğrenci listesinin sağ üstüne buton olarak yoklama kısmı eklendi (farklı sayfada açılacak)

@@ -974,10 +974,11 @@ img {
 }
 
 .projectCard {
-  background: #eeeeee;
+  background: white;
   border: 1px solid #dd2476;
   color: #1B262C;
   width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
 }
 .projectCard .projectBtn {
   border: 5px solid;
@@ -997,6 +998,40 @@ img {
   border: 5px solid #fff !important;
   box-shadow: #222 1px 0 10px;
   text-decoration: underline;
+}
+
+.paymentsone .payment-info .progress {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  background-color: #f2f2f2;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.paymentsone .payment-info .progress .progress-bar {
+  width: 0%;
+  height: 30px;
+  background-color: #2a9bc7;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.5s ease-in-out;
+}
+.paymentsone .payment-info .progress .progress-text {
+  z-index: 99;
+  margin-left: 1rem;
+  font-size: 13px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
 }
 
 .login-form {
@@ -1495,6 +1530,44 @@ footer.dark-mode-active .footer_text {
 }
 .departments_edit_section .card.dark-mode-active .img-file-btn {
   background-color: #1B262C !important;
+}
+
+.quiz-project-notes.dark-mode-active .nav-tabs {
+  border-bottom: 1px solid #eeeeee;
+}
+.quiz-project-notes.dark-mode-active .nav-tabs .nav-link {
+  background: none !important;
+  color: black;
+  border-bottom: none;
+}
+.quiz-project-notes.dark-mode-active .nav-tabs .nav-link:hover {
+  background-color: #faf9f9;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+.quiz-project-notes.dark-mode-active .nav-tabs .nav-link:focus {
+  background-color: #393E46 !important;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  border: 1px solid gray !important;
+}
+.quiz-project-notes.dark-mode-active .nav-tabs .active {
+  background-color: #393E46 !important;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  border: 1px solid gray !important;
+}
+.quiz-project-notes.dark-mode-active .nav-tabs .active img {
+  width: 20px;
+}
+.quiz-project-notes.dark-mode-active .modal .modal-header {
+  background-color: #393E46 !important;
+}
+.quiz-project-notes.dark-mode-active .modal .modal-body {
+  background-color: #393E46 !important;
+}
+.quiz-project-notes.dark-mode-active .modal .modal-footer {
+  background-color: #393E46 !important;
 }
 
 .departments_list_section .card.dark-mode-active {
@@ -2609,8 +2682,22 @@ footer .footer_text {
   transform: translateY(5px);
 }
 
+.quiz-project-notes .nav-tabs {
+  border-bottom: 1px solid #eeeeee;
+}
 .quiz-project-notes .nav-tabs .nav-link {
   color: black;
+  border-bottom: none;
+}
+.quiz-project-notes .nav-tabs .nav-link:hover {
+  background-color: #faf9f9;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.quiz-project-notes .nav-tabs .nav-link:focus {
+  background-color: #eeeeee;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .quiz-project-notes .nav-tabs .nav-link img {
   width: 20px;
@@ -2618,48 +2705,9 @@ footer .footer_text {
 .quiz-project-notes .nav-tabs .active {
   color: black;
   font-weight: bold;
-}
-.quiz-project-notes .tab-content .tab-pane .frontend img {
-  width: 30px;
-}
-.quiz-project-notes .tab-content .tab-pane .backend img {
-  width: 30px;
-}
-.quiz-project-notes .tab-content .tab-pane .accordion {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.quiz-project-notes .tab-content .tab-pane .accordion .accordion-button {
-  padding: 1.5rem;
-  background: none;
-  color: black;
-}
-.quiz-project-notes .tab-content .tab-pane .accordion .accordion-button:focus {
-  box-shadow: none;
-  background: none;
-  color: black;
-  font-weight: bold;
-}
-.quiz-project-notes .tab-content .tab-pane .accordion .accordion-collapse .accordion-body ol li {
-  padding: 0.5rem;
-}
-.quiz-project-notes .tab-content .tab-pane .accordion .accordion-collapse .accordion-body ol li button {
-  margin-left: 1rem;
-  border: none;
-  background: none;
-  color: crimson;
-  transition: 0.4s;
-}
-.quiz-project-notes .tab-content .tab-pane .accordion .accordion-collapse .accordion-body ol li button:hover {
-  transform: scale(1.1);
-}
-.quiz-project-notes .tab-content .tab-pane .accordion .accordion-collapse .accordion-body ol li a {
-  text-decoration: none;
-  color: black;
-}
-.quiz-project-notes .tab-content .tab-pane .accordion .accordion-collapse .accordion-body ol li a:hover {
-  font-weight: bold;
+  background-color: #eeeeee;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .quiz-project-notes .subjectsadd .subjects_add_form {
   position: relative;
