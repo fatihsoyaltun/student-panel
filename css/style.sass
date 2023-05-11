@@ -13,6 +13,7 @@ $projectCardGradient:linear-gradient(to left top, #8b8b8b 10%, #a4a0a0 90%)
 $backroundimg:"../img/neos_teacher_header_img.jfif"
 $backroundimg2:"../img/7_Kasım.jpg"
 $backroundimg3:'../img/yaprakgri.png'
+$backgroundimgadd: "../img/photo-add.png" 
 
 body
     font-family: 'Roboto', sans-serif
@@ -1848,15 +1849,20 @@ footer.dark-mode-active
             justify-content: center
             align-items: center
             position: absolute
-            top: -90px
+            top: -100px
             .teacher_head_bottom_profile_summary_area_center_profile_photo
                 display: flex
                 justify-content: center
-                
                 width: 120px
+                height: 120px
                 border-radius: 50%
                 border: 5px solid white
                 overflow: hidden
+                img
+                    aspect-ratio: 4/4
+                    background: url($backgroundimgadd)
+                    background-position: center
+                    background-size: cover
         .teacher_head_bottom_profile_summary_area_center_b
             display: flex
             flex-direction: column
