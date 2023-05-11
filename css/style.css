@@ -609,11 +609,17 @@ img {
   margin-right: 20px;
   position: relative;
   top: -30px;
-}
-.student-panel .content .student-card .card-body .student-profil .student-profil-box .student-profil-box-img img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
   border-radius: 50%;
   border: 9px solid #fff;
-  width: 120px;
+}
+.student-panel .content .student-card .card-body .student-profil .student-profil-box .student-profil-box-img img {
+  aspect-ratio: 4/4;
 }
 .student-panel .content .student-card .card-body .student-profil .student-profil-box .student-profil-box-name h4 {
   font-size: 16px;
