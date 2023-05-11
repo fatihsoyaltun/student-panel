@@ -2104,15 +2104,22 @@ footer.dark-mode-active .footer_text {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -90px;
+  top: -100px;
 }
 .teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_center .teacher_head_bottom_profile_summary_area_center_profile_photo {
   display: flex;
   justify-content: center;
   width: 120px;
+  height: 120px;
   border-radius: 50%;
   border: 5px solid white;
   overflow: hidden;
+}
+.teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_center .teacher_head_bottom_profile_summary_area_center_profile_photo img {
+  aspect-ratio: 4/4;
+  background: url("../img/photo-add.png");
+  background-position: center;
+  background-size: cover;
 }
 .teacher_header .teacher_head_bottom_profile .teacher_head_bottom_profile_summary_area_center_b {
   display: flex;
