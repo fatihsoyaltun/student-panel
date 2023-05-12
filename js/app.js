@@ -31,18 +31,16 @@ ball.addEventListener("click", function () {
   if (ball.classList.contains("dark-mode-active")) {
     document.cookie =
       "dark-mode=on; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
-    changeImg.src = "/img/neosLogoWhite.png";
+    //changeImg.src = "/img/neosLogoWhite.png";
   } else {
     document.cookie =
       "dark-mode=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
-    changeImg.src = "/img/neos.PNG";
+    //changeImg.src = "/img/neos.PNG";
   }
 });
 
 // Check if the cookie exists and set the dark mode accordingly
-const darkModeCookie = document.cookie
-  .split(";")
-  .find((c) => c.trim().startsWith("dark-mode="));
+const darkModeCookie = document.cookie.split(";").find((c) => c.trim().startsWith("dark-mode="));
 if (darkModeCookie && darkModeCookie.split("=")[1] === "on") {
   ball.classList.add("dark-mode-active");
   items.forEach((item) => item.classList.add("dark-mode-active"));

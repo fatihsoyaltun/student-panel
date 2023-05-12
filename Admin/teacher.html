@@ -6,11 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Main Css -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -1320,27 +1327,19 @@
             <h6 class="footer_text">TELİF HAKKI © 2023 NEOS YAZILIM.</h6>
         </footer>
     </div>
-
-    <!-- apex charts -->
+    <!-- Bootstrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- ApexCharts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-
-    <!-- bs js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Dark Mode -->
-    <script src="../js/jsDarkMode.js"></script>
-
-    <!-- app js -->
+    <!-- Apex Charts Js -->
+    <script src="../js/apexCharts.js"></script>
+    <!-- Main Js -->
     <script src="../js/app.js"></script>
-
-
     <script>
-        //* teacher.html
         //teacher sayaç
         var countDownDate = new Date("Mar 30, 2023 19:00:00").getTime();
-
 
         var x = setInterval(function () {
 
@@ -1361,111 +1360,6 @@
                 document.querySelector(".time_left_for_class").innerHTML = "EXPIRED";
             }
         }, 1000);
-        //* Anket başarı durumu
-        var options = {
-            series: [{
-                name: "Desktops",
-                data: [90, 85, 80, 75, 80, 90, 100, 90, 85]
-            }],
-            chart: {
-                height: 350,
-                type: 'line',
-                zoom: {
-                    enabled: false
-                }
-            },
-            dataLabels: {
-                enabled: false
-            },
-            stroke: {
-                curve: 'straight'
-            },
-            title: {
-                text: 'Product Trends by Month',
-                align: 'left'
-            },
-            grid: {
-                row: {
-                    colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-                    opacity: 0.5
-                },
-            },
-            xaxis: {
-                categories: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağust.', 'Eylül'],
-            }
-        };
-
-        var chart = new ApexCharts(document.querySelector("#teacher_success_average"), options);
-        chart.render();
-
-        const teacher_data = options.series[0].data;
-        const sum = teacher_data.reduce((total, num) => total + num);
-        const average = sum / teacher_data.length;
-        const teacher_average = average.toFixed(2);
-
-        const teacher_average_score = document.querySelector(".teacher_average_score");
-        teacher_average_score.innerHTML = teacher_average;
-
-        //   teacher_abilities
-        var options = {
-            series: [{
-                name: 'Series 1',
-                data: [95, 90, 85, 70, 50, 60, 50],
-            }],
-            chart: {
-                height: 350,
-                type: 'radar',
-            },
-            dataLabels: {
-                enabled: true
-            },
-            plotOptions: {
-                radar: {
-                    size: 140,
-                    polygons: {
-                        strokeColors: '#e9e9e9',
-                        fill: {
-                            colors: ['#f8f8f8', '#fff']
-                        }
-                    }
-                }
-            },
-            title: {
-                text: 'Yetenekler'
-            },
-            colors: ['#FF4560'],
-            markers: {
-                size: 4,
-                colors: ['#fff'],
-                strokeColor: '#FF4560',
-                strokeWidth: 2,
-            },
-            tooltip: {
-                y: {
-                    formatter: function (val) {
-                        return val
-                    }
-                }
-            },
-            xaxis: {
-                categories: ['Html', 'Css', 'Bootstrap', 'Javascript', 'Nodejs', 'Python', 'Django']
-            },
-            yaxis: {
-                tickAmount: 7,
-                labels: {
-                    formatter: function (val, i) {
-                        if (i % 2 === 0) {
-                            return val
-                        } else {
-                            return ''
-                        }
-                    }
-                }
-            }
-        };
-
-        var chart = new ApexCharts(document.querySelector("#teacher_abilities_id"), options);
-        chart.render();
     </script>
 
 </body>
