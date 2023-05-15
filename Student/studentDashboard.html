@@ -57,7 +57,8 @@
                                             </a>
                                             <ul class="submenu-content">
                                                 <li><a href="student-subjects.html">Müfredat</a></li>
-                                                <li><a href="quiz-and-project-notes.html">Quiz ve Proje Notlarım</a></li>
+                                                <li><a href="quiz-and-project-notes.html">Quiz ve Proje Notlarım</a>
+                                                </li>
                                                 <li><a href="upload-project-page.html">Projeler</a></li>
                                             </ul>
                                         </li>
@@ -364,15 +365,15 @@
                 </div>
                 <div class="row mt-5">
                     <div class="col-12">
-                        <div class="certificate_area card p-3" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border-radius: 10px;">
+                        <div class="certificate_area card p-3"
+                            style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border-radius: 10px;">
                             <h5 class="text-center mt-3"><i class="fa-solid fa-graduation-cap"></i> Sertifika</h5>
                             <hr>
                             <div class="row">
                                 <div class="col-12 p-4">
                                     <div class="certificate_area_sec">
                                         <div class="cert_div_photo d-flex align-items-center me-2">
-                                            <img class="cert_photo" src="/img/sertifikalarBasarii_1.png"
-                                                alt="">
+                                            <img class="cert_photo" src="/img/sertifikalarBasarii_1.png" alt="">
                                         </div>
                                         <h6 class="">Sertifika Durumu : </h6>
                                         <h6 class="certificate_status"> </h6>
@@ -384,7 +385,8 @@
                 </div>
                 <div class="row mt-5">
                     <div class="col-xl-12">
-                        <div class="row" id="wrapper" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border-radius: 10px">
+                        <div class="row" id="wrapper"
+                            style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border-radius: 10px">
                             <h5 class="text-center mt-4 mb-4"><i class="fa-solid fa-calendar-days"></i> Takvim</h5>
                             <hr style="width: 95%; margin: auto;">
                             <div class="col-lg-6 col-sm-12">
@@ -399,11 +401,12 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h1 class="modal-title fs-5" id="exampleModalLabel">Etkinlik Ekle</h1>
-                                                <button type="button" class="btn-close modalClose" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
+                                                <button type="button" class="btn-close modalClose"
+                                                    data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <input style="width: 100%;" type="text" id="eventName" placeholder="Etkinlik Adını Girin...">
+                                                <input style="width: 100%;" type="text" id="eventName"
+                                                    placeholder="Etkinlik Adını Girin...">
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary modalClose"
@@ -421,7 +424,8 @@
                 <div class="row mt-5">
                     <div class="col-xl-12 d-flex">
                         <div class="card star-students flex-fill">
-                            <h5 class="text-center mt-4 mb-4"><i class="fa-solid fa-chart-line"></i> Yaklaşan Aktiviteler</h5>
+                            <h5 class="text-center mt-4 mb-4"><i class="fa-solid fa-chart-line"></i> Yaklaşan
+                                Aktiviteler</h5>
                             <hr style="width: 95%; margin: auto;">
                             <div class="card-header d-flex align-items-center">
                                 <ul class="list-out">
@@ -507,7 +511,8 @@
                             <form action="">
                                 <h6> Neos Yazılım Akademi'nin müfredatı yeterli mi?</h6>
                                 <input id="a6" name="anket" type="radio"> <label for="a6">Evet yeterli</label> <br>
-                                <input id="a7" name="anket" type="radio"> <label for="a7">Hayır yeterli değil</label> <br>
+                                <input id="a7" name="anket" type="radio"> <label for="a7">Hayır yeterli değil</label>
+                                <br>
                                 <input id="a8" name="anket" type="radio"> <label for="a8">Geliştirilebilir</label> <br>
                                 <button class="btn btn-primary mt-3" type="submit">Yanıtla</button>
                             </form>
@@ -542,47 +547,53 @@
         function getNextLessonDate() {
             const today = new Date();
             const dayOfWeek = today.getDay();
-            // calculate the number of milliseconds until the next lesson starts
+            const lessonDays = [1, 3, 5]; // days of the week when lessons occur
+            const lessonTime = [19, 0, 0, 0]; // lesson start time (19:00)
             let countdown;
-            if (dayOfWeek === 1 || dayOfWeek === 3 || dayOfWeek === 5) {
-                const lessonStart = new Date();
-                lessonStart.setHours(19, 0, 0, 0); // set lesson start time to 19:00
-                if (today.getTime() > lessonStart.getTime()) {
+
+            if (lessonDays.includes(dayOfWeek)) {
+                // today is a lesson day
+                const lessonStart = new Date(today);
+                lessonStart.setHours(...lessonTime);
+                if (today >= lessonStart) {
                     // today's lesson has already started, so schedule the countdown for the next lesson
-                    lessonStart.setDate(lessonStart.getDate() + (8 - dayOfWeek) %
-                    7); // next lesson is on Monday, Wednesday, or Friday
+                    lessonStart.setDate(lessonStart.getDate() + ((7 - dayOfWeek + lessonDays[0]) % 7));
+                    // next lesson is on the next available lesson day (Monday, Wednesday, or Friday)
                 }
-                countdown = lessonStart.getTime() - today.getTime();
+                countdown = lessonStart - today;
             } else {
                 // today is not a lesson day, so schedule the countdown for the next lesson
-                const nextLesson = new Date();
-                nextLesson.setDate(today.getDate() + (8 - dayOfWeek) %
-                7); // next lesson is on Monday, Wednesday, or Friday
-                nextLesson.setHours(19, 0, 0, 0); // set lesson start time to 19:00
-                countdown = nextLesson.getTime() - today.getTime();
+                const nextLesson = new Date(today);
+                nextLesson.setDate(nextLesson.getDate() + ((7 - dayOfWeek + lessonDays[0]) % 7));
+                // next lesson is on the next available lesson day (Monday, Wednesday, or Friday)
+                nextLesson.setHours(...lessonTime);
+                countdown = nextLesson - today;
             }
+
             // start the countdown
-            const countdownInterval = setInterval(function () {
+            const updateCountdown = () => {
                 countdown -= 1000;
                 if (countdown < 0) {
-                    clearInterval(countdownInterval);
                     getNextLessonDate(); // start the countdown for the next lesson
                 } else {
-                    const seconds = Math.floor((countdown / 1000) % 60);
-                    const minutes = Math.floor((countdown / 1000 / 60) % 60);
-                    const hours = Math.floor((countdown / (1000 * 60 * 60)) % 24);
                     const days = Math.floor(countdown / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((countdown / (1000 * 60 * 60)) % 24);
+                    const minutes = Math.floor((countdown / (1000 * 60)) % 60);
+                    const seconds = Math.floor((countdown / 1000) % 60);
                     // update the countdown display
                     document.getElementById('day').innerText = `${days}g`;
                     document.getElementById('hour').innerText = `${hours}s`;
                     document.getElementById('minute').innerText = `${minutes}d`;
                     document.getElementById('second').innerText = `${seconds}s`;
+                    setTimeout(updateCountdown, 1000);
                 }
-            }, 1000);
+            };
+            updateCountdown();
         }
         getNextLessonDate();
 
-        //Apex Charts
+
+        // //Apex Charts
         var stdDash = {
             series: [{
                 name: 'series1',
@@ -618,7 +629,7 @@
         var stdDash_chart = new ApexCharts(document.querySelector("#performance"), stdDash);
         stdDash_chart.render();
 
-        //<-- ProgressBar->
+        // //<-- ProgressBar->
 
         var prgBar = {
             series: [{
@@ -648,18 +659,20 @@
         var prgBar_chart = new ApexCharts(document.querySelector("#progresBar"), prgBar);
         prgBar_chart.render();
 
-         // certificate_status
-        const average_note = 70 
+        // certificate_status
+        const average_note = 70
         const average_text = document.querySelector(".average");
         average_text.innerHTML = average_note;
         const certificate_status = document.querySelector(".certificate_status");
         const cert_photo = document.querySelector(".cert_photo");
 
         if (average_note >= 80) {
-            certificate_status.innerHTML = `<span style="color: green;"><i class="fa fa-check-circle"></i> Not ortalaması sertifka almak için uygundur.</span>`
+            certificate_status.innerHTML =
+                `<span style="color: green;"><i class="fa fa-check-circle"></i> Not ortalaması sertifka almak için uygundur.</span>`
             cert_photo.style.filter = "grayscale(1%)";
         } else {
-            certificate_status.innerHTML = `<span style="color: red;"><i class="fa fa-times-circle"></i> Not Ortalaması sertifika almaya uygun değildir. Not ortalamasını % ${80 - average_note} oranında arttırması gerekmektedir.</span>`
+            certificate_status.innerHTML =
+                `<span style="color: red;"><i class="fa fa-times-circle"></i> Not Ortalaması sertifika almaya uygun değildir. Not ortalamasını % ${80 - average_note} oranında arttırması gerekmektedir.</span>`
             cert_photo.style.filter = "grayscale(100%)";
         }
     </script>
