@@ -617,6 +617,9 @@ img {
   overflow: hidden;
   border-radius: 50%;
   border: 9px solid #fff;
+  background: url("../img/photo-add.png");
+  background-position: center;
+  background-size: cover;
 }
 .student-panel .content .student-card .card-body .student-profil .student-profil-box .student-profil-box-img img {
   aspect-ratio: 4/4;

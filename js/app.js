@@ -6,137 +6,96 @@ submenus.forEach(submenu => {
 
   let menuOpen = false;
 
-  submenu.addEventListener("click",()=>{
+  submenu.addEventListener("click", () => {
     if (menuOpen) {
-      subcontent.style.display="none";
-      arrow.style.transform="rotate(0deg)";
+      subcontent.style.display = "none";
+      arrow.style.transform = "rotate(0deg)";
       menuOpen = false;
     } else {
-      subcontent.style.display="block";
-      arrow.style.transform="rotate(90deg)";
+      subcontent.style.display = "block";
+      arrow.style.transform = "rotate(90deg)";
       menuOpen = true;
     }
   });
 });
 
-//! Breadcrumb
-// var activeBreadcrumb = document.querySelector('.breadcrumb-item.active');
-// var activeBreadcrumbItem = activeBreadcrumb.querySelector('li');
-// activeBreadcrumbItem.innerHTML = 'Örnek Sayfa';
+// Dark Mode start
+const ball = document.querySelector(".dark-mode");
+const items = document.querySelectorAll(
+  "body, .navbar,.sidebar,.toggle-ball,.dark-mode,.student-panel, footer, .section, .classes_information_card,.classes_bar, .classes_participation_rate, #SvgjsText1097, .apexcharts-zoomin-icon, .apexcharts-zoomout-icon, .apexcharts-selected.dark, .apexcharts-reset-icon, apexcharts-menu-icon, text, #events-calendar, #events, .continuation_table, .card, .student-header-text, .student-info, .student-profil, .card-body, .student-accordion-button, .student-accordion-body, .student_profil_card_header, .student-profil-card-title, .student-subjects-nav-btn, .frontend_subjects, .backend_subjects, .subjects-nav-btn, .teacher_head_bottom_profile, .teacher_about, .teacher_analyces, .teacher_abilities, .teacher-about-edit, .teacher_my_classes, .my_classes, .quiz-project-notes"
+);
+const changeImg = document.querySelector(".navbar-brand_img");
 
-
-//! Apex Charts
-
-var options = {
-  series: [{
-    name: "Eğitmen",
-    data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-},
-{
-  name:"Öğrenci",
-  data:[20,34,45,56,67,78,89,90,78]
-}],
-  chart: {
-  height: 350,
-  type: 'line',
-  zoom: {
-    enabled: false
+ball.addEventListener("click", function () {
+  items.forEach((item) => item.classList.toggle("dark-mode-active"));
+  if (ball.classList.contains("dark-mode-active")) {
+    document.cookie =
+      "dark-mode=on; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    //changeImg.src = "/img/neosLogoWhite.png";
+  } else {
+    document.cookie =
+      "dark-mode=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+    //changeImg.src = "/img/neos.PNG";
   }
-},
-dataLabels: {
-  enabled: false
-},
-stroke: {
-  curve: 'smooth'
-},
-title: {
-  text: 'Product Trends by Month',
-  align: 'left'
-},
-grid: {
-  row: {
-    colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-    opacity: 0.5
-  },
-},
-xaxis: {
-  categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',],
-}
+});
+
+// Check if the cookie exists and set the dark mode accordingly
+const darkModeCookie = document.cookie.split(";").find((c) => c.trim().startsWith("dark-mode="));
+if (darkModeCookie && darkModeCookie.split("=")[1] === "on") {
+  ball.classList.add("dark-mode-active");
+  items.forEach((item) => item.classList.add("dark-mode-active"));
 };
 
-var chart = new ApexCharts(document.querySelector("#apexcharts-area"), options);
-chart.render();
-
-//* Charts Two
-
-var options2 = {
-  series: [{
-    name: "Eğitmen",
-    data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-},
-{
-  name:"Öğrenci",
-  data:[20,34,45,56,67,78,89,90,78]
-}],
-  chart: {
-  height: 350,
-  type: 'bar',
-  zoom: {
-    enabled: false
-  }
-},
-dataLabels: {
-  enabled: false
-},
-stroke: {
-  curve: 'smooth'
-},
-title: {
-  text: 'Product Trends by Month',
-  align: 'left'
-},
-grid: {
-  row: {
-    colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-    opacity: 0.5
-  },
-},
-xaxis: {
-  categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',],
+// flatpickr
+try {
+  document.getElementById("kt_datepicker_1").flatpickr();
+} catch (error) {
+  // console.error("Flatpickr initialization failed: ", error);
 }
-};
 
-var chart2 = new ApexCharts(document.querySelector("#apexcharts-bar"), options2);
-chart2.render();
-
-//* Charts Student
-
-
-//! Calendar
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   var calendarEl = document.getElementById('calendar');
-//   var calendar = new FullCalendar.Calendar(calendarEl, {
-//     initialView: 'dayGridMonth',
-//     selectable: true,
-//     select: function(start, end ,allDays){
-//       console.log(start,end,allDays);
-//     }
-//   });
-//   calendar.render();
-// });
-// <div id="calendar" class="calendar-container"></div>
+//FroalaEditor
+try {
+  let editor = new FroalaEditor('#example');
+} catch (error) {
+  // console.log(error);
+}
 
 
 
-//! AYHAN APP JS //
+//inbox
+let mailRead = document.querySelectorAll('.subject');
+
+mailRead.forEach(element => {
+  element.addEventListener('click', () => {
+    window.location.href = "inbox-read.html"
+  });
+});
+
+//inbox read
+
+let backInbox = document.querySelectorAll('.back-inbox');
+
+backInbox.forEach(element => {
+  element.addEventListener('click', () => {
+    window.location.href = "inbox.html"
+  });
+});
+
+
+// student-profil html certificate_status
+const certificate_status = document.querySelector(".certificate_status");
+const cert_photo = document.querySelector(".cert_photo");
+
+if (70 >= 80) {
+    certificate_status.innerHTML = `<span style="color: green;"><i class="fa fa-check-circle"></i> Not ortalaması sertifka almak için uygundur.</span>`
+    cert_photo.style.filter = "grayscale(1%)";
+} else {
+    certificate_status.innerHTML = `<span style="color: red;"><i class="fa fa-times-circle"></i> Not Ortalaması sertifika almaya uygun değildir. Not ortalamasını % ${80 - 70} oranında arttırması gerekmektedir.</span>`
+    cert_photo.style.filter = "grayscale(100%)";
+}
 
 
 
-//* AYHAN APP JS--->
-
-
-  
 
 
 
