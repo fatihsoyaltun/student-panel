@@ -2,7 +2,7 @@
 
 const ball = document.querySelector(".dark-mode");
 const items = document.querySelectorAll(
-  "body, .navbar,.sidebar,.toggle-ball,.dark-mode,.student-panel, footer, .section, .classes_information_card,.classes_bar, .classes_participation_rate, #SvgjsText1097, .apexcharts-zoomin-icon, .apexcharts-zoomout-icon, .apexcharts-selected.dark, .apexcharts-reset-icon, apexcharts-menu-icon, text, #events-calendar, #events, .continuation_table, .card, .student-header-text, .student-info, .student-profil, .card-body, .student-accordion-button, .student-accordion-body, .student_profil_card_header, .student-profil-card-title, .student-subjects-nav-btn, .frontend_subjects, .backend_subjects, .subjects-nav-btn, .teacher_head_bottom_profile, .teacher_about, .teacher_analyces, .teacher_abilities, .teacher-about-edit, .teacher_my_classes, .my_classes, .quiz-project-notes"
+  "body, .navbar,.sidebar,.toggle-ball,.dark-mode,.student-panel, footer, .section, .classes_information_card,.classes_bar, .classes_participation_rate, #SvgjsText1097, .apexcharts-zoomin-icon, .apexcharts-zoomout-icon, .apexcharts-selected.dark, .apexcharts-reset-icon, apexcharts-menu-icon, text, #events-calendar, #events, .continuation_table, .card, .student-header-text, .student-info, .student-profil, .card-body, .student-accordion-button, .student-accordion-body, .student_profil_card_header, .student-profil-card-title, .student-subjects-nav-btn, .frontend_subjects, .backend_subjects, .subjects-nav-btn, .teacher_head_bottom_profile, .teacher_about, .teacher_analyces, .teacher_abilities, .teacher-about-edit, .teacher_my_classes, .my_classes, .quiz-project-notes, .list-table-responsive"
 
 );
 const changeImg = document.querySelector(".navbar-brand_img");

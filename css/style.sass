@@ -1106,6 +1106,66 @@ img
             .choices__input
                 background-color: white !important
 
+//attendance-list.html
+.attendance-list
+    .list-table-responsive
+        .table-responsive
+            .attandance-table
+                thead
+                    tr
+                        th
+                            // writing-mode: vertical-lr
+                            // text-orientation: upright
+                            font-size: 12px
+                tbody
+                    tr
+                        td
+                            font-size: 12px
+//attendance-list-html //*dark mode
+.card-body.dark-mode-active
+    .nav-tabs
+        .nav-item
+            .nav-link
+                color: white !important
+            .nav-link.active
+                background-color: $color6 !important
+                color: white !important
+    .dataTables_wrapper
+        .dataTables_length
+            label
+                select
+                    color: white !important
+                    option
+                        background-color: $color6 !important
+                        color: white !important
+        .attandance-table
+            thead
+                tr
+                    th
+                        select
+                            background-color: $color6
+                            color: white !important
+
+            tbody
+                tr
+                    background-color: $color6 !important
+                    td
+                        select
+                            background-color: $color6 !important
+                            color: white !important
+                        input
+                            border: 1px solid grey !important
+        .dataTables_info
+            color: white !important
+        .dataTables_paginate
+            .previous, .next
+                color: white !important
+            span
+                .current
+                    background-color: $color6 !important
+                
+
+
 //* dark mode start
 body.dark-mode-active
     background-color: $color1 !important

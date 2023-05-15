@@ -1232,6 +1232,51 @@ img {
   background-color: white !important;
 }
 
+.attendance-list .list-table-responsive .table-responsive .attandance-table thead tr th {
+  font-size: 12px;
+}
+.attendance-list .list-table-responsive .table-responsive .attandance-table tbody tr td {
+  font-size: 12px;
+}
+
+.card-body.dark-mode-active .nav-tabs .nav-item .nav-link {
+  color: white !important;
+}
+.card-body.dark-mode-active .nav-tabs .nav-item .nav-link.active {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.card-body.dark-mode-active .dataTables_wrapper .dataTables_length label select {
+  color: white !important;
+}
+.card-body.dark-mode-active .dataTables_wrapper .dataTables_length label select option {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.card-body.dark-mode-active .dataTables_wrapper .attandance-table thead tr th select {
+  background-color: #393E46;
+  color: white !important;
+}
+.card-body.dark-mode-active .dataTables_wrapper .attandance-table tbody tr {
+  background-color: #393E46 !important;
+}
+.card-body.dark-mode-active .dataTables_wrapper .attandance-table tbody tr td select {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.card-body.dark-mode-active .dataTables_wrapper .attandance-table tbody tr td input {
+  border: 1px solid grey !important;
+}
+.card-body.dark-mode-active .dataTables_wrapper .dataTables_info {
+  color: white !important;
+}
+.card-body.dark-mode-active .dataTables_wrapper .dataTables_paginate .previous, .card-body.dark-mode-active .dataTables_wrapper .dataTables_paginate .next {
+  color: white !important;
+}
+.card-body.dark-mode-active .dataTables_wrapper .dataTables_paginate span .current {
+  background-color: #393E46 !important;
+}
+
 body.dark-mode-active {
   background-color: #1B262C !important;
 }
