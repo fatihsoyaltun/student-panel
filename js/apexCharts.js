@@ -496,8 +496,76 @@ document.addEventListener('DOMContentLoaded', function () {
     chart.render();
 
 
-
     //teacher html apex charts end
+
+    //!stdDashboard html start
+
+    var stdDash = {
+        series: [{
+            name: 'series1',
+            data: [31, 40, 28, 51, 42, 109, 100]
+        }, {
+            name: 'series2',
+            data: [11, 32, 45, 32, 34, 52, 41]
+        }],
+        chart: {
+            height: 350,
+            type: 'area'
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'smooth'
+        },
+        xaxis: {
+            type: 'datetime',
+            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z",
+                "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z",
+                "2018-09-19T06:30:00.000Z"
+            ]
+        },
+        tooltip: {
+            x: {
+                format: 'dd/MM/yy HH:mm'
+            },
+        },
+    };
+
+    var stdDash_chart = new ApexCharts(document.querySelector("#performance"), stdDash);
+    stdDash_chart.render();
+
+    //<-- ProgressBar->
+
+    var prgBar = {
+        series: [{
+            data: [1300, 1000, 800, 600, 500, 300, 200, ]
+        }],
+        chart: {
+            type: 'bar',
+            height: 350
+        },
+        plotOptions: {
+            bar: {
+                borderRadius: 4,
+                horizontal: true,
+            }
+        },
+        dataLabels: {
+            enabled: false,
+        },
+        fill: {
+            colors: ['#F44336', '#E91E63', '#9C27B0']
+        },
+        xaxis: {
+            categories: ['Html', 'Css', 'Javascript', 'Python', 'Django', ],
+        }
+    };
+
+    var prgBar_chart = new ApexCharts(document.querySelector("#progresBar"), prgBar);
+    prgBar_chart.render();
+
+    //!stdDashboard html end
 });
 
 
