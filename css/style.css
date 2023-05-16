@@ -847,7 +847,7 @@ img {
 }
 .student-panel .content .card .card-body .upFile .upload .img-file-btn {
   background: #444;
-  border: 1px solid #444;
+  border: 1px solid #eeeeee;
   border-radius: 8px;
   color: #fff;
   padding: 6px 19px;
@@ -1420,6 +1420,37 @@ footer.dark-mode-active .footer_text {
   color: #FFFFFF !important;
 }
 
+.navbar.dark-mode-active .container-fluid .off-canvas .btn .fa-solid {
+  color: white !important;
+}
+.navbar.dark-mode-active .container-fluid .off-canvas .offcanvas .offcanvas-header {
+  background-color: #393E46 !important;
+  color: white !important;
+}
+.navbar.dark-mode-active .container-fluid .off-canvas .offcanvas .offcanvas-header .btn-close {
+  background-color: rgba(238, 238, 238, 0.9333333333);
+}
+.navbar.dark-mode-active .container-fluid .off-canvas .offcanvas .offcanvas-body {
+  background: rgb(57, 62, 70) !important;
+  background: linear-gradient(135deg, rgb(57, 62, 70) 0%, rgb(57, 62, 70) 7%, rgb(27, 38, 44) 34%) !important;
+}
+.navbar.dark-mode-active .container-fluid .off-canvas .offcanvas .offcanvas-body .sidebar-menu .submenu a {
+  color: white !important;
+}
+.navbar.dark-mode-active .container-fluid .off-canvas .offcanvas .offcanvas-body .sidebar-menu .submenu a span {
+  color: white !important;
+}
+.navbar.dark-mode-active .container-fluid .off-canvas .offcanvas .offcanvas-body .sidebar-menu .submenu a:hover {
+  background-color: #393E46 !important;
+  color: rgba(238, 238, 238, 0.9333333333) !important;
+}
+.navbar.dark-mode-active .container-fluid .off-canvas .offcanvas .offcanvas-body .sidebar-menu .submenu .submenu-content li a {
+  color: white !important;
+}
+.navbar.dark-mode-active .container-fluid .off-canvas .offcanvas .offcanvas-body .sidebar-menu .submenu .submenu-content li a:hover {
+  background-color: #222831 !important;
+}
+
 .stdDash.dark-mode-active .card {
   background-color: #393E46 !important;
 }
@@ -1556,9 +1587,6 @@ footer.dark-mode-active .footer_text {
   background-color: #393E46 !important;
   color: #a6a0a0 !important;
 }
-.departments_add_section .card.dark-mode-active .img-file-btn {
-  background-color: #1B262C !important;
-}
 
 .departments_edit_section .card.dark-mode-active {
   background-color: #393E46 !important;
@@ -1581,9 +1609,6 @@ footer.dark-mode-active .footer_text {
 .departments_edit_section .card.dark-mode-active select {
   background-color: #393E46 !important;
   color: #a6a0a0 !important;
-}
-.departments_edit_section .card.dark-mode-active .img-file-btn {
-  background-color: #1B262C !important;
 }
 
 .quiz-project-notes.dark-mode-active .nav-tabs {
@@ -1675,9 +1700,6 @@ footer.dark-mode-active .footer_text {
   background-color: #393E46 !important;
   color: #a6a0a0 !important;
 }
-.student_add_section .card.dark-mode-active .img-file-btn {
-  background-color: #1B262C !important;
-}
 
 .internship-selection .card.dark-mode-active {
   background-color: #393E46 !important;
@@ -1712,9 +1734,6 @@ footer.dark-mode-active .footer_text {
 .internship-selection .card.dark-mode-active select {
   background-color: #393E46 !important;
   color: #a6a0a0 !important;
-}
-.internship-selection .card.dark-mode-active .img-file-btn {
-  background-color: #1B262C !important;
 }
 .internship-selection .card.dark-mode-active textarea {
   background-color: #393E46 !important;
@@ -1770,9 +1789,6 @@ footer.dark-mode-active .footer_text {
   background-color: #393E46 !important;
   color: #a6a0a0 !important;
 }
-.edit_profile_section .card.dark-mode-active .img-file-btn {
-  background-color: #1B262C !important;
-}
 .edit_profile_section .card.dark-mode-active textarea {
   background-color: #393E46 !important;
   color: white !important;
@@ -1799,9 +1815,6 @@ footer.dark-mode-active .footer_text {
 .student-edit_section .card.dark-mode-active select {
   background-color: #393E46 !important;
   color: #a6a0a0 !important;
-}
-.student-edit_section .card.dark-mode-active .img-file-btn {
-  background-color: #1B262C !important;
 }
 
 .student_list_section .card.dark-mode-active {
@@ -1939,9 +1952,6 @@ footer.dark-mode-active .footer_text {
   background-color: #393E46 !important;
   color: #a6a0a0 !important;
 }
-.teacher_add_section .card.dark-mode-active .img-file-btn {
-  background-color: #1B262C !important;
-}
 
 .teacher_edit_section .card.dark-mode-active {
   background-color: #393E46 !important;
@@ -1964,9 +1974,6 @@ footer.dark-mode-active .footer_text {
 .teacher_edit_section .card.dark-mode-active select {
   background-color: #393E46 !important;
   color: #a6a0a0 !important;
-}
-.teacher_edit_section .card.dark-mode-active .img-file-btn {
-  background-color: #1B262C !important;
 }
 
 .teacher_list_section .card.dark-mode-active {
