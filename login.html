@@ -160,11 +160,17 @@
                 setTimeout(() => {
                     window.location.href = "Admin/admin.html";
                 }, 3000);
-            }else if(isAuthenticated){
+            }else if(isAuthenticated && userName ==="Fatih"){
                 const toast = new bootstrap.Toast(toastLiveExample)
                 toast.show()
                 setTimeout(() => {
                     window.location.href = "Student/studentDashboard.html";
+                }, 3000);
+            }else if(isAuthenticated && userName==="Eğitmen"){
+                const toast = new bootstrap.Toast(toastLiveExample)
+                toast.show()
+                setTimeout(() => {
+                    window.location.href = "Teacher/teacher-profile.html";
                 }, 3000);
             }else{
                 document.querySelector('.user-log-name').value = "";
@@ -174,7 +180,6 @@
                 const toast = new bootstrap.Toast(toastLiveExample)
                 toast.show()
             }
-
         });
     </script>
 </body>
