@@ -1227,6 +1227,9 @@ body.dark-mode-active
                         fill: $color9 !important
                 .apexcharts-legend-text
                     color: $color9 !important
+    .modal-content
+        background-color: $color6
+        color: white
 .student-panel.dark-mode-active
     background-color: $color1 !important
     .list-header
@@ -1279,6 +1282,10 @@ body.dark-mode-active
         .table-responsive
             .unread
                 color: white
+    .student-card
+        .modal-content
+            background-color: $color6
+            color: white
 footer.dark-mode-active
     background-color: $color1 !important
     .footer_text
@@ -1856,6 +1863,10 @@ footer.dark-mode-active
     color: white !important
 
 @media screen and (max-width: 768px)
+    .navbar
+        form
+            input
+                display: none
     .off-canvas
         display: block !important
     .sidebar

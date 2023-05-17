@@ -1352,6 +1352,10 @@ body.dark-mode-active {
 .section.dark-mode-active .card-chart .apexcharts-canvas .apexcharts-legend-text {
   color: #FFFFFF !important;
 }
+.section.dark-mode-active .modal-content {
+  background-color: #393E46;
+  color: white;
+}
 
 .student-panel.dark-mode-active {
   background-color: #1B262C !important;
@@ -1411,6 +1415,10 @@ body.dark-mode-active {
   color: white;
 }
 .student-panel.dark-mode-active .tab-content .table-responsive .unread {
+  color: white;
+}
+.student-panel.dark-mode-active .student-card .modal-content {
+  background-color: #393E46;
   color: white;
 }
 
@@ -2087,6 +2095,9 @@ footer.dark-mode-active .footer_text {
 }
 
 @media screen and (max-width: 768px) {
+  .navbar form input {
+    display: none;
+  }
   .off-canvas {
     display: block !important;
   }
