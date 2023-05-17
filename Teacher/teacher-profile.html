@@ -17,6 +17,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jsCalendar -->
+    <link rel="stylesheet" type="text/css" href="../css/jsCalendar.css">
+    <link rel="stylesheet" type="text/css" href="../css/jsCalendar.clean.css">
+    <script type="text/javascript" src="../js/jsCalendar.js"></script>
+    <script type="text/javascript" src="../js/jsCalendar.lang.tr.js"></script>
+    <!-- js calendar main css -->
+    <link rel="stylesheet" href="../css/jsCalendarMain.css">
     <!-- Main Css -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -365,48 +372,6 @@
                                             class="col-lg-4 teacher_head_bottom_col_right d-flex align-items-center justify-content-end ">
                                             <div class="teacher_head_bottom_profile_summary_area_right_two">
                                                 <a href="teacher-edit-profile.html" class="follow bg-primary text-white p-2 rounded-3 text-center"><i class="fa-solid fa-plus"></i> <span>Profili Düzenle</span></a>
-                                                <div class="modal fade" id="exampleModal" tabindex="-1"
-                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Yeni
-                                                                    Mesaj</h1>
-                                                                <button type="button" class="btn-close"
-                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <form>
-                                                                    <div class="mb-3">
-                                                                        <label for="recipient-name"
-                                                                            class="col-form-label"><i
-                                                                                class="fa-solid fa-user-tie"></i>
-                                                                            Alıcı:</label>
-                                                                        <input type="text" class="form-control"
-                                                                            id="recipient-name">
-                                                                    </div>
-                                                                    <div class="mb-3">
-                                                                        <label for="message-text"
-                                                                            class="col-form-label"><i
-                                                                                class="fa-regular fa-envelope"></i>
-                                                                            Mesaj:</label>
-                                                                        <textarea class="form-control"
-                                                                            id="message-text"></textarea>
-                                                                    </div>
-                                                                </form>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-secondary"
-                                                                    data-bs-dismiss="modal"><i
-                                                                        class="fa-solid fa-power-off"></i>
-                                                                    Kapat</button>
-                                                                <button type="button" class="btn btn-primary"><i
-                                                                        class="fa-regular fa-paper-plane fa-fade"></i>
-                                                                    Gönder</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -576,7 +541,7 @@
                 <section class="teacher_my_classes mt-5">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xl-6 d-flex">
+                            <div class="col-12 d-flex">
                                 <div class="card star-students flex-fill">
                                     <div class="card-header d-flex align-items-center">
                                         <h5>Yaklaşan Aktiviteler</h5>
@@ -642,8 +607,81 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-6">
+                            <!-- <div class="col-xl-6">
                                 <div id="teacher_abilities_id" class="teacher_abilities card p-5">
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="row mt-5 d-flex justify-content-between teacher_skill_cards p-3">
+                                <h5 class="text-center mt-4 mb-4"><i class="fa-regular fa-id-card"></i></i> Yetenekler</h5>
+                                <hr>
+                                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+                                    <div class="card text-center p-3 w-100">
+                                        <i class="fa-brands fa-html5"></i>
+                                        <h6 class="mb-0 mt-2 text-center">HTML</h6>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+                                    <div class="card text-center p-3 w-100">
+                                        <i class="fa-brands fa-css3"></i>
+                                        <h6 class="mb-0 mt-2 text-center">CSS</h6>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+                                    <div class="card text-center p-3 w-100">
+                                        <i class="fa-brands fa-square-js"></i>
+                                        <h6 class="mb-0 mt-2 text-center">JS</h6>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+                                    <div class="card text-center p-3 w-100">
+                                        <i class="fa-brands fa-sass"></i>
+                                        <h6 class="mb-0 mt-2 text-center">Sass</h6>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+                                    <div class="card text-center p-3 w-100">
+                                        <i class="fa-brands fa-python"></i>
+                                        <h6 class="mb-0 mt-2 text-center">Python</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-xl-12">
+                                <div class="row" id="wrapper"
+                                    style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border-radius: 10px">
+                                    <h5 class="text-center mt-4 mb-4"><i class="fa-solid fa-calendar-days"></i> Takvim</h5>
+                                    <hr style="width: 95%; margin: auto;">
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div id="events-calendar" data-language="tr"></div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div id="events"></div>
+                                        <!-- Modal -->
+                                        <div class="modal fade addModal" id="exampleModal" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Etkinlik Ekle</h1>
+                                                        <button type="button" class="btn-close modalClose"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <input style="width: 100%;" type="text" id="eventName"
+                                                            placeholder="Etkinlik Adını Girin...">
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary modalClose"
+                                                            data-bs-dismiss="modal">Kapat</button>
+                                                        <button type="button" class="btn btn-primary saveEvent">Kaydet</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Modal -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -675,7 +713,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xl-6 mt-5">
+                            <div class="col-12 mt-5">
                                 <h5 class="ms-1 mb-3"><i class="fa-solid fa-laptop"></i> Sınıflarım</h5>
                                 <div class="accordion accordion-flush my_classes" id="accordionFlushExample">
                                     <div class="accordion-item">
@@ -1402,7 +1440,7 @@
             <h6 class="footer_text">TELİF HAKKI © 2023 NEOS YAZILIM.</h6>
         </footer>
     </div>
-    <!-- Bootstrap Js -->
+<!-- Bootstrap Js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
 </script>
@@ -1410,6 +1448,8 @@ integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <!-- Apex Charts Js -->
 <script src="../js/apexCharts.js"></script>
+<!-- JsCalendar Main Js -->
+<script src="../js/jsCalenderMain.js"></script>
 <!-- Main Js -->
 <script src="../js/app.js"></script>
 </body>
