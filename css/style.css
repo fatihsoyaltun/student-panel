@@ -2095,6 +2095,9 @@ footer.dark-mode-active .footer_text {
 }
 
 @media screen and (max-width: 768px) {
+  .navbar form input {
+    display: none;
+  }
   .off-canvas {
     display: block !important;
   }
