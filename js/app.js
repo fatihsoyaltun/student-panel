@@ -1,57 +1,36 @@
+//Sidebar menu open-close
+
 const submenus = document.querySelectorAll(".submenu a");
 
 submenus.forEach(submenu => {
   const subcontent = submenu.nextElementSibling;
   const arrow = submenu.querySelector(".menu-arrow");
 
-  let menuOpen = false;
-
   submenu.addEventListener("click", () => {
-    if (menuOpen) {
-      subcontent.style.display = "none";
-      arrow.style.transform = "rotate(0deg)";
-      menuOpen = false;
-    } else {
+    const isActive = submenu.classList.contains("active");
+
+    // Diğer menülerin otomatik kapanması
+    const openSubmenus = document.querySelectorAll(".submenu a.active");
+    openSubmenus.forEach(openSubmenu => {
+      const openSubcontent = openSubmenu.nextElementSibling;
+      const openArrow = openSubmenu.querySelector(".menu-arrow");
+      openSubcontent.style.display = "none";
+      openArrow.style.transform = "rotate(0deg)";
+      openSubmenu.classList.remove("active");
+    });
+
+    // Seçilen menünün açılması veya kapanması
+    if (!isActive) {
       subcontent.style.display = "block";
       arrow.style.transform = "rotate(90deg)";
-      menuOpen = true;
+      submenu.classList.add("active");
+    } else {
+      subcontent.style.display = "none";
+      arrow.style.transform = "rotate(0deg)";
+      submenu.classList.remove("active");
     }
   });
 });
-
-//* geliştirilecek
-
-// const submenus = document.querySelectorAll(".submenu a");
-
-// submenus.forEach(submenu => {
-//   const subcontent = submenu.nextElementSibling;
-//   const arrow = submenu.querySelector(".menu-arrow");
-
-//   submenu.addEventListener("click", () => {
-//     // Diğer menülerin otomatik kapanması
-//     const openSubmenus = document.querySelectorAll(".submenu a.active");
-//     openSubmenus.forEach(openSubmenu => {
-//       const openSubcontent = openSubmenu.nextElementSibling;
-//       const openArrow = openSubmenu.querySelector(".menu-arrow");
-//       openSubcontent.style.display = "none";
-//       openArrow.style.transform = "rotate(0deg)";
-//       openSubmenu.classList.remove("active");
-//     });
-
-//     // Seçilen menünün açılması veya kapanması
-//     if (submenu.classList.contains("active")) {
-//       subcontent.style.display = "none";
-//       arrow.style.transform = "rotate(0deg)";
-//       submenu.classList.remove("active");
-//     } else {
-//       subcontent.style.display = "block";
-//       arrow.style.transform = "rotate(90deg)";
-//       submenu.classList.add("active");
-//     }
-//   });
-// });
-
-//* geliştirilecek
 
 
 // Dark Mode start
