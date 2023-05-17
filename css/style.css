@@ -300,6 +300,7 @@ img {
   color: #1B262C;
   font-size: 16px;
   height: auto;
+  cursor: pointer;
 }
 .main-wrapper .offcanvas-body .sidebar-menu ul li a:hover {
   background-color: #fff;
