@@ -2439,20 +2439,24 @@ footer.dark-mode-active .footer_text {
   border-radius: 10px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.teacher_my_classes .teacher_skill_cards .card {
+.teacher_my_classes .teacher_skill_cards .skillCard {
   border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.teacher_my_classes .teacher_skill_cards .card i {
-  font-size: 60px;
-  color: #a4a4a4;
+.teacher_my_classes .teacher_skill_cards .skillCard img {
+  width: 60px;
+  filter: grayscale(100%);
 }
-.teacher_my_classes .teacher_skill_cards .card h6 {
+.teacher_my_classes .teacher_skill_cards .skillCard:hover img {
+  filter: grayscale(0);
+}
+.teacher_my_classes .teacher_skill_cards .skillCard h6 {
   visibility: hidden;
 }
-.teacher_my_classes .teacher_skill_cards .card:hover i {
-  color: black !important;
-}
-.teacher_my_classes .teacher_skill_cards .card:hover h6 {
+.teacher_my_classes .teacher_skill_cards .skillCard:hover h6 {
   visibility: visible;
 }
 
