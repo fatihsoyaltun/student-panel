@@ -2434,6 +2434,27 @@ footer.dark-mode-active .footer_text {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 1rem;
 }
+.teacher_my_classes .teacher_skill_cards {
+  border: 1px solid #a4a4a4;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.teacher_my_classes .teacher_skill_cards .card {
+  border: none;
+}
+.teacher_my_classes .teacher_skill_cards .card i {
+  font-size: 60px;
+  color: #a4a4a4;
+}
+.teacher_my_classes .teacher_skill_cards .card h6 {
+  visibility: hidden;
+}
+.teacher_my_classes .teacher_skill_cards .card:hover i {
+  color: black !important;
+}
+.teacher_my_classes .teacher_skill_cards .card:hover h6 {
+  visibility: visible;
+}
 
 .departments_header .departments_search_field .departments_search_field_form {
   display: flex;
