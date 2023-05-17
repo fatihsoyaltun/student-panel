@@ -342,9 +342,9 @@
                             <div class="col-12">
                                 <div class="classes_search_field">
                                     <form class="classes_search_field_form mt-5" action="">
-                                        <input class="classes_search_field_form_name me-2" type="text"
-                                            placeholder="İsme Göre Ara...">
-                                        <button type="button">Ara</button>
+                                        <input class="classes_search_field_form_name me-2 d-md-none" type="text"
+                                            placeholder="İsme Göre Ara..." style="width: 80%;">
+                                        <button class="d-md-none" type="button" style="width: 80px;">Ara</button>
                                     </form>
                                 </div>
                             </div>
@@ -367,7 +367,7 @@
                 <section class="classes mt-5">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xl-4">
+                            <div class="col-xl-4 mt-3">
                                 <div class="classes_information_card">
                                     <h5 class="classes_name fw-bold mb-0 m-auto"><i class="fa-solid fa-laptop-code"></i>
                                         7 Kasım
@@ -391,14 +391,14 @@
                                             class="classes_students_number fw-bold">10</span></h6>
                                 </div>
                             </div>
-                            <div class="col-xl-3">
+                            <div class="col-xl-3 mt-3">
                                 <div class="classes_bar">
                                     <div id="curriculum_progress" class="classes_curriculum_progress">
                                     </div>
                                     <div id="classes_average_id" class="classes_average"></div>
                                 </div>
                             </div>
-                            <div class="col-xl-5">
+                            <div class="col-xl-5 mt-3">
                                 <div id="classes_participation_rate_id" class="classes_participation_rate card">
                                 </div>
                             </div>
@@ -406,7 +406,7 @@
                     </div>
                 </section>
 
-                <section class="student-panel ms-0">
+                <section class="student-panel ms-0 pt-0">
                     <div class="content container-fluid student_list_section">
                         <div class="row">
                             <div class="col-12">
@@ -415,14 +415,13 @@
                                         <div class="card list-table">
                                             <div class="card-body">
                                                 <div class="list-table-header">
-                                                    <div class="row align-items-center justify-content-between">
-                                                        <div class="col d-flex justify-content-between">
-                                                            <h3 class="list-title">Öğrenciler</h3>
-                                                            <div>
-                                                                <a class="btn btn-primary " href="entering-notes.html">Sınav Notu Gir</a>
-                                                                <a class="btn btn-primary" href="attendance-list.html">Yoklama Al</a>
+                                                    <h3 class="list-title mt-3 text-center"><i class="fa-solid fa-graduation-cap"></i> Öğrenciler</h3>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-flex justify-content-between">
+                                                            <div class=" gap-2">
+                                                                <a class="btn btn-primary mt-3 col-lg-6" href="entering-notes.html" style="width: 150px;">Sınav Notu Gir</a>
+                                                                <a class="btn btn-primary mt-3 col-lg-6" href="attendance-list.html" style="width: 150px;">Yoklama Al</a>
                                                             </div>
-                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -711,9 +710,10 @@
                     </div>
                 </section>
 
-                <section class="calender mt-5">
+                <section class="calender mt-3">
                     <div class="container">
-                        <div class="row" id="wrapper">
+                        <div class="row p-3" id="wrapper">
+                            <h5 class="mt-3 mb-4 text-center"><i class="fa-solid fa-calendar-days"></i> Takvim</h5>
                             <div class="col-lg-6 col-sm-12">
                                 <div id="events-calendar" data-language="tr"></div>
                             </div>
