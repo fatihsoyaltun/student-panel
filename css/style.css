@@ -1299,6 +1299,12 @@ body.dark-mode-active {
 .navbar.dark-mode-active .user-text h6 {
   color: #FFFFFF !important;
 }
+.navbar.dark-mode-active .right .dropdown .dropdown-menu {
+  background-color: #393E46;
+}
+.navbar.dark-mode-active .right .dropdown .dropdown-menu .drop-top-title {
+  color: white;
+}
 
 .sidebar.dark-mode-active {
   background: rgb(57, 62, 70);
